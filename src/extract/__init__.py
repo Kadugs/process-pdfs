@@ -1,0 +1,1 @@
+from .specifications_for_constructions.main import extract_text_from_pdf

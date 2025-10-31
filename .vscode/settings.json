@@ -1,7 +1,10 @@
 {
   "python.linting.enabled": true,
   "python.linting.flake8Enabled": true,
-  "python.linting.flake8Args": ["--ignore=F403,F401,W504"],
+  "python.linting.flake8Args": [
+    "--ignore=F403,W504",
+    "--per-file-ignores=__init__.py:F401"
+  ],
   "[python]": {
     "editor.defaultFormatter": "ms-python.black-formatter",
     "editor.formatOnSave": true,
@@ -12,5 +15,6 @@
   "python.testing.unittestEnabled": false,
   "python.testing.pytestEnabled": true,
   "makefile.configureOnOpen": false,
-  "python.defaultInterpreterPath": "./.venv/bin/python"
+  "python.defaultInterpreterPath": "./.venv/bin/python",
+  "python.analysis.extraPaths": ["./src"]
 }
