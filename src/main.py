@@ -8,6 +8,7 @@ from transform.standardize_data import standardize_data
 from load.load_documents import (
     load_documents,
 )
+from analyze.analyze_final_data import generate_analysis
 
 file_name_to_function_ht = {
     "specifications_for_constructions": extract_specifications_for_constructions,
@@ -44,6 +45,8 @@ def main():
         table_name="extracted_documents",
         file_path="data/output/extracted_documents.sql",
     )
+
+    generate_analysis("data/output/extracted_documents.csv")
 
 
 if __name__ == "__main__":

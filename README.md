@@ -38,6 +38,8 @@ Or run directly:
 python -m src.main
 ```
 
+4. Select the option that corresponds to the PDF you want to process. If you want to proccess all PDFs in the input folder, select "Process all files". It will generate standardized csv, parquet and SQL dump files in the `data/output/` folder.
+
 ## What the application does
 
 - Scans `data/input/` for PDF files and lets you choose one to process.
@@ -157,6 +159,12 @@ Main runtime dependencies are listed in `requirements.txt` and include:
 - inquirer (interactive file selection)
 
 Dev dependencies and tooling may be configured in `pyproject.toml` (if present).
+
+### Reasons to use specific dependencies
+
+- `pdfplumber`: Robust PDF text extraction with table support, which is essential for parsing tabular data from invoices and specifications.
+- `pandas`: Excellent data manipulation library, ideal for handling large datasets and performing transformations.
+- `inquirer`: Provides a user-friendly command-line interface for selecting files interactively, enhancing usability.
 
 ## Project layout
 
