@@ -118,15 +118,7 @@ Dev dependencies and tooling may be configured in `pyproject.toml` (if present).
 - `src/extract/` — extractor modules per document type
 - `src/transform/` — standardization and mapping logic
 - `src/load/` — CSV/SQL dump helpers
-- `data/` — input PDFs and generated Parquet files
-- `tmp/` — generated SQL dumps and other temporary artifacts
-
-## Notes
-
-- The repo uses editable install (`pip install -e .`) in `install.sh` so the
-  `src` package is importable without per-file `sys.path` hacks.
-- Mappings are required for standardization; if not present the raw extractor
-  output will be used as-is.
+- `data/` — input PDFs and generated files
 
 ## Author
 
