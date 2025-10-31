@@ -44,8 +44,7 @@ python -m src.main
 - Routes the PDF to the correct extractor (e.g. `specifications_for_constructions`,
   `sample_invoice`). Extractors return a pandas DataFrame.
 - Standardizes the DataFrame using a mapping JSON found in
-  `src/transform/configs/<document_type>.json`. If a sibling
-  `*.schema.json` exists the mapping is validated before use.
+  `src/transform/configs/<document_type>.json`.
 - Saves standardized data to `data/<document_type>_df.parquet`.
 - Exports an SQL dump to `tmp/<document_type>.sql` with CREATE TABLE and batched
   INSERT statements (suitable for loading into PostgreSQL).
@@ -74,10 +73,6 @@ Mappings live in `src/transform/configs/` and are simple JSON objects with a
 }
 ```
 
-If a schema file with the same name and `.schema.json` suffix exists it will be
-used to validate the mapping before standardization. See
-`src/transform/configs/*.schema.json` for examples.
-
 ## SQL dump and loading into PostgreSQL
 
 After standardization the pipeline writes an SQL dump to `data/output/extracted_documents.sql`.
@@ -87,6 +82,56 @@ To load the dump into PostgreSQL locally:
 ```bash
 psql -d your_database -f data/output/extracted_documents.sql
 ```
+
+## Semantic mapping decisions
+
+This project maps heterogeneous extractor outputs to a single canonical schema to make downstream processing consistent. Below are the key decisions and conventions used by the standardizer (`src/transform/standardize_data.py`) and the mapping JSONs in `src/transform/configs/`.
+
+Canonical fields (examples)
+
+- item_description: string — free-text describing the row/section/item
+- price: numeric — price or amount (stored as number when possible)
+- quantity: numeric — quantity or count
+- invoice_number: string
+- customer_number: string
+- contractor: string — party responsible for delivering the work
+- client_name: string
+- tax_rate: numeric or string — percentage; mappings should indicate percent values
+- item_code: string — unique code or section number
+- details: string — auxiliary free-text, on the sample invoice, for example, is the value of the pages of each section
+- document_description: string — higher level document title
+
+Mapping decisions (current configs)
+
+- `specifications_for_constructions`:
+
+  - `section_name` -> `item_description`
+  - `section_code` -> `item_code`
+  - `title` -> `document_description`
+  - `author` -> `contractor`
+  - `description` -> `details`
+  - numeric/amount fields: not present; leave `price`/`quantity` null
+
+- `sample_invoice`:
+  - `Service Description` -> `item_description`
+  - `Amount -without VAT-` -> `price`
+  - `quantity` -> `quantity`
+  - `Invoice No` -> `invoice_number`
+  - `Customer No` -> `customer_number`
+  - `Service Contractor` -> `contractor`
+  - `Client Name` -> `client_name`
+  - `VAT Percentage` -> `tax_rate`
+
+Guidelines for adding mappings
+
+- Create `src/transform/configs/<document_type>.json` with the `mapping` structure.
+- Provide source column names exactly as they appear in the extractor output (before normalization). The standardizer will normalize them when applying the mapping.
+
+Handling semantic differences
+
+- Documents that represent different granularities (invoices with item lines vs. specifications with sections) are mapped to the same canonical fields, but downstream consumers should be aware of the document `type` and treat `item_description` vs `section` semantics accordingly.
+- When a document lacks a field (e.g., `price` in specifications), leave the canonical field present and null to preserve schema stability.
+- For ambiguous fields (e.g., `tax_rate` stored as "20%"), add small transformation code in the mapping layer or post-process to normalize to a numeric value (0.2) if required by downstream systems.
 
 ## Development
 
@@ -119,6 +164,12 @@ Dev dependencies and tooling may be configured in `pyproject.toml` (if present).
 - `src/transform/` — standardization and mapping logic
 - `src/load/` — CSV/SQL dump helpers
 - `data/` — input PDFs and generated files
+
+## Credit for used pdfs
+
+- [Standard Specification for Construction of Public Infrastructure](https://clients.bolton-menk.com/)
+- [Sample Invoice PDF](https://www.wmaccess.com/downloads/sample-invoice.pdf)
+- [Scanned Receipt PDF](https://www.kaggle.com/datasets/jenswalter/receipts)
 
 ## Author
 
