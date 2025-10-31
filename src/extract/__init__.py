@@ -1,1 +1,2 @@
-from .specifications_for_constructions.main import extract_text_from_pdf
+from .specifications_for_constructions import extract_specifications_for_constructions
+from .sample_invoice import extract_sample_invoice

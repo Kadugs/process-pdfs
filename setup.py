@@ -7,8 +7,7 @@ setup(
     name="process-pdfs",
     version="0.1.0",
     description=(
-        "A small ETL pipeline that extracts "
-        "structured information from PDF files"
+        "A small ETL pipeline that extracts " "structured information from PDF files"
     ),
     long_description=long_description,
     long_description_content_type="text/markdown",

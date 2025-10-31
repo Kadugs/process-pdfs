@@ -3,3 +3,4 @@ pyarrow
 pdfplumber>=0.11.7
 matplotlib>=3.7.1
 pandas>=2.0.3
+inquirer

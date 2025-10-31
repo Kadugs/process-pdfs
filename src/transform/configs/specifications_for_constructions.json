@@ -1,0 +1,16 @@
+{
+  "document_id": 1,
+  "mapping": {
+    "item_description": "section_name",
+    "price": null,
+    "quantity": null,
+    "invoice_number": null,
+    "customer_number": null,
+    "contractor": "author",
+    "client_name": null,
+    "tax_rate": null,
+    "document_description": "title",
+    "item_code": "section_code",
+    "details": "details"
+  }
+}

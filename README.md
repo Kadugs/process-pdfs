@@ -2,123 +2,131 @@
 
 A small ETL pipeline that extracts structured information from PDF files.
 
-## Description
+## Overview
 
-This project provides tools and utilities for processing PDF documents and extracting structured data from them.
+This repository contains extractors, transformers and loaders to process PDFs and
+produce structured data. Key features:
 
-## Quick Start
+- PDF extraction using `pdfplumber`.
+- Per-document mapping and standardization (JSON mappings + optional JSON Schema).
+- Export of cleaned data to Parquet and SQL dump files (ready for PostgreSQL).
+- Interactive file selection in terminal using `inquirer`.
 
-### 1. Installation (One-time setup)
+## Quick start
+
+1. Run the installer (creates a virtualenv and installs dependencies):
 
 ```bash
 ./install.sh
 ```
 
-### 2. Running the application
+2. Activate the virtual environment (if not already active):
+
+```bash
+source venv/bin/activate
+```
+
+3. Run the application (interactive selection):
 
 ```bash
 ./run.sh
 ```
 
-Or manually:
+Or run directly:
 
 ```bash
-# Activate virtual environment
-source venv/bin/activate
-
-# Run the application
-python main.py
+python -m src.main
 ```
 
-## Manual Installation
+## What the application does
 
-If you prefer to install manually:
+- Scans `data/input/` for PDF files and lets you choose one to process.
+- Routes the PDF to the correct extractor (e.g. `specifications_for_constructions`,
+  `sample_invoice`). Extractors return a pandas DataFrame.
+- Standardizes the DataFrame using a mapping JSON found in
+  `src/transform/configs/<document_type>.json`. If a sibling
+  `*.schema.json` exists the mapping is validated before use.
+- Saves standardized data to `data/<document_type>_df.parquet`.
+- Exports an SQL dump to `tmp/<document_type>.sql` with CREATE TABLE and batched
+  INSERT statements (suitable for loading into PostgreSQL).
 
-```bash
-# Create virtual environment
-python3 -m venv venv
+## Adding or updating mappings
 
-# Activate virtual environment
-source venv/bin/activate
+Mappings live in `src/transform/configs/` and are simple JSON objects with a
+`mapping` key that maps canonical target fields to source column names (or
+`null` to create an empty column). Example:
 
-# Install dependencies
-pip install -r requirements.txt
-
-# Run the application
-python main.py
+```json
+{
+  "document_id": 1,
+  "mapping": {
+    "item_description": "Service Description",
+    "price": "Amount -without VAT-",
+    "quantity": "quantity",
+    "invoice_number": "Invoice No",
+    "customer_number": "Customer No",
+    "contractor": "Service Contractor",
+    "client_name": "Client Name",
+    "tax_rate": "VAT Percentage",
+    "item_code": null,
+    "details": null
+  }
+}
 ```
 
-## Setup (recommended)
+If a schema file with the same name and `.schema.json` suffix exists it will be
+used to validate the mapping before standardization. See
+`src/transform/configs/*.schema.json` for examples.
 
-1. Create and activate a virtual environment:
+## SQL dump and loading into PostgreSQL
 
-   ```bash
-   python3 -m venv venv
-   source venv/bin/activate
-   ```
-
-2. Install the project and dependencies in editable mode:
-
-   ```bash
-   pip install --upgrade pip
-   pip install -e .
-   ```
-
-This makes the `src` package importable (so `from extract...` works) and lets you edit code without reinstalling.
-
-## Alternative: PYTHONPATH
-
-If you prefer not to install the project, set PYTHONPATH to include the `src` folder before running scripts:
+After standardization the pipeline writes an SQL dump to `data/output/extracted_documents.sql`.
+The dump includes a `CREATE TABLE` followed by batched `INSERT` statements.
+To load the dump into PostgreSQL locally:
 
 ```bash
-export PYTHONPATH="$(pwd)/src:$PYTHONPATH"
-python main.py
+psql -d your_database -f data/output/extracted_documents.sql
 ```
 
-For zsh, add the export to `~/.zshrc` to make it persistent.
+## Development
 
-## Usage
-
-### Processing PDFs
-
-1. Place your PDF files in the `data/input/` directory
-2. Run the application:
-   ```bash
-   ./run.sh
-   ```
-   Or manually:
-   ```bash
-   source venv/bin/activate
-   python main.py
-   ```
-
-The application will automatically:
-
-- Look for PDF files in `data/input/`
-- Process the first PDF file found
-- Extract and display the text content
-
-### Development
-
-If you want to modify the code:
+Install development dependencies:
 
 ```bash
-# Install development dependencies
+sh install.sh
+```
+
+or
+
+```bash
 pip install -r requirements-dev.txt
-
-# Format code
-black src/
-isort src/
-
-# Check code quality
-flake8 src/
 ```
 
 ## Dependencies
 
-- pdfplumber: For PDF text extraction
-- matplotlib: For data visualization
-- pandas: For data manipulation
+Main runtime dependencies are listed in `requirements.txt` and include:
+
+- pdfplumber
+- pandas
+- matplotlib
+- inquirer (interactive file selection)
+
+Dev dependencies and tooling may be configured in `pyproject.toml` (if present).
+
+## Project layout
+
+- `src/extract/` — extractor modules per document type
+- `src/transform/` — standardization and mapping logic
+- `src/load/` — CSV/SQL dump helpers
+- `data/` — input PDFs and generated Parquet files
+- `tmp/` — generated SQL dumps and other temporary artifacts
+
+## Notes
+
+- The repo uses editable install (`pip install -e .`) in `install.sh` so the
+  `src` package is importable without per-file `sys.path` hacks.
+- Mappings are required for standardization; if not present the raw extractor
+  output will be used as-is.
 
 ## Author
 

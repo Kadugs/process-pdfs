@@ -1,0 +1,6898 @@
+DROP TABLE IF EXISTS "extracted_documents";
+CREATE TABLE "extracted_documents" (
+  "item_description" TEXT,
+  "price" DOUBLE PRECISION,
+  "quantity" TEXT,
+  "invoice_number" TEXT,
+  "customer_number" TEXT,
+  "contractor" TEXT,
+  "client_name" TEXT,
+  "tax_rate" DOUBLE PRECISION,
+  "document_description" TEXT,
+  "item_code" TEXT,
+  "details" TEXT,
+  "document_id" BIGINT
+);
+
+INSERT INTO "extracted_documents" ("item_description", "price", "quantity", "invoice_number", "customer_number", "contractor", "client_name", "tax_rate", "document_description", "item_code", "details", "document_id") VALUES
+('Basic Fee wmView', 130.0, '1', '123100401', '12345', 'CPB Software (Germany) GmbH', 'Stefanie Müller', 0.19, 'Invoice WMACCESS Internet', 'nan', NULL, 2),
+('Basis fee for additional user accounts', 10.0, '0', '123100401', '12345', 'CPB Software (Germany) GmbH', 'Stefanie Müller', 0.19, 'Invoice WMACCESS Internet', 'nan', NULL, 2),
+('Basic Fee wmPos', 50.0, '0', '123100401', '12345', 'CPB Software (Germany) GmbH', 'Stefanie Müller', 0.19, 'Invoice WMACCESS Internet', 'nan', NULL, 2),
+('Basic Fee wmGuide', 1000.0, '0', '123100401', '12345', 'CPB Software (Germany) GmbH', 'Stefanie Müller', 0.19, 'Invoice WMACCESS Internet', 'nan', NULL, 2),
+('Change of user accounts', 10.0, '0', '123100401', '12345', 'CPB Software (Germany) GmbH', 'Stefanie Müller', 0.19, 'Invoice WMACCESS Internet', 'nan', NULL, 2),
+('Transaction Fee T1', 0.58, '14', '123100401', '12345', 'CPB Software (Germany) GmbH', 'Stefanie Müller', 0.19, 'Invoice WMACCESS Internet', 'nan', NULL, 2),
+('Transaction Fee T2', 0.7, '0', '123100401', '12345', 'CPB Software (Germany) GmbH', 'Stefanie Müller', 0.19, 'Invoice WMACCESS Internet', 'nan', NULL, 2),
+('Transaction Fee T3', 1.5, '162', '123100401', '12345', 'CPB Software (Germany) GmbH', 'Stefanie Müller', 0.19, 'Invoice WMACCESS Internet', 'nan', NULL, 2),
+('Transaction Fee T4', 0.5, '0', '123100401', '12345', 'CPB Software (Germany) GmbH', 'Stefanie Müller', 0.19, 'Invoice WMACCESS Internet', 'nan', NULL, 2),
+('Transaction Fee T5', 0.8, '0', '123100401', '12345', 'CPB Software (Germany) GmbH', 'Stefanie Müller', 0.19, 'Invoice WMACCESS Internet', 'nan', NULL, 2),
+('Transaction Fee T6', 1.8, '0', '123100401', '12345', 'CPB Software (Germany) GmbH', 'Stefanie Müller', 0.19, 'Invoice WMACCESS Internet', 'nan', NULL, 2),
+('Transaction Fee G1', 0.3, '0', '123100401', '12345', 'CPB Software (Germany) GmbH', 'Stefanie Müller', 0.19, 'Invoice WMACCESS Internet', 'nan', NULL, 2),
+('Transaction Fee G2', 0.3, '0', '123100401', '12345', 'CPB Software (Germany) GmbH', 'Stefanie Müller', 0.19, 'Invoice WMACCESS Internet', 'nan', NULL, 2),
+('Transaction Fee G3', 0.4, '0', '123100401', '12345', 'CPB Software (Germany) GmbH', 'Stefanie Müller', 0.19, 'Invoice WMACCESS Internet', 'nan', NULL, 2),
+('Transaction Fee G4', 0.4, '0', '123100401', '12345', 'CPB Software (Germany) GmbH', 'Stefanie Müller', 0.19, 'Invoice WMACCESS Internet', 'nan', NULL, 2),
+('Transaction Fee G5', 0.3, '0', '123100401', '12345', 'CPB Software (Germany) GmbH', 'Stefanie Müller', 0.19, 'Invoice WMACCESS Internet', 'nan', NULL, 2),
+('Transaction Fee G6', 0.3, '0', '123100401', '12345', 'CPB Software (Germany) GmbH', 'Stefanie Müller', 0.19, 'Invoice WMACCESS Internet', 'nan', NULL, 2),
+('TABLE OF CONTENTS', NULL, NULL, 'nan', 'nan', '© Bolton & Menk, Inc.', NULL, NULL, 'Standard Specifications for Construction of Public Infrastructure', '00010', 'SECTION 00010 - TABLE OF CONTENTS
+Standard Specifications for Construction of Public Infrastructure
+City of Jordan, MN
+This Project Manual incorporates, either in full or in part, various EJCDC copyrighted documents. Documents incorporated
+in full are subject to the copyright notice in the EJCDC document footnotes. For those EJCDC documents excerpted,
+modified or incorporated in part, those portions of the text that originated in copyrighted EJCDC documents remain subject
+to the EJCDC license and copyright. Copyright © 2011-2015 National Society of Professional Engineers, American Council of
+Engineering Companies, and American Society of Civil Engineers. All rights reserved.
+CONTRACT DOCUMENTS:
+PROJECT MANUAL:
+Introductory Information, Bidding Requirements, Contract Forms and Conditions of Contract
+00005 - CERTIFICATION PAGE
+00010 - TABLE OF CONTENTS
+00700 - GENERAL CONDITIONS
+00800 - SUPPLEMENTAL CONDITIONS
+Conditions of the Contract
+01110 - SUMMARY OF WORK
+01310 - COORDINATION
+01315 - PROJECT MEETINGS
+01330 - SUBMITTALS
+01410 - REGULATORY REQUIREMENTS
+01420 - SPECIFICATION REFERENCE AND WORKS CONSULTED
+01425 - ABBREVIATIONS
+01450 - QUALITY CONTROL
+01550 - MAINTENANCE OF HAUL ROADS & TEMPORARY ACCESS
+01555 - MAINTENANCE AND CONTROL OF TRAFFIC
+01562 - AIR, LAND AND WATER POLLUTION
+01770 - PROJECT CLOSEOUT
+Specifications
+02220 - REMOVING PAVEMENT AND MISCELLANEOUS STRUCTURES
+02230 - CLEARING AND GRUBBING
+02240 - DEWATERING
+02310 - EXCAVATION & eMBANKMENT - SITE GRADING
+02315 - APPLICATION OF WATER
+02320 - TRENCH EXCAVATION, BEDDING AND BACKFILL
+02330 - EXCAVATION AND EMBANKMENT
+02335 - SUBGRADE PREPARATION
+02340 - GEOTEXTILE FABRIC - ROAD CONSTRUCTION
+02370 - EROSION & SEDIMENT CONTROL
+02377 - RIPRAP
+02445 - JACK & AUGER STEEL CASING
+02446 - TRENCHLESS PIPELINE
+02510 - DOMESTIC WATER SYSTEM
+02530 - PIPE SEWERS - SANITARY
+02535 - FORCEMAIN
+02610 - PIPE CULVERTS
+02620 - SUBSURFACE DRAINS
+City of Jordan – Standard Specifications TABLE OF CONTENTS
+September, 2019 PAGE 00010-1
+© Bolton & Menk, Inc. 2019, All Rights Reserved02630 - PIPE SEWERS - STORM
+02705 - MANHOLES & CATCH BASINS - ADJUST CASTING
+02720 - AGGREGATE BASE
+02740 - PLANT-MIXED BITUMINOUS SURFACING
+02741 - BITUMINOUS PATCH
+02749 - PAVEMENT MARKINGS
+02751 - CONCRETE PAVEMENT
+02770 - CONCRETE CURBING AND DRIVEWAY PAVEMENT
+02775 - WALKS - CONCRETE
+02785 - BITUMINOUS SEAL COAT
+02820 - CHAIN LINK FENCE AND GATES
+02830 - MODULAR BLOCK RETAINING WALL SYSTEM
+02890 - TRAFFIC SIGNS
+02920 - TURF RESTORATION
+02975 - BITUMINOUS SURFACE CRACK and JOINT REPAIR
+CITY OF JORDAN STANDARD DETAIL PLATES:
+STREETS
+1000J TYPICAL SECTION - LOCAL STREET
+1001J TYPICAL SECTION - MINOR COLLECTOR
+1002J TYPICAL SECTION - MAJOR COLLECTOR
+1003J BITUMINOUS TRAIL
+1004J BITUMINOUS STREET PATCH
+1005J CONCRETE DRIVEWAY PAVEMENT
+LIGHTING
+2003J DECORATIVE STREET LIGHT - ACORN
+2004J DECORATIVE STREET LIGHT - TRADITIONAL
+2005J DECORATIVE STREET LIGHT - SHOEBOX
+EROSION & SEDIMENT CONTROL
+3001J VELOCITY CHECK - HD SILT FENCE
+3002J SILT FENCE - MACHINE SLICED
+3003J SILT FENCE - HAVY DUTY
+3004J SILT FENCE - PREASSEMBLED
+3005J ROCK CONSTRUCTION ENTRANCE
+3008J EROSION CONTROL BLANKET INSTALLATION
+3009J TYPICAL SEDIMENT BASIN CROSS SECTION
+3010J RIPRAP DITCH CHECK
+3011J INLET PROTECTION PERFORATED WALL
+3013J BIOROLL DITCH CHECK
+3014J INLET PROTECTION - GEOTEXTILE BAG
+3015J INLET PROTECTION - ROCK BAG
+3016J RISER STANDPIPE
+3017J FLOTATION SILT CURTAIN
+3018J ALTERNATE CULVERT STANDPIPE
+3019J RIPRAP AT RIVER OUTFALL
+3020J RCP END RIPRAP DETAIL
+3031J ARTICULATED BLOCK AT FLARED END
+3032J TYPICAL BENCH DETAIL
+STORM SEWER
+4001J RC STORM SEWER CLASS C BEDDING
+City of Jordan – Standard Specifications TABLE OF CONTENTS
+September, 2019 PAGE 00010-2
+© Bolton & Menk, Inc. 2019, All Rights Reserved4002J RC STORM SEWER CLASS B BEDDING
+4006J STORM SEWER STRUCTURE DES F, TYPE A CONE
+4007J DRAINAGE STRUCTURE DESIGN J
+4010J ROADWAY EDGE DRAIN
+4014J POND SKIMMER STRUCTURE WITH RATE CONTROL BAFFFLE
+4015J POND SKIMMER STRUCTURE
+4018J SUBSURFACE DRAIN CLEANOUT
+4020J DRAINAGE STRUCTURE DESIGN 4020
+4022J DRAINAGE STRUCTURE DESIGN 4022
+4029J DRAINAGE STRUCTURE DESIGN R-1 (2''X3)
+4030J RC APRON TRASH GUARD
+4031J CONCRETE CURB & GUTTER TRANSITION & CATCH BASIN LOCATION
+SANITARY SEWER
+5001J SANITARY SEWER MANHOLE
+5003J SANITARY SEWER DROP MANHOLE
+5004J SANITARY SEWER SERVICE CLEANOUT
+5005J NON-RIGID SANITARY SEWER TRENCH
+5006J INSULATION FOR NON-RIGID SANITARY SEWER
+5016J ROCK EXCAVATION FOR SANITARY SEWER
+5017J SANITARY SEWER SERVICE
+5019J STRUCTURE MARKER SIGNS
+WATER
+6001J HYDRANT INSTALLATION
+6004J WATERMAIN OFFSET
+6005J WATER VALVE MANHOLE
+6007J DUCTILE IRON WATERMAIN TRENCH
+6008J HYDRANT LOCATION
+6009J WATER SERVICE INSTALLATION
+6010J GATE VALVE AND BOX INSTALLATION
+6011J WATERMAIN INSULATION
+6012J GATE VALVE ADAPTOR
+6020J CONCRETE THRUST BLOCKS
+6023J WATERMAIN WET TAP
+6024J IRRIGATION SYSTEM TAP, METER AND BACKFLOW PREVENTOR ASSEMBLY
+6025J ADJUSTABLE VALVE EXTENSION STEM
+STREETS
+7001J B618 CONCRETE CURB & GUTTER
+7002J B618 CURB & GUTTER (GUTTER OUT)
+7003J MOUNTABLE CONCRETE CURB & GUTTER
+7004J CONCRETE VALLEY GUTTER
+7008J DRY CAST MODULAR BLOCK RETAINING WALL
+7010J TRANSITION TO B618 CURB AT CATCH BASIN
+7014J TYPICAL BARRICADE
+7015J DEPRESSED CURB WITH DRIVEWAY APRON
+7017J CONCRETE DRAINAGE PAN
+MISCELLANEOUS
+8003J WETLAND BUFFER SIGN
+City of Jordan – Standard Specifications TABLE OF CONTENTS
+September, 2019 PAGE 00010-3
+© Bolton & Menk, Inc. 2019, All Rights Reserved9009J TREE PRESERVATION FENCE
+9012J MAILBOX INSTALLATION
+9014J TYPICAL LOCATION OF PUBLIC UTILITIES
+9015J FUTURE THROUGHT STREET SIGN
+****END OF SECTION****
+City of Jordan – Standard Specifications TABLE OF CONTENTS
+September, 2019 PAGE 00010-4
+© Bolton & Menk, Inc. 2019, All Rights Reserved', 1),
+('CERTIFICATION PAGE', NULL, NULL, 'nan', 'nan', '© Bolton & Menk, Inc.', NULL, NULL, 'Standard Specifications for Construction of Public Infrastructure', '00005', '', 1),
+('GENERAL CONDITIONS', NULL, NULL, 'nan', 'nan', '© Bolton & Menk, Inc.', NULL, NULL, 'Standard Specifications for Construction of Public Infrastructure', '00700', '', 1),
+('SUPPLEMENTAL CONDITIONS', NULL, NULL, 'nan', 'nan', '© Bolton & Menk, Inc.', NULL, NULL, 'Standard Specifications for Construction of Public Infrastructure', '00800', 'SECTION 00800 - SUPPLEMENTARY CONDITIONS
+TO THE STANDARD GENERAL CONDITIONS
+OF THE CONSTRUCTION CONTRACT
+SUPPLEMENTARY CONDITIONS - GENERAL COMMENTS
+These Supplementary Conditions amend or supplement the Standard General Conditions of the Construction Contract,
+EJCDC® C-700 (2013 Edition). All provisions which are not so amended or supplemented remain in full force and effect.
+The terms used in these Supplementary Conditions have the meanings stated in the General Conditions. Additional terms
+used in these Supplementary Conditions have the meanings stated below, which are applicable to both the singular and
+plural thereof.
+The address system used in these Supplementary Conditions is the same as the address system used in the General
+Conditions, with the prefix "SC" added thereto.
+SC-4.03 REFERENCE POINTS
+Delete Paragraph 4.03.A of the General Conditions in its entirety and insert the following Paragraph 4.03.A in its
+place:
+4.03.A. The OWNER will provide engineering surveys to establish reference points for construction as described in
+Section 01720, Field Engineering, of the Specifications.
+SC-5.03 SUBSURFACE AND PHYSICAL CONDITIONS
+Delete Paragraphs 5.03.A and 5.03.B in their entirety and insert the following:
+5.03.A. No reports of explorations or tests of subsurface conditions at or contiguous to the Site, or drawings of
+physical conditions relating to existing surface or subsurface structures at the Site, are known to Owner, unless
+provided with the bidding documents. If such explorations or test results are available to the Owner, applicable
+information and reports available to the owner will be provided with the bidding documents.
+SC-5.06 HAZARDOUS ENVIRONMENTAL CONDITIONS
+Delete subparagraphs 5.06.A.1 and 5.06.A.2 in their entirety and insert the following:
+5.06.A. No reports or drawings related to Hazardous Environmental Conditions at the Site are known to Owner,
+unless provided with the bidding documents. If such conditions are known to the owner, applicable information
+and reports available to the owner will be provided with the bidding documents.
+SC-6.02 INSURANCE – GENERAL PROVISIONS
+SC-6.02 Add the following paragraph immediately after Paragraph 6.02.B:
+6.02.B.1. Contractor may obtain worker’s compensation insurance from an insurance company that has not been
+rated by A.M. Best, provided that such company (a) is domiciled in the state in which the project is located, (b) is
+certified or authorized as a worker’s compensation insurance provider by the appropriate state agency, and (c) has
+been accepted to provide worker’s compensation insurance for similar projects by the state within the last 12
+months.
+SC-6.03 CONTRACTOR’S INSURANCE
+Delete paragraph SC-6.03.J in its entirety and insert the following:
+City of Jordan – Standard Specifications SUPPLEMENTARY CONDITIONS
+September, 2019 PAGE 00800-1
+© Bolton & Menk, Inc. 2019, All Rights Reserved6.03.J. The coverage requirements for specific policies of insurance, including the requirements of SC 6.03.K.2.a,
+must be met by such policies, with exception that an Excess or Umbrella Liability insurance policy may be
+used to supplement Contractor’s policy limits on a follow-form basis to satisfy the full policy limits
+required by this Contract.
+SC-6.03 Add the following new paragraph immediately after Paragraph 6.03.J:
+6.03.K. The limits of liability for the insurance required by Paragraph 6.03 of the General Conditions shall provide
+coverage for not less than the following amounts or greater where required by Laws and Regulations:
+1. Workers’ Compensation, and related coverages under Paragraphs 6.03.A.1 and A.2 of the
+General Conditions:
+State: Statutory
+Federal, if applicable (e.g., Longshoreman’s): Statutory
+Jones Act coverage, if applicable:
+Bodily injury by accident, each accident $ Not Applicable
+Bodily injury by disease, aggregate $ Not Applicable
+Employer’s Liability:
+Bodily injury, each accident $ 1,000,000.00
+Bodily injury by disease, each employee $ 1,000,000.00
+Bodily injury/disease aggregate $ 1,000,000.00
+For work performed in monopolistic states, stop-gap liability
+coverage shall be endorsed to either the worker’s compensation
+or commercial general liability policy with a minimum limit of: $ Not Applicable
+Foreign voluntary worker compensation Statutory
+2. Contractor’s Commercial General Liability under Paragraphs 6.03.B and 6.03.C of the General
+Conditions:
+General Aggregate 2,000,000.00
+Products - Completed Operations Aggregate $ 2,000,000.00
+Each Occurrence (Bodily Injury and Property Damage) $ 1,500,000.00
+Personal and Advertising Injury $ 1,500,000.00
+a. The aggregate limits under SC-6.03.K.2 (Commercial General Liability) be maintained
+fully available for this Contract by obtaining and maintaining a Designated Construction
+Project General Aggregate Limit endorsement, or equivalent
+3. Automobile Liability under Paragraph 6.03.D. of the General Conditions:
+Bodily Injury:
+Each person $ 1,000,000.00
+Each accident $ 1,000,000.00
+Property Damage:
+Each accident $ 1,000,000.00
+OR
+Combined Single Limit of $ 1,000,000.00
+5. Contractor’s Pollution Liability:
+City of Jordan – Standard Specifications SUPPLEMENTARY CONDITIONS
+September, 2019 PAGE 00800-2
+© Bolton & Menk, Inc. 2019, All Rights ReservedPer Occurrence $ N/A
+General Aggregate $ N/A
+If box is checked, Contractor is not required to provide Contractor’s Pollution Liability
+insurance under this Contract
+6. Additional Insureds: In addition to Owner and Bolton & Menk, Inc. as Engineer, include the other
+persons or entities identified in the bidding documents on the commercial general liability,
+automobile liability, umbrella or excess, and pollution liability policies as additional insureds.
+SC-7.08 PERMITS
+The following Paragraph 7.08.B shall be added immediately after Paragraph 7.08.A:
+7.08.B. If the OWNER has obtained, or has applied for, the necessary construction permits from any regulatory
+agencies, they will be addressed in Section 01410, Regulatory Requirements, of the Specifications. CONTRACTOR
+shall obtain and pay for all construction permits, licenses and bonds, not specifically highlighted as previously
+obtained, or applied for, in the referenced Section.
+SC-7.11 RECORD DOCUMENTS
+The following Paragraphs 7.11.B through 7.11.C shall be added immediately after Paragraph 7.11.A:
+7.11.B. The purpose of the final Project Record Documents is to provide factual information regarding all aspects
+of the work, both concealed and visible, to enable future modification of the work to proceed without lengthy and
+expensive site measurement, investigation, and examination.
+7.11.C. Prior to submitting a request for final payment, submit the final Project Record Documents to the
+Engineer and/or Owner for approval. Approval of the Record Documents shall not constitute final acceptance of
+the completed project.
+SC-7.12 SAFETY AND PROTECTION
+The following Paragraph 7.12.A.4 shall be added immediately after Paragraph 7.12.A.3:
+7.12.A.4. The OWNER, ENGINEER or their representatives may indicate potential safety hazards noticed at the
+construction site. However, the CONTRACTOR shall remain the only party liable for initiating, maintaining, and
+supervising all safety precautions and programs in connection with the Work.
+SC-7.20 PROGRESS PAYMENTS TO SUBCONTRACTORS
+Add the following Paragraph 7.20 immediately after Paragraph 7.19
+7.20 Progress Payments to Subcontractors
+A. For contracts involving payment with public funds within the State of Minnesota, including but not limited
+to cities, counties, towns, school districts, political subdivisions or agencies of local government, within
+ten days after receipt of payment has been made to the Prime Contractor, the Prime Contractor shall
+make payment to all Subcontractors for undisputed services provided by the Subcontractor. The Prime
+Contractor shall pay interest of 1.5% per month or for any part of a month to the Subcontractor on any
+undisputed amount not paid on time to the Subcontractor. The minimum monthly interest penalty
+payment for an unpaid balance of $100.00 or more is $10.00 for an unpaid balance of less than $100.00,
+the Prime Contractor shall pay the actual penalty due to the subcontractor. A Subcontractor who prevails
+City of Jordan – Standard Specifications SUPPLEMENTARY CONDITIONS
+September, 2019 PAGE 00800-3
+© Bolton & Menk, Inc. 2019, All Rights Reservedin a civil action to collect interest penalties from a Prime Contractor must be awarded its costs and
+disbursements, including attorney’s fees, incurred in bringing the action.
+SC-8.02 COORDINATION
+Delete Paragraph 8.02.A and 8.02.B in its entirety and replace with the following:
+8.02.A. Owner does not intend to contract with others for the performance of other work on the Project at the
+Site, unless otherwise stated in the bidding documents.
+SC-8.04 CLAIMS BETWEEN CONTRACTORS
+Add the following new paragraphs immediately after paragraph 8.03:
+8.04 Claims Between Contractors
+8.04.A. Should Contractor cause damage to the work or property of any other contractor at the Site, or should
+any claim arising out of Contractor’s performance of the Work at the Site be made by any other contractor against
+Contractor, Owner, Engineer, or the construction coordinator, then Contractor (without involving Owner,
+Engineer, or construction coordinator) shall either (1) remedy the damage, (2) agree to compensate the other
+contractor for remedy of the damage, or (3) remedy the damage and attempt to settle with such other contractor
+by agreement, or otherwise resolve the dispute by arbitration or at law.
+8.04.B. Contractor shall, to the fullest extent permitted by Laws and Regulations, indemnify and hold harmless
+Owner, Engineer, the construction coordinator and the officers, directors, partners, employees, agents and other
+consultants and subcontractors of each and any of them from and against all claims, costs, losses and damages
+(including, but not limited to, fees and charges of engineers, architects, attorneys, and other professionals and
+court and arbitration costs) arising directly, indirectly or consequentially out of any action, legal or equitable,
+brought by any other contractor against Owner, Engineer, consultants, or the construction coordinator to the
+extent said claim is based on or arises out of Contractor’s performance of the Work. Should another contractor
+cause damage to the Work or property of Contractor or should the performance of work by any other contractor
+at the Site give rise to any other Claim, Contractor shall not institute any action, legal or equitable, against Owner,
+Engineer, or the construction coordinator or permit any action against any of them to be maintained and
+continued in its name or for its benefit in any court or before any arbiter which seeks to impose liability on or to
+recover damages from Owner, Engineer, or the construction coordinator on account of any such damage or Claim.
+8.04.C. If Contractor is delayed at any time in performing or furnishing the Work by any act or neglect of another
+contractor, and Owner and Contractor are unable to agree as to the extent of any adjustment in Contract Times
+attributable thereto, Contractor may make a Claim for an extension of times in accordance with Article 12. An
+extension of the Contract Times shall be Contractor’s exclusive remedy with respect to Owner, Engineer, and
+construction coordinator for any delay, disruption, interference, or hindrance caused by any other contractor. This
+paragraph does not prevent recovery from Owner, Engineer, or construction coordinator for activities that are
+their respective responsibilities.
+SC-10.03 PROJECT REPRESENTATIVE
+Add the following new paragraphs immediately after Paragraph 10.03.A:
+10.03.B. When the Engineer is contracted by the Owner to do so, the Resident Project Representative (RPR) will be
+Engineer''s representative at the Site, will act as directed by and under the supervision of Engineer, and will confer
+with Engineer regarding RPR''s actions.
+1. General: RPR''s dealings in matters pertaining to the Work in general shall be with Engineer and
+Contractor. RPR''s dealings with Subcontractors shall only be through or with the full knowledge
+City of Jordan – Standard Specifications SUPPLEMENTARY CONDITIONS
+September, 2019 PAGE 00800-4
+© Bolton & Menk, Inc. 2019, All Rights Reservedand approval of Contractor. RPR shall generally communicate with Owner only with the
+knowledge of and under the direction of Engineer.
+2. Schedules: Review the progress schedule, schedule of Shop Drawing and Sample submittals, and
+Schedule of Values prepared by Contractor and consult with Engineer concerning acceptability.
+3. Conferences and Meetings: Attend meetings with Contractor, such as preconstruction
+conferences, progress meetings, job conferences, and other Project-related meetings, and
+prepare and circulate copies of minutes thereof.
+4. Liaison:
+a. Serve as Engineer’s liaison with Contractor. Working principally through Contractor’s
+authorized representative or designee, assist in providing information regarding the
+provisions and intent of the Contract Documents.
+b. Assist Engineer in serving as Owner’s liaison with Contractor when Contractor’s
+operations affect Owner’s on-Site operations.
+c. Assist in obtaining from Owner additional details or information, when required for
+proper execution of the Work.
+5. Interpretation of Contract Documents: Report to Engineer when clarifications and
+interpretations of the Contract Documents are needed and transmit to Contractor clarifications
+and interpretations as issued by Engineer.
+6. Shop Drawings and Samples:
+a. Record date of receipt of Samples and Contractor-approved Shop Drawings.
+b. Receive Samples which are furnished at the Site by Contractor, and notify Engineer of
+availability of Samples for examination.
+c. Advise Engineer and Contractor of the commencement of any portion of the Work
+requiring a Shop Drawing or Sample submittal for which RPR believes that the submittal
+has not been approved by Engineer.
+7. Modifications: Consider and evaluate Contractor’s suggestions for modifications in Drawings or
+Specifications and report such suggestions, together with RPR’s recommendations, if any, to
+Engineer. Transmit to Contractor in writing decisions as issued by Engineer.
+8. Review of Work and Rejection of Defective Work:
+a. Conduct on-Site observations of Contractor’s work in progress to assist Engineer in
+determining if the Work is in general proceeding in accordance with the Contract
+Documents.
+b. Report to Engineer whenever RPR believes that any part of Contractor’s work in
+progress is defective, will not produce a completed Project that conforms generally to
+the Contract Documents, or will imperil the integrity of the design concept of the
+completed Project as a functioning whole as indicated in the Contract Documents, or
+has been damaged, or does not meet the requirements of any inspection, test or
+approval required to be made; and advise Engineer of that part of work in progress that
+RPR believes should be corrected or rejected or should be uncovered for observation, or
+requires special testing, inspection or approval.
+9. Inspections, Tests, and System Start-ups:
+a. Verify that tests, equipment, and systems start-ups and operating and maintenance
+training are conducted in the presence of appropriate Owner’s personnel, and that
+Contractor maintains adequate records thereof.
+City of Jordan – Standard Specifications SUPPLEMENTARY CONDITIONS
+September, 2019 PAGE 00800-5
+© Bolton & Menk, Inc. 2019, All Rights Reservedb. Observe, record, and report to Engineer appropriate details relative to the test
+procedures and systems start-ups.
+10. Records:
+a. Prepare a daily report or keep a diary or log book, recording Contractor’s hours on the
+Site, Subcontractors present at the Site, weather conditions, data relative to questions
+of Change Orders, Field Orders, Work Change Directives, or changed conditions, Site
+visitors, deliveries of equipment or materials, daily activities, decisions, observations in
+general, and specific observations in more detail as in the case of observing test
+procedures; and send copies to Engineer.
+b. Record names, addresses, fax numbers, e-mail addresses, web site locations, and
+telephone numbers of all Contractors, Subcontractors, and major Suppliers of materials
+and equipment.
+c. Maintain records for use in preparing Project documentation.
+11. Reports:
+a. Furnish to Engineer periodic reports as required of progress of the Work and of
+Contractor’s compliance with the Progress Schedule and schedule of Shop Drawing and
+Sample submittals.
+b. Draft and recommend to Engineer proposed Change Orders, Work Change Directives,
+and Field Orders. Obtain backup material from Contractor.
+c. Immediately notify Engineer of the occurrence of any Site accidents, emergencies, acts
+of God endangering the Work, force majeure or delay events, damage to property by
+fire or other causes, or the discovery of any Constituent of Concern or Hazardous
+Environmental Condition.
+12. Payment Requests: Review applications for payment with Contractor for compliance with the
+established procedure for their submission and forward with recommendations to Engineer,
+noting particularly the relationship of the payment requested to the Schedule of Values, Work
+completed, and materials and equipment delivered at the Site but not incorporated in the Work.
+13. Certificates, Operation and Maintenance Manuals: During the course of the Work, verify that
+materials and equipment certificates, operation and maintenance manuals and other data
+required by the Contract Documents to be assembled and furnished by Contractor are applicable
+to the items actually installed and in accordance with the Contract Documents, and have these
+documents delivered to Engineer for review and forwarding to Owner prior to payment for that
+part of the Work.
+14. Completion:
+a. Participate in Engineer’s visits to the Site to determine Substantial Completion, assist in
+the determination of Substantial Completion and the preparation of a punch list of
+items to be completed or corrected.
+b. Participate in Engineer’s final visit to the Site to determine completion of the Work, in
+the company of Owner and Contractor, and prepare a final punch list of items to be
+completed and deficiencies to be remedied.
+c. Observe whether all items on the final list have been completed or corrected and make
+recommendations to Engineer concerning acceptance and issuance of the notice of
+acceptability of the work.
+10.03.C. The RPR shall not:
+City of Jordan – Standard Specifications SUPPLEMENTARY CONDITIONS
+September, 2019 PAGE 00800-6
+© Bolton & Menk, Inc. 2019, All Rights Reserved1. Authorize any deviation from the Contract Documents or substitution of materials or equipment
+(including “or-equal” items).
+2. Exceed limitations of Engineer’s authority as set forth in the Contract Documents.
+3. Undertake any of the responsibilities of Contractor, Subcontractors, or Suppliers.
+4. Advise on, issue directions relative to, or assume control over any aspect of the means, methods,
+techniques, sequences or procedures of Contractor’s work.
+5. Advise on, issue directions regarding, or assume control over security or safety practices,
+precautions, and programs in connection with the activities or operations of Owner or
+Contractor.
+6. Participate in specialized field or laboratory tests or inspections conducted off-site by others
+except as specifically authorized by Engineer.
+7. Accept Shop Drawing or Sample submittals from anyone other than Contractor.
+8. Authorize Owner to occupy the Project in whole or in part.
+SC-13.03. UNIT PRICE WORK
+Delete Paragraph 13.03.E. in its entirety and insert the following in its place:
+13.03.E. The unit price of an item of Unit Price Work shall be subject to reevaluation and adjustment under the
+following conditions:
+1. if the original bid amount of a particular item of Unit Price Work amounts to five (5) percent or
+more of the total Contract Price and the variation in the quantity of that particular item of Unit
+Price Work performed by Contractor differs by more than twenty (20) percent from the
+estimated quantity of such item indicated in the Agreement; and
+2. if there is no corresponding adjustment with respect to any other item of Work; and
+3. if Contractor believes that Contractor has incurred additional expense as a result thereof or if
+Owner believes that the quantity variation entitles Owner to an adjustment in the unit price,
+either Owner or Contractor may make a Claim for an adjustment in the Contract Price in
+accordance with Article 10 if the parties are unable to agree as to the effect of any such
+variations in the quantity of Unit Price Work performed.
+SC-15.01.B.4 APPLICATIONS FOR PAYMENT
+Add the following Paragraph 15.01.B.4 immediately after Paragraph 15.01.B.3.
+15.01.B.4. All out-of-state contractors shall comply with all State of Minnesota surety deposit requirements. The
+OWNER may withhold an additional sum of 8 percent of the amount due the CONTRACTOR from each payment
+and forward it to the Department of Revenue until the CONTRACTOR''s state tax obligations are considered fulfilled
+unless the CONTRACTOR can show reason for exemption. Exemption will be granted provided the out-of-state
+CONTRACTOR meets the exemption guidelines established for the Minnesota Department of Revenue. All
+necessary forms may be obtained from the Minnesota Department of Revenue, Mail Station 4450, St. Paul,
+Minnesota 55146-4450, or phone 1-800-657-3777 or online at:
+http://www.revenue.state.mn.us/businesses/withholding/Pages/Forms.aspx .
+SC-15.01.D.1 PAYMENT BECOMES DUE
+Delete Paragraph 15.01.D.1 in its entirety and replace with the following:
+15.01.D.1 The time period for payment shall be in accordance with the Agreement.
+City of Jordan – Standard Specifications SUPPLEMENTARY CONDITIONS
+September, 2019 PAGE 00800-7
+© Bolton & Menk, Inc. 2019, All Rights ReservedSC-15.04 PARTIAL UTILIZATION
+Add the following Paragraph 15.04.B immediately after Paragraph 15.04.A.4 of the General Conditions. Paragraph
+15.04.B modifies Paragraph 15.04.A of the General Conditions and reference is made thereto.
+15.04.B. Nothing in Paragraph 15.04.A shall obligate the CONTRACTOR to apply for a Certificate of Substantial
+Completion for any part of this Project. The provisions for partial utilization of the Project, if any, are established
+by the Specifications and no Certificate of Substantial Completion will be issued for partial utilization occurring
+within the terms of the Specifications. Partial utilization of the Project not covered by the Specifications shall be in
+accordance with Paragraph 15.04.A and its sub-paragraphs. If a Certificate of Substantial Completion is not issued,
+Substantial Completion shall be when final payment is due in accordance with Paragraph 15.06.D.
+SC-15.06.A.4. WITHHOLDING OF INCOME TAX AT SOURCE
+Add the following Paragraph 15.06.A.4. Immediately following Paragraph 15.06.A.3 of the General Conditions and
+immediately before 15.06.B:
+15.06.A.4. "Final payment will not be made to the CONTRACTOR until a certificate showing that the
+CONTRACTOR has complied with the provisions of M.S.A. 290.92 requiring withholding of income tax on wages at
+the source. Said certificate shall be executed by the Commissioner of Revenue. Forms for certification may be
+obtained from the Commissioner of Revenue, Centennial Building, St. Paul, Minnesota 55145."
+SC-15.08 CORRECTION PERIOD
+Modify Paragraphs 15.08.A of the General Conditions to change all references for the correction period length
+from one year to two years, except for luminaires, which is five years.
+Add the following Paragraph 15.08.F immediately after Paragraph 15.08.E:
+15.08.F. For purposes of this Paragraph 15.08, the date of Substantial Completion shall be interpreted as the
+date when final payment is due in accordance with Paragraph 15.06.B and 15.06.C, and the two year correction
+period shall commence on the date when final payment is due in accordance with Paragraph 15.06.B and 15.06.C,
+unless otherwise modified by the Specifications or by Written Agreement.
+****END OF SECTION****
+City of Jordan – Standard Specifications SUPPLEMENTARY CONDITIONS
+September, 2019 PAGE 00800-8
+© Bolton & Menk, Inc. 2019, All Rights Reservedc. Observe whether all items on the final list have been completed or corrected and make
+recommendations to Engineer concerning acceptance and issuance of the notice of
+acceptability of the work.
+10.03.C. The RPR shall not:
+1. Authorize any deviation from the Contract Documents or substitution of materials or equipment
+(including “or-equal” items).
+2. Exceed limitations of Engineer’s authority as set forth in the Contract Documents.
+3. Undertake any of the responsibilities of Contractor, Subcontractors, or Suppliers.
+4. Advise on, issue directions relative to, or assume control over any aspect of the means, methods,
+techniques, sequences or procedures of Contractor’s work.
+5. Advise on, issue directions regarding, or assume control over security or safety practices,
+precautions, and programs in connection with the activities or operations of Owner or
+Contractor.
+6. Participate in specialized field or laboratory tests or inspections conducted off-site by others
+except as specifically authorized by Engineer.
+7. Accept Shop Drawing or Sample submittals from anyone other than Contractor.
+8. Authorize Owner to occupy the Project in whole or in part.
+SC-13.03. UNIT PRICE WORK
+Delete Paragraph 13.03.E. in its entirety and insert the following in its place:
+13.03.E. The unit price of an item of Unit Price Work shall be subject to reevaluation and adjustment under the
+following conditions:
+1. if the original bid amount of a particular item of Unit Price Work amounts to five (5) percent or
+more of the total Contract Price and the variation in the quantity of that particular item of Unit
+Price Work performed by Contractor differs by more than twenty (20) percent from the
+estimated quantity of such item indicated in the Agreement; and
+2. if there is no corresponding adjustment with respect to any other item of Work; and
+3. if Contractor believes that Contractor has incurred additional expense as a result thereof or if
+Owner believes that the quantity variation entitles Owner to an adjustment in the unit price,
+either Owner or Contractor may make a Claim for an adjustment in the Contract Price in
+accordance with Article 10 if the parties are unable to agree as to the effect of any such
+variations in the quantity of Unit Price Work performed.
+SC-15.01.B.4 APPLICATIONS FOR PAYMENT
+Add the following Paragraph 15.01.B.4 immediately after Paragraph 15.01.B.3.
+15.01.B.4. All out-of-state contractors shall comply with all State of Minnesota surety deposit requirements. The
+OWNER may withhold an additional sum of 8 percent of the amount due the CONTRACTOR from each payment
+and forward it to the Department of Revenue until the CONTRACTOR''s state tax obligations are considered fulfilled
+unless the CONTRACTOR can show reason for exemption. Exemption will be granted provided the out-of-state
+CONTRACTOR meets the exemption guidelines established for the Minnesota Department of Revenue. All
+necessary forms may be obtained from the Minnesota Department of Revenue, Mail Station 4450, St. Paul,
+Minnesota 55146-4450, or phone 1-800-657-3777 or online at:
+http://www.revenue.state.mn.us/businesses/withholding/Pages/Forms.aspx .
+City of Jordan – Standard Specifications SUPPLEMENTARY CONDITIONS
+September, 2019 PAGE 00800-7
+© Bolton & Menk, Inc. 2019, All Rights ReservedSC-15.01.D.1 PAYMENT BECOMES DUE
+Delete Paragraph 15.01.D.1 in its entirety and replace with the following:
+15.01.D.1 The time period for payment shall be in accordance with the Agreement.
+SC-15.04 PARTIAL UTILIZATION
+Add the following Paragraph 15.04.B immediately after Paragraph 15.04.A.4 of the General Conditions. Paragraph
+15.04.B modifies Paragraph 15.04.A of the General Conditions and reference is made thereto.
+15.04.B. Nothing in Paragraph 15.04.A shall obligate the CONTRACTOR to apply for a Certificate of Substantial
+Completion for any part of this Project. The provisions for partial utilization of the Project, if any, are established
+by the Specifications and no Certificate of Substantial Completion will be issued for partial utilization occurring
+within the terms of the Specifications. Partial utilization of the Project not covered by the Specifications shall be in
+accordance with Paragraph 15.04.A and its sub-paragraphs. If a Certificate of Substantial Completion is not issued,
+Substantial Completion shall be when final payment is due in accordance with Paragraph 15.06.D.
+SC-15.06.A.4. WITHHOLDING OF INCOME TAX AT SOURCE
+Add the following Paragraph 15.06.A.4. Immediately following Paragraph 15.06.A.3 of the General Conditions and
+immediately before 15.06.B:
+15.06.A.4. "Final payment will not be made to the CONTRACTOR until a certificate showing that the
+CONTRACTOR has complied with the provisions of M.S.A. 290.92 requiring withholding of income tax on wages at
+the source. Said certificate shall be executed by the Commissioner of Revenue. Forms for certification may be
+obtained from the Commissioner of Revenue, Centennial Building, St. Paul, Minnesota 55145."
+SC-15.08 CORRECTION PERIOD
+Modify Paragraphs 15.08.A of the General Conditions to change all references for the correction period length
+from one year to two years, except for luminaires, which is five years.
+Add the following Paragraph 15.08.F immediately after Paragraph 15.08.E:
+15.08.F. For purposes of this Paragraph 15.08, the date of Substantial Completion shall be interpreted as the
+date when final payment is due in accordance with Paragraph 15.06.B and 15.06.C, and the two year correction
+period shall commence on the date when final payment is due in accordance with Paragraph 15.06.B and 15.06.C,
+unless otherwise modified by the Specifications or by Written Agreement.
+****END OF SECTION****
+City of Jordan – Standard Specifications SUPPLEMENTARY CONDITIONS
+September, 2019 PAGE 00800-8
+© Bolton & Menk, Inc. 2019, All Rights Reserved', 1),
+('SUMMARY OF WORK', NULL, NULL, 'nan', 'nan', '© Bolton & Menk, Inc.', NULL, NULL, 'Standard Specifications for Construction of Public Infrastructure', '01110', 'SECTION 01110 - SUMMARY OF WORK
+PART 1 -- GENERAL
+1.1 PROJECT LOCATION
+A. The project is located in or adjacent to the City of Jordan, MN.
+1.2 PROJECT DESCRIPTION
+A. The project involves work as described in the plan sheets and bidding documents. Individual elements of
+work may include, but are not limited to:
+1. Removal of bituminous pavement, concrete curb and gutter, sidewalk and driveways, pipe and other
+miscellaneous items.
+2. Clearing and grubbing.
+3. Street excavation.
+4. Sanitary sewer construction.
+5. Water main construction.
+6. Water and sewer service construction.
+7. Storm sewer construction.
+8. Concrete walk construction.
+9. Concrete curbing and driveway pavement construction.
+10. Bituminous street construction.
+11. Turf restoration and erosion control construction.
+12. Seal coating
+13. Crack filling
+14. Retaining wall construction
+15. Signage and striping
+16. Traffic Control; and/or
+17. Other miscellaneous work shown on the plans or specified herein.
+1.3 ALTERNATE MATERIALS & METHODS OF CONSTRUCTION
+A. The Contractor may present alternative materials and/or methods of construction for consideration by the
+Owner. Proposals for such alternatives shall be in accordance with the provisions of Section 01230
+“Alternates and Alternatives” of this Project Manual.
+1.4 CONTRACTOR USE OF PROJECT SITE
+A. The Contractor''s use of the project site shall be limited to its construction operations, including on-site
+storage of materials and field offices. No materials shall be stored in a location as to limit access to the
+affected public. Any damage caused by Contractor operations to private property, including but not
+limited to, parking lots, trees, shrubs, material spatter, etc. shall promptly be corrected at the Contractor’s
+expense.
+PART 2 -- PRODUCTS (NOT USED)
+PART 3 -- EXECUTION
+3.1 OPERATIONAL LIMITATIONS AND REQUIREMENTS
+City of Jordan – Standard Specifications SUMMARY OF WORK
+September, 2019 PAGE 01110-1
+V040111 © Bolton & Menk, Inc. 2019, All Rights ReservedA. The Contractor shall confine its work within the limits of the easements, public rights-of-way, and/or
+construction limits as shown on the plans. If the Contractor desires additional space, it shall be the
+Contractor''s responsibility to acquire easements and/or permission, as desired.
+3.2 BARRICADES
+A. The Contractor shall furnish and install any necessary barricades to protect the public or workers during the
+project. Barricades to keep public out of construction areas shall be left in place until removed by
+Contractor after they are no longer required for protection. The Contractor is responsible to secure the site
+at all times during the demolition.
+B. The Contractor shall furnish names, addresses, and phone numbers of at least two local individuals capable
+of immediate response who will be responsible for the site security and traffic control devices to:
+The Engineer
+The Owner
+Local Law Enforcement Agencies
+C. The Contractor shall respond with sufficient personnel, equipment and/or materials and conduct the
+required work or be subject to a $100 per hour fee from the time of notification for non-attention to
+project security and safety.
+3.3 SAFETY HAZARDS
+A. The Owner, Engineer or their representatives may indicate potential safety hazards noticed at the
+Construction site. However, the Contractor shall remain the only party liable for the maintenance of safe
+construction practices.
+3.4 INTERFERENCE WITH TREES
+A. The Contractor may be required to trim tree branches that overhang the work zone as specifically identified
+during construction by the Engineer, where branches are likely to be broken or excessively damaged by
+construction equipment and activities. Branches which are accidentally damaged during construction shall
+be trimmed immediately. All trimmed ends shall be coated with an appropriate coating material.
+B. The Contractor shall protect existing trees within close proximity of the construction from stripping and
+root damage. Roots extending into excavations shall be cut before excavating in their vicinity. Roots cut or
+otherwise damaged shall be coated with an appropriate protective dressing prior to backfilling.
+C. No direct compensation for tree protection and interference shall be made, unless specifically identified in
+the Schedule of Unit Prices.
+****END OF SECTION****
+City of Jordan – Standard Specifications SUMMARY OF WORK
+September, 2019 PAGE 01110-2
+V040111 © Bolton & Menk, Inc. 2019, All Rights Reserved', 1),
+('COORDINATION', NULL, NULL, 'nan', 'nan', '© Bolton & Menk, Inc.', NULL, NULL, 'Standard Specifications for Construction of Public Infrastructure', '01310', 'SECTION 01310 - COORDINATION
+PART 1 -- GENERAL
+1.1 SEQUENCE OF CONSTRUCTION
+A. A written project management scheduling tool (i.e., critical path (CPM), detailed bar chart, etc.) shall be
+employed by the Contractor for cost value reporting, planning and scheduling of all work required under
+the Contract Documents. This schedule shall show the order in which the Contractor proposes to execute
+the work with dates on which it proposes to start the various phases of the work and the estimated
+completion date of each phase. The Contractor shall submit a preliminary version of its intended schedule
+within 10 working days following the Notice of Award on the attached form or on a form of its own
+choosing. The Contractor is required to show the initial critical path (CPM) of tasks to be performed.
+B. Unless otherwise approved by the Engineer, the schedule shall also include an anticipated payment
+schedule for the volume of work to be completed each month. This schedule shall indicate the Contractor''s
+intention and ability to complete the work within the contract times, as specified in Article 4 of Section
+00520 “Agreement” of this Project Manual.
+C. The Preconstruction Conference as outlined in Section 01315 “Project Meetings” of this Project Manual will
+not be conducted until the schedule is submitted. In addition, no construction staking shall be provided
+until the schedule is submitted by the Contractor and reviewed by the Engineer.
+1.2 WORKING HOURS
+A. Except in connection with safety or emergency situations, all work at the site shall be performed during
+daylight hours.
+B. The Contractor shall notify the Owner and Engineer of any work planned on Saturday, Sunday, or any legal
+holidays at least 48 hours prior to such work.
+C. The Contractor shall coordinate any construction or hauling activity in the vicinity of churches, schools,
+medical facilities, and funeral homes. The Contractor shall be cognizant of the disruptive effects of
+continued construction during funerals. The Owner reserves the right to temporarily stop construction
+within one block of, and during the time of, any funeral procession. No compensation shall be granted to
+the Contractor due to temporary delays caused by funerals.
+1.3 TRAFFIC CONTROL
+A. Reference Specification 01555 “Maintenance and Control of Traffic” of this Project Manual.
+1.4 COORDINATION WITH BUSINESSES AND PRIVATE PROPERTY OWNERS ADJACENT TO THE PROJECT
+A. The Contractor shall notify all property owners and occupants adjacent to the project 2 days in advance to
+allow moving machinery and/or vehicles or other items that may be blocked in or damaged due to the
+upcoming construction in the area. Access to the properties shall be restored as soon as possible after each
+phase of construction.
+1.5 COORDINATION WITH UTILITY COMPANIES
+A. The Contractor is responsible for working with public and private utility companies in protecting and/or
+relocating existing or new utility lines located near and affected by this construction.
+1. Coordination with the utility companies is very important and should be considered in planning the
+work and the associated extra costs involved.
+2. Private utility companies are responsible for their own lines and are so obligated under City Code
+Agreements to protect and/or relocate their utilities, if required.
+B. The Contractor shall consult with the City’s maintenance personnel when working around or performing the
+required sanitary sewer installations.
+City of Jordan – Standard Specifications COORDINATION
+September, 2019 PAGE 01310-1
+V040110 © Bolton & Menk, Inc. 2019, All Rights ReservedC. The Contractor shall also work with the City’s maintenance personnel to provide for scheduled water shut-
+downs in a given area and to provide for continued water service to the properties along the project
+throughout the duration of the project.
+D. The Contractor shall work with all utility companies, as necessary, to allow for installation and for
+maintenance of service of gas, power, lighting, telephone, cable TV, etc. in the boulevards or across the
+streets prior to final shaping of aggregate base and/or topsoil. This coordination with the utility companies
+is the responsibility of the Contractor and is considered incidental to the construction and no additional
+compensation shall be granted.
+1.6 COOPERATION WITH FIRE & EMERGENCY DEPARTMENTS
+A. The Contractor shall coordinate all work requiring shutting down water service or limiting access to
+buildings by emergency equipment with the fire & emergency departments. This shall include notification
+of the daily construction schedule by the Contractor.
+1.7 COOPERATION WITH OTHER CONTRACTORS
+A. The Contractor shall cooperate with other contractors performing construction on other projects in the
+vicinity of this Project, including but not limited to allowing access for the delivery of equipment and
+materials.
+1.8 COORDINATION WITH SERVICE PROVIDERS
+A. The Contractor shall coordinate with the postal service, recycling service, garbage collection service, school
+bus service, etc. to maintain continual uninterrupted service to all residences and businesses throughout
+the duration of the project.
+B. The Contractor shall temporarily relocate mailboxes, haul recycling and garbage for residents to a
+designated pick up location, etc., as required by the subject service provider. All equipment materials and
+labor required to coordinate with service providers and maintain services shall be incidental to the
+Contract.
+PART 2 -- PRODUCTS (NOT USED)
+PART 3 -- EXECUTION (NOT USED)
+****END OF SECTION****
+City of Jordan – Standard Specifications COORDINATION
+September, 2019 PAGE 01310-2
+V040110 © Bolton & Menk, Inc. 2019, All Rights Reserved', 1),
+('PROJECT MEETINGS', NULL, NULL, 'nan', 'nan', '© Bolton & Menk, Inc.', NULL, NULL, 'Standard Specifications for Construction of Public Infrastructure', '01315', 'SECTION 01315 - PROJECT MEETINGS
+PART 1 -- GENERAL
+1.1 SUMMARY
+A. Pre-construction Conference
+1. For all contract work in excess of $25,000 and as required by the Engineer, prior to the start of the
+work, a joint meeting will be held with representatives of the Contractor, the Owner, the Engineer, and
+any other interested parties. This meeting is intended to introduce the various key personnel from
+each organization and to discuss the start of the work, order of work, labor and legal requirements,
+insurance requirements, method of payment, shop drawing requirements, protection of existing
+facilities, location of disposal and stockpile areas, and other pertinent items associated with the
+project.
+2. The Contractor shall be prepared to discuss his proposed detailed construction progress schedule. The
+construction schedule shall be subject to the review of the Owner, Engineer and applicable agencies.
+B. Construction Progress Meetings
+1. These meetings will require the attendance of the Contractor''s Project Manager or other designated
+staff authorized by the Contractor to discuss project status and negotiate agreements between the
+Contractor and Owner. Failure of the Contractor to attend scheduled project meetings as required may
+result in project delays expensed by the Contractor.
+2. Meetings will be held between the Owner, Contractor and Engineer for the purpose of reviewing the
+project schedule or the status of the project. These meetings will be arranged by the Owner, and/or
+Engineer, as deemed necessary.
+C. Safety Meetings
+1. The Owner, Engineer or their representatives shall be allowed to attend Contractor’s onsite safety
+meetings. The Contractor shall be responsible for meeting content and coordination and shall inform
+the Owner, Engineer or their representatives of the time and location of the meeting a minimum of
+two business days prior to the meeting.
+2. The Contractor shall make additional copies of any safety related handouts or materials for distribution
+to the Owner, Engineer or their representatives. However, the Contractor shall remain the only party
+responsible for the maintenance of project safety materials.
+PART 2 -- PRODUCTS (NOT USED)
+PART 3 -- EXECUTION (NOT USED)
+****END OF SECTION****
+City of Jordan – Standard Specifications PROJECT MEETINGS
+September, 2019 PAGE 01315-1
+V042611 © Bolton & Menk, Inc. 2019, All Rights Reserved', 1),
+('SUBMITTALS', NULL, NULL, 'nan', 'nan', '© Bolton & Menk, Inc.', NULL, NULL, 'Standard Specifications for Construction of Public Infrastructure', '01330', 'SECTION 01330 - SUBMITTALS
+PART 1 -- GENERAL
+1.1 SUMMARY
+A. The Contractor shall submit three copies of all required submittals and sample items as noted below. The
+Engineer will review them with reasonable promptness. The Contractor shall make all required corrections
+and file with the Engineer three corrected sets for final review. If the Contractor requires more than two
+reviewed copies, the Contractor shall submit additional sets.
+B. The responsibility for completeness of submittals lies with the Contractor. If the Engineer and/or Owner
+sign the submittal with no exception taken, such action shall not absolve the responsibilities of the
+Contractor in any way.
+C. Emailed submittals to the Engineer in pdf format will be accepted.
+1.2 ITEMS TO BE SUBMITTED
+A. Written Progress Management Schedule Tool (as defined in Section 01310) - to be reviewed at the
+Preconstruction Conference. See Article 4 of Section 00520 “Agreement” of this Project Manual for
+contractual time requirements.
+B. The following items must be submitted when applicable to the project scope:
+1. Minnesota Pollution Control Agency (MPCA) - General Storm Water Permit for Construction Activity
+(MN R100001) – Reference Section 02370 “Erosion & Sediment Control” of this Project Manual.
+2. Concrete Mix Design
+3. Bituminous Mix Design (wear and non-wear)
+4. Gradation Test Results from 2 separate tests, as required in Source Quality Control provisions of
+individual sections contained herein, from material stockpiles of aggregates to be used on this project.
+These tests may be run by the Contractor or its supplier during aggregate production.
+5. Geotextile Fabrics - Certificates of Compliance.
+6. Sanitary Sewer and Sanitary Sewer Service
+(a) Manhole structure - shop drawings.
+(b) Manhole casting - shop drawings.
+(c) Piping and fittings - Certificates of Compliance.
+(d) Final televising DVD and log.
+7. Storm Sewer, Subdrain and Sump Drain Lines
+(a) Manhole and catch basin structure - shop drawings.
+(b) Manhole and catch basin casting - shop drawings.
+(c) Piping and fittings - Certificates of Compliance.
+8. Watermain and Water Service Lines
+(a) Hydrants - Certificates of Compliance.
+(b) Valves & boxes - Certificates of Compliance.
+(c) Pipe & fittings - Certificates of Compliance.
+(d) Corporation stops, saddles, curb stops, curb boxes, copper pipe - Certificates of Compliance.
+9. Seeding - Certificates of Compliance for seed mixture.
+City of Jordan – Standard Specifications SUBMITTALS
+September, 2019 PAGE 01330-1
+V062612 © Bolton & Menk, Inc. 2019, All Rights Reserved10. Trees & Shrubs - Certificates of Compliance.
+11. Lift Stations
+(a) Pumps & panels - shop drawings
+(b) Valve manhole - shop drawings.
+(c) Valves - shop drawings and Certificates of Compliance.
+(d) Maintenance and operations manuals.
+1.3 MATERIAL SAFETY DATA SHEETS
+A. The Contractor shall submit two copies of Safety Data Sheets (SDSs) (formerly known as Material Safety
+Data Sheets or MSDSs) for each material on site to the OWNER.
+B. The Contractor shall maintain an orderly file of Safety Data Sheets at the job site.
+1.4 RECORD DRAWINGS
+A. The CONTRACTOR shall maintain at the construction site one complete set of drawings suitably marked to
+show all deviations from the original set of drawings and other information as specified. Supplementary
+sketches shall be included, if necessary, to clearly indicate all work as constructed. Sanitary and water
+service tie-in or stub-out locations shall show station and distances left or right of the survey control
+centerline. Existing sanitary and water service piping material type and size at the tie-in locations shall be
+noted also.
+B. All manholes, watermain bends and valves shall be located with tie-off dimensions to known items on the
+plans or in the field to enable the Contractor or City personnel to locate these structures for adjustment.
+C. The CONTRACTOR shall fill out a service record form for each water service and sanitary sewer service
+connection or stub out. A blank service record form will be supplied by the ENGINEER to be used by the
+CONTRACTOR. The completed service record forms and photos taken of the services shall be submitted to
+the ENGINEER in a digital format and in booklet form.
+D. All work shall be clearly shown and the record drawings and service record forms shall be satisfactory to the
+OWNER in order to insure that adequate information is indicated to show the actual construction. The
+complete set of the record drawings shall be submitted to the ENGINEER prior to submittal of the final
+Application for Payment. Failure of the CONTRACTOR to maintain an up-to-date set of record drawings on
+the project site shall be reason to withhold payments. All underground lines shall be determined from the
+record drawings.
+E. The CONTRACTOR must provide a complete an as-built record form, as provided in the appendix, for
+acceptance of each storm sewer and sanitary sewer structure, as well as each sanitary sewer and water
+service line. The completed report shall be submitted each week to the Engineer or the Engineer''s
+designated representative at some mutually agreeable time. Failure to submit the required form shall
+render the structure or services subject to non-acceptance.
+1.5 CONSTRUCTION PHOTOS
+A. The CONTRACTOR shall take digital photos during the course of construction using only cameras or smart
+phones with Global Positioning System (GPS) capabilities. GPS location settings shall be turned on at the
+time of taking each photo. The quality of the photos submitted shall be sufficient to clearly depict the focal
+points in the photo.
+B. The CONTRACTOR shall take photos of underground construction work prior to backfilling. Such items to be
+photographed include but are not limited to: connections to existing utilities, watermain fittings,
+small/private underground utilities, utility stub-outs, manholes, etc.
+C. The CONTRACTOR shall take photos of all water service and sanitary sewer service connections at the main
+and at the tie in or stub out locations prior to backfilling the service. The photo shall indicate the house
+address number or lot description of the service location.
+City of Jordan – Standard Specifications SUBMITTALS
+September, 2019 PAGE 01330-2
+V062612 © Bolton & Menk, Inc. 2019, All Rights ReservedD. After the first couple days of underground construction, the CONTRACTOR shall submit to the ENGINEER a
+sample set of digital photos. The test set of photos will be reviewed to verify that the date, GPS
+coordinates, and other photo features are being recorded.
+E. All photos shall be submitted to the ENGINEER in a digital format immediately upon completion of the
+utility installation. The digital properties of the photos, such as date and time taken and GPS coordinates,
+shall be full intact at the time of submittal. Failure of the CONTRACTOR to maintain a set of construction
+photos shall be reason to withhold payments.
+PART 2 -- PRODUCTS (NOT USED)
+PART 3 -- EXECUTION
+3.1 SUBMITTAL ROUTING
+A. All submittals shall be approved by the Contractor prior to submission to the Engineer.
+B. A Letter of Transmittal that identifies the submitted item and the review action required shall accompany
+all submittals.
+1. The Contractor shall be responsible for filling in the following information on the Letter of Transmittal:
+(a) Date.
+(b) Submittal No.
+(c) Identify what is being sent checking the appropriate box.
+(d) No. Copies Submitted.
+(e) Identify the Specification Section the attached information relates to.
+(f) Subject of Shop Drawing or Other Submittal.
+(g) Check whether the Shop Drawings are or are not in compliance.
+(1) If not in compliance, list the features which are not.
+(h) Sign and Date.
+3.2 RESPONSIBILITY
+A. The Engineer''s review of a submittal shall not relieve the Contractor from the responsibility for deviation
+from the drawings and specifications unless the Contractor has, in writing, called the Engineer''s attention to
+the deviations at the time of submission; nor shall it relieve the Contractor from the responsibility of errors
+in the submittals.
+B. All submittals shall be reviewed by the Engineer prior to their incorporation into the project. If materials
+are installed without prior review, they will be subject to removal, at the Contractor''s expense, if the
+material is found to be non-conforming to the Specifications.
+**** END OF SECTION ****
+City of Jordan – Standard Specifications SUBMITTALS
+September, 2019 PAGE 01330-3
+V062612 © Bolton & Menk, Inc. 2019, All Rights Reserved', 1),
+('REGULATORY REQUIREMENTS', NULL, NULL, 'nan', 'nan', '© Bolton & Menk, Inc.', NULL, NULL, 'Standard Specifications for Construction of Public Infrastructure', '01410', 'SECTION 01410 - REGULATORY REQUIREMENTS
+PART 1 -- GENERAL
+1.1 SUMMARY
+A. Applicable codes and standards referred to in these specifications shall establish minimum requirements for
+equipment, materials, construction and shall be superseded by more stringent requirements of drawings
+and specifications when and where they occur.
+B. All equipment furnished and installed under the contract shall be designed, fabricated, assembled,
+installed, and placed into service. The equipment will conform to the applicable provisions of the Federal
+and State Safety and Health Standards, including but not limited to Federal Occupational Safety and Health
+Regulations for Construction; the Division of Environmental Health, Minnesota Department of Health; the
+Minnesota Pollution Control Agency; the Department of Natural Resources; the Minnesota Department of
+Transportation, Division of Highways; the Minnesota Industrial Commission and ordinances of the City that
+apply to this work.
+C. All construction methods and tools shall comply with commonly accepted standards for safety and health of
+personnel engaged on construction, including but not limited to Federal Occupational Safety and Health
+Regulations for Construction; the Division of Environmental Health, Minnesota Department of Health; the
+Minnesota Pollution Control Agency; the Department of Natural Resources; the Minnesota Department of
+Transportation, Division of Highways; the Minnesota Industrial Commission and ordinances of the City that
+apply to this work.
+D. Any conflicts between specifications and applicable codes and standards shall be referred to the Engineer.
+1.2 PERMITS OBTAINED BY OWNER
+A. Permits obtained by or to be obtained by the Owner will be identified in the bidding documents. The
+Contractor shall perform all work and conduct itself in full accordance with the requirements of the
+applicable permits, which may include but not be limited to:
+1. Minnesota Pollution Control Agency (MPCA) - General Storm Water Permit for Construction Activity
+(MN R100001)
+2. Minnesota Pollution Control Agency (MPCA) - Extension of sanitary sewers.
+3. Minnesota Health Department - Watermain Plan Review.
+4. Minnesota Department of Transportation (MnDOT) - Utility Accommodation on Trunk Highway Right-
+of-Way.
+5. Minnesota Department of Transportation (MnDOT) - Access Driveway Permit
+6. Utility installation within Scott County right-of-way.
+7. Work within Union Pacific railroad right-of-way.
+8. Wetland Conservation Act (WCA) requirements
+B. The Contractor shall be responsible for meeting any bonding or insurance requirements which may be
+required as a condition to any permit, listed above.
+1.3 PERMITS OBTAINED BY CONTRACTOR
+A. The Contractor shall secure and pay the cost of any other permits not mentioned above, which may be
+required including but not limited to:
+1. Work within City right-of-way permit.
+2. Building permits.
+1.4 WORK WITHIN A RAILROAD RIGHT OF WAY
+City of Jordan – Standard Specifications REGULATORY REQUIREMENTS
+September, 2019 PAGE 01410-1
+V092712 © Bolton & Menk, Inc. 2019, All Rights ReservedA. This project may include work within the Union Pacific Railroad right of way. A copy of the Owner’s permit
+or agreement with the railroad is included in the Appendix.
+B. The Contractor is reminded that each railway has its own unique requirements and the Contractor is
+responsible for ascertaining what those requirements are prior to commencing work. While on or about
+railroad property, The Contractor shall fully comply with the railway''s requirements, including (but not
+limited to) insurance requirements, bond requirements, flagging requirements, and safety requirements.
+The contractor shall be responsible for fully informing itself as to railroad requirements.
+C. For projects requiring work within Union Pacific Railroad right-of-way, the Contractor shall comply with all
+provisions of MnDOT Specification 1708 as revised below:
+1. The Contractor shall provide notifications to the Engineer a minimum of 5 working days prior to
+notification to the railroad. Requirements for advance notification to the railroad for work within
+railroad right-of-way shall be as required by the railroad. No notifications shall be made without prior
+approval of the Engineer and no work shall begin prior to notification to the railroad.
+2. The Contractor shall be responsible for all costs associated with securing Railroad Liability Insurance
+with limits required by the railroad.
+3. The Contractor shall be responsible for increasing contractor’s general liability insurance coverage
+limits beyond those required in the Supplementary Conditions if required by the railroad.
+4. The railroad shall be named as an additional insured on all insurance policies except workman’s
+compensation and employers liability.
+5. No work shall begin until the proof of insurance forms for all required coverages are received by the
+Engineer.
+6. The Contractor shall be responsible for all costs associated with securing appropriate flagging,
+protective services, and devices.
+7. The special bond requirements are listed in the permit for the work in the railroad right of way.
+8. Unless specific bid items are provided, these costs shall be incidental to the related work items in the
+railroad right-of-way.
+PART 2 -- PRODUCTS (NOT USED)
+PART 3 -- EXECUTION (NOT USED)
+****END OF SECTION****
+City of Jordan – Standard Specifications REGULATORY REQUIREMENTS
+September, 2019 PAGE 01410-2
+V092712 © Bolton & Menk, Inc. 2019, All Rights Reserved', 1),
+('SPECIFICATION REFERENCE AND WORKS CONSULTED', NULL, NULL, 'nan', 'nan', '© Bolton & Menk, Inc.', NULL, NULL, 'Standard Specifications for Construction of Public Infrastructure', '01420', 'SECTION 01420 - SPECIFICATION REFERENCE AND WORKS CONSULTED
+PART 1 -- GENERAL
+The references listed in this section are not all inclusive. There may be other references in individual
+specification sections that are not listed in this Section.
+Portions of referenced specifications not specifically affected by the supplemented information of modification
+shall remain in effect as originally written.
+It is the Contractor’s responsibility to have these and all other referenced specifications listed in individual
+Sections available onsite and to be familiar with them.
+1.1 ENGINEERS JOINT CONTRACT DOCUMENTS COMMITTEE (EJCDC)
+A. Documents with the EJCDC copyright notice in the footer are used in this Project Manual under a licensing
+agreement with EJCDC. The text of these documents has not been changed or modified by Bolton & Menk,
+Inc.
+B. EJCDC documents were consulted in the creation of the Project Manual Sections listed below. These
+documents have been altered from the original EJCDC text and the EJCDC footer has been removed in
+compliance with the EJCDC license agreement. Those portions of the text that originated in copyrighted
+EJCDC documents remain subject to the EJCDC copyright.
+1. 00100 – Advertisement for Bids
+2. 00200 – Instructions to Bidders
+3. 00410 – Bid Form
+4. 00520 – Agreement
+5. 00800 – Supplemental Conditions
+1.2 SOIL DISTURBING ACTIVITIES
+A. Minnesota Pollution Control Agency (MPCA) - General Storm Water Permit for Construction Activity (MN
+R100001) available at: http://www.pca.state.mn.us/water/stormwater/stormwater-c.html
+1.3 WATERMAIN, SANITARY SEWER AND STORM SEWER CONSTRUCTION
+A. "Standard Specifications" as published by the City Engineers Association of Minnesota, (CEAM) 2018 Edition
+available at: http://www.ceam.org
+B. American Water Works Association (AWWA) Standards: http://www.awwa.org/
+C. THREADED ITEMS - All threaded items furnished under this contract, including but not limited to mechanical
+joint connectors, flanged joint connectors, mainline valves, saddles, corporation stops, curb stops, hydrants,
+and air release valves shall be furnished to the nominal size as specified with ENGLISH threads.
+1.4 GRADING, STREET AND SURFACE IMPROVEMENTS
+A. All of Divisions II and III, and any specifically referenced Division I sections of the Minnesota Department of
+Transportation (MnDOT), "Standard Specifications for Construction", 2018 Edition, together with all the
+Supplemental Specifications: http://www.dot.state.mn.us/pre-letting/spec/
+B. MnDOT Technical Memoranda in force 30 calendar days prior to bid date and referencing the use of English
+units of measure: http://www.dot.state.mn.us/design/tools/index.html
+C. MnDOT Standard Plans: http://standardplans.dot.state.mn.us/
+D. MnDOT Standard Details: http://standardplates.dot.state.mn.us/
+E. Whenever the word "Contracting Authority," "Department" or "Owner" is used in the sense of ownership as
+part of any of the MnDOT Documents, it shall mean Owner as defined in the Agreement.
+City of Jordan – Standard Specifications SPECIFICATION REFERENCE
+September, 2019 PAGE 01420-1
+V052815 © Bolton & Menk, Inc. 2019, All Rights Reserved1.5 TRAFFIC CONTROL
+A. The Minnesota Manual of Uniform Traffic Control Devices (MMUTCD) shall apply to this project and is
+available at: http://www.dot.state.mn.us/trafficeng/publ/mutcd/.
+B. The MnDOT’s Temporary Traffic Control Zone Layouts Field available at:
+http://www.dot.state.mn.us/trafficeng/publ/fieldmanual/.
+PART 2 -- PRODUCTS (NOT USED)
+PART 3 -- EXECUTION
+A. The Contractor shall have access to the reference documents at the site at all times during the construction
+either in paper or digital format.
+****END OF SECTION****
+City of Jordan – Standard Specifications SPECIFICATION REFERENCE
+September, 2019 PAGE 01420-2
+V052815 © Bolton & Menk, Inc. 2019, All Rights Reserved', 1),
+('ABBREVIATIONS', NULL, NULL, 'nan', 'nan', '© Bolton & Menk, Inc.', NULL, NULL, 'Standard Specifications for Construction of Public Infrastructure', '01425', 'SECTION 01425 - ABBREVIATIONS
+PART 1 -- GENERAL
+1.1 WHEREVER THE FOLLOWING ABBREVIATIONS ARE USED, THEY SHALL HAVE THE MEANINGS INDICATED:
+A. AASHTO American Association of the State Highway and Transportation Officials
+B. ACI American Concrete Institute
+C. AI The Asphalt Institute
+D. ASTM American Society for Testing and Materials
+E. AWWA American Water Works Association
+F. CEAM City Engineer''s Association of Minnesota
+G. CLFMI Chain Link Fence Manufacturers Institute
+H. MnDOT Minnesota Department of Transportation
+I. OSHA Occupational Safety and Health Administration
+J. PCA Portland Cement Association or Minnesota Pollution Control Agency (context obvious)
+K. SWPPP Storm Water Pollution Prevention Plan
+PART 2 -- PRODUCTS (NOT USED)
+PART 3 -- EXECUTION (NOT USED)
+****END OF SECTION****
+City of Jordan – Standard Specifications ABBREVIATIONS
+September, 2019 PAGE 01425-1
+© Bolton & Menk, Inc. 2019, All Rights Reserved', 1),
+('QUALITY CONTROL', NULL, NULL, 'nan', 'nan', '© Bolton & Menk, Inc.', NULL, NULL, 'Standard Specifications for Construction of Public Infrastructure', '01450', 'SECTION 01450 - QUALITY CONTROL
+PART 1 -- GENERAL
+1.1 SCOPE OF TESTS
+A. All materials, equipment, installation, and workmanship included in this contract, if so required by the
+Engineer, shall be tested and inspected to prove compliance with the contract requirements.
+B. All tests and inspections shall be completed under the direct supervision of a licensed professional
+engineer. All tests and inspections shall be the responsibility as identified in the individual sections of these
+specifications and shall be reported directly to the Owner and Engineer.
+C. No tests specified herein shall be applied until the item to be tested has been inspected and approval given
+for the application of such tests.
+D. Tests and inspections shall include all those specified in the individual sections and shall be compensated in
+accordance with the individual sections.
+E. Tests and inspection, unless otherwise specified or accepted, shall be in accordance with the recognized
+standards of the industry.
+F. Soil compaction testing performed by the Owner is deemed to be for the convenience of the Owner for
+documentation of the progress and performance of the work. Soil compaction testing results will be made
+available to the Contractor. However, the Owner and Engineer make no representations that the number
+of tests taken will be sufficient to accurately characterize the condition of any trench, and the Contractor
+shall take any supplemental test it deems necessary to monitor its own performance. The Owner may, at
+its discretion, eliminate soil and compaction testing on any part or the entire project. The presence or
+absence of soil and compaction testing or the approval of the results thereof shall in no way reduce the
+Contractor’s obligation to correct trench settlement as described in these Special Provisions.
+1.2 FINAL TESTING AND START-UP
+A. If, under test, any portion of the work fails to fulfill the contract requirements and is altered, renewed or
+replaced, tests on that portion so altered, removed, replaced, together with all other portions of the work
+as are affected thereby, shall, if so required by the Engineer, be repeated within reasonable time and in
+accordance with the specified conditions and the Contractor shall pay to the Owner all reasonable expenses
+incurred by the Owner as a result of the carrying out of such tests.
+1.3 TESTING AND LABORATORY SERVICES
+A. Independent Testing Laboratory
+1. Where in the individual sections of this Specification, tests or inspections are required to be furnished
+by the Contractor by an independent testing laboratory, the Contractor shall employ and arrange for,
+at its expense, the services of an approved independent testing laboratory satisfactory to the Engineer
+to perform the testing utilizing recognized standard procedures and criteria.
+2. If the project includes the MnDOT Schedule of Materials Control Section, the Contractor shall employ
+and arrange for, at its expense, the services of an approved independent testing laboratory satisfactory
+to the Engineer to perform the testing utilizing recognized standard procedures and criteria for all
+testing listed under Quality Control, Contractor, or Producer testing in the Schedule of Materials
+Control regardless of what the individual sections of this specification state.
+B. Reports and Certificates
+1. The Contractor shall submit reports and certificates of all inspections and test to the Engineer in
+duplicate. The reports and certificates become the property of the Owner.
+C. Sample Materials
+City of Jordan – Standard Specifications QUALITY CONTROL
+September, 2019 PAGE 01450-1
+V040110 © Bolton & Menk, Inc. 2019, All Rights Reserved1. The Contractor shall furnish all sample materials required for these tests and shall deliver the same
+without charge to the testing laboratory or other designated agency when and where directed by
+them.
+D. Additional Tests
+1. In addition to those tests required by the individual technical specifications and/or referenced
+specifications:
+(a) Additional tests required beyond these required under this specification may be ordered by the
+Engineer to settle disagreements with the Contractor regarding quality of work done. If the work
+is defective, the Contractor shall pay all costs of the additional tests and shall correct the work. If
+the work is satisfactory, the Owner will pay for the additional tests.
+(b) The Owner may perform televised inspection of any and/or all under construction included in this
+project, at its own expense, at any time prior to final payment. All deficiencies discovered in the
+course of such investigation shall be corrected at the Contractor’s expense and, the Owner''s
+satisfaction, prior to final payment.
+1.4 ENGINEER''S REPRESENTATIVES AND TESTING
+A. The Engineer may provide a Resident Project Representative (RPR) to ascertain that the work is
+accomplished properly and in accordance with the plans and specifications. The RPR shall have full access
+to the work and shall be given full cooperation. The RPR shall have the authority, subject to the final
+decision of the Engineer, to reject any defective work or material. The RPR shall have no authority to
+permit any deviation from the plans and specifications except on written order from the Engineer.
+B. The presence of the Engineer or any RPRs, however, shall not relieve the Contractor of the responsibility for
+the proper execution of the work in accordance with all requirements of the Contract Documents.
+Compliance is a duty of the Contractor, and said duty shall not be avoided by any act or omission on the
+part of the Engineer or any RPRs.
+1.5 SITE INVESTIGATION AND CONTROL
+A. The Contractor shall verify all dimensions in the field and shall check field conditions continuously during
+construction. The Contractor shall be solely responsible for any inaccuracies built into the work due to his
+failure to comply with this requirement.
+B. The Contractor shall inspect related and appurtenant work and shall report in writing to the Engineer any
+conditions, which will prevent proper completion of the work. Failure to report any such conditions shall
+constitute acceptance of all site conditions, and any required removal, repair or replacement caused by
+unsuitable conditions shall be performed by the Contractor at his sole cost and expense.
+1.6 RIGHT OF REJECTION
+A. The Engineer, acting for the Owner, shall have the right, at all time and places, to reject any articles or
+materials to be furnished hereunder which in any respect, fail to meet the requirements of these
+specifications, regardless of whether the defects in such articles or materials are detected at the point of
+manufacture or after completion of the work at the site. If the Engineer or RPR, through an oversight or
+otherwise, has accepted materials or work which is defective or which is contrary to the specifications, such
+material, no matter in what stage or condition of manufacture, deliver, or erection, may be rejected by the
+Engineer for the Owner.
+PART 2 -- PRODUCTS (NOT USED)
+PART 3 -- EXECUTION (NOT USED)
+****END OF SECTION****
+City of Jordan – Standard Specifications QUALITY CONTROL
+September, 2019 PAGE 01450-2
+V040110 © Bolton & Menk, Inc. 2019, All Rights Reserved', 1),
+('MAINTENANCE OF HAUL ROADS & TEMPORARY ACCESS', NULL, NULL, 'nan', 'nan', '© Bolton & Menk, Inc.', NULL, NULL, 'Standard Specifications for Construction of Public Infrastructure', '01550', 'SECTION 01550 - MAINTENANCE OF HAUL ROADS & TEMPORARY ACCESS
+PART 1 -- GENERAL
+1.1 MAINTENANCE
+A. The Contractor shall notify and obtain the approval of the local governmental authority for the use of all
+haul roads and construction easement areas within the City limits not specifically noted below. The
+Contractor will be required to deliver new materials and dispose of all excavated material plus removal
+items only on designated haul roads. This also applies to equipment entering and leaving the project site
+such as backhoes and front end loaders.
+B. Allowable City street and project haul roads are to be determined by the City Engineer for each individual
+project.
+C. The Contractor shall confine all operations, ingress and egress to the haul roads designated by the City
+Engineer. The Owner may assess a fee in the amount of $ 500 per day for each day that the Contractor
+occupies or travels on non-designated haul roads. The fee shall be in addition to damages assessed against
+the Contractor to repair damage caused to the roadway.
+D. The Contractor shall maintain and repair any damage to haul roads. Maintenance shall include, but not be
+limited to, the following: blading, patching, signing, graveling and dust control. This work will be at the
+Contractor''s expense, without any direct compensation being made other than the payment received for
+Contract items.
+E. The Contractor shall be responsible for all roadbed maintenance over backfilled trenches and roadbed
+subgrade during the construction period.
+1.2 REFERENCED SPECIFICATION
+A. MnDOT 1513, Restrictions on Movement and Storage of Heavy Loads and Equipment.
+B. MnDOT 1515, Control of Haul Roads
+C. MnDOT 2051, Maintenance and Restoration of Haul Roads.
+D. Unless noted otherwise, the provisions in this section are in addition to the referenced specification.
+PART 2 -- PRODUCTS (NOT USED)
+PART 3 -- EXECUTION
+3.1 CONSTRUCTION REQUIREMENTS
+A. Reclaimed bituminous and salvaged aggregate base may be used for temporary access surfacing. No
+additional compensation shall be granted for the installation, removal and disposal of materials utilized in
+this way.
+****END OF SECTION****
+City of Jordan – Standard Specifications MAINTENANCE OF HAUL ROADS & TEMPORARY ACCESS
+September, 2019 PAGE 01550-1
+V040110 © Bolton & Menk, Inc. 2019, All Rights Reserved', 1),
+('MAINTENANCE AND CONTROL OF TRAFFIC', NULL, NULL, 'nan', 'nan', '© Bolton & Menk, Inc.', NULL, NULL, 'Standard Specifications for Construction of Public Infrastructure', '01555', 'SECTION 01555 - MAINTENANCE AND CONTROL OF TRAFFIC
+PART 1 -- GENERAL
+1.1 SUMMARY
+A. Traffic Control
+1. All traffic control methods shall conform to the provisions of the latest edition of the Minnesota
+Manual of Uniform Traffic Control Devices (MN MUTCD), including its supplements and Part VI, "Field
+Manual for Temporary Traffic Control Zone Layouts", the "Guide to Establishing Speed Limits in
+Highway Work Zones", the Minnesota Flagging Handbook, the provisions of MnDOT 1404 and 1710, the
+Minnesota Standard Signs Manuals Parts I and II, the Traffic Engineering Manual Chapter 8 Appendixes
+8-8.02 and 8-8.03, the Traffic Control Layouts/Typical Traffic Control Layouts in the Plans.
+2. The Contractor shall furnish, install, maintain and remove all traffic control devices including, but not
+limited to, construction signs, barricades and barricade weights, traffic marking tape, and warning
+lights which are needed for the guidance, warning and control of traffic adjacent to and through this
+project.
+3. The Contractor shall provide sufficient surveillance of the traffic control devices to insure compliance
+during the entire construction period. The Contractor shall furnish names, addresses, and phone
+numbers of at least two local individuals capable of immediate response who will be responsible for
+the site security and traffic control devices to:
+The Engineer
+The Owner
+Local Law Enforcement Agencies
+4. The Contractor shall respond with sufficient personnel, equipment and/or materials and conduct the
+required work or be subject to a $100 per hour deduction from the time of notification for non-
+attention to project security and safety.
+5. The Contractor shall schedule the work to cooperate fully with residential and business property
+owners abutting the project to minimize the time of restricted access to their property during the
+construction period. Driveway access to any property adjacent to the construction zone shall be
+restricted no more than seven days to allow for curing of the concrete curb and driveway pavement.
+6. The cost of maintaining vehicular and pedestrian traffic on temporary aggregate surfaced drives,
+walkways, including the eventual removal of the aggregate material, shall be considered incidental to
+traffic control.
+7. If it is necessary to enter upon a right-of-way controlled by the County or Minnesota Department of
+Transportation, the Contractor shall notify the appropriate agency before commencing construction
+within the right-of-way.
+8. In the event that any of the above right-of-way require traffic to be detoured around the construction
+zone, the Contractor shall prepare the detour route with the appropriate Agency representatives. The
+Contractor shall provide and maintain all signing and other traffic control required. The affected
+Agency shall be notified by the Contractor before re-routing traffic. Dust control and road maintenance
+of the by-pass route shall be the Contractor''s responsibility.
+9. The Contractor shall be responsible for securing a site for storage of construction equipment and
+materials.
+B. General Construction and Traffic Requirements
+1. The parking of Contractor''s Vehicles that obstruct any traffic control devices will not be permitted.
+1.2 METHOD OF MEASUREMENT AND PAYMENT
+City of Jordan – Standard Specifications MAINTENANCE AND CONTROL OF TRAFFIC
+September, 2019 PAGE 01555-1
+V040110 © Bolton & Menk, Inc. 2019, All Rights ReservedA. When no bid item is provided in the Schedule of Unit Prices, Traffic Control shall be considered incidental to
+the project and no compensation will be granted.
+B. When a bid item is provided in the Schedule of Unit Prices for Traffic Control, Traffic Control shall be
+measured by the LUMP SUM and paid in accordance with the following schedule.
+1. On the first partial estimate that shows work performed on at least one major contract item,
+25 percent of the amount bid for Traffic Control will be paid, but not more that 3 percent of the original
+Contract amount.
+2. On subsequent partial estimates, payment shall be made at the same percentage as the value of work
+completed to date relative to the original Contract amount, except that payment shall not be reduced
+from the original 25 percent. Materials on hand shall be excluded from the payment ratio
+computation.
+3. At such time that 95 percent of the original Contract amount is earned, full payment for Traffic Control
+shall be made.
+PART 2 -- PRODUCTS (NOT USED)
+PART 3 -- EXECUTION
+3.1 CONSTRUCTION REQUIREMENTS
+A. The Contractor shall notify the Engineer in writing at least 72 hours prior to the start of any construction
+operation that will necessitate lane closure or internal traffic control signing.
+B. The traffic control devices required along the project corridor shall be delivered and installed prior to the
+start-up of the work.
+C. The Contractor shall maintain traffic through the intersections whenever possible.
+D. The Contractor shall monitor and maintain all traffic control devices.
+****END OF SECTION****
+City of Jordan – Standard Specifications MAINTENANCE AND CONTROL OF TRAFFIC
+September, 2019 PAGE 01555-2
+V040110 © Bolton & Menk, Inc. 2019, All Rights Reserved', 1),
+('AIR, LAND AND WATER POLLUTION', NULL, NULL, 'nan', 'nan', '© Bolton & Menk, Inc.', NULL, NULL, 'Standard Specifications for Construction of Public Infrastructure', '01562', 'SECTION 01562 - AIR, LAND AND WATER POLLUTION
+PART 1 -- GENERAL
+1.1 SUMMARY
+A. This section covers the furnishing of all labor, materials, tools, equipment and performances of all work and
+services necessary for the prevention of air, land and water pollution as indicated on the plans or as
+specified herein or as directed by the Engineer.
+1.2 METHOD OF MEASUREMENT AND PAYMENT
+A. Measurement and compensation for the following items shall be paid according to the referenced
+specification or as modified below:
+1. Payment for the prevention of air and land pollution shall be incidental to the project and no separate
+compensation will be granted
+2. Payment for all work associated with the prevention of water pollution and erosion control shall be
+incidental to the project and no separate compensation will be granted, unless payment for such work
+is specifically identified in Section 02370 “Erosion and Sediment Control” of this Project Manual.
+B. SPECIFICATION REFERENCES
+1. MnDOT 1717 shall apply to the prevention of air, land and water pollution.
+2. MnDOT 2573 shall apply to storm water management.
+3. Unless noted otherwise, the provisions in this section are in addition to the referenced specification.
+PART 2 -- PRODUCTS (NOT USED)
+PART 3 -- EXECUTION
+3.1 GENERAL
+A. The Contractor shall provide and maintain all sanitary accommodations for use by employees.
+B. All solid waste material shall be disposed by the Contractor in accordance with the local and State solid
+waste disposal regulations.
+3.2 DUST CONTROL
+A. The Contractor shall perform dust control operations necessary to proactively prevent the production of
+dust in amounts to cause nuisance or damage to property, vegetation, animals, or persons in the vicinity of
+the construction.
+B. The Contractor shall suspend construction or haul traffic when the Contractor cannot prevent airborne dust
+until such time as dust control can be re-established to the required levels.
+C. The Contractor shall be responsible for any damage resulting from dust originating from the construction.
+The dust abatement measures shall be continued until the Contractor is relieved of further responsibility
+under these Contract provisions.
+D. Requests by the Owner or Engineer for additional dust control shall be accomplished within 4 hours of
+notification and shall also include evenings and weekends as required or deemed necessary by the Owner
+or the Engineer. Failure to perform the work requested within the 4 hours may result in the Owner or
+Engineer arranging for dust control by others. A contract deduction shall be made equal to the total of all
+costs to perform dust control so arranged, including not limited to labor, materials, equipment and
+administrative costs.
+3.3 USE OF CHEMICALS
+A. Reference Storm Water Pollution Prevention Plan (SWPPP).
+****END OF SECTION****
+City of Jordan – Standard Specifications AIR, LAND AND WATER POLLUTION
+September, 2019 PAGE 01562-1
+V040110 © Bolton & Menk, Inc. 2019, All Rights Reserved', 1),
+('PROJECT CLOSEOUT', NULL, NULL, 'nan', 'nan', '© Bolton & Menk, Inc.', NULL, NULL, 'Standard Specifications for Construction of Public Infrastructure', '01770', 'SECTION 01770 - PROJECT CLOSEOUT
+PART 1 -- GENERAL
+1.1 FINAL INSPECTION
+A. After the cleaning up of the work, premises, and all other areas and structures connected with the
+performance of the contract, the work as a whole, shall be examined by the Engineer and Owner; and, any
+workmanship or materials found not meeting the requirements of the specifications shall be identified and
+included on a punch list given to the Contractor.
+B. The Contractor shall, at its own expense, promptly remove, replace, repair, or otherwise correct the
+deficiencies with good and satisfactory workmanship and material to the satisfaction of the Owner and
+Engineer.
+C. In the event that the Contractor does not satisfactorily remove, replace, repair, or otherwise correct the
+deficiencies within thirty calendar days after receipt of the punch list, the Owner reserves the right to
+employ the services of other contractors and/or service organizations to conduct the necessary work and
+deduct any and all associated costs from final payment to the Contractor. The entry of such other agents
+on the project to perform this work will not relieve the Contractor from any of its warranty, maintenance or
+start-up obligations.
+1.2 PROJECT ACCEPTANCE
+A. The project shall be accepted after the final examination has been conducted and all settlement, defects,
+damages, etc., discovered during the previous examination have been remedied.
+B. Unless otherwise stated in the supplementary conditions to the contract or other special provisions
+provided at the time of bidding, the Contractor shall warranty the work for two years from the date of final
+payment and project closeout.
+PART 2 -- PRODUCTS (NOT USED)
+PART 3 -- EXECUTION (NOT USED)
+**** END OF SECTION ****
+City of Jordan – Standard Specifications PROJECT CLOSEOUT
+September, 2019 PAGE 01770-1
+V040110 © Bolton & Menk, Inc. 2019, All Rights Reserved', 1),
+('REMOVING PAVEMENT AND MISCELLANEOUS STRUCTURES', NULL, NULL, 'nan', 'nan', '© Bolton & Menk, Inc.', NULL, NULL, 'Standard Specifications for Construction of Public Infrastructure', '02220', 'SECTION 02220 - REMOVING PAVEMENT AND MISCELLANEOUS STRUCTURES
+PART 1 -- GENERAL
+1.1 SUMMARY
+A. This section covers the furnishing of all labor, materials, tools, equipment and performances of all work and
+services necessary or incidental to the removal of pavement and miscellaneous structures as indicated on
+the drawings or as specified herein.
+1.2 METHOD OF MEASUREMENT AND PAYMENT
+A. Measurement and compensation for the following items shall be paid according to the referenced
+specification or as modified below:
+1. Remove Sanitary Sewer Service Pipe, and/or Water Service Pipe – No direct payment shall be made for
+removal of service pipes. Removal shall be considered incidental to the related items of work for
+construction of the project.
+2. Remove Sanitary Sewer Pipe, Watermain Pipe, and/or Storm Sewer Pipe – The contract unit price bid
+per linear foot shall be compensation in full for all equipment, materials and labor required to remove
+the pipe regardless of size and type encountered including but not limited to excavation, saw cutting
+pipe, bulkheading pipe to be abandoned in place, removal, disposal, backfill, compaction, etc. The work
+associated with maintaining service and working around existing pipe to be removed, until removal is
+approved by the Engineer, shall be incidental to the Contract, unless otherwise specified or approved.
+3. Remove Manhole – The contract unit price bid per each shall be compensation in full for all equipment,
+materials and labor required to completely remove manholes as specified and directed including not
+limited to excavation, removal and disposal of the structure, removal and disposal of interior and
+exterior piping and equipment, importation of backfill and compaction of suitable material to fill the
+void remaining from structure removal, etc.
+4. Abandon Manhole – The contract unit price bid per each shall be compensation in full for all equipment
+materials and labor required to abandon structures as specified and directed including but not limited
+to excavation, removal and disposal of interior and exterior piping and equipment, removal and
+disposal of top sections of structure and top slab, saw cutting structure walls if required, bulkheading
+pipe perforating base and structure walls, filling structure with sand and compacting, importing, placing
+and compacting suitable material to fill void from removed structure, etc.
+5. Remove Curb & Gutter, Remove Bituminous Pavement, Reclaim Bituminous Surface, Salvage Existing
+Pavers, Sawing Bituminous Pavement, and Sawing Concrete Pavement
+6. Remove Concrete Pavement (Walks, Driveways, Street, and Alleys)
+7. Remove Sign
+8. Salvage & Reinstall Mailbox
+City of Jordan – Standard Specifications REMOVING PAVEMENT AND MISCELLANEOUS STRUCTURES
+September, 2019 PAGE 02220-1
+V12222017 © Bolton & Menk, Inc. 2019, All Rights Reserved9. Abandon Pipes
+10. The UNIT PRICE bid for all other removal items shall include all costs of labor, materials, equipment and
+ultimate disposal required to complete the work, as specified.
+B. The furnishing and installing of specific items and/or the performance of work under certain circumstances
+shall not be individually paid in the absence of a specific bid item for the work. The costs shall be included
+in the unit price bid for the associated removal and excavation items. Such items of work include but are
+not limited to:
+1. Saw cutting - bituminous and/or concrete, driveways, sidewalks, pavements, curb & gutter, and other
+impervious surfaces.
+2. Removing storing and reinstalling mail boxes, street/traffic signs or similar structures which must be
+moved to construct the project.
+3. Off-site disposal of excess excavated material and debris.
+4. Removal and off-site disposal of bituminous or concrete, unless designated for salvaging.
+5. Removing, salvaging and storing, or disposing of manhole and catch basin castings.
+6. Loading, hauling, stockpiling and placing as directed (i.e., leveling) designated salvage items to a
+location directed by the Owner.
+7. Fees and permits for the disposal of materials.
+8. Removal and disposal of existing sanitary sewer pipe, storm sewer pipe, watermain, and service pipes.
+9. Bulkheading the ends of existing pipes designated by the Engineer to be abandoned in place.
+10. Protection from damage of structures or other surface improvements that are not to be removed, and
+subsequent repair and/or replacement if damaged by Contractor operations.
+1.3 SPECIFICATION REFERENCES
+A. Unless noted otherwise, the provisions in this section are in addition to the referenced specification.
+B. MnDOT 2104 shall apply to the removal of pavement and miscellaneous structures, except as modified
+herein.
+1.4 SUBMITTALS
+A. No exception to the referenced specification is made.
+City of Jordan – Standard Specifications REMOVING PAVEMENT AND MISCELLANEOUS STRUCTURES
+September, 2019 PAGE 02220-2
+V12222017 © Bolton & Menk, Inc. 2019, All Rights ReservedPART 2 -- PRODUCTS
+2.1 No exception to the referenced specification is made.
+PART 3 -- EXECUTION
+3.1 CONSTRUCTION REQUIREMENTS
+A. Remove existing bituminous, curb and gutter, walks, drives, steps and other specified items where shown
+on the plans and/or required for the construction of the project.
+B. Saw cut bituminous and concrete surfaces prior to excavation, to produce a clean-cut breakage joint.
+C. Dispose of all concrete and bituminous removal items, rubbish and debris outside of the construction zone.
+It shall be the Contractor''s responsibility to secure all required permits and pay all fees associated with the
+disposal of the material and to secure the disposal site.
+D. Remove existing mailboxes, street/traffic signs and similar structures that must be removed to construct
+the project. Restore these facilities to the original location or a location designated by the Owner, when
+work has progressed past the location of the structure.
+E. The Contractor shall take full responsibility to protect structures or other surface improvements from
+damage that are not to be removed. If damage to these facilities occurs due to the construction of the
+project, the Contractor shall replace or repair them.
+F. The Owner will designate which existing hydrants, valves and boxes, manhole castings and other items
+removed as part of the construction, are to be salvaged. All other items shall be disposed by the
+Contractor.
+G. All existing watermain, sanitary sewer and storm sewer pipe being removed and replaced by new
+improvements shall be considered as debris and removed during the construction process.
+H. Where existing pipes are to be abandoned in place, the exposed pipe ends shall be bulkheaded shut with a
+watertight non-shrink concrete grout at a thickness of not less than one pipe diameter.
+I. Pump flowable fill through bulkheads constructed for placement of two 2-inch PVC pipes or use other
+suitable construction methods to contain flowable fill in lines to be abandoned. Contractor shall utilize
+pipes as injection points or vents for placement of flowable fill.
+J. Structure removal shall include removal and disposal of all interior and exterior piping and equipment
+including but not limited to top slabs, base slabs, cone sections, manhole sections, castings, rings, drop pipe,
+base elbows, valves, meters, fittings, pipe, pipe supports, electrical components, etc. At the discretion of the
+Owner, any material to be removed shall be salvaged and delivered to a location selected by the Owner. No
+additional compensation will be made for salvaged items or delivery thereof.
+The entire structure shall be removed from ground surface through base slab. Complete removal is required
+such that no concrete, steel, brick, etc. material is buried on site. All inlet and outlet piping to be abandoned
+in place shall be bulkheaded, and abandoned as specified.
+K. Structure abandonment shall include removal and disposal of all internal piping and equipment including but
+not limited to valves, meters, fittings, pipe, pipe supports, electrical components, etc.
+The structure shall be abandoned by removing and disposing of castings, hatches, top slabs, structure
+sections, exterior piping and appurtenances, etc. to an elevation of a minimum of 5 feet below finished
+grade. Removal of structure sections to the nearest joint or saw cutting may be required as directed. The
+bottom of the structure remaining in place shall be perforated as directed to allow drainage of groundwater.
+The remaining structure shall be filled with granular material and compacted to 100% standard proctor
+density throughout. All exterior piping components such as drop sections shall be abandoned as specified.
+L. Suitable onsite material shall be placed and compacted to fill the void created by structure removal and
+abandonment. When suitable onsite material is not available, suitable offsite material shall be imported. The
+City of Jordan – Standard Specifications REMOVING PAVEMENT AND MISCELLANEOUS STRUCTURES
+September, 2019 PAGE 02220-3
+V12222017 © Bolton & Menk, Inc. 2019, All Rights ReservedContractor shall make his own determination of the quantity of material needed to fill voids, and the
+availability of suitable onsite material.
+M. The Contractor shall remove miscellaneous structures, rubble and debris encountered during construction.
+Miscellaneous structures, rubble and debris may include but are not limited to building foundations,
+cisterns, concrete rubble, bituminous rubble, trees, wood, tires, etc., that exists prior to construction, and
+are not suitable for reuse as backfill material, and are not considered cobbles or boulders as specified and
+directed. Miscellaneous structures, rubble and debris shall be completely removed and disposed of offsite.
+The Contractor shall completely remove and dispose of all material encountered as necessary to construct
+the proposed work, and as directed. Filling of the resulting void with suitable material, as directed, shall be
+considered incidental to the Contract. It shall be the Contractor''s responsibility to secure all required
+permits and pay all fees associated with the disposal of the material and to secure the disposal site(s).
+****END OF SECTION****
+City of Jordan – Standard Specifications REMOVING PAVEMENT AND MISCELLANEOUS STRUCTURES
+September, 2019 PAGE 02220-4
+V12222017 © Bolton & Menk, Inc. 2019, All Rights Reserved', 1),
+('CLEARING AND GRUBBING', NULL, NULL, 'nan', 'nan', '© Bolton & Menk, Inc.', NULL, NULL, 'Standard Specifications for Construction of Public Infrastructure', '02230', 'SECTION 02230 - CLEARING AND GRUBBING
+PART 1 -- GENERAL
+1.1 SUMMARY
+A. This section covers the furnishing of all labor, materials, tools, equipment and performances of all work and
+services necessary or incidental to clearing and grubbing trees, stumps and brush as indicated on the
+drawings or as specified herein.
+1.2 METHOD OF MEASUREMENT AND PAYMENT
+A. Measurement and compensation for the following items shall be paid according to the referenced
+specification or as modified below:
+1. No exception to the referenced specification is made.
+B. The furnishing and installing of specific items and/or the performance of work under certain circumstances
+shall not be individually paid in the absence of a specific bid item for the work. The costs shall be included
+in the unit price bid for clearing and grubbing. Such items of work include but are not limited to:
+1. Permits and fees for the disposal of materials.
+2. Protecting existing improvements from damage.
+1.3 SPECIFICATION REFERENCES
+A. MnDOT 2101 shall apply to clearing and removing trees, stumps and brush, except as modified herein.
+B. Unless noted otherwise, the provisions in this section are in addition to the referenced specification.
+PART 2 -- PRODUCTS
+2.1 NO EXCEPTION TO THE REFERENCED SPECIFICATION IS MADE.
+PART 3 -- EXECUTION
+3.1 CONSTRUCTION REQUIREMENTS
+A. Tree clearing shall be limited to November 1 to March 31, where environmental review requirements of the
+project dictate such removals.
+B. Prior to tree trimming to remove overhanging branches, the Contractor shall inspect the branches to be
+trimmed for occupied bird nests and/or hollows that may be used by birds or bats.
+1. If absent, tree trimming may be completed without time restrictions.
+C. If present, the Contractor shall document with photos to the best of their ability and contact the Engineer
+before initiating tree trimming. Tree trimming may not proceed until authorized in writing by the Engineer
+D. All trees, stumps, brush, seed, grass, roots or other undesirable material within the construction limits shall
+be disposed of by the Contractor.
+E. Disposal methods shall be approved by the Engineer and shall meet all Local, State and Federal regulations.
+F. Burning or burial will not be allowed within city limits.
+****END OF SECTION****
+City of Jordan – Standard Specifications CLEARING AND GRUBBING
+September, 2019 PAGE 02230-1
+V122617 © Bolton & Menk, Inc. 2019, All Rights Reserved', 1),
+('DEWATERING', NULL, NULL, 'nan', 'nan', '© Bolton & Menk, Inc.', NULL, NULL, 'Standard Specifications for Construction of Public Infrastructure', '02240', 'SECTION 02240 - DEWATERING
+PART 1 -- GENERAL
+1.1 SUMMARY
+A. This section covers the furnishing of all labor, materials, tools, equipment and performances of all work and
+services necessary or incidental to the dewatering of trenches as necessary to construct the elements
+shown on the drawings or as specified herein.
+1.2 METHOD OF MEASUREMENT AND PAYMENT
+A. No measurement or direct payment will be made for Dewatering. Payment for control of groundwater,
+surface water, or any other water present at the site, unless otherwise stated in the Schedule of Unit Prices.
+All costs of dewatering in this case shall be considered incidental to the related elements of work.
+B. When a bid item is provided in the Schedule of Unit Prices, the Lump Sum price bid for dewatering for the
+appropriate utility and at the utility depth identified, shall include all equipment materials and labor
+required to dewater utility and appurtenant service excavations to an extent that provides a stable and
+reasonably workable excavation bottom suitable for the proper installation of pipe and bedding materials in
+accordance with the plans, manufacturer requirements, as specified, and as directed by the Engineer.
+1. Dewatering methods (well points or wells, etc.) are the Contractor’s option. Multiple dewatering
+techniques may be required. Dewatering methods selected shall be considered incidental to the price
+bid for dewatering.
+2. The project may require multiple stages of dewatering system installation, operation, and removal. No
+additional compensation shall be paid for multiple stages, setups, installation, operations and removal
+of dewatering systems.
+3. The project may require sub cutting dewatering equipment to achieve optimum dewatering depth. No
+additional compensation shall be paid for any equipment, materials and labor required to sub cut for
+dewatering.
+4. Dewatering manifold and discharge piping may require installation across streets, highways, driveways,
+etc. All dewatering piping shall be installed in a manner to maintain all traveled ways open to traffic.
+Trenching across with temporary aggregate surfacing and use of existing culverts, etc. will be allowed
+as approved by the appropriate governing agency. Ramping over piping with rock, soil, planks, etc. will
+not be permitted. All crossing methods shall be approved by the Engineer and/or governing agency.
+5. All equipment, materials, and labor required to cross maintain, remove, and restore traveled ways,
+including but not limited to highways, streets, driveways, etc. shall be considered incidental to
+dewatering.
+6. The Contractor shall be solely responsible for the application and fees for all permits required to
+perform dewatering operations including but not limited to DNR appropriations, discharge location and
+treatment, WMO’s, etc. All costs associated therewith shall be considered incidental to dewatering.
+7. The Contractor shall be solely responsible for complying with all permit requirements including but not
+limited to dewatering volume, discharge piping, discharge treatment, temporary sedimentation
+control, additional erosion control, discharge piping needed to reach receiving areas, etc. The costs
+associated with permit compliance shall be considered incidental to dewatering.
+C. No dewatering payment will be made for dewatering consisting of placing pumps directly into the open
+trench.
+D. The furnishing and installing of specific items and/or the performance of work under certain circumstances
+shall not be individually paid in the absence of a specific bid item for the work. The costs shall be included
+in the unit price bid for the dewatering items, as indicated. Such items of work include but are not limited
+to:
+City of Jordan – Standard Specifications DEWATERING
+September, 2019 PAGE 02240-1
+V050208 © Bolton & Menk, Inc. 2019, All Rights Reserved1. Interference of other underground structures and utilities.
+2. Protection of existing improvements from damage.
+1.3 SPECIFICATION REFERENCES
+A. MnDOT 2451.3C shall apply to the dewatering of trenches, except as modified herein.
+B. Unless noted otherwise, the provisions in this section are in addition to the referenced specification.
+PART 2 -- PRODUCTS
+2.1 MATERIALS
+A. None
+PART 3 -- EXECUTION
+3.1 CONSTRUCTION REQUIREMENTS
+A. The Contractor shall furnish and install all necessary discharge piping and obtain all permits, easements,
+rights-of-way, etc. to convey and discharge the water at a sufficient distance from the project area to
+eliminate recharge of the ground water at the project site.
+B. Water from dewatering operations shall not be discharged where it will pond or cause damage to cropland
+or personal property due to the presence of standing or flowing water.
+C. Unless otherwise provided in the contract documents; the Contractor shall be responsible for obtaining all
+necessary permits required for dewatering prior to beginning of dewatering. The Contractor shall provide a
+plan for the discharge showing the discharge location, energy dissipation, and water quality treatment to
+the Engineer for approval prior to beginning discharge. The discharge rate, location, and water quality shall
+be in compliance with all local, State, and Federal requirements.
+D. Existing and/or proposed sanitary system(s) shall not be used as an outlet for the dewatering operations.
+E. When dewatered volumes are anticipated to require State of MN permitting approval or when requested
+by the Engineer, the Contractor shall submit a dewatering plan to the Engineer and appropriate permitting
+agencies for approval. The dewatering plan shall include all pertinent information necessary to fully define
+the Contractor’s intended plan to dewater the entire project as required, including but not limited to
+methods proposed, location of wells, well points, pumps, generators, engines, discharge piping, manifolds,
+discharge locations, treatment methods, receiving areas, pumping rates and estimated volumes from each
+location and discharged at each discharge point, etc. and any other information requested by the Engineer.
+1. Approval of the submitted dewatering plan shall not relieve the Contractor of his sole responsibility for
+providing adequate dewatering of the utility corridor as specified and as directed and complying with
+all permit requirements, and protection of existing features as specified.
+2. All costs associated with preparation of the dewatering plan, adding, deleting, adjusting the dewatering
+plan and methods and techniques used shall be considered incidental to dewatering.
+3. The Contractor shall protect all existing features above or below ground including but not limited to
+streets, buildings, private wells, utilities, septic systems, etc. from damage caused by dewatering
+activities including but not limited to settlements, cracking, reduction of well productivity or water
+quality, etc.
+4. Any and all damage caused by dewatering activities shall be repaired as directed by the Engineer at the
+Contractor’s sole expense, unless otherwise approved by the Engineer. Repair items may include but
+are not limited to foundation and building restoration, driveway reconstruction, drilling new wells,
+septic system replacement, etc.
+5. The plans include a sheet that shows the approximate location and well log data available from the
+County Well Index GIS data base from MnDNR and MDH. This information is provided for informational
+purposes only to assist in the planning and design of the dewatering system. The Contractor shall
+City of Jordan – Standard Specifications DEWATERING
+September, 2019 PAGE 02240-2
+V050208 © Bolton & Menk, Inc. 2019, All Rights Reservedconduct his own research and field investigations necessary to design and implement a dewatering
+system that meets the requirements of these specifications and prevents damage to existing features.
+****END OF SECTION****
+City of Jordan – Standard Specifications DEWATERING
+September, 2019 PAGE 02240-3
+V050208 © Bolton & Menk, Inc. 2019, All Rights Reserved', 1),
+('EXCAVATION & eMBANKMENT - SITE GRADING', NULL, NULL, 'nan', 'nan', '© Bolton & Menk, Inc.', NULL, NULL, 'Standard Specifications for Construction of Public Infrastructure', '02310', 'SECTION 02310 - EXCAVATION & EMBANKMENT - SITE GRADING
+PART 1 -- GENERAL
+1.1 SUMMARY
+A. This section covers the furnishing of all labor, materials, tools, equipment and performances of all work and
+services necessary or incidental to the excavation and embankment of the site improvements as indicated
+on the drawings or as specified herein.
+1.2 DEFINITIONS
+A. Building Pad - The area under any proposed building, or an area delineated on the plans as the site for a
+future building.
+B. Building Pad Hold-Down - The elevation that the proposed building pad is to be constructed to. This
+elevation does not represent the finished grade elevation of the proposed building.
+C. Compacted Volume (CV) – The volume of material actually placed as determined by computing the
+difference between original and final cross-sections by the average end area method.
+D. Excavated Volume (EV) – The volume of material actually excavated as determined by computing the
+difference between original and final cross-sections by the average end area method.
+E. Excess Material - Material that is not needed to complete the earthwork balance.
+F. Structural Improvements - For the purposes of this specification, structural improvements shall refer to any
+roadway, sidewalk, trail, building, sign, or other improvements requiring suitable soil to support the
+anticipated loadings.
+G. Subcut - Excavation performed below the proposed subgrade or building pad hold-down elevation shown
+on the plans for the purposes of removing unsuitable material.
+H. Subgrade - The top surface of a roadbed upon which the pavement structure (including aggregate base
+and/or granular subbase) is to be constructed. This is also a general term denoting the soil foundation upon
+which a proposed improvement is to be placed.
+I. Suitable Material - Sand, silty sand or low plasticity clay soils with no organic content. The Engineer shall
+make the final determination as to what material will be considered suitable.
+J. Topsoil - Any soil, generally black in color, containing organic material.
+K. Unsuitable Material - Soil with organic content including topsoil, swamp deposits, peat, muck, or other
+material deemed by the Engineer to be unsuitable for fill or embankment construction.
+1.3 METHOD OF MEASUREMENT AND PAYMENT
+A. Measurement and compensation for the following items shall be paid according to the referenced
+specification or as modified below:
+1. Measurement and payment for Common Excavation shall be based upon the CUBIC YARD - PLANNED
+QUANTITY - CY (P), included in the Proposal. Common excavation is computed to the face of any
+retaining walls. Excavation required for construction of the wall shall be incidental to the unit price bid
+for retaining wall.
+2. Measurement and payment for Topsoil Borrow shall be based upon the CUBIC YARD - LOOSE VOLUME
+QUANTITY - CY (LV), included in the Proposal.
+3. Measurement and payment for Granular Borrow or Select Granular Borrow shall be based upon the
+TON or the CUBIC YARD – COMPACTED VOLUME INPLACE QUANTITY - CY (CV), as indicated in the
+Schedule of Unit Prices.
+4. Measurement and payment for Subgrade Excavation shall be based upon the CUBIC YARD - EXCAVATED
+VOLUME QUANTITY - CY (EV), included in the Proposal.
+City of Jordan – Standard Specifications EXCAVATION & EMBANKMENT - SITE GRADING
+September, 2019 PAGE 02310-1
+V122217 © Bolton & Menk, Inc. 2019, All Rights Reserved5. Measurement and payment for Stabilizing Aggregate shall be based upon the TON or the CUBIC YARD –
+COMPACTED VOLUME INPLACE QUANTITY - CY (CV), as indicated in the Schedule of Unit Prices.
+6. The quantities for Subgrade Excavation and Stabilizing Aggregate may be increased or decreased by any
+amount according to the conditions revealed. No direct compensation will be made for backfilling
+subcut areas with suitable material from the excavation.
+B. The furnishing and installing of specific items and/or the performance of work under certain circumstances
+shall not be individually paid in the absence of a specific bid item for the work. The costs shall be included
+in the unit price bid for the associated excavation items. Such items of work include but are not limited to:
+1. Unless itemized in the Schedule of Prices, separating, salvaging, stockpiling, and spreading of topsoil,
+include in the price bid for common excavation.
+2. Unless itemized in the Schedule of Prices, subcutting the existing topsoil prior to placing embankment
+in all areas with proposed structural improvements, include in the price bid for common excavation.
+3. Salvaging and separately stockpiling suitable aggregate base material, as determined by the Engineer,
+include in the price bid for common excavation.
+4. Separating, salvaging, stockpiling and placing suitable material for use in embankment areas, include in
+the price bid for common excavation.
+5. Obtaining suitable material from areas with no proposed structural improvements to provide enough
+suitable material for embankments being constructed under proposed structural improvements,
+include in the price bid for common excavation.
+6. Restoring the borrow site by grading the area to drain properly to slopes not-to-exceed 6:1 and by
+restoring the topsoil to a minimum thickness of 6 inches, include in the contract unit price for common
+borrow.
+7. Subgrade excavation, furnishing stabilizing aggregate, geotextile fabric installation, compaction,
+regrading and/or other efforts necessary to repair the subgrade after satisfying the roll test and failing
+to protect the integrity of the subgrade, include in the price bid for common excavation.
+8. Over-excavation in cut areas to provide room for placement of topsoil, include in the price bid for
+common excavation.
+9. Earthwork balancing including adjustments for shrinkage loss, and excess materials resulting from the
+additional volume created from pipe bedding, utility pipe, and/or underground structures shall be
+included in the unit price bid for common excavation.
+10. The avoidance and protection of wetlands include in the price bid for common excavation.
+11. Protecting existing improvements and previously accepted in-process improvements from damage
+include in the price bid for common excavation.
+12. Test rolling, include in the price bid for common excavation.
+13. Gradation and compaction testing, and geotechnical inspection services to meet requirements of
+Source and Field Quality Control, if required, include in the price bid for common excavation.
+14. Farming, disking and/or drying suitable wet materials, include in the price bid for common excavation.
+15. Excavation required for construction of any retaining wall shall be included in the unit price bid for
+retaining wall.
+1.4 SPECIFICATION REFERENCES
+A. MnDOT 2105 shall apply to the excavation and embankment for the site improvements, except as modified
+herein.
+B. MnDOT 2574 shall apply to the excavation and embankment for the site improvements, except as modified
+herein.
+City of Jordan – Standard Specifications EXCAVATION & EMBANKMENT - SITE GRADING
+September, 2019 PAGE 02310-2
+V122217 © Bolton & Menk, Inc. 2019, All Rights ReservedC. Unless noted otherwise, the provisions in this section are in addition to the referenced specification.
+PART 2 -- PRODUCTS
+2.1 MATERIALS
+A. All excess excavated material shall become the property of the Contractor and shall be removed from the
+site and disposed of at a location secured by the Contractor.
+B. Stabilizing aggregates for use in backfilling subgrade excavations shall be one of the following, as approved
+by the City Engineer:
+1. 2-inch dust free aggregate, 100% Crushed
+2. Class 5 Aggregate Base, 100% Crushed
+3. Coarse Filter Aggregate, 100% Crushed
+PART 3 -- EXECUTION
+3.1 GENERAL
+A. Excavated topsoil and suitable material for reuse in the project shall be segregated and stockpiled at a site
+selected by the Contractor.
+B. Frozen material will not be allowed for roadway or building pad construction. The Engineer shall approve
+locations for placement of frozen material.
+C. All excavations shall be kept free of water during the placement of fill.
+D. The Contractor shall utilize methods and equipment for excavating that will minimize the disturbance to the
+subgrade. The use of backhoes rather than scrapers or front-end loaders may be required to minimize
+repeated passes of equipment over wet subgrade soils.
+E. At the end of each day the Contractor shall eliminate surface indentations, including those caused by
+sheepsfoot rollers, tractor tires and tracked equipment, and roll the surface with a steel wheel or rubber
+tired roller.
+F. Sufficient common excavation shall be utilized by the Contractor to replace the soil shrinkage from
+excavation which occurs through the course of construction handling and compaction. The Contractor shall
+make his own estimate of the amount of shrinkage that will occur.
+G. Topsoil
+1. Topsoil shall be salvaged and stockpiled in locations shown on the plans or in areas requiring final turf
+establishment, as approved by the Engineer.
+2. Once the salvaged topsoil is stockpiled, the Contractor shall make an estimate of any potential shortage
+or surplus of topsoil possible in meeting the other provision of this Contract and notify the Engineer of
+the estimate.
+3. The first priority in re-distributing the topsoil on site shall be to meet the minimum depths required
+over the entire project area.
+4. In areas requiring final turf establishment with no proposed or anticipated structural improvements
+(building pads, etc.), topsoil shall be spread uniformly to a minimum depth of 6.0-inches, unless
+otherwise indicated in the plans.
+5. In areas requiring final turf establishment with proposed or anticipated structural improvements
+(building pads, etc.), topsoil shall be spread to a depth of 2.0 to 4.0-inches.
+6. In areas not requiring final turf establishment with proposed or anticipated structural improvements,
+no topsoil shall be placed.
+City of Jordan – Standard Specifications EXCAVATION & EMBANKMENT - SITE GRADING
+September, 2019 PAGE 02310-3
+V122217 © Bolton & Menk, Inc. 2019, All Rights ReservedH. Material suitable for curb backfill shall be segregated and stockpiled at a site selected by the Contractor.
+Following curb construction, the material shall be placed behind the curb, allowing for a minimum of 6-
+inches of topsoil, unless otherwise indicated in the plans.
+I. In areas where filling above the existing grade is necessary to establish the final designed elevation, the
+Contractor shall fully remove the topsoil and organic material to the level of stable underlying sand or clay
+prior to backfilling with suitable embankment material.
+J. The Contractor shall make his own determination as to whether the proposed grading has been completed
+according to the plans. When the Contractor determines that the grading has been completed, he will
+notify the Engineer. Neither the Owner nor the Engineer will provide any intermediate acceptance of the
+grading improvements until all of the grading has been completed and all topsoil has been spread.
+3.2 EXCAVATION AND EMBANKMENT IN AREAS WITH PROPOSED STRUCTURAL IMPROVEMENTS.
+A. All vegetation, topsoil, organic, or other unsuitable materials shall be excavated from the area below the
+structural improvement. Due to the variability of soils, the depth of the excavation in these areas is
+expected to vary significantly throughout the site. The excavated area shall be inspected by the
+geotechnical engineer as specified in Field Quality Control.
+B. Subcut excavations shall be laterally oversized a distance of 1.0-foot beyond the edges of the proposed
+structural improvement for each foot of excavation depth (1:1 oversizing). The extents of the structural
+improvement areas shown on the plans do not necessarily show this 1:1 oversizing.
+C. Fill placed from the bottom of the subcut to the subgrade or building pad hold down elevation shall be
+selected material from the excavation or borrow material. Such material shall consist of suitable material
+as defined above. Clay fill shall be moisture-conditioned to within 2 percent above or below the optimum
+moisture content determined from the Standard Proctor compaction test.
+D. The embankment material shall be spread in 6.0 to 8.0-inch loose lifts.
+E. In all roadway and pavement areas, the Contractor shall perform a roll test on the subgrade prior to placing
+any portion of the pavement structure. The roll test shall be performed with a fully-loaded tandem axle
+truck. Soils which rut or deflect 1.0-inch or more shall be corrected by scarifying, drying, and recompacting
+the soils. Subgrade excavation shall only be performed as directed by the Engineer.
+F. Subgrade excavation shall be performed only when the Engineer and the Contractor both agree that the
+inplace soil cannot be made suitable by scarifying, drying, and recompacting. Such excavation shall be
+backfilled with suitable excess common excavation material, stabilizing aggregate, granular borrow or select
+granular borrow, as directed by the Engineer. If the Contractor proceeds without approval from the
+Engineer, all work and material to restore the roadbed to the proper grade shall be at the Contractor’s
+expense.
+3.3 EXCAVATION AND EMBANKMENT IN AREAS WITH NO PROPOSED STRUCTURAL IMPROVEMENTS
+A. Topsoil or unsuitable material may be used to construct embankments in areas with no structural
+improvements.
+3.4 COMPACTION
+A. All embankment grading shall be compacted using:
+1. Under areas with proposed paved or structural improvements, Specified Density Method:
+(a) 100 percent Standard Proctor dry density within 3.0-feet of the proposed sub-grade or building
+pad hold-down elevation.
+(b) 95 percent of the maximum Standard Proctor dry density below 3.0-feet from the proposed sub-
+grade or building pad hold-down elevation.
+2. Under areas with no proposed paved or structural improvements, Quality Compaction Method.
+3.5 SOURCE QUALITY CONTROL
+City of Jordan – Standard Specifications EXCAVATION & EMBANKMENT - SITE GRADING
+September, 2019 PAGE 02310-4
+V122217 © Bolton & Menk, Inc. 2019, All Rights ReservedA. The following testing must be performed:
+1. One (1) gradation test per each 500 tons or 275 cubic yards (CV) of select granular borrow.
+2. One (1) gradation test per each 500 tons or 275 cubic yards (CV) of stabilizing aggregate.
+B. All testing shall be performed by an independent testing laboratory approved by the Engineer.
+3.6 FIELD QUALITY CONTROL
+A. The following testing and inspections, with written certification, must be performed:
+1. Areas with Proposed Structural Improvements:
+(a) One compaction test (including Standard Proctor) per each 500 SY per each 3.0-foot of depth of
+embankment.
+(b) Building Pads shall have a minimum of one compaction test (including Standard Proctor) per each
+3.0-foot of depth of embankment for each pad.
+(c) Inspection following the removal of unsuitable material and prior to placement of embankment
+material to insure that all topsoil and unsuitable material has been removed, and that the exposed
+subgrade has sufficient bearing capacity for the anticipated structural improvement.
+B. The Contractor shall notify the Engineer 24 hours prior to completing the removal of topsoil and unsuitable
+material in areas with proposed structural improvements to ensure that appropriate inspection may be
+performed.
+C. All testing shall be performed by an independent testing laboratory. All inspection shall be performed
+under the direct supervision of a licensed Geotechnical Engineer who shall provide written certification of
+the results.
+D. Samples for testing shall be taken from material in place, in building sites and/or paved areas. All sampling
+methods shall be approved by the Engineer.
+E. The Contractor shall coordinate the site grading and inform the Engineer when the roadway subgrade is
+ready for test rolling, prior to installing any aggregate base. The Engineer may order some subgrade
+correction prior to allowing the installation of aggregate base.
+F. Should any of the specified tests or inspections fail, the Contractor may arrange and pay for additional tests
+or inspections as may be necessary to satisfy the Engineer that the specified requirements have been met.
+***END OF SECTION***
+City of Jordan – Standard Specifications EXCAVATION & EMBANKMENT - SITE GRADING
+September, 2019 PAGE 02310-5
+V122217 © Bolton & Menk, Inc. 2019, All Rights Reserved', 1),
+('APPLICATION OF WATER', NULL, NULL, 'nan', 'nan', '© Bolton & Menk, Inc.', NULL, NULL, 'Standard Specifications for Construction of Public Infrastructure', '02315', 'SECTION 02315 - APPLICATION OF WATER
+PART 1 -- GENERAL
+1.1 SUMMARY
+A. This section covers the furnishing of all labor, materials, tools, equipment and performances of all work and
+services necessary or incidental to the application of water as indicated on the drawings or as specified
+herein.
+1.2 METHOD OF MEASUREMENT AND PAYMENT
+A. Measurement and compensation for the following items shall be paid according to the referenced
+specification or as modified below:
+1. No direct payment is made for water required.
+1.3 SPECIFICATION REFERENCES
+A. MnDOT 2130 shall apply to the application of water, except as modified herein.
+B. Unless noted otherwise, the provisions in this section are in addition to the referenced specification.
+PART 2 -- PRODUCTS
+2.1 NO EXCEPTION TO THE REFERENCED SPECIFICATION IS MADE.
+PART 3 -- EXECUTION
+3.1 CONSTRUCTION REQUIREMENTS
+A. The Contractor shall secure his own source of water, unless the use of fire hydrants is approved by the
+Jordan Public Works Department.
+B. The Contractor must receive the written approval of the Public Works Director, pay any required fees or
+deposits, and implement any required metering prior the use of any City fire hydrants.
+C. The Contractor shall apply water as may be required to obtain proper compaction for all dust control, street
+construction, and embankment construction.
+D. The Contractor shall NOT apply water in quantity or rate sufficient to cause erosion.
+****END OF SECTION****
+City of Jordan – Standard Specifications APPLICATION OF WATER
+September, 2019 PAGE 02315-1
+V122217 © Bolton & Menk, Inc. 2019, All Rights Reserved', 1),
+('TRENCH EXCAVATION, BEDDING AND BACKFILL', NULL, NULL, 'nan', 'nan', '© Bolton & Menk, Inc.', NULL, NULL, 'Standard Specifications for Construction of Public Infrastructure', '02320', 'SECTION 02320 - TRENCH EXCAVATION, BEDDING AND BACKFILL
+PART 1 -- GENERAL
+1.1 SUMMARY
+A. This section covers the furnishing of all labor, materials, tools, equipment and performances of all work and
+services necessary or incidental to maintenance of utility service, trench excavation, bedding and backfill
+necessary for the construction of underground utilities and structures, as indicated on the drawings or as
+specified herein.
+1.2 DEFINITIONS
+A. Excess Material - Material that is not needed to complete the earthwork balance.
+B. Suitable Material - Sand, silty sand or low plasticity clay soils with no organic content. The Engineer shall
+make the final determination as to what material will be considered suitable.
+C. Unsuitable Material - Soil with organic content including topsoil, swamp deposits, peat, muck, or other
+material deemed by the Engineer to be unsuitable for fill or embankment construction.
+D. Flexible Pipe Materials – For the purposes of this specification section, flexible pipe materials shall include
+the following:
+1. Polyvinyl chloride (PVC) pipe – solid wall and profile wall pipe.
+2. Polypropylene profile wall pipe.
+3. High density polyethylene pipe – solid wall and profile wall pipe.
+4. Corrugated steel or aluminum pipe.
+5. Centrifugally cast, glass-fiber-reinforced, polymer mortar (CCFRPM) pipe.
+E. Rigid Pipe Materials – For the purposes of this specification section, rigid pipe materials shall include the
+following:
+1. Reinforced concrete pipe.
+2. Reinforced concrete box culverts.
+3. Ductile iron pipe.
+1.3 METHOD OF MEASUREMENT AND PAYMENT
+A. Measurement and compensation for the following items shall be paid according to the referenced
+specification or as modified below:
+1. Items specifically identified in the Schedule of Unit Prices will be compensated in accordance with the
+description of measurement and payment contained in the section applicable to the individual item.
+Otherwise, no direct compensation shall be granted for compliance with the provisions contained
+herein.
+B. The furnishing and installing of specific items and/or the performance of work under certain circumstances
+shall not be individually paid in the absence of a specific bid item for the work. The costs shall be included
+in the unit price bid for the individual pipeline items associated with the stated specific item or work effort.
+Such items of work include but are not limited to:
+1. Interference with other above and underground structures and utilities.
+2. The removal and restoration, or protection of existing structures and utilities that are shown on the
+plans and for which there is no bid item for removing and restoring, or working around the utility.
+City of Jordan – Standard Specifications TRENCH EXCAVATION, BEDDING AND BACKFILL
+September, 2019 PAGE 02320-1
+V101807 © Bolton & Menk, Inc. 2019, All Rights Reserved3. Unless separately itemized in the Schedule of Unit Prices, any dewatering necessary for construction.
+4. Foundation materials placed in lieu of performing necessary dewatering.
+5. Bulkheading of existing pipes to be abandoned in place.
+6. Granular foundation, granular bedding and granular encasement materials.
+7. Granular foundation materials used in lieu of bedding materials in the specified bedding zone, where
+specified.
+8. Granular foundation materials used in unstable trench conditions.
+9. The removal and disposal of native materials that are unsuitable for bedding and/or backfill.
+10. Providing and maintaining utility service.
+11. The replacement of all material displaced due to shrinkage or loss during the excavation and backfilling
+operations.
+12. The removal of excess materials above the original topography the resulting from the additional
+volume created from pipe bedding, utility pipe, and/or underground structures.
+13. Delays due to other utility conflicts that result during the course of construction.
+14. Protecting existing improvements and previously accepted elements of this construction from damage.
+15. Protecting the inverts of other utility pipes from the accumulation of debris and soil, the removal of
+blockages that threaten to damage property, and/or the cleaning of both the newly constructed lines
+and the existing lines of all debris and soil that accumulated during the construction.
+16. If a separate bid item for bypass pumping is NOT included in the Schedule of Unit Prices, providing
+temporary bypass pumping / control of storm water flows around the construction zone, include in the
+price bid for the associated items being installed.
+17. The use of special construction techniques such as trench boxes, sheeting, shoring, etc., include in the
+price bid for the associated items being installed.
+18. Compaction testing and compaction, if required, include in the price bid for the associated items being
+installed.
+1.4 SPECIFICATION REFERENCES
+A. Reference CEAM 2600 shall apply to excavating, installing bedding and backfilling all trench excavation
+construction necessary for the completion of work, except as modified herein.
+1. All references to MnDOT specifications shall mean the specific edition, including Supplemental
+Specifications and Technical Memoranda as identified in Section 01420 “Specification Reference” of
+this Project Manual.
+2. CEAM 2600.3.A5 Removal of Surface Improvements - All rubble and debris to be disposed of off-site,
+shall be disposed of at a location secured by the Contractor and in a manner in compliance with
+applicable Local, State and Federal regulations.
+3. CEAM 2600.3.B3 Excavation Limits and Requirements - OSHA limitations shall also apply to the top of
+trench width determination. The 7-day written notice is waived if changing soil conditions and OSHA
+compliance apply.
+4. CEAM 2600.3.C Trenchless Pipe Installation is hereby deleted. If trenchless pipe installation is included
+in this project, refer to applicable specification sections in these specifications
+5. CEAM 2600.4 Method of Measurement Paragraphs B and C are hereby deleted. See applicable sections
+of these Specifications.
+City of Jordan – Standard Specifications TRENCH EXCAVATION, BEDDING AND BACKFILL
+September, 2019 PAGE 02320-2
+V101807 © Bolton & Menk, Inc. 2019, All Rights Reserved6. CEAM 2600.5 Basis of Payment – The last three paragraphs of 2600.5 are hereby deleted. See
+applicable sections of these Specifications.
+B. MnDOT 2451 shall apply to granular materials for foundation, bedding and encasement of utility line
+construction, except as modified herein.
+C. Unless noted otherwise, the provisions in this section are in addition to the referenced specification.
+1.5 SUBMITTALS
+A. No exception to the referenced specification is made.
+PART 2 -- PRODUCTS
+2.1 GRANULAR MATERIALS
+A. Granular Bedding and Granular Encasement – No exception to the referenced specification is made.
+B. Granular Backfill - No exception to the referenced specification is made.
+PART 3 -- EXECUTION
+3.1 EXCAVATION AND PREPARATION OF TRENCH
+A. Interference and Protection of Underground Structures
+1. If an existing utility is shown on the plans and there is no bid item for removing and restoring, or
+working around the utility, the Contractor shall be required to remove and restore, or protect the
+utility.
+2. The inverts of existing sewers (storm & sanitary), culverts, subdrains, etc. shall be protected during
+construction. The Contractor is responsible to inspect and clean, if necessary, all lines which have
+become compromised by the construction operations.
+B. Excavation Limits and Requirements
+1. The trench for all flexible pipe shall be undercut 6.0-inches below the pipe barrel to permit the
+installation of granular bedding or foundation material.
+2. The trench for all rigid pipe shall be undercut three-inches below the pipe barrel, or as shown in the
+bedding detail, to permit the installation of granular bedding or foundation material.
+3. The Contractor shall install and operate a dewatering system to maintain all trenches free of water
+wherever necessary. The Contractor shall make his own subsurface investigations and determine what
+dewatering methods to utilize to prevent such damage.
+4. The Contractor shall be responsible for any damage to adjacent structures or buildings caused by the
+dewatering operations
+5. Use of granular foundation material in lieu of performing dewatering is permitted.
+6. All excess excavated material shall become the property of the Contractor and shall be removed from
+the site and disposed of at a location secured by the Contractor.
+3.2 INSTALLATION OF PIPE AND FITTINGS
+A. The Contractor shall keep accurate records as to the location of the service connections, field tile, utility
+crossings, etc. either constructed or encountered during the construction Measurements to service lines
+shall be taken from the two nearest permanent structures (i.e., hydrants, valves, manholes, buildings).
+Final payment for the project will not be made until the information is in the possession of the Owner.
+B. When connection to an existing conduit is required at an existing or proposed manhole, the Contractor shall
+expose and verify the elevation of the existing conduit prior to laying any pipe toward, or away from, the
+City of Jordan – Standard Specifications TRENCH EXCAVATION, BEDDING AND BACKFILL
+September, 2019 PAGE 02320-3
+V101807 © Bolton & Menk, Inc. 2019, All Rights Reservedconnection point. If the elevation of the existing conduit does not match the elevation shown on the plans,
+the Contractor shall notify the Engineer, at which time the Engineer may adjust the proposed grades.
+C. Sewer Pipe at Structures
+1. The pipe end(s) shall be extended inside the structure a maximum of 3.0-inches unless approved
+otherwise by the Engineer or shown on the plans.
+D. Connection and Assembly of Joints
+1. For sanitary sewer, watermain, forcemains, and culverts, all joints shall be water tight.
+2. For storm sewers and subdrains, all joints shall not permit the intrusion of soil or backfill materials.
+(a) If reinforced concrete pipe is used, the Contractor may at its own discretion choose to wrap each
+joint with a geotextile filter fabric, as specified, rather than place mastic in the joint.
+E. Bulkheading Open Pipe Ends
+1. The Contractor shall furnish, install and maintain a temporary, water-tight plug adequately blocked in
+place to prevent flooding of the existing downstream sewer system. The plug shall be placed at the
+beginning of the project or at the end of each working day at the end of the day''s operation.
+2. When flows are diverted from an existing sewer or tile to be abandoned in place, the Contractor shall
+construct a water-tight plug on the open end of the abandoned pipe.
+3. Permanent watertight plugs shall be constructed with concrete grout with a thickness of not less than
+1 pipe diameter.
+3.3 BEDDING AND BACKFILLING OPERATIONS
+A. Backfill material around all manholes, catch basins, valve boxes, curb boxes, and hydrants shall be
+compacted with hand machines. The maximum lift thickness shall be 6-inches.
+B. Flexible Pipe Materials
+1. Unless otherwise shown on the plans, the pipe shall be bedded and backfilled with granular material
+compacted to 95 percent Standard Proctor Density or as recommended by the pipe manufacturer,
+whichever is denser, from 6.0-inches below the bottom of the pipe to 12.0-inches above the top of the
+pipe the full width of the trench. The Contractor shall bed and backfill the pipe as shown on the plan
+details.
+2. Where the trench foundation has been found to be unstable and not suitable for bedding, the trench
+shall be undercut until acceptable conditions are found. The Contractor shall then install compacted
+foundation material to meet the line and grade specified on the plan.
+3. Unless otherwise shown on the plans, select native material may be used as a trench backfill above the
+granular bedding up to the bottom of the subgrade except in those conditions where the top of the
+pipe is less than 12-inches from the bottom of the subgrade in which case granular material compacted
+to 100 percent Standard Proctor Density shall be used as trench backfill the full width of the trench to
+the bottom of the subgrade excavation zone.
+C. Rigid Pipe Materials
+1. Unless otherwise shown on the plans, in ordinary or stable trench conditions, the bottom of the trench
+shall be first excavated to a depth of approximately 15 percent of the outside pipe diameter below the
+established grade for the bottom of the pipe. Then the bottom of the trench shall be further excavated
+to allow for the placement of 6.0-inches of granular bedding for a width of at least 60 percent of the
+outside diameter of the pipe. Pipe shall be placed on the bottom of the pre-shaped excavated trench.
+The bottom of the excavated trench shall be shaped to fit the circumference of the pipe up to 0.15 of
+the outside diameter of the pipe. The Contractor shall encase the pipe from the 0.15 outside diameter
+City of Jordan – Standard Specifications TRENCH EXCAVATION, BEDDING AND BACKFILL
+September, 2019 PAGE 02320-4
+V101807 © Bolton & Menk, Inc. 2019, All Rights Reservedto the 0.60 diameter height of the pipe with granular material compacted to 95 percent Standard
+Proctor Density or as recommended by the pipe manufacturer, whichever is denser.
+2. Where the trench foundation has been found to be unstable and not suitable for bedding, the trench
+shall be undercut until acceptable conditions are found. The Contractor shall then install compacted
+foundation material to meet the line and grade specified on the plan.
+3. Unless otherwise shown on the plans, select native material may be used as trench backfill above the
+granular bedding up to the bottom of the subgrade except in those conditions where the top of the
+pipe is less than 12.0-inches from the bottom of the subgrade in which case granular material
+compacted to 100 percent Standard proctor Density shall be used as trench backfill the full width of the
+trench to the bottom of the subgrade excavation zone.
+D. Structures
+1. All manholes, catch basins, valve boxes, water vaults, headwalls and miscellaneous structures shall be
+backfilled with granular backfill material and shall be compacted with a hand operated motorized
+compactor.
+E. All trench backfill shall be compacted in accordance with the Specified Density Method:
+1. Under areas with proposed paved or structural improvements:
+(a) 100 percent Standard Proctor from the proposed pavement subgrade elevation down 3.0-feet.
+(b) 95 percent Standard Proctor from the bottom of excavation up to 3.0-feet below the subgrade
+elevation
+2. Under areas with no proposed paved or structural improvements:
+(a) 95 percent Standard Proctor
+3.4 SOURCE QUALITY CONTROL
+A. The following testing must be performed:
+(a) One gradation test per each 500 tons or 275 cubic yards (CV) of granular material.
+3.5 FIELD QUALITY CONTROL
+A. The following testing must be performed:
+1. One compaction test (including Standard Proctor) on subgrade per each 300 lineal feet of trench per
+3.0-feet of depth
+B. The Contractor shall cooperate fully with the individuals performing the tests.
+C. Samples for testing shall be taken from material in place, in the trench at locations approved by the
+Engineer. All sampling methods shall be approved by the Engineer.
+D. Should any of the specified tests fail, the Contractor may arrange and pay for additional tests as may be
+necessary to satisfy the Engineer that the requirements have been met.
+***END OF SECTION***
+City of Jordan – Standard Specifications TRENCH EXCAVATION, BEDDING AND BACKFILL
+September, 2019 PAGE 02320-5
+V101807 © Bolton & Menk, Inc. 2019, All Rights Reserved', 1),
+('EXCAVATION AND EMBANKMENT', NULL, NULL, 'nan', 'nan', '© Bolton & Menk, Inc.', NULL, NULL, 'Standard Specifications for Construction of Public Infrastructure', '02330', 'SECTION 02330 - EXCAVATION AND EMBANKMENT
+PART 1 -- GENERAL
+1.1 SUMMARY
+A. This section covers the furnishing of all labor, materials, tools, equipment and performance of all work and
+services necessary or incidental to the excavation and embankment for roadways and pavements and
+construction of storm water detention facilities as indicated on the drawings or as specified herein.
+1.2 METHOD OF MEASUREMENT AND PAYMENT
+A. Measurement and compensation for the following items shall be paid according to the referenced
+specification or as modified below:
+1. Common Excavation:
+(a) Measurement and payment for Common Excavation shall be based upon the CUBIC YARD, PLAN
+QUANTITY - CY(P).
+(b) Common excavation is computed to the face of any retaining walls. Excavation required for
+construction of the wall shall be incidental to the unit price bid for retaining wall.
+2. Measurement and payment for Granular Borrow or Select Granular Borrow shall be based upon the
+TON or the CUBIC YARD – COMPACTED VOLUME INPLACE QUANTITY - CY (CV), as indicated in the
+Schedule of Unit Prices.
+3. Subgrade Excavation:
+(a) All excavation directed by the Engineer below the common excavation zone or limits indicated in
+the typical sections or cross sections in the plans shall be considered Subgrade Excavation.
+(b) Measurement and payment for Subgrade Excavation will be by the CUBIC YARD, EXCAVATED
+VOLUME - CY (EV) based on the dimensions of the excavated area.
+(c) The quantities for Subgrade Excavation is strictly an estimate and may be increased or decreased
+by any amount with no adjustment in unit price according to the conditions revealed.
+4. Backfill for Subgrade Excavations:
+(a) No direct compensation will be made for backfilling subcut areas with suitable material from the
+excavation.
+(b) Where suitable on-site material is unavailable, Stabilizing Aggregate shall be used for backfill of
+Subgrade Excavations.
+5. Measurement and payment for Stabilizing Aggregate shall be based upon the TON or the CUBIC YARD –
+COMPACTED VOLUME INPLACE QUANTITY - CY (CV), as indicated in the Schedule of Unit Prices.
+6. The quantities for Subgrade Excavation and Stabilizing Aggregate may be increased or decreased by any
+amount according to the conditions revealed. No direct compensation will be made for backfilling
+subcut areas with suitable material from the excavation.
+7. Rock Excavation:
+(a) Measurement and payment for Rock Excavation shall be by the CUBIC YARD.
+(b) The amount bid shall be compensation in full for all costs of excavating, removing and disposing, if
+necessary, all continuous bedrock materials encountered in the course of trench excavation.
+8. Topsoil Borrow:
+City of Jordan – Standard Specifications EXCAVATION AND EMBANKMENT
+September, 2019 PAGE 02330-1
+V122717 © Bolton & Menk, Inc. 2019, All Rights Reserved(a) No direct compensation will be made for salvaging, stockpiling and replacing topsoil salvaged from
+within the construction limits.
+(b) Measurement and payment for furnishing and installing topsoil borrow shall be based upon the
+CUBIC YARD, LOOSE VOLUME - CV (LV).
+(c) The quantities for topsoil borrow are strictly estimates and may be increased or decreased by any
+amount with no adjustment in unit price according to the extent of existing topsoil salvaged and
+other conditions revealed.
+B. The furnishing and installing of specific items and/or the performance of work under certain circumstances
+shall not be individually paid in the absence of a specific bid item for work. The costs shall be included in
+the unit price bid for the associated excavation items. Such items of work include but are not limited to:
+1. Reclaiming existing bituminous material, mixing with underlying granular material, loading and
+temporarily stockpiling the mixture (unless specifically identified as a separate bid item).
+2. Disposal of bituminous/aggregate reclamation material that is determined by the Engineer to be
+unsuitable for re-use.
+3. Salvaging, separating, separately stockpiling and re-spreading topsoil material in turf areas to the
+depths specified or indicated on the plans.
+4. Salvaging and separately stockpiling suitable aggregate base material, as determined by the Engineer.
+5. Separating, salvaging, stockpiling and replacing clay borrow in roadway, structure, and embankment
+areas.
+6. Earthwork balancing including adjustments for shrinkage loss, and excess materials resulting from the
+additional volume created from pipe bedding, utility pipe, and/or underground structures shall be
+included in the unit price bid for common excavation.
+7. Protecting existing improvements and previously accepted in-process improvements from damage.
+8. Protecting infiltration areas.
+9. The avoidance of wetlands.
+10. Subcutting the existing topsoil prior to placing embankment in all roadway, patio and trail locations.
+11. Subgrade excavation, furnishing stabilizing aggregate, geotextile fabric installation, compaction,
+regrading and/or other efforts necessary to repair the subgrade for failing to protect the integrity of
+the subgrade after it has been accepted (test rolled).
+12. Restoring the borrow site by grading the area to drain properly to slopes not-to-exceed 6:1 and by
+restoring the topsoil to a minimum thickness of 6 inches, include in the contract unit price for common
+borrow.
+13. Shaping, stockpiling, & seeding of all disposal sites shall be included in the price bid for common
+excavation.
+14. Gradation and compaction testing and geotechnical inspection services to meet requirements of source
+and field quality control, if required
+1.3 SPECIFICATION REFERENCES
+A. MnDOT 2105 shall apply to excavation and embankment, except as modified herein.
+B. MnDOT 2574 shall apply to excavation and embankment, except as modified herein.
+C. Unless noted otherwise, the provisions in this section are in addition to the referenced specification.
+PART 2 -- PRODUCTS
+City of Jordan – Standard Specifications EXCAVATION AND EMBANKMENT
+September, 2019 PAGE 02330-2
+V122717 © Bolton & Menk, Inc. 2019, All Rights Reserved2.1 MATERIALS
+A. All excess excavated material shall become the property of the Contractor and shall be removed from the
+site and disposed of at a site secured by the Contractor.
+B. Frozen material shall be considered unsuitable material unless otherwise authorized in writing by the
+Engineer.
+C. Excavated material unsuitable for embankment and backfill construction shall become the property of the
+Contractor and shall be removed from the site and disposed of at a site secured by the Contractor.
+D. Stabilizing aggregates for use in backfilling subgrade excavations shall be one of the following, as approved
+by the City Engineer:
+1. 2-inch dust free aggregate, 100% Crushed
+2. Class 5 Aggregate Base, 100% Crushed
+3. Coarse Filter Aggregate, 100% Crushed
+PART 3 -- EXECUTION
+3.1 CONSTRUCTION REQUIREMENTS
+A. At the end of each day the Contractor shall eliminate surface indentations, including those caused by
+sheeps foot rollers, tractor tires and tracked equipment, and roll the surface with a steel wheel or rubber
+tired roller except in those areas designated to be protected from compaction.
+B. Subgrade excavation shall be performed, as directed by the Engineer, for the removal of any unstable soils
+that may be encountered. Such excavation shall be backfilled with suitable excess common excavation
+material or stabilizing aggregate as directed by the Engineer. If the Contractor proceeds without approval
+from the Engineer or Owner, all work and material to restore the roadbed to the proper grade shall be at
+the Contractor’s expense.
+C. Once the subgrade has been successfully test rolled, no traffic or construction equipment shall be permitted
+to operate directly on the subgrade without the prior approval of the Engineer. The subgrade shall be
+relatively smooth prior to the placement of aggregate base. All equipment shall be restricted to operating
+only in areas where the aggregate base has been installed to its full design depth.
+D. Material suitable for curb backfill shall be segregated and stockpiled at a site selected by the Contractor.
+Following curb construction, the material shall be placed behind the curb to the subgrade level of the
+topsoil.
+E. The Contractor shall salvage and stockpile all topsoil removed during the course of the construction. This
+topsoil shall be used where required for turf establishment as directed by the Engineer.
+F. Sufficient excavated material shall be utilized by the Contractor to replace loss volume due to soil shrinkage
+from trench excavation that may occur through the course of construction. The Contractor shall make his
+own determination of the amount of shrinkage that will occur.
+G. All embankment shall be compacted using the Specified Density Method:
+1. Under areas with proposed paved or structural improvements:
+(a) 100 percent Standard Proctor from the proposed pavement subgrade elevation down 3.0-feet.
+(b) 95 percent Proctor from the bottom of excavation up to 3.0-feet below the subgrade elevation.
+2. Under areas with no proposed paved or structural improvements:
+(a) 95 percent Standard Proctor.
+City of Jordan – Standard Specifications EXCAVATION AND EMBANKMENT
+September, 2019 PAGE 02330-3
+V122717 © Bolton & Menk, Inc. 2019, All Rights ReservedH. Topsoil unsuitable for pond or channel bottom construction may be used as embankment material above
+the designated high water level in the plans.
+I. If the subgrade is unstable and the instability is due to excessive moisture, the subgrade shall be scarified
+and dried over a reasonable time period. When the material has reached acceptable moisture limits, the
+material shall be returned and compacted into place to the proper elevation. If the material continues to be
+unstable, the Engineer may authorize the removal of the undesirable material as subgrade excavation.
+3.2 SOURCE QUALITY CONTROL
+A. The following testing must be performed:
+1. One gradation test per each 500 tons or 275 cubic yards (CV) of select granular borrow.
+2. One gradation test for stabilizing aggregate.
+B. Samples for testing shall be taken from material in stock at locations approved by the Engineer. All sampling
+methods shall conform to MnDOT standards.
+3.3 FIELD QUALITY CONTROL
+A. "Blue top" stakes shall be provided by the Contractor at 100.0-foot intervals to confirm that the subgrade is
+constructed to the required grades and elevations. Methods other than "blue top" staking may be allowed,
+if approved by the Engineer.
+B. The following testing must be performed:
+1. One compaction test (including Standard Proctor) on subgrade per each 500 SY of roadway per each
+3.0-feet of subgrade excavation depth.
+C. All testing shall be performed by an independent testing laboratory approved by the Engineer.
+D. The Contractor shall cooperate fully with the individuals performing the tests.
+E. Samples for testing shall be taken from material in place, in the roadway at locations approved by the
+Engineer. All sampling methods shall conform to MnDOT Standards.
+F. Should any of the specified tests fail, the Contractor may arrange and pay for additional tests as may be
+necessary to satisfy the specified requirements.
+****END OF SECTION****
+City of Jordan – Standard Specifications EXCAVATION AND EMBANKMENT
+September, 2019 PAGE 02330-4
+V122717 © Bolton & Menk, Inc. 2019, All Rights Reserved', 1),
+('SUBGRADE PREPARATION', NULL, NULL, 'nan', 'nan', '© Bolton & Menk, Inc.', NULL, NULL, 'Standard Specifications for Construction of Public Infrastructure', '02335', 'SECTION 02335 - SUBGRADE PREPARATION
+PART 1 -- GENERAL
+1.1 SUMMARY
+A. This section covers the furnishing of all labor, materials, tools, equipment and performance of all work and
+services necessary or incidental to the subgrade preparation as indicated on the drawings or as specified
+herein.
+1.2 METHOD OF MEASUREMENT AND PAYMENT
+A. Measurement and compensation for the following items shall be paid according to the referenced
+specification or as modified below:
+1. Unless a bid item is provided in the Schedule of Unit Prices for Subgrade Excavation, no direct payment
+shall be made for subgrade preparation. Costs shall be included in the unit prices bid for the various
+excavation and embankment items.
+2. When a bid item is provided in the Schedule of Unit Prices, no exception to the referenced specification
+is made.
+B. The furnishing and installing of specific items and/or the performance of work under certain circumstances
+shall not be individually paid in the absence of a specific bid item for the work. The costs shall be included
+in the unit price bid for the various excavation items. Such items of work include but are not limited to:
+1. Drying and adding water to the subgrade.
+2. Subgrade excavation, furnishing stabilizing aggregate, geotextile fabric installation, compaction,
+regrading and/or other efforts necessary to repair the subgrade after satisfying the rolling test and
+failing to protect the integrity of the subgrade.
+1.3 SPECIFICATION REFERENCES
+A. MnDOT 2112 shall apply to the subgrade preparation, except as modified herein.
+B. Unless noted otherwise, the provisions in this section are in addition to the referenced specification.
+PART 2 -- PRODUCTS
+2.1 NO EXCEPTION TO THE REFERENCED SPECIFICATION IS MADE.
+PART 3 -- EXECUTION
+3.1 CONSTRUCTION REQUIREMENTS
+A. At the end of each day, and prior to the placement of aggregate base, the Contractor shall eliminate surface
+indentations, including those caused by sheeps foot rollers and tractor cletes, and roll the surface with a
+steel wheel or rubber tired roller.
+B. The Contractor shall disc, scarify, shape and compact the street subgrade or existing base, adding water or
+drying as may be necessary to give uniform and desired density.
+C. If the subgrade is unstable and the instability is due to excessive moisture, the subgrade shall be scarified
+and dried over a reasonable time period. When the material has reached acceptable moisture limits, the
+material shall be returned to the roadbed and compacted into place to the proper elevation. The roadbed
+will once again be test rolled. If the material continues to be unstable, the Engineer may authorize the
+removal of the undesirable material as subgrade excavation.
+D. Once the subgrade has been test rolled and accepted by the Engineer, no traffic or construction equipment
+shall be permitted to operate directly on the subgrade without the prior approval of the Engineer. All
+City of Jordan – Standard Specifications SUBGRADE PREPARATION
+September, 2019 PAGE 02335-1
+V122217 © Bolton & Menk, Inc. 2019, All Rights Reservedequipment shall be restricted to operating only in areas where the aggregate base has been installed to its
+full design depth. In the event that inclement weather occurs after a test roll, and prior to placement of the
+aggregate base or first course of bituminous, the test roll shall be voided and a new test roll shall be
+performed.
+E. The subgrade shall be compacted in accordance with the Specified Density Method:
+1. Under areas with proposed paved or structural improvements:
+(a) 100 percent Standard Proctor from the proposed pavement subgrade elevation down 3.0-feet.
+(b) 95 percent Standard Proctor from the bottom of excavation up to 3.0-feet below the subgrade
+elevation.
+2. Under areas with no proposed paved or structural improvements:
+(a) 95 percent Standard Proctor.
+3.2 FIELD QUALITY CONTROL
+A. "Blue Top" stakes shall be provided by the Contractor at 50.0-foot intervals to confirm that the subgrade is
+constructed to the required grades and elevations. Methods other than "Blue Top" staking may be allowed,
+if approved by the Engineer.
+B. The compacted subgrade shall be test rolled using a fully loaded aggregate truck (tandem) in a pattern
+approved by the Engineer. The subgrade stability shall be considered adequate when the surface shows
+less than 1.0-inch of yielding or rutting after one pass, or as otherwise approved by the Engineer.
+C. The following testing must be performed:
+1. One compaction test (including Standard Proctor) on subgrade per 500 SY of roadway.
+D. All testing shall be performed by an independent testing laboratory approved by the Engineer.
+E. The Contractor shall cooperate fully with the individuals performing the tests.
+F. Samples for testing shall be taken from material in place, in the roadway at locations approved by the
+Engineer. All sampling methods shall be approved by the Engineer.
+G. Should any of the specified tests fail, the Contractor may arrange and pay for additional tests as may be
+necessary to satisfy the Engineer that the requirements have been met.
+****END OF SECTION****
+City of Jordan – Standard Specifications SUBGRADE PREPARATION
+September, 2019 PAGE 02335-2
+V122217 © Bolton & Menk, Inc. 2019, All Rights Reserved', 1),
+('GEOTEXTILE FABRIC - ROAD CONSTRUCTION', NULL, NULL, 'nan', 'nan', '© Bolton & Menk, Inc.', NULL, NULL, 'Standard Specifications for Construction of Public Infrastructure', '02340', 'SECTION 02340 - GEOTEXTILE FABRIC - ROAD CONSTRUCTION
+PART 1 -- GENERAL
+1.1 SUMMARY
+A. This section covers the furnishing of all labor, materials, tools, equipment and performances of all work and
+services necessary or incidental to geotextile fabric - road construction as indicated on the drawings or as
+specified herein.
+1.2 METHOD OF MEASUREMENT AND PAYMENT
+A. Measurement and compensation for the following items shall be paid according to the referenced
+specification or as modified below:
+1. Geotextile Fabric – Road Construction shall be measured by the SQUARE YARD in place and shall be
+paid at the unit price bid.
+B. The furnishing and installing of specific items and/or the performance of work under certain circumstances
+shall not be individually paid in the absence of a specific bid item for the work. The costs shall be included
+in the unit price bid for the associated geotextile fabric - road construction items. Such items of work
+include but are not limited to:
+1. No exception to the referenced specification is made.
+1.3 SPECIFICATION REFERENCES
+A. Reference MnDOT 3733 shall apply to the geotextile fabric - road construction, except as modified herein.
+B. Unless noted otherwise, the provisions in this section are in addition to the referenced specification.
+PART 2 -- PRODUCTS
+2.1 MATERIALS
+A. The fabric to meet the requirements of MnDOT 3733, Type 5 (Type V), unless otherwise shown on the
+plans.
+2.2 SOURCE QUALITY CONTROL
+A. The Contractor shall furnish certified copies of manufacturer''s test results on geotextile samples indicating
+conformance to the required specifications. The test results shall be furnished to the Engineer at least
+10-days prior to the intended installation date.
+B. Non-conforming products will be subject to rejection.
+C. Approved materials will be accepted on the basis of brand name labeled on the geotextile itself or its
+container.
+PART 3 -- EXECUTION
+3.1 CONSTRUCTION REQUIREMENTS
+A. Prior to installing geotextile fabric, the prepared subgrade surface shall be relatively smooth and free of
+stones, sticks or other debris or irregularities that could puncture the geotextile.
+B. If multiple pieces of geotextile are required, adjacent strips shall be field or factory sewn per the
+manufactures recommendation.
+C. Wrinkles and folds in the geotextile shall be removed by stretching and staking, as required.
+D. The geotextile shall be secured to prevent displacement during subsequent operations.
+City of Jordan – Standard Specifications GEOTEXTILE FABRIC - ROAD CONSTRUCTION
+September, 2019 PAGE 02340-1
+V122217 © Bolton & Menk, Inc. 2019, All Rights ReservedE. No traffic or construction equipment will be permitted to operate directly on the geotextile.
+F. Once the geotextile is placed and prior to the placing of aggregate cover, the Contractor shall allow the
+Engineer sufficient time to conduct a personal observation of the geotextile to determine that no holes,
+rips, tears or similar defects have occurred and that sewing/overlap have been properly installed. All
+defects determined during the observation shall be patched or replaced prior to placing aggregate cover.
+G. The aggregate cover shall be end dumped onto the geotextile. The initial deposit of material may be graded
+to the design thickness but at no time shall equipment be allowed on the geotextile with less than
+8.0-inches of aggregate cover. Following compaction of the initial layer, all remaining material shall be
+placed as specified.
+H. Construction shall be conducted parallel to road alignment. Vehicular turning shall not be allowed on the
+first lift of cover material, unless approved by the Engineer. All ruts that form during the construction shall
+be immediately filled to maintain the minimum aggregate cover.
+I. Unless otherwise shown on the plans, the geotextile fabric shall be placed to the back of the curb or to the
+inside edge of the edge drain filter trench, whichever is closest to the centerline of the roadway.
+****END OF SECTION****
+City of Jordan – Standard Specifications GEOTEXTILE FABRIC - ROAD CONSTRUCTION
+September, 2019 PAGE 02340-2
+V122217 © Bolton & Menk, Inc. 2019, All Rights Reserved', 1),
+('EROSION & SEDIMENT CONTROL', NULL, NULL, 'nan', 'nan', '© Bolton & Menk, Inc.', NULL, NULL, 'Standard Specifications for Construction of Public Infrastructure', '02370', 'SECTION 02370 - EROSION & SEDIMENT CONTROL
+PART 1 -- GENERAL
+1.1 SUMMARY
+A. This section covers the furnishing of all labor, materials, tools, equipment and performances of all work and
+services necessary or incidental to storm water management as indicated on the plans, as specified herein
+or as directed by the Engineer.
+B. The Contractor and Owner shall identify a person(s) knowledgeable and experienced in the application of
+erosion and sediment control Best Management Practices (BMPs) who will oversee the implementation of
+the SWPPP.
+C. Minnesota Pollution Control Agency (MPCA) - General Storm Water Permit for Construction Activity (MN
+R100001)
+1. The Owner has developed a Storm Water Pollution Prevention Plan (SWPPP) in accordance with Part
+III (Storm Water Discharge Design Requirements) of the National Pollutant Discharge Elimination
+System (NPDES)/State Disposal System Permit. The SWPPP is included in the project plans.
+2. As a condition of the Award, the Contractor shall be a co-permittee and assume the role of “Operator”
+under the NPDES Permit.
+3. The Contractor will initiate the permit and pay the required fee and submit the NPDES Permit.
+Owner/Permittee Information:
+Owner Name City of Jordan
+Business Type Local Government
+Contact Name Scott Haas, Public Works Director
+E-Mail Address HaasS@jordanmn.gov
+Business Phone 952-492-2535
+Complete Mailing Address 210 First Street E, Jordan MN 55352
+Routine Contact for Owner/Permittee Information:
+Full Name (Request from City Engineer)
+E-Mail Address (Request from City Engineer)
+Business Phone (Request from City Engineer)
+4. Permittee(s) shall ensure that their SWPPP meets all terms and conditions of this permit and that their
+activities do not render ineffective another party’s erosion prevention and sediment control BMPs.
+5. The Contractor shall maintain copies of the SWPPP on the project site at all times and comply with all
+provisions contained therein, including performing the required inspections of the erosion control
+devices and maintaining an Inspector’s Log for the MPCA Storm Water Permit. An Inspector’s Log form
+is attached at the end of this Section.
+6. The Contractor shall be responsible for keeping the on-site SWPPP documents current and updated to
+reflect changing conditions as construction progresses.
+7. Process Summary:
+(a) Owner issues Notice of Award to Contractor.
+City of Jordan – Standard Specifications EROSION & SEDIMENT CONTROL
+September, 2019 PAGE 02370-1
+V121917 © Bolton & Menk, Inc. 2019, All Rights Reserved(b) The Contractor shall review the SWPPP and may propose changes or a new SWPPP to the Engineer
+and Owner for review, comment, and Authorization. Changes may be recommended by the
+Contractor, Engineer, and/or Owner at any time during the construction period to address
+changing conditions.
+(1) The responsibility for SWPPP amendments proposed by the Contractor lies with the
+Contractor. If the Engineer and/or Owner authorize the revisions with no exception taken,
+such action shall not absolve the responsibilities of the Contractor in any way.
+(2) During the review and modification period, on-site Erosion Control shall comply with or
+exceed the current SWPPP. Pending review by the Engineer and/or Owner shall not alleviate
+the Contractor’s responsibility to install necessary BMPs to address site issues.
+(3) Once a SWPPP is modified and/or amended, the Contractor shall distribute new copies to the
+Owner, the Engineer, the on-site project supervisor and the resident project representative.
+(c) Contractor acknowledges the Notice of Award and provides the Owner with the contact
+information for the Contractor’s designated SWPPP contact to be used by the Owner for the on-
+line Stormwater Permit Application. Required information includes; Name, Title, Business Mailing
+Address, Phone Number and Email for the designated individual.
+(d) Within 7 days of acknowledgement of the Notice of Award by the Contractor, the Contractor shall
+submit the On-line Stormwater Permit Application to the MPCA.
+(e) No earth disturbing work shall begin until the permit coverage date shown on the Coverage Card
+issued by the MPCA.
+(f) Work shall follow the sequence of major activities outlined in the SWPPP.
+1.2 METHOD OF MEASUREMENT AND PAYMENT
+A. Measurement and compensation for erosion and sediment control shall be paid according to the
+referenced specification or as modified below:
+1. Payment for all work associated with Erosion and Sediment Control shall be at the contract unit price
+bid for that item and shall be considered full compensation for furnishing, installing, maintaining and
+utilizing storm water best management practices and any work specified in conjunction therewith as
+well as removing temporary sediment control devices when no longer necessary.
+2. For temporary erosion control best management practices, (80%) of payment shall be made upon
+installation. The remaining 20% shall be made upon complete removal of the control measure,
+removal of any accumulated sediment and surface restoration.
+B. The furnishing and installing specific items and/or the performance of work under certain circumstances
+shall not be individually paid in the absence of a specific bid item for the work. The costs shall be included
+in the unit price bid for the associated erosion control and excavation items. Such items of work include but
+are not limited to:
+1. Complying with the Minnesota Pollution Control Agency (MPCA) - General Storm Water Permit for
+Construction Activity (MN R100001) – Reference Storm Water Pollution Prevention Plan (SWPPP)
+included in the Appendix or in the drawings.
+2. Providing trained Construction SWPPP Manager and BMP Installer.
+3. Inspect, maintain, repair, and remove (if necessary) temporary surface stabilization practices
+throughout the duration of the project.
+4. Maintaining clean exit areas or roads from the site.
+5. Sweeping adjacent streets clean of excess soil.
+City of Jordan – Standard Specifications EROSION & SEDIMENT CONTROL
+September, 2019 PAGE 02370-2
+V121917 © Bolton & Menk, Inc. 2019, All Rights Reserved6. Cleaning storm sewers, drain tiles and culverts that have been partially or completely obstructed by
+sediment that originated from the site.
+7. Geotextile fabric for rock installation.
+8. Geotextile fabric to wrap prefabricated inlet protection devices.
+9. Aggregate to anchor and act as a filter for prefabricated inlet protection devices.
+10. Aggregate associated with the construction of temporary sediment traps.
+11. Emergency erosion control mobilization.
+12. Construction, maintenance and removal of rock construction entrance.
+13. Changing the type of inlet protection for different phases of construction.
+C. No additional payment shall be made for Erosion Control BMPs necessary to accommodate Contractor
+phasing of the project.
+1.3 SPECIFICATION REFERENCES
+A. MnDOT 1717 – Air, Land and Water Pollution
+B. MnDOT 2573 – Stormwater Management.
+C. MnDOT 2574 – Soil Preparation
+D. MnDOT 2575 – Establishing Turf and Controlling Erosion
+E. Unless noted otherwise, the provisions in this section are in addition to the referenced specification.
+1.4 SUBMITTALS
+A. SWPPP Plan Amendments
+B. Contact information and training documentation for Construction SWPPP Manager and BMP Installer,
+C. Weekly Erosion and Sediment Control Schedule meeting the requirements of MnDOT 1717.
+D. Site Management Plans meeting the minimum requirements of MnDOT 1717. An updated Site
+Management Plan shall be submitted as needed to reflect changes to:
+1. Types and/or Locations of BMPs
+2. Material Storage and Spill Response
+3. Fueling Plans
+4. Locations for Stockpiles, Concrete Washout, and Sanitation Facilities and
+5. Project Phasing
+E. PDF copies of all SWPPP Documentation including but not limited to:
+1. Field Copy of the SWPPP. If the Field Copy has been replaced during Construction with an updated
+SWPPP, a copy of both the final Field Copy and all intermediate copies shall be provided.
+2. Inspection Logs including all supporting documents.
+PART 2 -- PRODUCTS
+2.1 MATERIALS
+A. For all materials not specifically discussed below no exceptions to the referenced specification are made.
+B. Bale checks shall not be used.
+City of Jordan – Standard Specifications EROSION & SEDIMENT CONTROL
+September, 2019 PAGE 02370-3
+V121917 © Bolton & Menk, Inc. 2019, All Rights ReservedPART 3 -- EXECUTION
+3.1 GENERAL
+A. Construction and/or installation of all appropriate erosion & sediment control devices shall be completed
+prior to any soil disturbing activities.
+B. Prior to construction, the Contractor shall observe and document the existing storm water outfall system
+and discharge area. Sediment deposits not documented prior to the construction may be assumed to have
+originated from the project site and be required to be removed and disposed of by the Contractor.
+C. Prior to construction, the Owner, Engineer and Contractor shall review the project to identify critical areas
+that could require rapid stabilization during the construction process, and develop mitigation and rapid
+stabilization plans to be incorporated into the SWPPP.
+3.2 CONSTRUCTION REQUIREMENTS
+A. The Contractor shall provide one or more trained Construction SWPPP Manager(s). The Construction
+SWPPP Manager shall be a knowledgeable and experienced in the application of erosion prevention and
+sediment control BMPs and will oversee the implementation of the SWPPP, and the installation, inspection
+and maintenance of the erosion prevention and sediment control BMPs. A Construction SWPPP Manager
+must be available for an on-site inspection within 72 hours upon request by the Owner and/or MPCA.
+Failure to provide a trained Construction SWPPP Manager or failure of the Contractor to rectify the
+situation within 24 hours of written notice if the provided Construction SWPPP Manager fails to adequately
+perform the duties of Construction SWPPP Manager may result in the Owner or Engineer arranging for
+performance of these duties by others.
+B. If Contractor fails to install and/or perform the appropriate erosion and sediment control practices, as
+determined by the Engineer, the Engineer may issue a written order to the Contractor. Failure to perform
+this work within 24 hours of written notification may result in the Owner or Engineer arranging for
+completion of the work by others.
+C. When the Engineer determines that the erosion and/or sediment control practices installed by the
+Contractor have failed, the Contractor shall correct the cause and alleviate all sediment deposition, to the
+fullest extent possible. If the corrective action is not taken in a timely manner, the Engineer may issue a
+written order to the Contractor. Failure to perform this work within 24 hours of notification of non-
+compliance may result in the Owner or Engineer arranging for completion of the work by others.
+D. A contract deduction shall be made equal to the total of all costs incurred by the Owner due to failure of
+the Contractor to take corrective action within the timeframe of any written notice of non-compliance.
+Such costs include but are not limited to: labor, materials, equipment and administrative costs.
+3.3 TRAINING
+A. Contractor shall ensure the individual(s) designated by the Contractor for this project to perform the
+Construction SWPPP Manager and Installation Supervision duties have been trained in accordance with
+Minnesota Pollution Control Agency (MPCA) General Storm Water Permit for Construction Activity (MN
+R100001) training requirements.
+B. Documentation incorporated by the Contractor into the SWPPP must include either:
+1. Proof of a current certification through the University of Minnesota Erosion and Stormwater
+Management Certification Program, or
+2. Documentation of training satisfactory to the MN Pollution Control Agency showing training is
+commensurate with the individual’s job duties.
+3.4 TERMINATION OF COVERAGE
+City of Jordan – Standard Specifications EROSION & SEDIMENT CONTROL
+September, 2019 PAGE 02370-4
+V121917 © Bolton & Menk, Inc. 2019, All Rights ReservedA. Upon completion of all final stabilization, the Contractor shall provide the Engineer a signed MN MPCA
+Notice of Termination (NOT) form and a PDF copy of the SWPPP Documentation. Final payment shall not be
+made for the project until the NOT is submitted and the SWPPP Documentation is received.
+B. The NOT form is available on the MPCA website at: http://www.pca.state.mn.us/index.php/water/water-
+types-and-programs/stormwater/construction-stormwater/index.html
+****END OF SECTION****
+City of Jordan – Standard Specifications EROSION & SEDIMENT CONTROL
+September, 2019 PAGE 02370-5
+V121917 © Bolton & Menk, Inc. 2019, All Rights ReservedSTORM WATER POLLUTION PREVENTION PLAN - INSPECTION LOG
+Project Title: Project Title, Owner: City of Jordan, Permit ID: C000
+General Contractor : ________________________________
+The Contractor is REQUIRED to maintain this record throughout the project.
+Inspectors should enter their initials, type, date, and time of the inspection in the blanks provided. After inspecting each
+shaded area, inspectors should check each box, and make any necessary comments regarding their findings in the blanks
+provided below and on the back of this sheet.
+Refer to the MPCA’s Compliance Guide for Erosion and Sediment Control during inspection.
+Type of Date and Time
+Weather Areas to be Inspected
+Inspection of Inspection
+Name of Inspector
+City of Jordan – Standard Specifications EROSION & SEDIMENT CONTROL
+September, 2019 PAGE 02370-6
+© Bolton & Menk, Inc. 2019, All Rights Reserved
+ylkeeW
+enituoR
+tneve
+niar
+retfa
+rH
+42
+htnoM
+yaD raeY
+)MP/MA(
+emiT
+erutarepmeT
+)tiehnerhaF
+seerged(
+)sehcni(
+tnuomA
+llafniaR
+tnemides
+dna
+noisore
+llA
+sPMB
+lortnoc
+noitatnemideS
+yraropmeT
+snisaB
+rehto
+dna
+sehctid
+eganiarD
+etatS
+eht
+fo
+sretaw
+stixE
+etiS
+noitcurtsnoC
+Comments:
+Comments:
+Comments:
+Comments:
+(A digital version of this form is available by request to the Engineer)', 1),
+('RIPRAP', NULL, NULL, 'nan', 'nan', '© Bolton & Menk, Inc.', NULL, NULL, 'Standard Specifications for Construction of Public Infrastructure', '02377', 'SECTION 02377 - RIPRAP
+PART 1 -- GENERAL
+1.1 SUMMARY
+A. This section covers the furnishing of all labor, materials, tools, equipment and performances of all work and
+services necessary or incidental to construct the rip-rap and geotextile fabric as indicated on the drawings
+or as specified herein.
+1.2 METHODS OF MEASUREMENT AND PAYMENT
+A. Measurement and compensation for the following items shall be paid according to the referenced
+specification or as modified below:
+1. Payment for riprap shall be by TON based on actual weigh tickets. The amount bid shall be
+compensation in full for all costs of excavating, removing and disposing, if necessary, all materials
+encountered in the course of riprap placement.
+B. The furnishing and installing of specific items and/or the performance of work under certain circumstances
+shall not be individually paid in the absence of a specific bid item for the work. The costs shall be included
+in the unit price bid for the associated rip-rap items. Such items of work include but are not limited to:
+1. Granular filter material and/or geotextile fabric.
+2. Excavation required to place rip-rap.
+1.3 SPECIFICATION REFERENCES
+A. MnDOT 2511 and all MnDOT Sections referenced therein shall apply to the construction of rock rip-rap,
+except as modified herein.
+B. Unless noted otherwise, the provisions in this section are in addition to the referenced specification.
+PART 2 -- PRODUCTS
+2.1 MATERIALS
+A. The material to be used shall be the class rip-rap and fine filter aggregate shown on the plans as specified in
+MnDOT 3601.
+B. The geotextile fabric shall meet the requirements of MnDOT 3733, Type 4, unless otherwise shown on the
+plans.
+C. The Contractor may choose the type of filter material, except as restricted for geotextile filters, unless the
+type is specified on the plans.
+PART 3 -- EXECUTION
+3.1 CONSTRUCTION REQUIREMENTS
+A. No exception to the referenced specification is made.
+****END OF SECTION****
+City of Jordan – Standard Specifications RIPRAP
+September, 2019 PAGE 02377-1
+V072108 © Bolton & Menk, Inc. 2019, All Rights Reserved', 1),
+('JACK & AUGER STEEL CASING', NULL, NULL, 'nan', 'nan', '© Bolton & Menk, Inc.', NULL, NULL, 'Standard Specifications for Construction of Public Infrastructure', '02445', 'SECTION 02445 - JACK & AUGER STEEL CASING
+PART 1 -- GENERAL
+1.1 SUMMARY
+A. This section covers the furnishing of all labor, materials, tools, equipment and performances of all work and
+services necessary or incidental to the construction of a steel casing as indicated on the drawings or as
+specified herein.
+1.2 METHOD OF MEASUREMENT AND PAYMENT
+A. Measurement and compensation for the following items shall be paid according to the referenced
+specification or as modified below:
+1. Boring: The contract unit price bid per LINEAL FOOT (LF) for the appropriate carrier pipe size and type
+shall be compensation in full for all equipment, materials and labor required to install steel cased
+borings as shown on the plan and as specified including but not limited to boring method used for
+horizontal and vertical alignment control, casing pipe, carrier pipe, rails and/or other pipe supports and
+grade establishment devices, bulkheading casing pipe, installation and removal of annular space fill and
+vent tubes, filling the annular space as specified, etc.
+2. Set Up Boring Pit: The contract unit price bid per EACH for the appropriate size of carrier pipe shall be
+compensation in full for all equipment materials and labor required to set up boring pits as specified
+including but not limited to sheeting, shoring, trench boxes, slide rail systems, excavation, additional
+dewatering, boring pit base material, protection and support of existing utilities, installation and
+removal of boring equipment, safety fencing, excavation, backfill, compaction, and all appurtenances
+required to set up boring pits, as specified. Receiving pits shall be considered incidental to the Contract.
+3. Boulder Removal: Payment for Boulder Removal shall be at the contract unit price bid per EACH (EA)
+for the removal of boulders from the boring, and shall be compensation in full for all equipment,
+materials, and labor required to remove, dispose, adjust boring methods, etc to account for boulders
+encountered in cased borings, in excess of the number per boring to be anticipated, as specified.
+B. The furnishing and installing of specific items and/or the performance of work under certain circumstances
+shall not be individually paid in the absence of a specific bid item for the work. The costs shall be included
+in the unit price bid for the associated jacking and augering items. Such items of work include but are not
+limited to:
+1. Excavation, dewatering and preparation of the jacking pit.
+2. Furnishing and placing all equipment necessary to jack and auger the casing pipe at the elevation and
+grade designated.
+3. Furnishing and placing the casing pipe, sand fill, carrier pipe support material, grout seals, and PVC riser
+pipe and associated PVC adaptors.
+4. Backfilling and compacting the jacking pit.
+5. Disposal of surplus and waste materials.
+6. Protecting existing improvements from damage.
+7. Performing a second attempt if the first attempt is unable to be completed because of equipment
+problems, soil conditions or rocks.
+8. Blowing the abandoned pipe and/or hole full of sand, if the first attempt is unsuccessful.
+C. The casing diameter used shall be the Contractor’s option.
+City of Jordan – Standard Specifications JACK & AUGER STEEL CASING
+September, 2019 PAGE 02445-1
+V050208 © Bolton & Menk, Inc. 2019, All Rights ReservedD. The boring method used shall be the Contractor’s option. The boring method used shall provide a
+completed carrier pipe at the horizontal line and grade shown on the plans and within the tolerances
+specified. Acceptable boring methods include water guided, laser guided boring, pilot boring, pipe
+pounding, and micro tunneling techniques. Other proposed methods require approval of the Engineer.
+E. Boring pits and receiving pits shall be designed by a licensed professional engineer in the State of
+Minnesota. Pit designs shall include consideration of all information provided in the plans and
+specifications, removal limits, sheeting, shoring, trench boxes, necessary to confine excavation limits, etc.
+The Contractor shall acquire any and all additional information necessary to properly design pits and
+borings at his sole expense. All costs associated with boring and pit design shall be considered incidental to
+the contract.
+1.3 SPECIFICATION REFERENCES
+A. See MnDOT 2105 for Quality Compaction Methods.
+B. See Section 02520 “Underground Utility Location System” of this Project Manual.
+C. MnDOT Utility Accommodation Policy and Procedures. A copy of the document is available at:
+http://www.dot.state.mn.us/policy/operations/op002.html
+D. CEAM 2600.3.C - Trenchless Pipe Installation shall apply, except as modified herein or as shown on the
+plans.
+E. Unless noted otherwise, the provisions in this section are in addition to the referenced specification.
+PART 2 -- PRODUCTS
+2.1 MATERIALS
+A. RAILROAD CROSSINGS
+1. The casing shall be new welded or seamless steel pipe conforming to the Standards of ASTM A53,
+Grade B with a yield strength of 36,000 psi. The wall thickness for the pipe to be bid shall be in
+accordance with the permit granted by the railroad or the following table, whichever is greater:
+Nominal Pipe Minimum Wall Nominal Pipe Minimum Wall
+Diameter Thickness Diameter Thickness
+Inches Inches mm mm
+Under 14 0.250 Under 355 6.3
+14 and 16 0.282 355 and 406 7
+18 0.312 457 8
+20 0.344 508 8.8
+22 0.375 558 10
+24 0.406 609 10
+26 0.438 660 11
+28 and 30 0.469 711 and 762 12
+32 0.500 813 13
+34 and 36 0.531 863 and 914 13.5
+B. STREET AND HIGHWAY CROSSINGS
+1. Casing pipe shall be welded steel pipe, new material with minimum yield strength of 35,000 PSIG
+(pounds per square inch gauge). The following minimum wall thickness shall be used:
+City of Jordan – Standard Specifications JACK & AUGER STEEL CASING
+September, 2019 PAGE 02445-2
+V050208 © Bolton & Menk, Inc. 2019, All Rights ReservedOutside Casing Diameter Minimum Wall Thickness
+(inches) (inches)
+12 to 24 0.250
+30 0.375
+36 to 42 0.500
+C. RESTRAINED JOINT CARRIER PIPE
+1. The following restrained joints for the appropriate carrier pipe material shall be approved for use on
+this project:
+(a) PVC Gravity Sewer
+(1) Bell clamps with tie rods
+(2) “Certa-Lok” as manufactured by CertainTeed or equal
+(3) “Eagle Loc” as manufactured by JM Eagle or equal
+(4) “Diamond Lok” as manufacture by Diamond Plastics, or equal.
+2. All carrier pipes shall have restrained joints unless otherwise approved by the Engineer. The costs
+associated with providing restrained joints shall be considered incidental to the contract.
+3. All carrier pipes shall have the same strength classification as the adjoining open cut pipe or stronger.
+4. Unless otherwise approved by the City Engineer, carrier pipe spacers on gravity pipes shall be stainless
+steel casing insulator skids as manufactured by Pipeline Seal and Insulator, Inc. - Model S 8, stainless
+steel casing spacers by Cascade Waterworks Manufacturing Company - Model CSS, or equal, unless
+otherwise shown on the plans.
+D. Cellular grout shall be used to fill annular space on all gravity sanitary sewer pipe lines. Flowable silica sand
+shall be used for annular space surrounding all other public pipelines, unless otherwise approved by th
+Engineer.
+E. Cellular Grout:
+1. Low density cellular grout (foam grout) for the annular space between the carrier pipe and steel casing
+shall be a lightweight cementitious material that contains stable air or gas cells uniformly distributed
+throughout the mixture and with a minimum air percentage of 20 percent. Foam backfill grout mix
+shall be designed in accordance with the requirements of ACI 523.IR, ACI 523.3R, and the additional
+requirements herein. A tentative mix shall be designed and tested in accordance with ASTM C796 for
+each consistency intended for use.
+2. Portland cement and water slurry blended with a high stability pre-generated foaming agent. Adjust
+proportions as necessary to meet compressive strength requirements.
+3. Fluid (10-inch slump), pumpable.
+4. Wet Density: 45 to 60 pounds per cubic foot. Adjust proportions as necessary to meet compressive
+strength requirements.
+5. 28-day Compressive Strength: 20 to 50 pounds per square inch.
+PART 3 -- EXECUTION
+3.1 CONSTRUCTION REQUIREMENTS
+A. The Contractor shall jack and auger a steel casing using equipment that encases the hole as the earth is
+removed. Boring without the concurrent installation of the casing pipe will not be permitted. All joints in
+the casing pipe shall be welded throughout the full circumference of the casing.
+B. Casing pipe shall be installed in such a manner that will not disrupt traffic.
+City of Jordan – Standard Specifications JACK & AUGER STEEL CASING
+September, 2019 PAGE 02445-3
+V050208 © Bolton & Menk, Inc. 2019, All Rights ReservedC. The introduction of water into the excavation is prohibited.
+D. Casings shall be installed such that the line and grade at any point within the carrier pipe shall not vary by
+more than the following from the line and grade shown on the plans.
+1. Elevation: A maximum of inch above grade and a maximum of 1 inches below grade, provided the
+conditions of 3 below are maintained.
+2. Alignment: A maximum of 1 foot from plan location.
+3. The maximum permitted deviations shall be such as to permit installation of carrier pipe to the line and
+grade specified or without intermediate high or low points that may inhibit gravity flow in the pipe
+after installation, both in the casing and upstream or downstream of the casing.
+E. Following the installation of the carrier pipe in the casing, place 4” minimum PVC riser pipes at both ends of
+the casing pipe and extend the PVC risers to the surface. Fill annular space at both ends with an
+appropriate bulkhead and concrete grout to form a watertight seal. The casing pipe and riser pipes shall be
+completely filled with silica sand or cellular grout. Riser pipes shall then be cut off a minimum of 1’ below
+finished grade. Fill remaining riser pipe with silica sand or cellular grout, and glue PVC caps to the top of
+each riser pipe.
+F. Grout all voids developed outside the casing during boring operations immediately and simultaneously with
+boring operations.
+G. The total volume of annular space fill installed shall be measured and compared to the anticipated volume
+required to completely fill the annulus. In the event of a discrepancy in fill volumes, as determined by the
+Engineer, additional annulus fill shall be required as directed by the Engineer at the sole expense of the
+Contractor.
+H. The Contractor shall provide key personnel with experience in the proposed method(s) of boring and
+associated pipe installation, including pipe at least as large as the largest casing diameter and length as
+those proposed for use on this project. Key personnel include field supervisor and operators of proposed
+boring equipment, including position monitoring and steering equipment.
+I. The pipe borings should anticipate that the face of the boring will encounter various soil types, cobbles and
+boulders. The loose sands and various soil interfaces may cause a tendency to lose ground at the face if the
+face is left unsupported for any given time. Settlement at the surface may occur if ground loss occurs in the
+pipe boring excavations.
+J. The pipe boring methods and equipment used shall be designed to accommodate transitions between soil
+types and densities, occasional boulders and nests of cobbles in the boring alignment, and prevent surface
+settlements.
+K. Boulders are defined as particles of rock that cannot be made to pass a 12-inch square opening when
+rotated in any orientation (Modified from ASTM D 2487). When a boulder diameter is listed in these
+Specifications, the diameter shall be defined as a boulder that can be made to pass the listed size square
+opening, even if the boulder is larger in some dimension.
+L. Cobbles are defined by ASTM D 2487 as particles of rock that will pass a 12-inch square opening and be
+retained on a 3-inch U.S. standard sieve.
+M. Nested cobbles are defined as cobbles and boulders in contact or close proximity to each other.
+N. The Contract unit price bid for the appropriate boring item shall include costs associated with the removal
+of cobbles and nested cobbles encountered as defined herein.
+City of Jordan – Standard Specifications JACK & AUGER STEEL CASING
+September, 2019 PAGE 02445-4
+V050208 © Bolton & Menk, Inc. 2019, All Rights Reserved3.2 TRACER WIRE INSTALLATION
+A. The installation of any non-conductive mains and/or services that will not extend in a straight line between
+manholes, catch basin or other surface structures shall include the installation of tracer wire in accordance
+with the details shown on the plans.
+B. At junctions of non-conductive pipe materials with conductive pipe materials, the Contractor shall
+electrically connect the conductive material with the tracer wire adjacent to the non-conductive material.
+C. Unless otherwise shown on the plan, the tracer wire riser shall be a cast iron valve box and have a
+maximum spacing of 500 feet.
+D. Approximately 1% slack shall be maintained in the wire by installing 101 feet of wire for each 100 feet of
+pipe length.
+E. The wire shall be electrically tied to each valve by extending the wire to ground surface inside the valve box
+and attaching it to the valve box with stainless steel screws. The wire shall be electrically tied to each
+hydrant assembly by extending the wire up the hydrant and securely attaching it to one of the break-off
+flange bolts. All connections shall receive a coat of an approved bituminous rust preventative material such
+as Koppers 505, or equal.
+F. The Contractor shall successfully locate the installed tracer wire system prior to final acceptance.
+G. Carrier pipe shall have two (2) tracer wires installed on opposite sides of the carrier pipe. Wires shall be
+securely taped to the carrier pipe every twenty (20) feet.
+3.3 SETTLEMENT MONITORING
+A. Settlement monitoring is required for all crossings of:
+1. City of Jordan major collector roadways
+2. County and State highways
+3. Railroads
+4. Structures
+B. The Owner or permitting agencies may direct the Engineer to perform an elevation survey of the surface of
+the ground above each pipe centerline before, before and after the jacking or drilling operations.
+C. Cross section surveys will be completed perpendicular to the pipe centerline with cross sections being
+located 50 feet each side of the pipe centerline at all edges of pavement, centerline of the road or pair of
+lanes, center of medians, curb lines, etc. or as directed.
+D. Survey data shall be recorded in such fashion to provide both horizontal coordinates and elevation for each
+point surveyed such that subsequent monitoring survey points can duplicate the location of the original
+survey points.
+E. If settlement reaches or exceeds 75 percent of the specified limits allowed by permitting agencies, the
+contractor shall immediately develop plans for mitigating settlements. The Contractor shall stop jacking or
+auger boring work or other excavation work if settlements exceed specified limits and not resume until
+authorized by the Engineer and permitting agencies. The settlement limit shall be as defined by the right of
+way authority.
+F. Settlement Repair:
+City of Jordan – Standard Specifications JACK & AUGER STEEL CASING
+September, 2019 PAGE 02445-5
+V050208 © Bolton & Menk, Inc. 2019, All Rights Reserved1. All settlements shall be repaired to a condition equal to or better than that which existed prior to
+construction. Repair methods used shall be as directed by the appropriate permitting agency and/or
+Owner. Potential repair methods that may be required include but are not limited to: mud jacking, mill
+and overlay, reconstruction of a roadway section, skin patch, etc. All work associated with repairing
+settlements shall be considered incidental to the contract.
+2. Use materials, methods, equipment that conform to permitting agency standards for such work.
+3. Traffic control is the responsibility of the contractor and must meet the requirements of the Minnesota
+Department of Transportation or other roadway OWNER.
+4. Furnish submittals of all materials, methods, equipment and schedule for review by UPRR, Scott
+County, and Engineer.
+5. If required by the right of way authority, coordinate and schedule a final inspection of the work by the
+right-of-way authority.
+6. Promptly replace damaged pavement and structures at the ground surface above the jacked or drilled
+pipe. Restore pavement around entry and exit pits as soon as work specified in this section is
+completed, even if this pavement will later be removed by other Work, unless otherwise approved by
+permitting agency or Engineer.
+****END OF SECTION****
+City of Jordan – Standard Specifications JACK & AUGER STEEL CASING
+September, 2019 PAGE 02445-6
+V050208 © Bolton & Menk, Inc. 2019, All Rights Reserved', 1),
+('TRENCHLESS PIPELINE', NULL, NULL, 'nan', 'nan', '© Bolton & Menk, Inc.', NULL, NULL, 'Standard Specifications for Construction of Public Infrastructure', '02446', 'SECTION 02446 - TRENCHLESS PIPELINE
+PART 1 -- GENERAL
+1.1 SUMMARY
+A. This section covers the furnishing of all labor, materials, tools, equipment and performances of all work and
+services necessary or incidental to trenchless pipeline construction. Various methods will be considered,
+providing they can generally follow the design profile in constructing the pipeline from the starting access
+point to the ending access point without the need to excavate an intermediate access.
+B. The INSTALLER for all forms of trenchless pipeline installation shall meet or exceed the experience
+requirements as stated in CEAM 2600.3.C2.
+1.2 METHOD OF MEASUREMENT AND PAYMENT
+A. Measurement and compensation for the following items shall be paid according to the referenced
+specification or as modified below:
+B. Measurement and compensation for the following items shall be paid according to the referenced
+specification or as modified below:
+1. Trenchless construction of casing pipe shall be paid by the LINEAR FOOT (LF) furnished and installed.
+The amount bid shall be full compensation for all costs associated with completely installing the
+required pipe diameter at the line and grade shown on the plan.
+2. The carrier pipe inside the casing will be paid by the LINEAR FOOT (LF) furnished and installed.
+C. The furnishing and installing of specific items and/or the performance of work under certain circumstances
+shall not be individually paid in the absence of a specific bid item for the work. These costs shall be
+included in the unit price bid for various pipeline items within the Schedule of Prices. Such items of work
+include but are not limited to:
+1. Any costs associated with drilling or redrilling to correct for poor alignment or encountering
+obstructions (including rock), back reaming, or other required methods, as well as the cost of furnishing
+and installing a replacement pipe, if necessary
+2. Interference of other underground structures and utilities.
+3. The removal and restoration, or protection of existing utilities which are shown on the plans and for
+which there is no bid item for removing and restoring, or working around the utility.
+4. Maintaining, tracking, reporting and documenting the actual alignment of the conduit achieved during
+the construction process include in the price bid for the appropriate pipeline construction and
+installation and documenting all post installation field quality control procedures specified, including
+but not limited to televising the interior of the conduit.
+5. Excavating, backfilling, compacting and restoring the surface improvements, unless itemized in the
+Schedule of Prices, of jacking pits, boring pits, launching pits, etc., as needed.
+6. Any dewatering necessary for the appropriate pipeline construction
+7. Foundation materials placed in lieu of performing necessary dewatering.
+8. Locating and connecting to an existing manhole or pipeline
+9. Removing the existing pipe.
+10. Foundation, bedding and encasement materials.
+11. Maintenance of utility service during construction.
+City of Jordan – Standard Specifications TRENCHLESS PIPELINE
+September, 2019 PAGE 02446-1
+V102510 © Bolton & Menk, Inc. 2019, All Rights Reserved12. The replacement of all material displaced due to shrinkage or loss during the excavation and backfilling
+operations.
+13. Compaction, deflection and hydrostatic testing.
+14. Delays due to other utility conflicts which result during the course of construction, include in the price
+bid for the appropriate pipeline construction and installation.
+15. Protecting existing improvements from damage.
+16. Repairs to any existing improvements damaged.
+17. Protecting the inverts of other utility pipes from the accumulation of debris and soil, the removal of
+blockages which threaten to damage property, and/or the cleaning of both the newly constructed lines
+and the existing lines of all debris and soil which accumulated during the construction.
+18. The removal and disposal of defective materials and joints from the job site, include in the unit price
+bid for the appropriate pipeline construction and installation.
+19. Any increased depth required for structures, risers or services required for failure to meet specified
+alignment and grade.
+20. Any additional structures required for failure to meet tolerances.
+21. Excavating, backfilling, compacting and restoring the surface improvements, of any spot verification
+pits required by the Engineer, as specified.
+22. Removal and disposal of excess drilling fluid at the drilling surface, or in the drilling pit, prior to
+backfilling the pit.
+23. Furnishing and placing the casing pipe, sand fill, carrier pipe support material, grout seals, riser pipe
+and associated PVC adaptors.
+24. Avoiding interference with the proposed bridge improvements, including bride piling.
+25. Post construction televising, include in the price bid for the carrier pipe.
+26. Furnishing and installing underground utility location system.
+1.3 SPECIFICATION REFERENCES
+A. Except as modified herein or as shown on the plans, Reference CEAM Specifications shall apply:
+1. See Section 02520 “Underground Utility Location System” of this Project Manual.
+2. CEAM 2600 Trench Excavation and Backfill/Surface Restoration
+3. CEAM 2611 Watermain and Service Line Installation
+4. CEAM 2621 Sanitary Sewer and Storm Sewer Installation
+B. Unless noted otherwise, the provisions in this section are in addition to the referenced specification.
+1.4 SUBMITTALS
+A. The diameter, wall thickness and type of material to be used for each trenchless installation. Pipe strength
+determination shall include calculations based on new material properties and long term properties.
+B. The manufacturer''s certificates of compliance with provisions of the referenced standards and these
+specifications.
+C. Construction Profile
+1. The Contractor shall monitor and plot the constructed pipeline profile to scale throughout the length of
+the trenchless construction.
+City of Jordan – Standard Specifications TRENCHLESS PIPELINE
+September, 2019 PAGE 02446-2
+V102510 © Bolton & Menk, Inc. 2019, All Rights Reserved(a) The horizontal profile shall be on a consistent scale where 1.0-inch measures no more than
+100.0-feet.
+(b) The Contractor shall note on the profile any deviations (horizontal or vertical) from the planned
+alignment which encroach on the separation space as required by CEAM 2600.3.A2.
+(c) The Contractor shall note on the profile any horizontal deviations in excess of 4.0-feet from the
+planned alignment.
+(d) The vertical profile shall be on a consistent scale where 1.0-inch measures no more than 10.0-feet.
+2. Two copies of the profile shall be submitted.
+D. Final DVD and log of post construction televised inspection.
+PART 2 -- PRODUCTS
+2.1 CASING PIPE
+A. STEEL CASING PIPE
+1. Casing pipe shall be welded steel pipe, new material, with a minimum yield strength of 35,000 PSIG
+(pounds per square inch gauge). The following minimum wall thickness shall be used:
+Outside Casing Diameter Minimum Wall Thickness
+(Inches) (Inches)
+12 to 24 0.250
+30 0.375
+36 to 42 0.500
+B. Gasketed reinforced concrete pipe meeting MnDOT specifications and of class appropriate for the specified
+bury depth shall be acceptable upon approval of the City Engineer.
+2.2 CARRIER PIPE
+A. Pipe materials shall comply with one of those allowed in section 2510 of these specifications trenchless
+installation.
+PART 3 -- EXECUTION
+3.1 CONSTRUCTION REQUIREMENTS:
+A. FUSING/FABRICATION
+1. The pipe shall be assembled and joined at the site using the butt-fusion method to provide a leak proof
+joint prior to insertion. All equipment and procedures used shall be in strict compliance with the
+manufacturer’s recommendations and specifications.
+2. Threaded or solvent welded joints or connections are not permitted.
+3. Fusing shall be performed by personnel certified as fusion technicians by the manufacturer of the pipe
+and/or the fusing equipment.
+4. The butt-fused joints shall maintain true alignment and shall have uniform roll-back beads from the
+fusing process. The joint shall be watertight and shall have a tensile strength equal to that of the pipe.
+5. Adequate cooling time shall be allowed prior to the release of the pressure from the fusing unit.
+6. All joints shall be subject to acceptance by the Engineer prior to insertion.
+7. All defective joints shall be cut out and replaced.
+B. BLOCKING AND ANCHORING OF PIPE
+City of Jordan – Standard Specifications TRENCHLESS PIPELINE
+September, 2019 PAGE 02446-3
+V102510 © Bolton & Menk, Inc. 2019, All Rights Reserved1. A thrust block of cast-in-place concrete, which covers the installed fitting, is not permitted. Pre-cast
+concrete thrust blocks and other restraining devices such as adjustable rods or cables shall be provided
+at all bends or wherever the pipe changes direction.
+C. INSTALLATION OF PIPELINES THROUGH CASINGS
+1. The Contractor shall install the carrier pipe through the casing pipe using supports or cradles
+constructed of permanent materials to support the entire length of the carrier pipe in the casing.
+Support material shall be uniformly spaced and located on three sides of the carrier pipe to prevent
+shifting of the pipe as detailed on the Plans. The line and grade at any point within the carrier pipe
+shall not vary by more than 0.5-foot from the horizontal plan line and 0.2-foot from the vertical grade.
+2. Following the installation of the carrier pipe in the casing, place 4.0-inch PVC riser pipes at both ends of
+the casing pipe and extend the PVC risers to the surface. Fill annular space at both ends with an
+appropriate concrete grout to form a watertight seal. The casing pipe and riser pipes shall be
+completely filled with sand. Riser pipes shall then be cut off 1.0-feet below finished grade. Glue PVC
+caps to the top of each riser pipe.
+D. TRENCHLESS METHODOLOGY
+1. The remaining specifications in this section pertain to directional drilling techniques as the most
+common type of trenchless technology. Other trenchless technologies may also be used, provided that
+the Contractor submits a set of specifications for the proposed alternate technology.
+(a) DRILLING EQUIPMENT
+(1) The installation shall be by a steerable drilling tool capable of installing continuous runs of
+pipe, without intermediate pits for a minimum distance of 350.0-feet.
+(b) DRILLING
+(1) The Contractor shall initially drill a pilot hole that follows the route of the pipeline to be
+constructed.
+(2) The Contractor shall monitor the route taken by the drilling unit utilizing the downhole survey
+calculation methods discussed in API Bulletin D20 entitled Directional Drilling Survey
+Calculation Methods and Terminology. A surface monitoring system may be allowed in lieu of
+the downhole calculation method. Approval of surface monitoring shall be at the discretion of
+the Engineer based on the Engineer’s evaluation of the particular system proposed for use.
+(3) The Contractor shall provide the Engineer with an “as-built” profile of the pilot hole prior to
+the back reaming and pipe insertion as which time the Engineer shall review it for tolerance
+compliance.
+(4) The back reamer shall be designed to create a void in the surrounding soil through which the
+new pipe may be threaded.
+(5) The size of the reaming tool shall be in accordance with the manufacturer’s specifications to
+achieve the sizing indicated on the plans, or in the Schedule of Unit Prices.
+(6) Upon commencement, pipe insertion shall be continuous and without interruption from one
+structure to another, except as approved by the Engineer.
+(c) INSERTION
+(1) Drill holes shall only be allowed at locations approved by the Engineer.
+(2) In so far as possible, the equipment used shall be located in such a way as to minimize the
+noise impact on surrounding properties.
+(3) The Contractor shall utilize a disconnect swivel which shall be set to limit the stress within the
+pipe to less than its elastic limit.
+City of Jordan – Standard Specifications TRENCHLESS PIPELINE
+September, 2019 PAGE 02446-4
+V102510 © Bolton & Menk, Inc. 2019, All Rights Reserved(4) The Contractor shall install all necessary pulleys, rollers, bumpers, alignment control devices
+and other equipment necessary to protect the pipe from damage during insertion. Dragging
+the pipe on the ground is not permitted. All break over bends should be made with a radius
+long enough to insure that the pipe is not overstressed.
+(5) Lubrication, as recommended by the manufacturer, may be used during installation.
+(6) Buoyancy control may be used during pull back.
+(7) The manufacturer’s recommended cooling/relaxation time, but not less than 4 hours, shall
+pass after insertion is complete and before the connection of services, sealing of the annular
+space, and/or the backfilling of the insertion pit. A sufficient excess of new pipe, but not less
+than 4.0-inches shall protrude into terminating structures.
+(8) The annular space at each structure shall be sealed with a material recommended by the
+manufacturer for a minimum of 8.0-inches to form a smooth, uniform, watertight joint.
+(9) Under no circumstance shall the pipe be stressed beyond its elastic limit.
+3.2 FIELD QUALITY CONTROL
+A. TOLERANCES
+1. General
+(a) Terminating connections to existing structures and conduits shall be made with a smooth grade for
+the adjacent 50.0-feet and shall permit the appropriate hydraulic operation at the conduit
+connection.
+(b) Periodically, the Engineer may require the Contractor to excavate a verification pit to expose the
+conduit for the Engineer to determine compliance with the line and grade specified. As long as
+tolerances are being met, as determined by the Engineer, the frequency shall not exceed
+2 excavations in each 500.0-feet or be required in obviously inaccessible locations. The Contractor
+shall then backfill, compact and restore the surface of the excavation.
+2. Pressure Systems
+(a) Horizontal alignment of the finished profile shall be within 0.5-feet of the planned alignment.
+(b) Vertical alignment of the finished profile shall be within 0.5-feet of the planned vertical alignment
+but in no event shall the invert elevation be closer to the existing ground surface or the future
+proposed ground surface, whichever is lower, than the minimum bury depth shown on the plans.
+(c) The final vertical alignment shall not conflict with future proposed gravity conduit grades shown on
+the plans, if any.
+(d) The final vertical alignment of forcemains shall not have high points that could permit the
+development of air locks at any location other than those identified on the plans.
+3. Gravity Systems
+(a) Horizontal alignment of the finished profile shall be within 0.5-feet of the planned alignment.
+(b) Vertical alignment of the finished profile shall be within 0.2-feet of the planned vertical alignment
+but in no event shall the invert elevation prevent the appropriate hydraulic operation with
+upstream or downstream conduits.
+(c) The final vertical alignment shall not have sags that could permit sediment to accumulate at any
+location.
+(d) The final vertical alignment shall not conflict with future proposed gravity conduit grades shown on
+the plans, if any.
+City of Jordan – Standard Specifications TRENCHLESS PIPELINE
+September, 2019 PAGE 02446-5
+V102510 © Bolton & Menk, Inc. 2019, All Rights Reserved(e) The final vertical alignment of gravity conduits (storm and sanitary) shall not be shallower than the
+basement elevations of adjoining properties less adequate vertical distance to allow gravity piping
+from the basement to reach the installed conduit.
+B. POST TELEVISING
+1. Televising is required after the installation and backfill are complete and prior to the placement of
+roadway aggregate base or pavement.
+2. Immediately prior to televising pipes installed on a smooth grade, the televisor shall discharge
+sufficient clear water into the pipe to clean the pipe and assist in identifying sags and mis-alignment.
+3. Televising shall be performed by experienced personnel trained in locating breaks, obstacles and
+service connections by close circuit television. All televising video shall be in color. The interior of the
+pipeline shall be carefully inspected to determine the location of any conditions which may indicate
+improper installation
+4. A DVD and suitable log shall be kept of all televising and later submitted to the Owner. Each individual
+reach of pipe shall be identified as a ‘chapter’ on the DVD.
+C. PRESSURE TESTING
+1. Trenchless conduit used as carrier pipe:
+(a) Watermain – Refer to the requirements in Section 02510 “Domestic Water Systems” of this Project
+Manual.
+(b) Gravity Sewer - The Contractor shall to perform a hydrostatic pressure test as specified in CEAM
+2611.3G to a pressure of 100 psi.
+2. Trenchless conduit is used as a host pipe (electrical conduits, casings, etc.):
+(a) Casings – No pressure test required.
+****END OF SECTION****
+City of Jordan – Standard Specifications TRENCHLESS PIPELINE
+September, 2019 PAGE 02446-6
+V102510 © Bolton & Menk, Inc. 2019, All Rights Reserved', 1),
+('DOMESTIC WATER SYSTEM', NULL, NULL, 'nan', 'nan', '© Bolton & Menk, Inc.', NULL, NULL, 'Standard Specifications for Construction of Public Infrastructure', '02510', 'SECTION 02510 - DOMESTIC WATER SYSTEM
+PART 1 -- GENERAL
+1.1 SUMMARY
+A. This section covers the furnishing of all labor, materials, tools, equipment and performances of all work and
+services necessary or incidental to watermain and service line construction as indicated on the drawings or
+as specified herein.
+1.2 METHODS
+A. Trench excavation, bedding and backfill, see Section 02320 “Trench Excavation, Bedding and Backfill” of this
+Project Manual.
+B. Trenchless installation, see Section 02446 “Trenchless Pipeline” of this Project Manual.
+C. Within casing, see Section 02445 “Jack & Auger Steel Casing” of this Project Manual.
+1.3 METHOD OF MEASUREMENT AND PAYMENT
+A. Measurement and compensation for the following items shall be paid according to the referenced
+specification or as modified below:
+1. Watermain
+(a) No exception to the referenced specification is made.
+2. Hydrants
+(a) No exception to the referenced specification is made.
+3. Hydrant Extensions
+(a) Hydrant extensions shall be measured and paid per each of the length as specified in the Schedule
+of Unit Prices, complete and in place, at the appropriate unit price bid.
+4. Valves and Valve Boxes
+(a) No exception to the referenced specification is made.
+5. Fittings
+(a) Unless otherwise noted on the plans, watermain fittings will be measured by the pound without
+joint accessories. The standard weight of watermain fittings, for payment purposes, shall be as
+published in AWWA C-153, as follows:
+Bends, Caps, Plugs & Sleeves
+Fitting Weights, lbs. (AWWA C153)
+Bends – MJ x MJ, (degrees) Caps Plugs Sleeves1
+Size 90 45 22.5 11.25 MJ x MJ MJ x MJ MJ x MJ
+3 19 16 15 14 8 8 18
+4 25 22 18 16 9 10 20
+6 39 32 31 30 15 16 33
+8 57 46 46 42 22 26 46
+10 89 70 64 58 32 36 62
+12 108 86 80 67 42 46 76
+14 210 160 136 93 66 75 140
+16 264 202 172 148 92 95 170
+18 335 250 255 205 114 121 200
+City of Jordan – Standard Specifications DOMESTIC WATER SYSTEM
+September, 2019 PAGE 02510-1
+V021518 © Bolton & Menk, Inc. 2019, All Rights Reserved20 400 305 310 245 125 135 255
+24 565 405 412 315 166 175 335
+1Weights are based on the use of long sleeves.
+Tees, Crosses & Reducers
+Fitting Weights, lbs. (AWWA
+C153) Fitting Weights, lbs. (AWWA C153)
+Run Branch Tee Cross Reducers Run Branch Tee Cross Reducers
+Large Small MJ x MJ MJ x MJ MJ x MJ Large Small MJ x MJ MJ x MJ MJ x MJ
+4 4 32 40 - 18 6 275 - -
+6 4 46 62 24 18 8 295 - 190
+6 6 56 75 - 18 10 315 - 195
+8 4 60 84 32 18 12 335 - 180
+8 6 72 98 36 18 14 380 - 190
+8 8 86 105 - 18 16 405 - 195
+10 4 78 98 46 18 18 435 - -
+10 6 90 121 47 20 6 315 - -
+10 8 105 135 50 20 8 345 - -
+10 10 120 145 - 20 10 370 - 220
+12 4 94 119 58 20 12 395 - 205
+12 6 110 138 58 20 14 440 - 200
+12 8 125 149 57 20 16 465 - 200
+12 10 140 187 61 20 18 505 - 225
+12 12 160 213 - 20 20 535 - -
+14 4 172 - 24 6 415 - -
+14 6 182 210 100 24 8 445 - -
+14 8 206 231 100 24 10 470 - -
+14 10 228 255 100 24 12 500 - 305
+14 12 234 269 100 24 14 550 - 310
+14 14 280 299 24 16 580 - 320
+16 6 228 250 124 24 18 625 - 305
+16 8 248 264 124 24 20 660 - 300
+16 10 264 286 124 24 24 720 - -
+16 12 280 312 112
+16 14 316 - 140
+16 16 322 385 -
+(b) The weight for fittings not listed in the tables above shall be in accordance with AWWA C153. The
+weight for fittings not listed in the tables above or in AWWA C153 shall be the actual weight of the
+fitting(s) furnished and installed based on acceptable documentation provided by the Contractor.
+6. Corporation Stops & Curb Stops
+(a) No exception to the referenced specification is made.
+7. Water Service Lines
+(a) The quantities for water service line items shown in the proposal are approximate. Since the
+extent of service line work that will be required is unknown, the Owner reserves the right to
+increase or decrease the quantities by any amount with no adjustment in unit price.
+City of Jordan – Standard Specifications DOMESTIC WATER SYSTEM
+September, 2019 PAGE 02510-2
+V021518 © Bolton & Menk, Inc. 2019, All Rights Reserved8. Cut in Tee
+(a) Payment for cutting in a new tee in an existing watermain, under pressure, shall be measured and
+paid per each of the size tee specified in the Schedule of Unit Prices, complete and in place, at the
+appropriate unit price bid.
+9. Polystyrene Insulation (2 inch thickness)
+(a) Polystyrene insulation shall be measured by the SQUARE YARD in place and shall be paid at the
+unit price bid.
+(b) Since the extent of insulation work that will be required is unknown, the Owner reserves the right
+to increase or decrease the quantities by any amount with no adjustment in unit price.
+B. The furnishing and installing of specific items and/or the performance of work under certain circumstances
+shall not be individually paid in the absence of a specific bid item for the work. The costs shall be included
+in the unit price bid for the water system items, as indicated. Such items of work include but are not limited
+to:
+1. Furnishing and installing underground utility location system.
+2. The furnishing and installing polyethylene encasement material, include in the price bid for watermain.
+3. Concrete blocking or metal ties, include in the price bid for watermain.
+4. Valve umbrella anchorage assembly, include in the unit price bid for valves.
+5. Locating and connecting to an existing watermain or a hydrant, include in the price bid for watermain.
+6. Locating and connecting to an existing water service line, include in the price bid for watermain.
+7. Compaction, hydrostatic, leakage, disinfecting, coliform bacteria and conductivity testing, include in the
+price bid for watermain.
+8. Furnishing and installing thrust block, tie rods, joint restraints and sacrificial zinc anode caps as shown
+on the plans and as specified.
+9. Turning hydrant heads to a location as directed by the Engineer, include in the price bid for hydrants.
+10. If a separate bid item for temporary water service is NOT included in the Schedule of Unit Prices,
+providing continuous temporary water service to affected users, include in the price bid for watermain.
+11. The wood and/or metal parts necessary to identify the ends of the unattached service lines and curb
+stops are included in the price bid for water services.
+12. If a separate bid item for bypass pumping is NOT included in the Schedule of Unit Prices, providing
+temporary bypass pumping / control of storm water flows around the construction zone, include in the
+price bid for watermain.
+13. The painting or re-painting of hydrants with scratches and/or abrasions, include in the price bid for
+hydrants.
+14. Providing temporary corporations, copper pipe, plugs, etc. for hydrostatic watermain testing, include in
+the unit price bid for watermain.
+15. The cost to furnish and install copper water service couplings, include in the unit price bid for water
+service pipe.
+16. If the watermain is to be installed inside a casing pipe, furnishing and placing the carrier pipe, carrier
+pipe support materials, sand fill and grout seals, include in the unit price bid for watermain.
+1.4 SPECIFICATION REFERENCES
+1. Trench excavation, bedding and backfill, reference Section 02320 “Trench Excavation, Bedding and
+Backfill” of this Project Manual, except as modified herein.
+City of Jordan – Standard Specifications DOMESTIC WATER SYSTEM
+September, 2019 PAGE 02510-3
+V021518 © Bolton & Menk, Inc. 2019, All Rights Reserved2. See Section 02520 “Underground Utility Location System” of this Project Manual.
+3. CEAM 2611 shall apply to the water main and service line construction, except as modified herein.
+4. AWWA C-651 shall apply to the disinfecting of water mains, except as modified herein.
+5. Unless noted otherwise, the provisions in this section are in addition to the referenced specification.
+1.5 SUBMITTALS
+A. Work plan for temporary service.
+B. The CONTRACTOR must provide a complete an as-built record form, as provided in the appendix, for
+acceptance of each storm sewer and sanitary sewer structure, as well as each sanitary sewer and water
+service line. The completed report shall be submitted each week to the Engineer or the Engineer''s
+designated representative at some mutually agreeable time. Failure to submit the required form shall
+render the structure or services subject to non-acceptance.
+PART 2 -- PRODUCTS
+2.1 OPEN CUT WATERMAIN MATERIAL
+A. The following water pipe materials will be allowed for use on this project:
+1. Ductile Iron Pipe, Class 52 with conductive gaskets or conductivity strips may be used.
+2. Pipe materials acceptable for trenchless installation will be considered acceptable for open cut
+installation upon approval of the City Engineer.
+2.2 TRENCHLESS PIPE MATERIAL & STRUCTURAL REQUIREMENTS
+A. All pipe shall be made from virgin material. No rework except that obtained from the manufacturer’s own
+production of the same formulation shall be used.
+B. The pipe shall be homogenous throughout and shall be free of visible cracks, holes, foreign material,
+blisters, and/or other deleterious faults.
+C. Any section of pipe with a gash, blister, abrasion, nick scar, or other deleterious fault greater than
+10 percent of the wall thickness, shall not be used and must be removed from the site. However, a
+defective portion of pipe, as defined above may be cut out and butt-fused in accordance with the
+procedures herein.
+D. Any section of pipe having other defects such as concentrated ridges, discoloration, excessive spot
+roughness, pitting, variable wall thickness or any other defect of manufacturing and/or handling shall not
+be used and shall be removed from site.
+E. The actual inside barrel diameter of the pipe used for pressure pipe shall not be less than that of DIP, Class
+52 for the corresponding nominal pipe size.
+F. The following materials will be acceptable for trenchless installation:
+1. DR 18 Fusible C900/C905 PVC
+(a) All piping shall be made from PVC compound conforming to cell classification 12454 per ASTM
+D1784.
+(b) Fusible polyvinylchloride pipe shall conform to AWWA C900, AWWA C905, ASTM D2241 OR ASTM
+D1785 for standard dimensions, as applicable. Testing shall be in accordance with the referenced
+AWWA standards for all pipe types.
+(c) Fusible polyvinylchloride pipe shall be extruded with plain ends. The ends shall be square to the
+pipe and free of any bevel or chamfer. There shall be no bell or gasket of any kind incorporated
+into this pipe.
+City of Jordan – Standard Specifications DOMESTIC WATER SYSTEM
+September, 2019 PAGE 02510-4
+V021518 © Bolton & Menk, Inc. 2019, All Rights Reserved(d) Fusible polyvinylchloride pipe shall be manufactured in a standard 40’ nominal length, or custom
+lengths as specified.
+(e) Fusible polyvinylchloride pipe shall be blue in color for potable water use.
+(f) Pipe for potable water use shall be certified per NSF-61G.
+(g) Pipe shall be marked as follows;
+(1) Nominal pipe size
+(2) PVC
+(3) Dimension Ratio, Standard Dimension Ratio, or Schedule
+(4) AWWA pressure class, or standard pressure rating for non-AWWA pipe, as applicable
+(5) AWWA standard designation number, or pipe type for non-AWWA pipe, as applicable
+(6) NSF-61 mark verifying suitability for potable water service
+(7) Extrusion production-record code
+(8) Trademark or trade name
+(9) Cell Classification 12454 and/or PVC material code 1120 may be included
+(h) Pipe shall be homogeneous throughout and be free of visible cracks, holes, foreign material,
+blisters, or other visible deleterious faults.
+(i) Joints
+(1) Unless otherwise specified, fusible polyvinylchloride pipe lengths shall be assembled in the
+field with butt-fused joints. The Contractor shall follow the pipe supplier’s written guidelines
+for this procedure. All fusion joints shall be completed as described in this specification.
+2. C900/C905 Reinforced Joint (RJ) PVC Pipe
+(a) One of the following pipe materials may be used:
+(1) Certa-Lok C900/RJIB Restrained Joint Integral Bell PVC Pipe, DR 18
+(2) TerraBrute Cartridge Loaded, Restrained Joint C900 PVC Pipe, DR 18
+(3) Approved equal
+(b) Unless otherwise specified, cartridge-loaded, restrained joint polyvinyl chloride pipe lengths shall
+be assembled in the field using a gasketed, restrained joint. The Contractor shall follow the pipe
+supplier''s written guidelines for joining the product.
+(c) Cartridge-loaded, restrained joint polyvinyl chloride pipe shall be manufactured in a standard, 20
+foot long nominal lay length, unless otherwise approved.
+(d) Cartridge-loaded, restrained joint polyvinyl chloride pipe shall have an integral bell. Bell shall have
+the same wall thickness as the pipe barrel. It shall not contain any metallic components.
+(e) The cartridge-loaded, restrained joint shall use a high deflection, profile gasket per ASTM F477.
+Standard gasket material shall be styrene-butadiene rubber (SBR). Optional, special order nitrile
+rubber gaskets shall be used where indicated in the construction documents. O-rings or similar
+gaskets shall not be allowed.
+(f) Restrained Joint polyvinylchloride pipe shall conform to AWWA C900, AWWA C905, ASTM D2241
+OR ASTM D1785 for standard dimensions, as applicable. Testing shall be in accordance with the
+referenced AWWA standards for all pipe types.
+(g) The assembled restrained joint shall meet the requirements of ASTM D3139.
+City of Jordan – Standard Specifications DOMESTIC WATER SYSTEM
+September, 2019 PAGE 02510-5
+V021518 © Bolton & Menk, Inc. 2019, All Rights Reserved(h) The assembled restrained joint shall allow for expansion and contraction within the joint.
+(i) Restrained Joint polyvinylchloride pipe shall be blue in color for potable water use.
+(j) Pipe for potable water use shall be certified per NSF-61G.
+(k) Pipe shall be marked as follows;
+(1) Nominal pipe size
+(2) PVC
+(3) Dimension Ratio, Standard Dimension Ratio, or Schedule
+(4) AWWA pressure class, or standard pressure rating for non-AWWA pipe, as applicable
+(5) AWWA standard designation number, or pipe type for non-AWWA pipe, as applicable
+(6) NSF-61 mark verifying suitability for potable water service
+(7) Extrusion production-record code
+(8) Trademark or trade name
+(9) Cell Classification 12454 and/or PVC material code 1120 may be included
+(l) Pipe shall be homogeneous throughout and be free of visible cracks, holes, foreign material,
+blisters, or other visible deleterious faults.
+3. High Density Polyethylene (HDPE) Pipe & Fitting
+(a) The pipe material shall be extra high molecular weight, high density polyethylene (EHMW-HDPE,
+PE4710) conforming with the minimum structural standards of ASTM D3350 with cell classification
+345434C. All HDPE pipe material shall meet the requirements of ASTM D1248 for a Type III, Class
+C, Category 5, Grade P34.
+(b) The pipe to be used shall be (HDPE) pressure pipe conforming to the requirement of AWWA C-906
+of a 160 psi working pressure. The grade used shall be resistant to aggressive soils or corrosive
+substances present. Unless otherwise specified, the dimensions and tolerances of the pipe barrel
+shall conform to ductile iron pipe size (DIPS) equivalent outside diameters.
+(c) The dimension ratio (DR) shall be 11 DIPS. Nominal size 14.
+(d) HDPE pipe shall have butt-fused joints.
+(e) The Contractor shall verify the lengths of conduit necessary in the field before fabrication.
+(f) Polyethylene fittings and adaptors shall be butt-fused, EHMW-HDPE, PE4710 meeting the same
+resin requirements as specified for the pipeline. In addition, the fittings shall meet the applicable
+requirements of ASTM D2513 and ASTM D3261.
+(g) Mechanical joint pressure pipe joints shall be restrained using ductile iron clamps (series Ebaa Iron,
+Inc. or equal) supplied with a sufficient number of ductile iron bolts to restrain the working and
+test pressures for this application.
+(h) Replacement Pipe Dimensions: The minimum length shall be that deemed necessary by the
+Contractor to effectively span the distance from the inlet to the outlet of the respective structures
+unless otherwise specified. The Contractor shall verify the lengths in the field before fabrication.
+(i) All pipe shall be made from virgin material. No rework except that obtained from the
+manufacturer''s own production of the same formulation shall be used.
+(j) The pipe shall be homogenous throughout and shall be free of visible cracks, holes, foreign
+material, blisters, and/or other deleterious faults.
+City of Jordan – Standard Specifications DOMESTIC WATER SYSTEM
+September, 2019 PAGE 02510-6
+V021518 © Bolton & Menk, Inc. 2019, All Rights Reserved(k) Any section of pipe with a gash, blister, abrasion, nick scar, or other deleterious fault greater than
+10 percent (10%) of the wall thickness, shall not be used and must be removed from the site.
+However, a defective portion of pipe, as defined above, may be cut out and butt-fused in
+accordance with the procedures herein.
+2.3 ANY SECTION OF PIPE HAVING OTHER DEFECTS SUCH AS CONCENTRATED RIDGES, DISCOLORATION, EXCESSIVE
+SPOT ROUGHNESS, PITTING, VARIABLE WALL THICKNESS OR ANY OTHER DEFECT OF MANUFACTURING AND/OR
+HANDLING SHALL NOT BE USED AND SHALL BE REMOVED FROM SITE.WATERMAIN FITTING MATERIALS
+A. The following pressure pipe fitting materials will be allowed for use on this project:
+1. Mechanical Class 350 ductile iron fittings shall be used. Adaptors, back-up rings, and oversize sleeves
+shall be provided for transitions and connections to dissimilar types of pipe materials. All sleeve fittings
+shall be long mechanical joint.
+2. All fittings, valves, hydrants and restraining rods shall be protected by using sacrificial zinc anode caps,
+ASTM B418 6 oz. Large Zinc Anode Caps as manufactured by Trumbull Industries Inc., or an approved
+equal. Contractors shall supply 2 anode caps per mechanical joint gland installed.
+3. All fittings, valves, hydrants, etc. shall be secured utilizing COR-BLUE T-BOLTS as manufactured by NSS
+Industries or approved equal.
+4. Quality control of all fitting manufacturers shall conform to the requirements of International
+Organization for Standardization (ISO).
+2.4 FIRE HYDRANTS
+A. Hydrants shall be Waterous Improved Pacer Style, Model WB67-250, UL, 250 psi rating, with safety flange
+and stem coupling. The bury length shall be 8.0-feet, unless otherwise noted on the plans. The break-off
+height install shall be 16.0-inches. The Contractor shall install the hydrant so that the center of the nozzle is
+24 inches above the finished grade. The hydrant shall be painted red.
+B. All hydrants shall have been manufactured in the year of construction or prior two calendar years.
+1. All hydrant extensions shall be manufactured by the same manufacturer as the hydrant.
+2. The local fire department shall be contacted before ordering hydrants to obtain the correct nozzle
+threads and type of operating nut and cap bolts.
+2.5 VALVE AND VALVE HOUSING
+A. All water valves shall have been manufactured in the year of construction or prior two calendar years.
+B. All nuts and bolts shall be 304 stainless steel.
+C. Valve Housing
+1. Cast-iron screw type valve boxes shall be installed where indicated on underground valves. The cast-
+iron valve boxes shall be of either the two-piece or three-piece style and shall be furnished with a stay-
+put cover with raised letters indicating "WATER." The shaft shall be 5¼-inch inside diameter.
+2. All valve box assemblies shall be furnished with a valve umbrella anchorage assembly. The valve
+umbrella anchorage assembly shall be manufactured by Adaptor, Inc., Oak Crest, WI, or equivalent.
+3. High Density Polyethylene valve housings will not be allowed on this project.
+D. Gate Valves
+1. All valves up to and including 12.0-inch diameter to be furnished and installed on the watermain shall
+be , non-rising stem, iron body, resilient-seated gate valves, with two-inch square opening nut rated for
+a 200 psi working pressure conforming to the current editions of AWWA C-509-or AWWA C-515.
+Double disc type valves (AWWA C-500) will not be allowed.
+E. Butterfly Valves
+City of Jordan – Standard Specifications DOMESTIC WATER SYSTEM
+September, 2019 PAGE 02510-7
+V021518 © Bolton & Menk, Inc. 2019, All Rights Reserved1. All valves greater than 12.0-inch diameter shall be butterfly valves conforming to the referenced
+specification.
+2. All butterfly valves shall be manufactured with the rubber seat bonded to the body. Valve discs shall
+be furnished with 316 stainless steel seating edge.
+2.6 WATER SERVICE PIPE AND FITTINGS
+A. Service Pipe and Fittings
+1. General
+(a) Water service pipe and fittings shall conform to the provisions of 2611.2D, AWWA C800 and the
+following:
+(b) Valves and fitting models to vary according to water main pipe size. See mfg. catalogue data.
+(c) Saddles shall be provided for all corporation stops larger than 1½-inches if DIP pipe is installed
+(d) Curb boxes shall be adjustable with Minneapolis Pattern. Stationary rods are required. Depth of
+curb boxes shall typically be 8.0-feet.
+2. Copper Service Pipe Notes & Specifications:
+(a) Copper pipe shall conform to ASTM B88, Seamless Copper Water Tubing, Type K, Soft Annealed
+Copper.
+(b) Copper water service pipe connections shall be flared type at connections to new pipe.
+(c) Copper water service pipe connectors shall be compression type at connections to existing pipe.
+3. Polyethylene (PE) Service Pipe Notes & Specifications
+(a) PE pipe shall conform to Grade PE-3408 or PE-4710 pipe and shall be rated for 200 PSI working
+pressure, SDR-9.
+(b) PE pipe shall conform to ASTM D-1248 & D-2737 for Copper Tube Size, outside diameter
+controlled.
+(c) PE water service pipe connections shall be compression type.
+(d) PE pipe shall be permanently marked at 2'' intervals indicating Mfg., PE Material Type, Date of
+Manufacture, etc.
+(e) Type 304 stainless steel pipe inserts / stiffeners shall be furnished and installed in the ends of the
+PE pipe at all connections. Inserts shall meet requirements of AWWA C901 and ASTM 240-92B,
+unless otherwise shown on the plans.
+(f) PE pipe shall not be allowed within the public right-of-way.
+4. Tracer Wire
+(a) Tracer wire shall be supplied when using PE water service pipe. Tracer wire shall be fastened to
+the underside of the top of the curb stop boxes with waterproof connections, unless otherwise
+indicated in the Engineering Plans or other as approved by the Owner.
+5. The Utility should be contacted before ordering to verify the manufacturers’ type and style. The water
+service materials style commonly used by the Utility are to be considered as a basis for quality are:
+WATER SERVICE PIPE & APPURTENANCES
+FLARED TYPE Valves & Fittings
+ITEM: SERVICE For TYPE K COPPER PIPE
+PIPE MUELLER
+City of Jordan – Standard Specifications DOMESTIC WATER SYSTEM
+September, 2019 PAGE 02510-8
+V021518 © Bolton & Menk, Inc. 2019, All Rights ReservedSIZE MODEL #
+MUELLER
+Corporation 3/4" B-25000-N
+Stop 1" B-25000-N
+1.5" B-25000-N
+2" B-25000-N
+FORD FORD
+Tapping for DIP WMN for PVC WMN
+Saddle 3/4" F202 FS323
+1" F202 FS323
+1.25” F202 FS323
+1.5" F202 FS323
+2" F202 FS323
+MUELLER
+Curb Stop 3/4" P-25154-N
+1" P-25154-N
+1.5" P-25154-N
+2" P-25154-N
+1.5” Diam. Base Tap for
+Curb Box H-10300
+¾” to 1.25” Curb Stops
+2" Diam. Base Tap for
+Curb Box N/A
+1.5" to 2" Curb Stops
+WATER SERVICE PIPE & APPURTENANCES
+COMPRESSION TYPE Valves & Fittings
+For POLYETHYLENE PIPE
+ITEM: SERVICE
+PIPE MUELLER
+SIZE MODEL #
+MUELLER
+Corporation 3/4" B-25008-N
+Stop 1" B-25008-N
+1.5" B-25008-N
+2" B-25008-N
+FORD FORD
+Tapping for DIP WMN for PVC WMN
+Saddle 3/4" F202 FS323
+1" F202 FS323
+1.25” F202 FS323
+1.5" F202 FS323
+2" F202 FS323
+MUELLER
+Curb Stop 3/4" B-25155-N
+1" B-25155-N
+City of Jordan – Standard Specifications DOMESTIC WATER SYSTEM
+September, 2019 PAGE 02510-9
+V021518 © Bolton & Menk, Inc. 2019, All Rights Reserved1.5" B-25155-N
+2" B-25155-N
+1.5” Diam. Base Tap for ¾”
+Curb Box N/A
+to 1.25” Curb Stops
+2" Diam. Base Tap for 1.5"
+Curb Box N/A
+to 2" Curb Stops
+2.7 RESTRAINED JOINT RETAINER GLANDS
+A. Where stainless steel is not used restrained joint retainer glands shall be coated with a 6-8 mil nominal
+thickness fusion bonded epoxy conforming to the requirements of ANSI/AWWA C550 and C116/A21.16 or
+approved equal.
+2.8 POLYETHYLENE ENCASEMENT
+A. Where DIP watermain is installed, the Contractor shall furnish and install polyethylene encasement for the
+entire main and all appurtenances in accordance with the referenced specification.
+PART 3 -- EXECUTION
+3.1 CONSTRUCTION REQUIREMENTS
+A. Temporary Service
+1. Before proceeding with the project, the Contractor shall establish a work plan and submit the plan to
+the utility personnel and Engineer for review and comment. The plan shall outline the method to be
+used to maintain service to the affected consumers and estimate the duration of any anticipated
+interruptions of service. The plan shall include provisions to fully disinfect all temporary piping, valves
+and fittings in accordance with CEAM Specification No. 2611. The Contractor is the sole party
+responsible to notify the Utility and consumers who may be affected by limitations and/or interruption
+of water service. Planned service interruptions shall not exceed 6 hours in any 72 hour period unless
+previously approved by the Utility.
+2. The Contractor shall coordinate watermain shut-downs with the water utility at least 24 hours prior to
+the requested shut-down.
+3. If the Contractor fails to provide water service to affected residents within the constraints specified
+above, an amount equal to $500.00 shall be due to the City of Jordan each occurrence.
+3.2 INSTALLATION OF PIPE AND FITTINGS
+A. Aligning and Fitting of Pipes
+1. The Contractor, together with the utility''s personnel, shall jointly examine and operate all curb stops
+and mainline valves prior to final acceptance.
+2. Anchoring of Pipe
+(a) A thrust block of cast-in-place concrete, which covers the installed fitting, is not permitted.
+Restrained joint retainer glands shall be provided at all bends, tees, hydrants, valves and plugged
+crosses or wherever the watermain changes direction or dead ends
+B. Polystyrene Insulation
+1. The Contractor shall install polystyrene insulation in those areas where the watermain or services may
+be susceptible to frost or freezing, or as directed by the Engineer.
+2. Rigid foam insulation shall be placed between the watermain and storm or sanitary sewer where
+adequate vertical clearance cannot be maintained. The insulation shall be placed on a bed of sand and
+sand shall be placed above the insulation to isolate the insulation from rocks and other sharp objects.
+City of Jordan – Standard Specifications DOMESTIC WATER SYSTEM
+September, 2019 PAGE 02510-10
+V021518 © Bolton & Menk, Inc. 2019, All Rights ReservedThe ultimate thickness of insulation required shall be achieved by using 2 layers of insulation, the
+second layer shall be placed perpendicular to first layer and the joints shall be offset.
+C. Water Service Installation
+1. The Contractor shall imprint the concrete face of curb at the locations of the utility service locations in
+accordance with City standards.
+2. The Contractor shall keep accurate records as to the location of the service connections, as specified in
+the referenced specification. Final payment for the project will not be made until the information is in
+the possession of the Owner.
+3. No warranty is expressed or implied as to the location, size or material type of existing service lines.
+The Contractor shall furnish and install all fittings required to make the connections.
+4. The Contractor shall install new service pipe, at 7.0-foot bury depth, from the corporation stop to the
+property line, or as shown on the plans, or as directed by the Engineer.
+5. The water services shall be hydrostatically tested and disinfected.
+6. All water services shall be verified as operative and the corporation stops shall be turned to open
+position prior to backfilling.
+D. Polyethylene Encasement
+1. Where DIP watermain is installed, the Contractor shall furnish and install polyethylene encasement for
+the entire main and all appurtenances in accordance with the referenced specification.
+3.3 FIELD QUALITY CONTROL
+A. Electrical Conductivity Test
+1. Conductive Pipe Materials
+(a) See CEAM 2611.3.F
+2. Non-conductive Pipe Materials
+(a) The conductivity requirements shall be deleted.
+3.4 HYDROSTATIC TESTING
+A. Hydrostatic tests shall be conducted in accordance with the referenced specification. Individual tests from
+valve to valve are required. These tests shall be conducted prior to the bacteriological tests required with
+the disinfection of the main. No drop in pressure will be allowed during the last two hours of the pressure
+test.
+B. Water services, including corporation and curb stops, shall be tested.
+3.5 DISINFECTION
+A. The Contractor shall disinfect the watermain in accordance with the provisions of AWWA C-651.
+B. Testing options A and B as described in AWWA C-651 and below shall be required for the bacteriological
+testing for total coliform analysis.
+Option A: Before approving a main for release, take an initial set of samples after flushing and then
+resample again after a minimum of 16 hours using the sampling site procedures outlined. Both
+sets of samples must pass for the main to be approved for release.
+Option B: Before approving a main for release, flush the main and let it sit for a minimum of 16 hours
+without any water use. Then collect, using the sampling site procedures outlined and without
+flushing the main, two sets of samples a minimum of 15 minutes apart while the sampling taps
+are left running. Both sets of samples must pass for the main to be approved for release.
+City of Jordan – Standard Specifications DOMESTIC WATER SYSTEM
+September, 2019 PAGE 02510-11
+V021518 © Bolton & Menk, Inc. 2019, All Rights ReservedC. If the initial disinfection fails to produce satisfactory bacteriological results, or if other results indicate
+unacceptable water quality, the main may be re-flushed and shall be resampled. If check samples fail to
+produce acceptable results, the main shall be re-chlorinated by the continuous-feed or slug method until
+satisfactory results are obtained.
+D. No lines shall be placed in service until a satisfactory result is obtained.
+****END OF SECTION****
+City of Jordan – Standard Specifications DOMESTIC WATER SYSTEM
+September, 2019 PAGE 02510-12
+V021518 © Bolton & Menk, Inc. 2019, All Rights Reserved', 1),
+('PIPE SEWERS - SANITARY', NULL, NULL, 'nan', 'nan', '© Bolton & Menk, Inc.', NULL, NULL, 'Standard Specifications for Construction of Public Infrastructure', '02530', 'SECTION 02530 - PIPE SEWERS - SANITARY
+PART 1 -- GENERAL
+1.1 SUMMARY
+A. This section covers the furnishing of all labor, materials, tools, equipment and performances of all work and
+services necessary or incidental to sanitary sewer and service lateral construction as indicated on the
+drawings or as specified herein.
+1.2 METHODS
+A. Reference Section 02320 “Trench Excavation, Bedding and Backfill” of this Project Manual, except as
+modified herein.
+B. Reference Section 02446 “Trenchless Pipeline” of this Project Manual.
+C. Reference Section 02445 “Jack & Auger Steel Casing” of this Project Manual.
+1.3 METHOD OF MEASUREMENT AND PAYMENT
+A. Measurement and compensation for the following items shall be paid according to the referenced
+specification or as modified below:
+1. Manholes
+(a) Payment for all manholes shall be at the unit price bid per LINEAR FOOT of structure as measured
+from the invert of the outlet pipe to the top of the manhole casting. The amount bid includes all
+work and material required to complete the structure. Casting assemblies shall be paid separately
+for each assembly furnished and installed.
+2. Casting Assemblies
+(a) Casting assemblies shall be measured per EACH, complete in place and paid at the unit price bid
+3. Sewer Pipe
+(a) The contract unit price bid per LINEAL FOOT (LF) for the appropriate size, and type, shall be
+compensation in full for all equipment, materials and labor required to construct sanitary sewer
+pipe as specified, including but not limited to excavation, backfill, sub cutting, compaction, and all
+bedding.
+4. Wye Branches
+(a) No exception to the referenced specification is made.
+5. Outside Drop Section
+(a) Payment for the respective diameter outside drop connection shall be at the unit price per LINEAR
+FOOT of structure as measured from the invert of the lower pipe to the invert of the higher pipe.
+6. Connect to Existing Sanitary Sewer Pipe
+(a) Payment for connecting a new sanitary sewer to an existing sanitary sewer pipe shall be measured
+and paid per EACH as specified in the Schedule of Unit Prices, complete and in place, at the
+appropriate unit price bid. The bid shall include full compensation for locating the existing pipe,
+verifying the condition, and constructing a water tight joint.
+7. Connect to Existing Sanitary Sewer Service
+(a) Payment for reconnecting a sanitary sewer lateral/service to the new sanitary sewer system shall
+be measured and paid per EACH as specified in the Schedule of Unit Prices, complete and in place,
+at the appropriate unit price bid. The bid shall include full compensation for locating the existing
+pipe, verifying the condition and its use as an active service, and constructing a water tight joint.
+City of Jordan – Standard Specifications PIPE SEWERS - SANITARY
+September, 2019 PAGE 02530-1
+V120511 © Bolton & Menk, Inc. 2019, All Rights Reserved8. Sewer Service Cleanout
+(a) The amount bid per EACH shall be full payment for furnishing and installing the PVC cleanout,
+complete with bends, cap, locating iron, bedding, and encasement materials. The use and location
+of cleanouts shall be identified in the field by the Engineer.
+9. Outside Drop
+(a) The contract unit price bid per LINEAL FOOT (LF) for the appropriate size shall be compensation in
+full for all equipment, materials, and labor required to construct complete outside drops as
+specified.
+Manholes shall be measured and paid for separately at the appropriate unit price bid for
+manholes.
+10. Manhole Marker Sign
+(a) The contract unit price bid per each shall be compensation in full for all equipment materials and
+labor required to furnish and install manhole marker signs and all necessary appurtenances as
+shown on the plans and specified.
+(b) Manhole marker signs shall be required where structures are located in the following areas:
+(1) Within residential areas, where structures are located outside of roadways in areas not to be
+mowed or otherwise routinely maintained (long grass, wetland, etc.)
+(2) Within commercial or industrial areas, all non-pavement areas unless otherwise approved by
+the City Engineer.
+11. Sewer Service and Service Risers
+(a) The contract unit price bid per LINEAL FOOT (LF) for the appropriate size and type of service or
+riser pipe, shall be compensation in full for all equipment, materials, and labor required to furnish
+and install services and risers as shown on the plans and specified, including but not limited to
+pipe, bedding, blocking, fittings, tracer wire, wire connections, etc.
+(b) Service Pipe
+(1) Measurement for payment for services with no riser shall be the horizontal distance from
+centerline of the sewer main, along the centerline of the service pipe, to the end of the service
+stub. Vertical length of service pipe shall be considered incidental to the price bid for services.
+(2) Measurement for payment for services with a riser shall be the horizontal distance from
+center of the horizontal-vertical bend at the top of the riser, along the centerline of the service
+pipe, to the end of the service stub. Vertical length of service pipe shall be considered
+incidental to the price bid for services.
+(3) The amount bid shall include all costs for furnishing a fully functional and complete tracer wire
+with access box for the full service and riser, as specified.
+(c) Riser Pipe
+(1) Measurement for payment shall be the vertical distance from centerline of the sewer main, to
+the center of the horizontal-vertical bend, along the centerline of the riser pipe, to the
+City of Jordan – Standard Specifications PIPE SEWERS - SANITARY
+September, 2019 PAGE 02530-2
+V120511 © Bolton & Menk, Inc. 2019, All Rights Reservedvertical-to-horizontal bend. Horizontal length of riser pipe shall be incidental to the price bid
+for risers.
+(2) Payment shall be made for the final constructed service pipe and risers. Excess pipe and
+materials used during construction to accommodate maintenance of flow, construction
+methods construction staging, etc., including but not limited to riser stubs and subsequent
+adjustment of riser height for connection to service, temporary connections, etc. shall be
+considered incidental to the Contract.
+(3) Where no pay item is included for riser pipe, the unit price bid for service pipe shall apply.
+12. Sanitary Sewer Pipe Bedding & Foundation
+(a) Bedding as required in the pipe bedding zone, as shown on the plan, generally described as from
+6-inches above the pipe to 6-inches below the pipe as shown on the plan shall be considered
+incidental to the unit price bid for the appropriate pipe size and type, regardless of the use of
+suitable onsite granular materials or imported granular bedding material.
+(b) Aggregate Pipe Foundation
+(1) The contract unit price bid per TON shall be compensation in full for all equipment materials
+and labor required to furnish and install aggregate pipe foundation in locations where
+excavation bottoms are not suitable for bedding and base material for pipe, manholes, fittings,
+valves, etc., including but not limited to furnishing, placing, compacting, excavation, and
+disposal of unsuitable materials.
+(2) Where no bid item is provided for aggregate pipe foundation, but such work is required by the
+Engineer in the field, such work shall be measured as paid as Stabilizing Aggregate.
+(3) The use of aggregate pipe foundation material in lieu of providing adequate dewatering, shall
+be considered incidental, unless otherwise approved by the Engineer. No payment shall be
+made for foundation materials in this use.
+(4) The use of aggregate foundation materials in lieu of specified manhole, valve, fitting, pipe,
+hydrant, bedding materials, etc., as specified shall be considered incidental, unless otherwise
+approved by the engineer. No payment shall be made for foundation materials in this use.
+(5) The use of aggregate foundation materials shall be approved by the Engineer prior to use.
+Payment shall not be made for aggregate foundation materials installed without prior
+approval of the engineer.
+(6) No payment shall be made for material lost, wasted, spilled, used for other work on the
+project, etc.
+(c) The Contractor shall keep accurate records and weight tickets that show the actual amount of
+bedding and foundation material installed. The Contractor shall notify and coordinate with the
+Engineer all deliveries and placement amounts, and locations of placement at the time delivery
+and/or placement of materials is made. The Engineer reserves the right to deduct quantities of
+material installed submitted by the Contractor to reflect quantities lost, spilled, wasted, or used on
+other portions of the work. The final amount paid shall be at the sole discretion of the Engineer.
+(d) The quantities included in the proposal for bedding items are estimates only. The exact locations
+and dimensions of bedding types used shall be determined in the field by the Engineer and
+Contractor. No adjustment of unit price will be applied as a result of increased or decreased
+quantities of bedding, foundation, and excavation items related to trench excavation, bedding, and
+backfill. Payment shall be made for the actual quantities used on the project, as specified, without
+any adjustment to unit prices bid allowed.
+13. Buoyancy Collar
+City of Jordan – Standard Specifications PIPE SEWERS - SANITARY
+September, 2019 PAGE 02530-3
+V120511 © Bolton & Menk, Inc. 2019, All Rights Reserved(a) The contract unit price bid per EACH for the appropriate size manhole shall be compensation in full
+for all equipment, materials, and labor required to construct manholes that counteract the effects
+of buoyancy including but not limited to buoyancy calculations, structure design, submittals,
+revisions, buoyancy collar construction, additional invert weight and thickness, etc.
+14. External Chimney Seal
+(a) The contract unit price bid per EACH shall be compensation in full for all equipment materials and
+labor required to furnish, install, and adjust chimney seals as specified.
+15. Bypass Pumping
+(a) No direct payment for Bypass Pumping shall be made unless specifically listed in the Schedule of
+Unit Prices. All costs for providing bypass pumping shall be considered incidental to the related
+utility installation work.
+(b) When listed in the Schedule of Unit Prices, Bypass Pumping shall be measured and paid per the
+Lump Sum amount bid which shall be compensation in full for all equipment materials and labor
+required to maintain existing sewer flows and service through and around the project area, as
+specified, including but not limited to installation, operation, monitoring, maintenance, and
+removal of pumps power systems, piping, etc., multiple set ups of various capacity pumping
+systems, temporary connections to existing pipe and services, etc. as shown on the Plans, as
+specified, and as directed.
+B. The furnishing and installing of specific items and/or the performance of work under certain circumstances
+shall not be individually paid in the absence of a specific bid item for the work. The costs shall be included
+in the unit price bid for the sanitary sewer items, as indicated. Such items of work include but are not
+limited to:
+1. Locating and connecting to an existing sanitary sewer pipe, include in the price bid for sanitary sewer.
+2. Dye water testing of all service lines encountered and the subsequent plugging of abandoned sewer
+services, include in the unit price bid for sanitary sewer.
+3. The costs of furnishing bends, adapters, cutting and removing the existing sanitary sewer pipe, include
+in the price bid for sanitary sewer.
+4. Locating and connecting to an existing sanitary sewer service laterals, include in the price bid for
+sanitary sewer.
+5. Adapters to adjust the diameter of the new service connections to match the existing service lines,
+include in the price bid for service connections.
+6. All work and material required to complete the outside drop manhole structure as shown on the
+Design Detail Plate, include in the price bid for outside drop section.
+7. Leakage, vacuum, air and deflection testing, include in the price bid for sanitary sewer.
+8. Post construction televising, include in the price bid for sanitary sewer.
+9. The wood and/or metal parts necessary to identify the ends of unattached service lines, include in the
+price bid for sanitary sewer services.
+10. Furnishing and installing tracer wire and electrical connections to intersecting services and/or tracer
+wires, include in the price bid for sanitary sewer.
+11. Adjustment of sewer service locations.
+1.4 SPECIFICATION REFERENCES
+A. Reference Section 02320 “Trench Excavation, Bedding and Backfill” of this Project Manual, except as
+modified herein.
+1. See Section 02520 “Underground Utility Location System” of this Project Manual.
+City of Jordan – Standard Specifications PIPE SEWERS - SANITARY
+September, 2019 PAGE 02530-4
+V120511 © Bolton & Menk, Inc. 2019, All Rights Reserved2. Reference CEAM 2621 shall apply to the gravity sewers and service laterals construction, except as
+modified herein.
+3. Reference MnDOT 2506 shall apply to manholes and castings, except as modified herein.
+4. Unless noted otherwise, the provisions in this section are in addition to the referenced specification.
+1.5 SUBMITTALS
+A. Work plan for temporary service, including any plans for intended bypass pumping.
+B. Final DVD and log of post construction televised inspection.
+C. Reference Section 01330 of this Project Manual for Submittals, for additional requirements.
+D. The CONTRACTOR must provide a complete an as-built record form, as provided in the appendix, for
+acceptance of each storm sewer and sanitary sewer structure, as well as each sanitary sewer and water
+service line. The completed report shall be submitted each week to the Engineer or the Engineer''s
+designated representative at some mutually agreeable time. Failure to submit the required form shall
+render the structure or services subject to non-acceptance.
+PART 2 -- PRODUCTS
+2.1 OPEN CUT SEWER PIPE AND FITTINGS
+A. All pipe and fittings must be laid on a continuous granular bed. Installation must comply with ASTM D2321
+B. Solid Wall Polyvinyl Chloride (PVC) Pipe
+1. 4.0-inch through 6.0-inch Diameters: Smooth-walled polyvinyl chloride pipe and fittings shall conform
+with the requirements of ASTM D-3034 for the Standard Dimension Ratio (SDR) of 26, unless otherwise
+specified on the plans.
+2. 8.0-inch through 15-inch Diameters: Smooth-walled polyvinyl chloride pipe and fittings shall conform
+with the requirements of ASTM D-3034 for the Standard Dimension Ratio (SDR) of 35, for depths of less
+than 20.0-feet, unless otherwise specified on the plans. The SDR for depths exceeding 20.0-feet shall
+be 26, unless otherwise specified on the plans.
+3. Over 15" Diameters: Smooth-walled polyvinyl chloride pipe and fittings shall conform with the
+requirements of ASTM F679 with a minimum wall thickness for a minimum pipe stiffness of 46, for
+depths less than 20.0-feet, unless otherwise specified in the plans. A minimum SDR of 26 shall be used
+for depths exceeding 20.0-feet, unless, unless otherwise specified on the plans.
+4. WYES: All wyes shall be heavy wall and shall conform with the requirements of ASTM D-3034 for the
+Standard Dimension Ratio (SDR) of 26, unless otherwise specified on the plans.
+5. The connection shall be push-on with elastomeric gasketed joints, which are bonded to the inner walls
+of the gasket recess of the bell socket.
+6. The pipe grade used shall be resistant to aggressive soil and corrosive substances in accordance with
+the requirements of ASTM D-543.
+C. Ductile Iron Pipe (DIP)
+1. No exception to the referenced specification is made.
+2.2 TRENCHLESS PIPE MATERIAL & STRUCTURAL REQUIREMENTS
+A. All pipe shall be made from virgin material. No rework except that obtained from the manufacturer’s own
+production of the same formulation shall be used.
+B. The pipe shall be homogenous throughout and shall be free of visible cracks, holes, foreign material,
+blisters, and/or other deleterious faults.
+City of Jordan – Standard Specifications PIPE SEWERS - SANITARY
+September, 2019 PAGE 02530-5
+V120511 © Bolton & Menk, Inc. 2019, All Rights ReservedC. Any section of pipe with a gash, blister, abrasion, nick scar, or other deleterious fault greater than 10
+percent of the wall thickness, shall not be used and must be removed from the site. However, a defective
+portion of pipe, as defined above may be cut out and butt-fused in accordance with the procedures herein.
+D. Any section of pipe having other defects such as concentrated ridges, discoloration, excessive spot
+roughness, pitting, variable wall thickness or any other defect of manufacturing and/or handling shall not
+be used and shall be removed from site.
+E. INTERNAL PIPE DIAMETERS
+1. The actual inside barrel diameter of the pipe used for gravity pipe shall not be less than that of PVC –
+SDR 35 for the corresponding nominal pipe size.
+ACTUAL INTERIOR PIPE DIAMETERS FOR VARIOUS GRAVITY PIPE MATERIALS
+Nominal PVC – SDR 35 HDPE 4000 HDPE 4100 PVC Fusible PVC
+DR 11ductile sizes DR 11steel DR 181 DR-18
+sizes Restrain
+Joint
+8 7.92 7.375 6.963 8.044 8.05
+10 9.041 8.679 9.866 9.87
+12 11.78 10.750 10.293 11.734 11.73
+14 11.301 12.444 13.60
+15 14.426
+16 14.170 12.915 14.222 15.50
+18 17.629 15.925 14.532 17.30
+20 17.590 16.146 19.20
+21 20.78
+22 17.760
+24 23.381 21.014 19.374 22.90
+27 26.35
+F. WASTE WATER APPLICATIONS - GRAVITY SEWERS
+1. Fusible C900/C905TM
+(a) As manufactured by Underground Solutions (www.undergroundsolutions.com ). ASTM D 1784-02
+with Cell Classification 12454. The formulation for extrusion of Fusible C-900™/C-905™/PVC™ shall
+be compounded to the specific proprietary recipe for Fusible pipe, and meet the requirements of
+PPI TR-2.
+(b) Butt joint fused PVC pressure pipe conforming to AWWA C900 for 150 psi pressure rating (SDR 18).
+However, structurally stronger pipe may be required to ensure resistance to pulling stresses.
+(c) Pipe fusing shall meet manufacturer requirements. See Paragraph 1.4.A, Items to be Included with
+the Bid.
+(d) A manufacturer''s representative shall be present during fusing and installation.
+2. Restrained Joint PVC Pipe and Fittings
+(a) Restrained Joint Polyvinyl Chloride (PVC) pressure pipe with a 150 psi working pressure. The
+working pressure dictates a maximum standard dimension ratio (DR) of 18, however, structurally
+stronger pipe may be needed to ensure resistance to damaging stresses relative to the trenchless
+1 CertainTeed, Certa-Lok Restrained Joint Catalog, 1993, page 4.
+City of Jordan – Standard Specifications PIPE SEWERS - SANITARY
+September, 2019 PAGE 02530-6
+V120511 © Bolton & Menk, Inc. 2019, All Rights Reservedconstruction technique. The grade used shall be resistant to aggressive soils or corrosive
+substances in accordance with the requirements of ASTM D-543.
+(b) Restrained joints shall be Certa-Lok C900/RJ Restrained Joint PVC couplings as manufactured by
+Certain Teed, or equal.
+3. HIGH DENSITY POLYETHYLENE (HDPE) PIPE
+(a) The pipe material shall be extra high molecular weight, high density polyethylene (EHMW-HDPE,
+PE3408) conforming with the minimum structural standards of ASTM D3350 with Cell Classification
+345434C as manufactured by Chevron Phillips Chemical Company 4000/4100 Series, or equal. All
+HDPE pipe material shall meet the requirements of ASTM D1248 for a Type III, Class C, Category 5,
+Grade P34.
+(b) The pipe to be used shall be (HDPE) pressure pipe conforming to the requirement of AWWA C-906
+of a 160 psi working pressure. The grade used shall be resistant to aggressive soils or corrosive
+substances present. Unless otherwise specified, the dimensions and tolerances of the pipe barrel
+should conform to ductile iron or cast iron pipe equivalent outside diameters.
+(1) The dimension ratio (DR) shall be 11.
+(2) HDPE pipe shall have butt-fused joints with the internal fusing bead removed.
+(3) The Contractor shall verify the lengths of conduit necessary in the field before fabrication.
+2.3 MANHOLES
+A. Precast Concrete Manholes
+1. Sanitary sewer manholes shall conform to the MnDOT Standard Plate No. 4007C, unless otherwise
+shown on the plans, including integral base sections and rubber gasketed tongue and groove joints. All
+pipe openings shall have integral cast watertight seal.
+2. Reinforced polypropylene plastic steps shall be furnished for all sanitary sewer manholes eight or more
+feet in depth.
+B. Outside Drop Manhole
+1. All pipe materials used to construct the drop section and the incoming pipe shall be ductile iron, Class
+52.
+2. The DI pipe shall extend from the tee to 2.0-feet beyond the point where the elevation of the virgin soil
+becomes a uniform 6.0-inches below the invert elevation of the incoming pipe.
+C. Castings
+1. The type of casting assembly to be used shall be Neenah R-1733 solid lid with two concealed pickholes,
+2.0-inch raised letters stamped “SANITARY SEWER” and Self-Sealing lid. The frame shall be Neenah R-
+1733.
+2. All casting assemblies shall meet the certification requirements of the Minnesota Department of
+Transportation and be manufactured by a MnDOT approved source.
+D. Chimney Seal
+1. Chimney seals accepted for use, when shown in the plans, shall be one of the following listed as
+standard of quality:
+(a) Infi-Shield (exterior only)
+(b) Cretex (exterior only)
+(c) Interior Chimney seals shall only be allowed with pre-approval by the City Engineer.
+E. Adjusting Rings
+City of Jordan – Standard Specifications PIPE SEWERS - SANITARY
+September, 2019 PAGE 02530-7
+V120511 © Bolton & Menk, Inc. 2019, All Rights Reserved1. HDPE adjusting rings manufactured by Ladtech, Inc. shall be used.
+2. Concrete adjusting rings may be permitted in lieu of HDPE rings with approval of the City Engineer.
+PART 3 -- EXECUTION
+3.1 INSTALLATION OF PIPE AND FITTINGS
+A. Sanitary Main Installation
+1. No exception to the referenced specification is made.
+B. Sewer Service Installation
+1. The Contractor shall imprint the concrete face of curb at the locations of the utility service locations in
+accordance with City standards.
+2. The Contractor shall dye water test all existing sanitary sewer service line connections cut, severed or
+encountered during the construction to determine whether they are still active. Those service lines
+which are no longer in use shall be abandoned by plugging the severed upstream end with a suitable
+watertight plug approved by the Engineer.
+3. The exact number of service connections, i.e., new service lines or connection to existing service lines,
+is unknown. The quantities listed on the proposal are approximate. Final payment shall be based upon
+the number constructed for the various diameter of services constructed.
+4. The Contractor shall keep accurate records as to the location of the service connections, manholes,
+cleanouts, wyes, bends, risers, and connections to existing structures, pipe and stubouts as
+constructed. Measurements to service line shall be taken from the two nearest permanent structures
+(i.e., hydrants, valves, manholes, buildings) as directed by the Engineer. Final payment for the project
+will not be made until the information is in the possession of the Owner.
+5. The Contractor shall install new service pipe from the wye branch to the property line, as shown on the
+plans.
+6. At the end of all services that are not immediately connected to working services, the Contractor shall
+furnish and install a wood or metal pole that extends to just below the ground surface. If wood is used,
+there shall be attached to the top of the pole a 6.0-inch x 2.0-inch metal piece, capable of being located
+by a metal detector from the ground surface.
+7. Contractor shall collect photos as described in Section 01330 - Submittals, prior to backfilling.
+3.2 MANHOLE STRUCTURE
+A. Connect to Existing Sanitary Sewer
+1. When connection to an existing sanitary sewer is made at an existing or proposed manhole, the
+Contractor shall expose and verify the elevation of the existing sewer prior to laying any sanitary sewer
+to, or from, the connection point. If the elevation of the existing sewer does not match the elevation
+shown on the plans, the Contractor shall notify the Engineer, at which time the Engineer may adjust the
+proposed grades.
+2. Connections to existing sanitary sewers shall be watertight.
+3. Connections to existing structures shall be watertight. The installation of Cor-N-Seal boots, or equal,
+shall be required.
+B. Outside Drop Manhole
+1. All pipe materials used to construct the drop section and the incoming pipe shall be PVC - SDR 26 with
+heavy-duty fittings.
+2. The PVC pipe shall extend from the tee to 2.0-feet beyond the point where the elevation of the virgin
+soil becomes a uniform 6 inches below the invert elevation of the incoming pipe.
+City of Jordan – Standard Specifications PIPE SEWERS - SANITARY
+September, 2019 PAGE 02530-8
+V120511 © Bolton & Menk, Inc. 2019, All Rights ReservedC. Raise / Lower Existing Manhole
+1. Raising and/or lowering an existing manhole to meet a proposed finished rim elevation is performed
+when the addition and/or deletion of 2.0-inch adjusting rings will not reach a minimum of 2 rings or
+exceed a maximum of 6 rings. Typically, it will require: the removal of the manhole cone section or the
+concrete slab top; the addition, removal, or exchange of barrel sections; the replacement of the cone
+section or the concrete slab top; the installation of the proper number of adjusting rings; and the
+replacement of the manhole casting and frame. In some cases, the existing structure may require saw
+cutting.
+D. Manhole Base
+1. Pre-cast bases shall be used for all manholes.
+2. Integral cast base is required unless otherwise shown on the plans or approved by the Engineer.
+3. Manholes shall be set on a minimum of 6.0-inches of compacted foundation material.
+E. Miscellaneous Work
+1. If concrete adjusting rings are used, they shall be set with bituminous mastic or cement mortar and
+shall be plastered inside and out, with a minimum thickness of ½-inch of mortar. A maximum of
+3 individual adjusting rings shall be used. Taller 6.0-inch or 12.0-inch rings shall be used where
+adjustment requires more than three 2.0-inch rings.
+2. If HDPE adjusting rings are used, the sealant material and method shall be in accordance with
+manufacturer''s recommendations.
+3.3 FIELD QUALITY CONTROL
+A. Deflection test
+1. No exception to the referenced specification is made.
+B. Sanitary sewer leakage testing
+Leakage tests shall be conducted as described in the referenced specification. However, leakage testing will
+not be necessary where existing services are connected directly to the new sewer as it is being constructed.
+1. Air Testing
+(a) No exception to the referenced specification is made.
+2. Hydrostatic Testing
+(a) Hydrostatic testing shall not be allowed on this project.
+C. Televising
+1. Televising is required after the installation and backfill are complete and prior to the placement of
+roadway aggregate base or pavement.
+2. Immediately prior to televising, the televisor shall discharge sufficient clear water into the pipe to clean
+the pipe and assist in identifying sags and miss-alignment.
+3. Televising shall be performed by experienced personnel trained in locating breaks, obstacles and
+service connections by close circuit television. All televising video shall be in color. The interior of the
+pipeline shall be carefully inspected to determine the location of any conditions which may indicate
+improper installation. Each individual reach of pipe shall be identified as a ‘chapter’ on the DVD.
+4. A DVD and suitable log shall be kept of all televising and later submitted to the Owner.
+****END OF SECTION****
+City of Jordan – Standard Specifications PIPE SEWERS - SANITARY
+September, 2019 PAGE 02530-9
+V120511 © Bolton & Menk, Inc. 2019, All Rights Reserved', 1),
+('FORCEMAIN', NULL, NULL, 'nan', 'nan', '© Bolton & Menk, Inc.', NULL, NULL, 'Standard Specifications for Construction of Public Infrastructure', '02535', 'SECTION 02535 - FORCEMAIN
+PART 1 -- GENERAL
+1.1 SUMMARY
+A. This section covers the furnishing of all labor, materials, tools, equipment and performances of all work and
+services necessary or incidental to force main construction as indicated on the drawings or as specified
+herein.
+1.2 METHODS
+A. Trench Excavation, Bedding and Backfill, see Section 02320 of this Project Manual.
+B. Trenchless Installation, see Section 02446 of this Project Manual.
+C. Jack and Auger Steel Casing, see Section 02445 of this Project Manual.
+1.3 METHOD OF MEASUREMENT AND PAYMENT
+A. Measurement and compensation for the following items shall be paid according to the referenced
+specification or as modified below:
+1. Force main
+(a) Force main shall be measured by the LINEAR FOOT and paid at the price unit bid. The amount bid
+for Force main shall include the costs of furnishing bends, adapters, granular materials for
+foundation, bedding, encasement and backfill.
+2. Air Relief Manholes
+(a) Measurement and payment for air relief manholes shall be by EACH and paid at the price bid. The
+amount bid shall include work and material required to complete the structure, including precast
+manhole, crushed rock bedding material, casting, excavation and backfilling.
+3. Air Relief Valve Assembly
+(a) The air release valve assembly shall be measured by the EACH and paid at the unit price bid. The
+amount shall include the air release valve, tapping saddle, corporation stop and all necessary
+piping and fasteners to complete the operational air release system as detailed in the plan set.
+4. Polyethylene Encasement and Underground Utility Location System
+(a) Unless separately itemized in the Schedule of Unit Prices, the furnishing and installation of
+polyethylene encasement material and location system shall be incidental to the installation of
+force main.
+B. The furnishing and installing of specific items and/or the performance of work under certain circumstances
+shall not be individually paid in the absence of a specific bid item for the work. The costs shall be included
+in the unit price bid for the force main items, as indicated. Such items of work include but are not limited
+to:
+1. Furnishing and installing all bends, pipe restraints, blocking and fittings, include in the price bid for
+force main.
+2. Furnishing and installing underground utility location system, include in the price bid for force main.
+3. The furnishing and installing polyethylene encasement material, include in the price bid for force main.
+4. Concrete blocking or metal ties, include in the price bid for force main.
+5. Hydrostatic, leakage and continuity testing, include in the price bid for force main.
+City of Jordan – Standard Specifications FORCEMAIN
+September, 2019 PAGE 02535-1
+V010708 © Bolton & Menk, Inc. 2019, All Rights Reserved6. Delays due to other utility conflicts which result during the course of construction include in the price
+bid for force main.
+7. Protecting existing improvements from damage, include in the price bid for force main.
+8. Connecting to existing structures, include in the price bid for force main.
+9. Valve operating nut extension rod(s), include in the unit price bid for valves.
+10. If the forcemain is to be installed inside a casing pipe, furnishing and placing the carrier pipe, carrier
+pipe support materials, sand fill and grout seals, include in the unit price bid for forcemain.
+1.4 SPECIFICATION REFERENCES
+A. Reference Section 02320 of this Project Manual for Trench Excavation, Bedding and Backfill, except as
+modified herein.
+1. See Section 02520 “Underground Utility Location System” of this Project Manual.
+2. Reference CEAM 2611 shall apply to the force main construction, except as modified herein.
+3. Reference CEAM 2621.3G for pipe deflection.
+4. Unless noted otherwise, the provisions in this section are in addition to the referenced specification.
+PART 2 -- PRODUCTS
+2.1 OPEN CUT FORCE MAIN PIPE AND FITTING MATERIALS
+A. Pressure Polyvinyl Chloride (PVC) Pipe
+1. Force main pipe material shall be polyvinyl chloride (PVC) pipe having a cell classification of 12454.B as
+defined in ASTM Designation D-1784. The dimensions, physical requirements, test methods and
+extrusion quality shall meet the requirements of ASTM Designation D-2241 for dimension ratio (SDR) of
+26, pressure Class 160 and shall have IPS outside diameter. Gasketed integral bells shall conform to
+ASTM Designation D-3139 "Standard Specification for Joints for Plastic Pressure Pipe Using Flexible
+Elastomeric Seals." Gaskets shall conform to ASTM Designation F-477, "Standard Specification for
+Elastomeric Seals (Gaskets) for Joint Plastic Pipe."
+B. Pressure Pipe Joint Restraint Clamps
+1. The clamps (Series 6500 Ebaa Iron, Inc.) shall be ductile iron and supplied with a sufficient number of
+ductile iron bolts to restrain working and test pressures for this application.
+C. Pipe Fitting Materials
+1. The following pressure pipe fitting materials will be allowed for use on this project:
+2. Mechanical Class 350 ductile iron fittings shall be used. Adaptors, back-up rings, and oversize sleeves
+shall be provided for transitions and connections to dissimilar types of pipe materials. All sleeve fittings
+shall be long mechanical joint.
+3. All fittings, valves, hydrants and restraining rods shall be protected by using sacrificial zinc anode caps,
+ASTM B418 6 oz. Large Zinc Anode Caps as manufactured by Trumbull Industries Inc., or an approved
+equal. Contractors shall supply 2 anode caps per mechanical joint gland installed.
+4. All fittings, valves, hydrants, etc. shall be secured utilizing COR-BLUE T-BOLTS as manufactured by NSS
+Industries or approved equal.
+5. Quality control of all fitting manufacturers shall conform to the requirements of International
+Organization for Standardization (ISO).
+D. High Density Polyethylene (HDPE) Pipe and Fittings
+City of Jordan – Standard Specifications FORCEMAIN
+September, 2019 PAGE 02535-2
+V010708 © Bolton & Menk, Inc. 2019, All Rights Reserved1. The pipe material shall be extra high molecular weight, high density polyethylene (EHMW-HDPE,
+PE3408) conforming with the minimum structural standards of ASTM D3350 with cell classification
+345464C for black pipe, 345464E for non-black & color, as manufactured by DriscoPlex 4200 (IPS) /4300
+(DIPS) Series, or equal. All HDPE pipe material shall meet the requirements of ASTM D1248 for a Type
+III, Class C, Category 5, Grade P34 material.
+2. The grade used shall be resistant to aggressive soils or corrosive substances present. Unless otherwise
+specified, the dimensions and tolerances of the pipe barrel should conform to ductile iron or cast iron
+pipe equivalent outside diameters (4300 series).
+3. The dimension ratio (DR) shall be 17 for open trench installation.
+4. HDPE pipe shall have butt-fused joints.
+5. The Contractor shall verify the lengths of conduit necessary in the field before fabrication.
+6. Polyethylene fittings and adaptors shall be butt-fused, EHMW-HDPE, PE3408 meeting the same resin
+requirements as specified for the pipeline. In addition, the fittings shall meet the applicable
+requirements of ASTM D2513 and ASTM D3261.
+7. Mechanical joint forcemain joints shall be restrained using ductile iron clamps (series 15PF00 or
+2000PV Ebaa Iron, Inc. or equal) supplied with a sufficient number of ductile iron bolts to restrain the
+working and test pressures for this application. Internal pipe stiffeners must be used.
+2.2 TRENCHLESS PIPE MATERIAL & STRUCTURAL REQUIREMENTS
+1. All pipe and fittings shall meet the quality requirements for the material types allowed in section 2510
+of these specifications for potable watermain.
+2.3 AIR RELIEF MANHOLES
+A. Precast Concrete Manholes
+1. Air relief manholes shall conform to the MnDOT Standard for the design type shown on the plans
+including integral base sections and rubber gasketed tongue and groove joints. All pipe openings shall
+have integral cast watertight seal.
+B. Castings
+1. The type of casting assembly to be used shall be Neenah R-1733 solid lid with two concealed pickholes,
+2.0-inch raised letters stamped “SANITARY SEWER” and Self-Sealing lid. The frame shall be Neenah R-
+1733.
+2. Chimney Seal
+3. Chimney seals accepted for use, when shown in the plans, shall be one of the following listed as
+standard of quality:
+(a) Infi-Shield (exterior only)
+(b) Cretex (exterior only)
+(c) Interior Chimney seals shall only be allowed with pre-approval by the City Engineer.
+2.4 ADJUSTING RINGS
+A. Only concrete adjusting rings shall be permitted.
+2.5 AIR AND VACUUM RELEASE VALVES
+A. The air and vacuum release valve shall be equal to APCO Model 402 with a 2.0-inch inlet. The air and
+vacuum release valve shall be equipped with blow-off valves, quick disconnect couplings, 6.0-feet of hose
+and a 2.0-inch shut-off valve. A 2.0-inch saddle shall be used on the force main for connection of the air
+and vacuum release valve.
+City of Jordan – Standard Specifications FORCEMAIN
+September, 2019 PAGE 02535-3
+V010708 © Bolton & Menk, Inc. 2019, All Rights Reserved2.6 POLYETHYLENE ENCASEMENT
+A. No exception to the referenced specification is made.
+2.7 VALVE AND VALVE HOUSING
+A. All valves shall have been manufactured in the year of construction or prior calendar year.
+B. Valve Housing
+1. Cast-iron screw type valve boxes shall be installed where indicated on underground valves. The cast-
+iron valve boxes shall be of either the two-piece or three-piece style and shall be furnished with a stay-
+put cover with raised letters indicating "SEWER." The shaft shall be 5¼-inch inside diameter.
+2. All valve box assemblies shall be furnished with a valve umbrella anchorage assembly. The valve
+umbrella anchorage assembly shall be manufactured by Adaptor, Inc., Oak Crest, WI, or equivalent.
+3. High Density Polyethylene valve housings will not be allowed on this project.
+C. Gate Valves
+1. All valves up shall be gate valves conforming to the referenced specification.
+PART 3 -- EXECUTION
+3.1 INSTALLATION OF PIPE AND FITTINGS
+A. Blocking and Anchoring of Pipe
+1. A thrust block of cast-in-place concrete, which covers the installed fitting, is not permitted. Pre-cast
+concrete thrust blocks and other restraining devices such as restrained joint retainer glands, shall be
+provided at all bends or wherever the force main changes direction, valves shall be tied to the nearest
+forcemain fitting.
+B. Polystyrene Insulation
+1. The Contractor shall install polystyrene insulation in those areas where the force main may be
+susceptible to frost or freezing, or as directed by the Engineer.
+C. Polyethylene Encasement
+1. Where DIP watermain is installed, the Contractor shall furnish and install polyethylene encasement for
+the entire main and all appurtenances in accordance with the referenced specification.
+D. Methods
+1. Reference Section 02320 “Trench Excavation, Bedding and Backfill” of this Project Manual.
+2. Reference Section 02446 “Trenchless Installation” of this Project Manual.
+3.2 FIELD QUALITY CONTROL
+A. No exception to the referenced Specification is made unless a non-conductive force main is installed, in
+which case the conductivity requirements, as specified are deleted.
+B. The Engineer may require the Contractor to demonstrate that the forcemain meets the requirements of
+CEAM Specification 2621.3G for pipe deflection.
+C. The Engineer may require the Contractor to perform a hydrostatic pressure test as specified in CEAM
+Specification 2611.3G to a pressure of 100 psi.
+****END OF SECTION****
+City of Jordan – Standard Specifications FORCEMAIN
+September, 2019 PAGE 02535-4
+V010708 © Bolton & Menk, Inc. 2019, All Rights Reserved', 1),
+('PIPE CULVERTS', NULL, NULL, 'nan', 'nan', '© Bolton & Menk, Inc.', NULL, NULL, 'Standard Specifications for Construction of Public Infrastructure', '02610', 'SECTION 02610 - PIPE CULVERTS
+PART 1 -- GENERAL
+1.1 SUMMARY
+A. This section covers the furnishing of all labor, materials, tools, equipment and performances of all work and
+services necessary to construct pipe culverts as indicated on the drawings or as specified herein.
+1.2 METHOD OF MEASUREMENT AND PAYMENT
+A. Measurement and compensation for the following items shall be paid according to the referenced
+specification or as modified below:
+1. No exception to the referenced specification is made.
+B. The furnishing and installing of specific items and/or the performance of work under certain circumstances
+shall not be individually paid in the absence of a specific bid item for the work. The costs shall be included
+in the unit price bid for the associated pipe culvert items, as indicated. Such items of work include but are
+not limited to:
+1. The placement of clay borrow as an anti-seepage collar, include in the price bid for pipe culvert.
+2. Connection to an existing pipe culvert, storm sewer pipe or subdrain, include in the price bid for pipe
+culvert.
+3. Use of geotextile fabric to wrap pipe joints in lieu of using mastic, include in the price bid for storm
+sewer.
+4. Maintenance of an appropriate storm water outlet during construction, include in the price bid for pipe
+culvert.
+5. If the culvert is to be installed inside a casing pipe, furnishing and placing the carrier pipe, carrier pipe
+support materials, sand fill and grout seals, include in the unit price bid for culvert.
+1.3 SPECIFICATION REFERENCES
+A. Reference Section 02320 “Trench Excavation, Bedding and Backfill” of this Project Manual, except as
+modified herein.
+B. MnDOT 2501 shall apply to the construction of pipe culvert and appurtenance items, except as modified
+herein.
+C. Unless noted otherwise, the provisions in this section are in addition to the referenced specification.
+PART 2 -- PRODUCTS
+2.1 CULVERT PIPE AND FITTINGS
+A. Reinforced Concrete Pipe (MnDOT 3236)
+1. No exception to the referenced specification is made.
+B. Corrugated Steel Pipe
+1. No exception to the referenced specification is made.
+2. Corrugated Steel Pipe shall not be used for crossing of public roadways.
+C. Bituminous Coated Corrugated Steel Pipe
+1. No exception to the referenced specification is made.
+2. Bituminous Coated Corrugated Steel Pipe shall not be used for crossing of public roadways.
+City of Jordan – Standard Specifications PIPE CULVERTS
+September, 2019 PAGE 02610-1
+121417 © Bolton & Menk, Inc. 2019, All Rights ReservedD. Corrugated Polyethylene (PE) Pipe
+1. No exception to the referenced specification is made.
+2. Corrugated Polyethylene (PE) pipe shall not be used for crossing of public roadways unless underlying
+soils are unable to support RCP and if approved by the City Engineer.
+PART 3 -- EXECUTION
+3.1 CONSTRUCTION REQUIREMENTS
+A. The Contractor shall install a clay (or an approved impermeable equal) collar around all culverts at a point
+approximately 4.0-feet from each apron. The collar shall fill the breadth and height of the trench for a
+minimum length of 3.0- feet.
+B. The CONTRACTOR must provide a complete an as-built record form, as provided in the appendix, for
+acceptance of each storm sewer and sanitary sewer structure, as well as each sanitary sewer and water
+service line. The completed report shall be submitted each week to the Engineer or the Engineer''s
+designated representative at some mutually agreeable time. Failure to submit the required form shall
+render the structure or services subject to non-acceptance.
+3.2 FIELD QUALITY CONTROL
+A. Deflection test - No exception to the referenced specification is made.
+B. Televising - No exception to the referenced specification is made.
+****END OF SECTION****
+City of Jordan – Standard Specifications PIPE CULVERTS
+September, 2019 PAGE 02610-2
+121417 © Bolton & Menk, Inc. 2019, All Rights Reserved', 1),
+('SUBSURFACE DRAINS', NULL, NULL, 'nan', 'nan', '© Bolton & Menk, Inc.', NULL, NULL, 'Standard Specifications for Construction of Public Infrastructure', '02620', 'SECTION 02620 - SUBSURFACE DRAINS
+PART 1 -- GENERAL
+1.1 SUMMARY
+A. This section covers the furnishing of all labor, materials, tools, equipment and performances of all work and
+services necessary to construct subsurface drains as indicated on the drawings or as specified herein.
+1.2 METHOD OF MEASUREMENT AND PAYMENT
+A. Measurement and compensation for the following items shall be paid according to the referenced
+specification or as modified below:
+1. Subsurface Drains
+(a) No exception to the referenced specification is made.
+2. Inspection Tees
+(a) Inspection tee assemblies shall be measured per EACH type and style indicated, complete in place
+and paid at the price unit bid.
+B. The furnishing and installing of specific items and/or the performance of work under certain circumstances
+shall not be individually paid in the absence of a specific bid item for the work. The costs shall be included
+in the unit price bid for the associated subsurface drain items, as indicated. Such items of work include but
+are not limited to:
+1. Interference of other underground structures and utilities, include in the price bid for subsurface
+drains.
+2. The removal and restoration, or protection of existing utilities that are shown on the plans and for
+which there is no bid item for removing and restoring, or working around the utility.
+3. Unless separately itemized in the Schedule of Unit Prices, any dewatering necessary for subsurface
+drains construction, include in the price bid for subsurface drains.
+4. Foundation materials placed in lieu of performing necessary dewatering include in the price bid for
+subsurface drains.
+5. Connection to a proposed or existing pipe culvert, storm sewer pipe, catch basin, manhole or subdrain,
+include in the price bid for subsurface drains.
+6. Bulkheading of existing pipes to be abandoned in place, include in the price bid for subsurface drains.
+7. Bedding and encasement materials, include in the price bid for subsurface drains.
+8. Crushed rock foundation materials used in lieu of bedding materials in the specified bedding zone,
+include in the price bid for subsurface drains.
+9. Maintenance of service, include in the price bid for subsurface drains.
+10. The replacement all material displaced due to shrinkage or loss during the excavation and backfilling
+operations, include in the price bid for subsurface drains.
+11. Protecting existing improvements from damage include in the price bid for subsurface drains.
+1.3 SPECIFICATION REFERENCES
+A. MnDOT 2502 shall apply to the subsurface drains, except as modified herein.
+B. Unless noted otherwise, the provisions in this section are in addition to the referenced specification.
+PART 2 -- PRODUCTS
+City of Jordan – Standard Specifications SUBSURFACE DRAINS
+September, 2019 PAGE 02620-1
+V021717 © Bolton & Menk, Inc. 2019, All Rights Reserved2.1 SUBSURFACE PIPE AND FITTINGS
+A. Perforated PVC drain pipe, SDR35 (ASTM D3034) shall be used along public roadways and in shared rear
+yard drainage systems.
+B. Perforated corrugated polyethylene drainage tubing, PE (ASTM D3350) shall be used where approved by
+the City Engineer.
+C. Cleanout caps on inspection tees shall be cast iron screw in type.
+2.2 GRANULAR MATERIALS
+A. The filter aggregate shall conform to the requirements of MnDOT 3149 for coarse filter aggregate, unless
+otherwise shown on the plans.
+PART 3 -- EXECUTION
+3.1 CONSTRUCTION REQUIREMENTS
+A. Geo-textile fabric sock shall not be installed.
+B. If an existing utility is shown on the plans and there is no bid item for removing and restoring, or working
+around the utility, the Contractor shall be required to remove and restore, or protect the utility.
+C. The Contractor shall install and operate a dewatering system to maintain all trenches free of water
+wherever necessary. The Contractor shall be responsible for any damage to adjacent structures or buildings
+caused by the dewatering operations. The Contractor shall make his own subsurface investigations and
+determine what dewatering methods to utilize to prevent such damage.
+D. Existing inverts shall be protected during construction. If debris enters culverts or sewers, it shall be the
+responsibility of the Contractor to clean.
+E. Inspection tees shall be installed flush with the finished boulevard grade.
+F. Where subdrains are connected to catch basins or manholes, rodent protection shall be installed.
+****END OF SECTION****
+City of Jordan – Standard Specifications SUBSURFACE DRAINS
+September, 2019 PAGE 02620-2
+V021717 © Bolton & Menk, Inc. 2019, All Rights Reserved', 1),
+('PIPE SEWERS - STORM', NULL, NULL, 'nan', 'nan', '© Bolton & Menk, Inc.', NULL, NULL, 'Standard Specifications for Construction of Public Infrastructure', '02630', 'SECTION 02630 - PIPE SEWERS - STORM
+PART 1 -- GENERAL
+1.1 SUMMARY
+A. This section covers the furnishing of all labor, materials, tools, equipment and performances of all work and
+services necessary or incidental to storm sewer construction as indicated on the drawings or as specified
+herein.
+1.2 METHODS
+A. Trenchless Installation, see Section 02446 of this Project Manual.
+1.3 METHOD OF MEASUREMENT AND PAYMENT
+A. Measurement and compensation for the following items shall be paid according to the referenced
+specification or as modified below:
+1. Manholes
+(a) Payment for all manholes shall be at the unit price bid per LINEAR FOOT of structure as measured
+from the invert of the outlet pipe to the top of the manhole casting. The amount bid includes all
+work and material required to complete the structure. Casting assemblies shall be paid separately
+for each assembly furnished and installed.
+2. Catch Basins
+(a) Payment for all catch basins shall be at the unit price bid per EACH of structure installed. The
+amount bid includes all work and material required to complete the structure. Casting assemblies
+shall be paid separately for each assembly furnished and installed.
+3. Casting Assemblies
+(a) Casting assemblies shall be measured per EACH, complete in place and paid at the unit price bid.
+4. Sewer Pipe
+(a) No exception to the referenced specification is made.
+5. Aprons
+(a) No exception to the referenced specification is made.
+6. Connect to Existing Drainage Structure
+(a) Payment for connecting a new storm sewer to an existing storm drainage structure shall be
+measured and paid per EACH, as specified in the Schedule of Unit Prices, complete and in place, at
+the appropriate unit price bid. The amount bid shall include removing the existing storm sewer
+pipe, enlarging the hole, removing the bench and reshaping the invert, if necessary to fit the
+proposed storm sewer pipe.
+7. Raise / Lower Existing Manhole
+(a) Payment for raising or lowering an existing manhole shall be measured and paid per lineal foot
+based on the vertical difference between the existing and final rim elevations. The payment shall
+include all cost of labor, materials and equipment required to complete the work.
+8. Connect to Existing Storm Pipe
+(a) The amount bid shall include all costs of locating the pipe and constructing the new drainage
+structure, paid separately, around the existing pipe. Adjustments to the drainage structure may be
+required and shall be included in the amount bid for connecting to the existing pipe.
+City of Jordan – Standard Specifications PIPE SEWERS - STORM
+September, 2019 PAGE 02630-1
+V122617 © Bolton & Menk, Inc. 2019, All Rights ReservedB. The furnishing and installing of specific items and/or the performance of work under certain circumstances
+shall not be individually paid in the absence of a specific bid item for the work. The costs shall be included
+in the unit price bid for the storm sewer items, as indicated. Such items of work include but are not limited
+to:
+1. The costs of furnishing bends, adapters, cutting and removing the existing storm sewer pipe, include in
+the price bid for storm sewer.
+2. Locating and connecting to an existing storm sewer service laterals, include in the price bid for service
+connections.
+3. Use of geotextile fabric to wrap pipe joints in lieu of using mastic, include in the price bid for storm
+sewer.
+4. Maintenance of an appropriate storm water outlet during construction, include in the price bid for
+storm sewer.
+5. The cost of all labor, equipment and materials necessary for testing of storm sewer, if required,
+included in the price bid for storm sewer.
+6. If a separate bid item for bypass pumping is NOT included in the Schedule of Unit Prices, providing
+temporary bypass pumping / control of storm water flows around the construction zone, include in the
+price bid for the associated sewer items.
+7. If the sewer is to be installed inside a casing pipe, furnishing and placing the carrier pipe, carrier pipe
+support materials, sand fill and grout seals, include in the unit price bid for sewer.
+8. Furnishing and installing underground utility location system, include in the price bid for sewer
+1.4 SPECIFICATION REFERENCES
+A. MnDOT 2506 shall apply to manholes, catch basins and castings, except as modified herein.
+B. Reference Section 02320 “Trench Excavation, Bedding and Backfill” of this Project Manual.
+C. Reference Section 02446 “Trenchless Pipeline” of this Project Manual.
+D. CEAM 2621 shall apply to construction of pipe sewers, except as modified herein.
+E. MnDOT 2503 shall apply to measurement and payment of pipe sewers, except as modified herein.
+F. MnDOT Standard Plates Manual with latest revisions.
+G. State of Minnesota Plumbing Code shall apply to all underground pipe sewers installed through areas to be
+occupied by buildings.
+H. Unless noted otherwise, the provisions in this section are in addition to the referenced specification.
+PART 2 -- PRODUCTS
+2.1 OPEN CUT SEWER PIPE AND FITTINGS
+A. Reinforced Concrete Pipe (MnDOT 3236)
+1. No exception to the referenced specification is made.
+B. Solid Wall Polyvinyl Chloride (PVC) Pipe (MnDOT 3245) (Thermoplastic, TP)
+1. 4-inch through 15-inch Diameters: Smooth-walled polyvinyl chloride pipe and fittings shall conform
+with the requirements of ASTM D3034 for the Standard Dimension Ratio (SDR) of 35.
+2. Over 15-inch Diameters: Smooth-walled polyvinyl chloride pipe and fittings shall conform with the
+requirements of ASTM F679 with a minimum wall thickness for a minimum pipe stiffness of 46.
+3. The connection shall be push-on with elastomeric gasketed joints, which are bonded to the inner walls
+of the gasket recess of the bell socket.
+City of Jordan – Standard Specifications PIPE SEWERS - STORM
+September, 2019 PAGE 02630-2
+V122617 © Bolton & Menk, Inc. 2019, All Rights Reserved4. The pipe grade used shall be resistant to aggressive soil and corrosive substances in accordance with
+the requirements of ASTM D543.
+C. Profile Wall Polyvinyl Chloride (PVC) Pipe
+1. Large diameter (21-inches through 48-inches) closed profile polyvinyl chloride pipe and fittings shall
+conform with the requirements of ASTM F794. Pipe and fittings shall be made from polyvinyl chloride
+compounds which comply with the requirements for a minimum cell classification of 12364A as defined
+by ASTM D1784.
+2. All joints shall be of the bell and spigot type with elastomeric seals and conform to the requirements of
+ASTM-D3212. Gaskets shall be factory installed and chemically bonded to the bell end of the pipe
+3. PVC pipe conforming to Contech A-2000 (ASTM F949) will not be allowed.
+D. Corrugated Polyethylene (CP) Pipe and Fittings (MnDOT 3247)
+1. Smooth interior and corrugated exterior polyethylene pipe and fittings shall conform to the
+requirements of AASHTO M294 or ASTM F2648 and MnDOT 3247. All joints shall be installed using an
+approved watertight sleeve with gaskets meeting the requirements of ASTM F477.
+2. CP pipe shall not be allowed under paved roadways within the public right-of-way, except where
+specifically approved by the City Engineer under special conditions.
+3. CP pipe up to and including 30-inch diameter shall be allowed outside of paved areas.
+E. Flexible Pipe Jointing
+1. Pipe joints for solid wall and profile wall polyvinyl chloride (PVC) pipe shall be in accordance with ASTM
+3212. This includes the flexible elastomeric seals being rated at sustaining an internal pressure of 10.8
+psi for 10 minutes.
+2. Pipe joints for high density polyethylene (HDPE) pipe shall be in accordance with ASTM D3261.
+F. Polypropylene Pipe
+1. Pipe:
+(a) Twelve- through 24-inch pipe shall have smooth interior and annular exterior corrugated
+polypropylene (PP) pipe meeting the requirements of ASTM F2736, ASTM F2881 or AASHTO MP-
+21-11, Type S, for respective diameters. The pipe supplied shall be watertight as defined in the
+joint performance requirements of this specification.
+(b) Virgin material for 12- through 24-inch pipe and fitting production shall be an impact modified
+copolymer meeting the material requirements of ASTM F2736, ASTM F2881 and AASHTO MP-21-
+11, for respective pipe diameters.
+(c) Pipe shall be ADS N-12® HP or pre-approved equal.
+(d) Polypropylene pipe greater than 30-inch diameter will not be allowed.
+(e) Polypropylene pipe shall not be allowed under paved roadways within the public right-of-way,
+except where specifically approved by the City Engineer under special conditions.
+2. Joints and Fittings:
+(a) Watertight joints shall be bell-and-spigot meeting the watertight requirements of ASTM F2736 or
+ASTM F2881. Gaskets shall be made of polyisoprene meeting the requirements of ASTM F477.
+Gaskets shall be installed by the pipe manufacturer and covered with a removable wrap to ensure
+the gasket is free from debris. A joint lubricant supplied by the manufacturer shall be used on the
+gasket and bell during assembly.
+City of Jordan – Standard Specifications PIPE SEWERS - STORM
+September, 2019 PAGE 02630-3
+V122617 © Bolton & Menk, Inc. 2019, All Rights Reserved(b) Fittings: Fittings shall conform to ASTM F2736 or ASTM F2764. Joint shall meet watertight joint
+performance requirements of ASTM D3212. Bell & spigot connections shall utilize a spun-on,
+welded or integral bell and spigot with gaskets meeting ASTM F477.
+2.2 TRENCHLESS PIPE MATERIAL & STRUCTURAL REQUIREMENTS
+A. All pipe shall be made from virgin material. No rework except that obtained from the manufacturer’s own
+production of the same formulation shall be used.
+B. The pipe shall be homogenous throughout and shall be free of visible cracks, holes, foreign material,
+blisters, and/or other deleterious faults.
+C. Any section of pipe with a gash, blister, abrasion, nick scar, or other deleterious fault greater than
+10 percent of the wall thickness, shall not be used and must be removed from the site. However, a
+defective portion of pipe, as defined above may be cut out and butt-fused in accordance with the
+procedures herein.
+D. Any section of pipe having other defects such as concentrated ridges, discoloration, excessive spot
+roughness, pitting, variable wall thickness or any other defect of manufacturing and/or handling shall not
+be used and shall be removed from site.
+E. INTERNAL PIPE DIAMETERS
+1. The actual inside barrel diameter of the pipe used for gravity pipe shall not be less than that of
+PVC-SDR 35 for the corresponding nominal pipe size.
+ACTUAL INTERIOR PIPE DIAMETERS FOR VARIOUS GRAVITY PIPE MATERIALS
+Nominal PVC – SDR 35 HDPE 4000 HDPE 4100 PVC Fusible PVC
+DR 11 DR 11 DR 182 DR-18
+ductile sizes steel sizes Restrain Joint
+8 7.92 7.375 6.963 8.044 8.05
+10 9.041 8.679 9.866 9.87
+12 11.78 10.750 10.293 11.734 11.73
+14 11.301 12.444 13.60
+15 14.426
+16 14.170 12.915 14.222 15.50
+18 17.629 15.925 14.532 17.30
+20 17.590 16.146 19.20
+21 20.78
+22 17.760
+24 23.381 21.014 19.374 22.90
+27 26.35
+F. Gravity Sewers
+1. Fusible C900/C905TM
+(a) As manufactured by Underground Solutions (www.undergroundsolutions.com ). ASTM D 1784-02,
+with cell classification 12454. The formulation for extrusion of Fusible C-900™/C-905™/PVC™ shall
+be compounded to the specific proprietary recipe for Fusible pipe, and meet the requirements of
+PPI TR-2.
+2 CertainTeed, Certa-Lok Restrained Joint Catalog, 1993, page 4.
+City of Jordan – Standard Specifications PIPE SEWERS - STORM
+September, 2019 PAGE 02630-4
+V122617 © Bolton & Menk, Inc. 2019, All Rights Reserved(b) Butt joint fused PVC pressure pipe conforming to AWWA C900 for 150 psi pressure rating (SDR 18).
+However, structurally stronger pipe may be required to ensure resistance to pulling stresses.
+(c) A manufacturer''s representative shall be present during fusing and installation.
+2. Restrained Joint PVC Pipe and Fittings
+(a) Restrained Joint Polyvinyl Chloride (PVC) pressure pipe with a 150 psi working pressure. The
+working pressure dictates a maximum standard dimension ratio (DR) of 18; however, structurally
+stronger pipe may be needed to ensure resistance to damaging stresses relative to the trenchless
+construction technique. The grade used shall be resistant to aggressive soils or corrosive
+substances in accordance with the requirements of ASTM D-543.
+(b) Restrained joints shall be Certa-Lok C900/RJ Restrained Joint PVC couplings as manufactured by
+Certain Teed, or equal.
+3. High Density Polyethylene (HDPE) Pipe
+(a) The pipe material shall be extra high molecular weight, high density polyethylene (EHMW-HDPE,
+PE3408) conforming with the minimum structural standards of ASTM D3350 with Ccell
+Cclassification 345434C as manufactured by Chevron Phillips Chemical Company 4000/4100 Series,
+or equal. All HDPE pipe material shall meet the requirements of ASTM D1248 for a Type III, Class C,
+Category 5, Grade P34.
+(b) The pipe to be used shall be (HDPE) pressure pipe conforming to the requirement of AWWA C-906
+of a 160 psi working pressure. The grade used shall be resistant to aggressive soils or corrosive
+substances present. Unless otherwise specified, the dimensions and tolerances of the pipe barrel
+should conform to ductile iron or cast iron pipe equivalent outside diameters.
+(1) The dimension ratio (DR) shall be 11.
+(2) HDPE pipe shall have butt-fused joints with the internal fusing bead removed.
+(3) The Contractor shall verify the lengths of conduit necessary in the field before fabrication.
+2.3 MANHOLES & CATCH BASINS
+A. Precast Concrete Manholes and Catch Basin Section
+1. Storm sewer manholes shall conform to the MnDOT Standard for the design type shown on the plans.
+2. Reinforced polypropylene plastic steps shall be furnished for all storm sewer manholes 8.0-feet or
+more in depth.
+B. Castings
+1. All casting assemblies shall meet the certification requirements of the Minnesota Department of
+Transportation and be manufactured by a MnDOT approved source.
+2. The type of casting assembly to be used shall be Neenah R-1733 solid lid with two open lift holes and
+2.0-inch raised letters stamped “STORM SEWER”. The frame shall be Neenah R-1733.
+3. The Type of curb and gutter catch basin casting assembly to be used shall be Neenah R-3067-V (Vane
+Grate).
+4. The type of non-street / rear yard inlet casting assembly to be used shall be Neenah R-4342 stool grate.
+C. Adjusting Rings
+1. Only concrete adjusting rings shall be permitted.
+D. Chimney Seal
+1. None
+2.4 GEOTEXTILE FABRIC
+City of Jordan – Standard Specifications PIPE SEWERS - STORM
+September, 2019 PAGE 02630-5
+V122617 © Bolton & Menk, Inc. 2019, All Rights ReservedA. MnDOT 3733, Type I, non-woven for use in wrapping joints in storm sewer.
+PART 3 -- EXECUTION
+3.1 MANHOLE AND CATCH BASIN STRUCTURES
+A. Raise / Lower Existing Structure
+1. Raising and/or lowering an existing manhole to meet a proposed finished rim elevation is performed
+when the addition and/or deletion of 2.0-inch adjusting rings will not reach a minimum of 2 rings or
+exceed a maximum of 6 rings. Typically, it will require: the removal of the manhole cone section or the
+concrete slab top; the addition, removal, or exchange of barrel sections; the replacement of the cone
+section or the concrete slab top; the installation of the proper number of adjusting rings; and the
+replacement of the manhole casting and frame.
+B. Miscellaneous Work
+1. If concrete adjusting rings are used, plaster all manhole adjusting rings installed inside and out, with a
+minimum thickness of ½-inch of mortar. A maximum of 3 individual adjusting rings shall be used.
+Taller 6.0-inch or 12.0-inch rings shall be used where adjustment requires more than three 2.0-inch
+rings.
+2. If HDPE adjusting rings are used, the sealant material and method shall be in accordance with
+manufacturer''s recommendations.
+3.2 FIELD QUALITY CONTROL
+A. Deflection test - No exception to the referenced specification is made.
+B. Televising
+1. Televising is required on flexible pipes after the installation and backfill are complete.
+2. Immediately prior to televising, the televisor shall discharge sufficient clear water into the pipe to assist
+in identifying sags and mis-alignment.
+3. Televising shall be performed by experienced personnel trained in locating breaks, obstacles and
+service connections by close circuit television. The interior of the pipeline shall be carefully inspected
+to determine the location of any conditions that may indicate improper installation. Each individual
+reach of pipe shall be identified as a ‘chapter’ on the DVD
+4. A DVD and suitable log shall be kept and later submitted to the Owner.
+C. The CONTRACTOR must provide a complete an as-built record form, as provided in the appendix, for
+acceptance of each storm sewer and sanitary sewer structure, as well as each sanitary sewer and water
+service line. The completed report shall be submitted each week to the Engineer or the Engineer''s
+designated representative at some mutually agreeable time. Failure to submit the required form shall
+render the structure or services subject to non-acceptance.
+****END OF SECTION****
+City of Jordan – Standard Specifications PIPE SEWERS - STORM
+September, 2019 PAGE 02630-6
+V122617 © Bolton & Menk, Inc. 2019, All Rights Reserved', 1),
+('MANHOLES & CATCH BASINS - ADJUST CASTING', NULL, NULL, 'nan', 'nan', '© Bolton & Menk, Inc.', NULL, NULL, 'Standard Specifications for Construction of Public Infrastructure', '02705', 'SECTION 02705 - MANHOLES & CATCH BASINS - ADJUST CASTING
+PART 1 -- GENERAL
+1.1 SUMMARY
+A. This section covers the furnishing of all labor, materials, tools, equipment and performances of all work and
+services necessary or incidental to adjusting a casting assembly frame and ring or valve box as indicated on
+the drawings or as specified herein.
+1.2 METHOD OF MEASUREMENT AND PAYMENT
+A. Measurement and compensation for the following items shall be paid according to the referenced
+specification or as modified below:
+1. Measurement and payment for adjusting existing manhole frame and rings, catch basin frame and
+rings, and valve boxes shall be paid per EACH scheduled adjustment, not caused by the Contractor''s
+activities or delays.
+2. The initial installation and adjustment of the casting assembly for new manholes and valve boxes,
+whether to match the bituminous base course or the bituminous wear course shall be incidental to the
+installation of the item. Subsequent adjustments, not caused by the Contractor''s activities or delays,
+shall be paid per EACH of the type of item indicated.
+B. Payment for raising or lowering an existing manhole shall be measured and paid based on the vertical
+difference between the existing and final rim elevations. The payment shall include all cost of labor,
+materials and equipment required to complete the work.
+C. The furnishing and installing of specific items and/or the performance of work under certain circumstances
+shall not be individually paid in the absence of a specific bid item for the work. The costs shall be included
+in the unit price bid for the associated adjustment items. Such items of work include but are not limited to:
+1. Saw cutting the wall of the existing structure, if necessary.
+2. Adjusting chimney seals on existing structures, if necessary.
+1.3 SPECIFICATION REFERENCES
+A. MnDOT 2506 shall apply to adjusting frame and ring, except as modified herein.
+B. Unless noted otherwise, the provisions in this section are in addition to the referenced specification.
+PART 2 -- PRODUCTS
+2.1 ADJUSTING RINGS
+A. Only concrete adjusting rings shall be permitted.
+PART 3 -- EXECUTION
+3.1 CONSTRUCTION REQUIREMENTS
+A. The Contractor shall bring manhole castings and valve boxes to grade. The manhole casting shall be placed
+on a full mortar bed or bituminous mastic upon final setting. The inside and outside of the adjusted area
+shall be plastered with a minimum thickness of 1/2-mortar.
+B. All inverts of manholes and valves boxes shall be cleaned of debris and gravel which may have fallen into
+the structures as a result of construction.
+C. Finished grade of the casting or valve box in paved areas shall be according to the following, unless
+otherwise specified on the plans:
+City of Jordan – Standard Specifications MANHOLES & CATCH BASINS - ADJUST CASTING
+September, 2019 PAGE 02705-1
+V021808 © Bolton & Menk, Inc. 2019, All Rights ReservedDistance Below Distance Below Distance Below
+Adjacent Concrete Adjacent Bituminous Adjacent Gravel
+Pavement (in) Pavement (in) Surface/Green Area
+(in)
+City Streets 1/8 to ¼ ¼ to 3/8 1
+County Highways 1/8 to ¼ ¼ to 3/8 1
+State Highways 1/8 to ¼ ¼ to 3/8 1
+Sidewalks 1/8 to ¼ 1/8 to ¼ 1
+Parking Areas 1/8 to ¼ ¼ to 3/8 1
+A. In no case shall the casting or valve box extend above the finished surface.
+B. Raising and/or lowering an existing manhole to meet a proposed finished rim elevation is performed when
+the addition and/or deletion of 2.0-inch adjusting rings will not reach a minimum of 2 rings or exceed a
+maximum of 6 rings. Typically, it will require the:
+1. Removal of the manhole cone section or concrete slab top
+2. Addition, removal or exchange of barrel sections
+3. Replacement of the cone section or the flat slab top
+4. Installation of the proper number of adjusting rings
+5. Replacement of the manhole frame and casting.
+6. In some cases, the existing structure may require saw cutting.
+****END OF SECTION****
+City of Jordan – Standard Specifications MANHOLES & CATCH BASINS - ADJUST CASTING
+September, 2019 PAGE 02705-2
+V021808 © Bolton & Menk, Inc. 2019, All Rights Reserved', 1),
+('AGGREGATE BASE', NULL, NULL, 'nan', 'nan', '© Bolton & Menk, Inc.', NULL, NULL, 'Standard Specifications for Construction of Public Infrastructure', '02720', 'SECTION 02720 - AGGREGATE BASE
+PART 1 -- GENERAL
+1.1 SUMMARY
+A. This section covers the furnishing of all labor, materials, tools, equipment and performances of all work and
+services necessary or incidental to construct the aggregate base course as indicated on the drawings or as
+specified herein.
+1.2 METHODS OF MEASUREMENT AND PAYMENT
+A. Measurement and compensation for the following items shall be paid according to the referenced
+specification or as modified below:
+1. No exception to the referenced specification is made.
+2. The quantities for aggregate base are strictly estimates and may be increased or decreased by any
+amount with no adjustment in unit price according to the extent of aggregate base used to backfill
+subgrade excavations and the extent of reclaimed material available.
+B. The furnishing and installing of specific items and/or the performance of work under certain circumstances
+shall not be individually paid in the absence of a specific bid item for the work. The costs shall be included
+in the unit price bid for the associated aggregate items. Such items of work include but are not limited to:
+1. Protecting existing improvements and previously accepted in-process improvements from damage.
+2. Subgrade excavation, furnishing stabilizing aggregate, geotextile fabric installation, compaction,
+regrading and/or other efforts necessary to repair the subgrade after satisfying the rolling test and
+failing to protect the integrity of the subgrade.
+3. The cost of all labor, equipment and materials necessary for meeting the testing requirements of field
+quality control, if required, include in price bid for Aggregate Base.
+4. Furnishing and installing blue tops for gravel surface.
+5. Test rolling of the compacted aggregate base using a fully loaded aggregate truck (tandem)..
+1.3 SPECIFICATION REFERENCES
+A. MnDOT 2211 shall apply to the construction of aggregate base, except as modified herein.
+B. Unless noted otherwise, the provisions in this section are in addition to the referenced specification.
+PART 2 -- PRODUCTS
+2.1 MATERIALS
+A. No exception to the referenced specification is made.
+PART 3 -- EXECUTION
+3.1 CONSTRUCTION REQUIREMENTS
+A. At the end of each day the Contractor shall eliminate surface indentations, including those caused by
+sheeps foot rollers and tractor cletes, and roll the surface with a steel wheel or rubber tired roller.
+B. The depth and class of aggregate base to be constructed shall be as shown on the plans. Aggregate base
+construction shall take place only after the street subgrade condition and grade has been examined by the
+Engineer.
+C. All aggregate base shall be compacted to 100 percent Standard Proctor Density using the Specified Density
+Method.
+City of Jordan – Standard Specifications AGGREGATE BASE
+September, 2019 PAGE 02720-1
+V122617 © Bolton & Menk, Inc. 2019, All Rights Reserved3.2 SOURCE QUALITY CONTROL
+A. The following testing shall be performed:
+1. One gradation test for each 500 tons or 275 cubic yards (CV) of each class of aggregate base.
+2. One percent crushing test.
+3. One aggregate quality test.
+B. Samples for testing shall be taken from material in stock at locations approved by the Engineer. All sampling
+methods shall be approved by the Engineer.
+C. Should any of the specified tests fail, the Contractor may arrange and pay for additional tests as may be
+necessary to satisfy the Engineer that the requirements have been met.
+3.3 FIELD QUALITY CONTROL
+A. "Blue top" stakes shall be provided by the Contractor at 50.0-foot intervals to confirm that the base is
+constructed to the required grades and elevations. Methods other than "blue top" staking may be allowed,
+if approved by the Engineer.
+B. The following testing shall be performed:
+1. One compaction test (including Standard Proctor) for each 500 SY of each class of aggregate base.
+C. All testing shall be performed by an independent testing laboratory approved by the Engineer.
+D. The Contractor shall cooperate fully with the individuals performing the tests.
+E. Samples for testing shall be taken from material in place, in the roadway at locations approved by the
+Engineer. All sampling methods shall be approved by the Engineer.
+F. Should any of the specified tests fail, the Contractor may arrange and pay for additional tests as may be
+necessary to satisfy the Engineer that the requirements have been met.
+****END OF SECTION****
+City of Jordan – Standard Specifications AGGREGATE BASE
+September, 2019 PAGE 02720-2
+V122617 © Bolton & Menk, Inc. 2019, All Rights Reserved', 1),
+('PLANT-MIXED BITUMINOUS SURFACING', NULL, NULL, 'nan', 'nan', '© Bolton & Menk, Inc.', NULL, NULL, 'Standard Specifications for Construction of Public Infrastructure', '02740', 'SECTION 02740 - PLANT-MIXED BITUMINOUS SURFACING
+PART 1 -- GENERAL
+1.1 SUMMARY
+A. This section covers the furnishing of all labor, materials, tools, equipment and performances of all work and
+services necessary or incidental to the construction of plant-mixed bituminous surfacing utilizing the
+MnDOT Gyratory Design Specification (2360) as indicated on the plans or as specified herein.
+B. This is a Certified Plant Project. The supplier shall have sufficient testing facilities and qualified personnel
+including Certified Technicians. All required plant and field tests shall be performed in a timely manner and
+with a good quality control program.
+1.2 METHOD OF MEASUREMENT AND PAYMENT
+A. Measurement and compensation for the following items shall be paid according to the referenced
+specification or as modified below:
+1. Payment for the accepted quantity of asphalt emulsion and cutback shall be at the Contract price per
+gallon for undiluted asphalt emulsion and neat cutback. Should the Contract fail to include a Contract
+Item covering payment for the bituminous material used for tack coat, all costs of furnishing and
+applying bituminous tack coat material will be included in the compensation provided for the
+bituminous mixture, with no measurement made of the bituminous material used and with no direct
+compensation being made therefore.
+2. Payment shall be at the unit price bid per TON of bituminous surfacing for the respective bituminous
+courses. The amount bid shall include all material and work required to mix and place the bituminous
+course specified.
+B. The maximum payment factor for density is 100 percent.
+C. No payment adjustment shall be made for density.
+D. This project is not subject to the provisions of MnDOT 2399.
+E. The furnishing and installing of specific items and/or the performance of work under certain circumstances
+shall not be individually paid in the absence of a specific bid item for the work. The costs shall be included
+in the unit price bid for the associated bituminous paving items. Such items of work include but are not
+limited to:
+1. Equipment and materials necessary for meeting the testing requirements of Source Quality Control for
+the bituminous tack coat, if required, include in price bid for bituminous tack coat.
+2. The cost of all labor, equipment and materials necessary to comply with plant and field testing
+requirements of MnDOT Specification 02360, include in price bid for Plant-Mixed Bituminous Surfacing.
+3. The cost of all labor, equipment and materials necessary for constructing clean, vertical, solid edge at
+the adjacent asphalt surface for both non-wear and wear courses, include in the price bid for Plant-
+Mixed Bituminous surfacing.
+4. Sawcutting the bituminous edges and removing of damaged bituminous just prior to the construction
+of the next lift of bituminous course.
+1.3 SPECIFICATION REFERENCE
+A. Plant mixed asphalt pavement shall conform to the current MnDOT 2360 Plant Mixed Asphalt Pavement
+and Technical Memoranda in force 30 calendar days prior to bid date and referencing the use of English
+units of measure, except as modified in these Specifications.
+B. MnDOT 2357 shall apply to the construction of bituminous tack coat, except as modified herein.
+City of Jordan – Standard Specifications PLANT-MIXED BITUMINOUS SURFACING
+September, 2019 PAGE 02740-1
+V050208 © Bolton & Menk, Inc. 2019, All Rights ReservedC. Aggregates for bituminous mixtures shall conform to the current MnDOT 3139 Graded Aggregate for
+Bituminous Mixtures. Copies of MnDOT’s current specifications may be downloaded and printed from
+MnDOT’s web site.
+D. Unless noted otherwise, the provisions in this Section are in addition to the referenced specification.
+PART 2 -- PRODUCTS
+2.1 MATERIALS
+A. Bituminous Tack Coat:
+1. The bituminous material for tack coat will be limited to one of the following kinds of emulsified asphalt.
+However, the Engineer may authorize the use of medium cure cutback asphalt (MC-250) during the
+early and late construction season when it is anticipated the air temperature may drop below 32
+degrees Fahrenheit. Cutback asphalt shall be used only when approved by the Engineer.
+(a) Emulsified Asphalt
+(1) Anionic SS-1, SS-1h
+(2) Cationic CSS-1, CSS-1h
+(b) Cutback Asphalt:
+(1) Medium Cure Liquid Asphalt MC-250
+2. Only Certified Sources are allowed for use. MnDOT’s Certified Source List is located at the following
+link: http://www.dot.state.mn.us/products/index.html .
+B. Bituminous material and aggregate shall be as shown on the typical sections in the plans.
+PART 3 -- EXECUTION
+3.1 CONSTRUCTION REQUIREMENTS
+A. Bituminous Tack Coat
+1. The tack coat shall not be applied when the road surface or weather conditions are unsuitable as
+determined by the Engineer.
+2. At the time of applying bituminous tack coat material, the road surface shall be dry and clean and all
+necessary repairs or reconditioning work shall have been completed as provided for in the Contract and
+approved by the Engineer.
+3. Unless otherwise indicated in the Plans or provisions, the bituminous tack coat material shall be
+applied within the application rates shown in the table below as based on pavement type or condition
+and type of bituminous material. The Engineer shall approve the time and rate of application. Only a
+MnDOT certified asphalt emulsion supplier is allowed to dilute the emulsion. When diluted, the
+supplier shall provide asphalt emulsion diluted 1-part emulsion to 1-part water. Dilution of asphalt
+emulsion in the field is not allowed. The Engineer may waive the tack coat requirement when multiple
+lifts are paved on the same day.
+Pavement Type or
+Application Rate - gallons/sy
+Condition
+Undiluted Emulsion Diluted Emulsion
+MC Cutback2
+SS-1, SS-1H, CSS-1, (1 part Emulsion to 1 part water) 1
+MC-250
+CSS-1H SS-1, SS-1H, CSS-1, CSS-1H
+New HMA 0.03 – 0.05 0.06 – 0.10 0.03 – 0.05
+Aged HMA3 or Un-milled
+0.05 – 0.08 0.10 – 0.15 0.05 – 0.08
+PCC
+City of Jordan – Standard Specifications PLANT-MIXED BITUMINOUS SURFACING
+September, 2019 PAGE 02740-2
+V050208 © Bolton & Menk, Inc. 2019, All Rights ReservedMilled HMA or Milled PCC 0.07 – 0.10 0.14 – 0.20 0.07 – 0.10
+1As provided by the asphalt emulsion supplier
+2When approved by the Engineer
+3Older than 1 year
+4. The temperature of the bituminous material at the time of application shall be approved by the
+Engineer, within the limits specified following:
+(a) SS-1, SS-1H, CSS-1, CSS-1H .........70 to 160 Degrees Fahrenheit
+(b) MC-250 ........…………………………....165 to 220 Degrees Fahrenheit
+B. The bituminous wearing course shall be constructed in the construction season following the season in
+which the underground utilities, aggregate base and bituminous base course have been constructed.
+C. The Contractor is required to use the self-propelled pneumatic tire roller as an intermediate roller on the
+wearing courses.
+D. Cut the adjacent asphalt surface prior to construction of the bituminous surface course to obtain a clean,
+vertical, solid edge.
+E. Compaction of all bituminous mixtures shall be by the Maximum Density Method.
+1. Longitudinal Joint Cores:
+(a) The first paragraph of 2360.3.D.1 of the referenced MnDOT 2360 (Plant Mixed Asphalt Pavement)
+Specification is hereby deleted and replaced with the following:
+D.1 Maximum Density
+Compact the pavement to at least the minimum required maximum density values in accordance
+with table 2360 19, “required minimum lot density (mat)”.
+(b) Table 2360-20 Longitudinal Joint Density Requirement of the referenced MnDOT 2360 (Plant
+Mixed Asphalt Pavement) Specification is hereby deleted.
+(c) 2360.3.D.1.h Mat Density Cores of the referenced MnDOT 2360 (Plant Mixed Asphalt Pavement)
+Specification is hereby deleted and replaced with the following:
+D.1.h Mat Density Cores
+Obtain four cores in each lot. Take two cores from random locations as directed by the Engineer.
+Take the third and fourth cores, the companion cores, within 1.0-foot longitudinally from the first
+two cores. Submit the companion cores to the Engineer immediately after coring and sawing. If
+the random core location falls on an unsupported joint, at the time of compaction, (the edge of
+the mat being placed does not butt up against another mat, pavement surface, etc.) cut the core
+with the outer edge of the core barrel 1.0-foot away (laterally) from the edge of the top of the
+mat (joint). If the random core location falls on a confined joint (edge of the mat being placed
+butts up against another mat, pavement surface, curb and gutter, or fixed face), cut with the
+outer edge of the core barrel 6.0-inches ± 0.5-inch from the edge of the top of the mat (ex.
+center of 4.0-inch core barrel 8.0-inches ± 0.5-inches] from the edge of the top of the mat).
+Cores will not be taken within 1.0-foot of any unsupported edge. The Contractor is responsible
+for maintaining traffic, coring, patching the core holes, and sawing the cores to the paved lift
+thickness before density testing.
+The Engineer may require additional density lots to isolate areas affected by equipment
+malfunction, heavy rain, or other factors affecting normal compaction operations.
+(d) 2360.3.D.1.j Companion Core Testing of the referenced MnDOT 2360 (Plant Mixed Asphalt
+Pavement) Specification is hereby deleted and replaced with the following:
+(e) The Engineer will select at least one of the two companion cores per lot to test for verification
+City of Jordan – Standard Specifications PLANT-MIXED BITUMINOUS SURFACING
+September, 2019 PAGE 02740-3
+V050208 © Bolton & Menk, Inc. 2019, All Rights Reserved(f) 2360.3.D.1.n Longitudinal Joint Density of the referenced MnDOT 2360 (Plant Mixed Asphalt
+Pavement) Specification is hereby deleted.
+(g) 2360.3.D.1.p Shoulders of the referenced MnDOT 2360 (Plant Mixed Asphalt Pavement)
+Specification is hereby deleted.
+(h) Table 2360-24 Payment Schedule for Longitudinal Joint Density (SP Wear and SP Shoulders,
+4 percent Void) of the referenced MnDOT 2360 (Plant Mixed Asphalt Pavement) Specification is
+hereby deleted.
+(i) Table 2360-25 Payment Schedule for Longitudinal Joint Density (SP Non-wear and SP Shoulders,
+3 percent Void) of the referenced MnDOT 2360 (Plant Mixed Asphalt Pavement) Specification is
+hereby deleted.
+(j) 2360.3.D.1.r Pay Factor Determination of the referenced MnDOT 2360 (Plant Mixed Asphalt
+Pavement) Specification is hereby deleted.
+3.2 SOURCE QUALITY CONTROL
+A. The bituminous mix shall be designed using Contractor Trial Mix Designs. A current MnDOT mix design may
+be accepted provided it represents the aggregate source and bituminous plant being used for the project,
+and is approved by the Engineer. No bituminous mixture shall be placed without an approved mix design.
+B. Testing of the material bituminous tack coat may be required, if determined by the Engineer, that the
+material appears suspect.
+3.3 FIELD QUALITY CONTROL
+A. If required by the Engineer, cores for mat density and for lift thickness verification shall be taken as
+specified in 2360.D.1.h of the referenced MnDOT Specification except that for daily production less than
+300 tons, the Engineer may require that two cores are taken (one for Contractor testing and one
+companion core). Sample locations shall be designated by the Engineer and made with a drilling device that
+produces clean sharp, vertical edges.
+B. Lift Thickness Tolerances:
+1. Lift thickness tolerances shall be as specified in MnDOT 2360.
+2. If any cores indicate lift thicknesses outside of the specified tolerances, the Contractor may, at its own
+cost and expense, take additional core samples to further define the extent of the deficiency.
+3. The Engineer shall calculate deficient pavement areas using the locations and thickness results of all
+core samples and prorating the thickness profile.
+4. Reduction in payment for bituminous courses constructed to more than the maximum permissible
+thickness shall be in accordance with MnDOT 2360.3.E, except that the thickness tolerances specified
+herein apply.
+C. Testing:
+1. For projects with 2000 tons or less of a particular mix type, delete Tables 2360-10 and 2360-11 of the
+referenced MnDOT 2360 and substitute the following:
+Test Reference (Laboratory
+Sampling and Testing
+Production Test Manual unless otherwise Spec Section
+Rates (each mix type)
+indicated)
+Bulk Specific Gravity Divide the planned 1806 2360.2.G.7.b
+Maximum Specific Gravity production by 500. Round 1807 2360.2.G.7.c
+Air Voids (calculated) up to the next whole 1808 2360.2.G.7.d
+Asphalt Content number 1853 2360.2.G.7.a
+City of Jordan – Standard Specifications PLANT-MIXED BITUMINOUS SURFACING
+September, 2019 PAGE 02740-4
+V050208 © Bolton & Menk, Inc. 2019, All Rights ReservedAdd AC/Total AC Ratio
+(calculated) 1853 2360.2.G.7.a
+Adj. AFT (Calculated) 1854 2360.2.E.7.e
+Gradation 1 gradation per 500 tons
+or portion thereof (at least 1203 2360.2.G.7.f
+one per day)
+Coarse Aggregate 1 test per 500 tons or
+Angularity portion thereof. If CAA >8
+percent of requirement, 1 1214 2360.2.G.7.g
+sample per day but test 1
+per week.
+Fine Aggregate Angularity 1 test per 500 tons or
+(FAA) portion thereof. If FAA >5
+percent of requirement, 1 1213 2360.2.G.7.h
+sample per day but test 1
+per week.
+Fines to Effective Asphalt Divide the planned
+2360.2.G.7.f
+Ratio (calculated) production by 500. Round
+1203 & 1853 &
+up to the next whole
+2360.2.G.7.a
+number
+TSR As directed by the
+1213 2360.G.7.i
+Engineer
+Aggregate Specific Gravity As directed by the
+1204, 1205, and 181 2360.G.7.j
+Engineer
+Mixture Moisture Content Daily unless otherwise
+1805 2360.G.7.k
+required by the Engineer
+Asphalt Binder As directed by the MnDOT Bituminous
+Engineer] Manual 2360.G.7.l
+5-693.920
+2. For projects with more than 2000 tons of a particular mix type, testing shall be performed at the rates
+specified in Tables 2360-10 and 2360-11 of the referenced specification.
+3. Contractor shall send a copy of the testing results to the Engineer.
+4. Should any of the specified tests fail, the Contractor shall notify the Engineer immediately and shall
+arrange and pay for additional test as may be necessary to satisfy the Engineer that the requirements
+have been met.
+****END OF SECTION****
+City of Jordan – Standard Specifications PLANT-MIXED BITUMINOUS SURFACING
+September, 2019 PAGE 02740-5
+V050208 © Bolton & Menk, Inc. 2019, All Rights Reserved', 1),
+('BITUMINOUS PATCH', NULL, NULL, 'nan', 'nan', '© Bolton & Menk, Inc.', NULL, NULL, 'Standard Specifications for Construction of Public Infrastructure', '02741', 'SECTION 02741 - BITUMINOUS PATCH
+PART 1 -- GENERAL
+1.1 SUMMARY
+A. This section covers the furnishing of all labor, materials, tools, equipment and performances of all work and
+services necessary or incidental to the construction of bituminous street patches over areas of utility
+construction, ROW permitting, or private connections to existing street pavements.
+1.2 METHOD OF MEASUREMENT AND PAYMENT
+A. Measurement and compensation for the following items shall be paid according to the referenced
+specification or as modified below:
+1. Payment for bituminous patch shall be at the unit price bid per square yard (SY) of bituminous patch.
+The amount bid shall include all material and work required to construct the bituminous patch as
+specified on the plans, including:
+(a) Removal and disposal of bituminous pavements.
+(b) Common excavation
+(c) Subgrade Preparation
+(d) Aggregate Base Course
+(e) Bituminous Base Course, if specified
+(f) Bituminous Tack Coat
+(g) Bituminous Wearing Course
+(h) Constructing clean vertical edges on adjacent asphalt surfaces.
+B. The furnishing and installing of specific items and/or the performance of work under certain circumstances
+shall not be individually paid in the absence of a specific bid item for the work. The costs shall be included
+in the unit price bid for the associated bituminous patch. Such items of work include but are not limited to:
+1. No exception to the referenced specifications is made.
+1.3 SPECIFICATION REFERENCE
+A. Unless noted otherwise, the provisions in this section are in addition to the referenced specification.
+B. Removing Existing Bituminous Pavements
+1. MnDOT 2104 shall apply to the removal and disposal of bituminous pavement, except as modified
+herein.
+C. Common Excavation
+1. MnDOT 2105 shall apply to the common excavation, except as modified herein.
+D. Subgrade Preparation
+1. MnDOT 2112 shall apply to the subgrade preparation, except as modified herein.
+E. Aggregate Base Course
+1. MnDOT 2211 shall apply to the construction of aggregate base, except as modified herein.
+F. Bituminous Tack Coat
+1. MnDOT 2357 shall apply to the construction of bituminous tack coat, except as modified herein.
+G. Bituminous Paving Materials
+City of Jordan – Standard Specifications BITUMINOUS PATCH
+September, 2019 PAGE 02741-1
+V122617 © Bolton & Menk, Inc. 2019, All Rights Reserved1. MnDOT 2360, Bituminous Quality Assurance, shall apply to the construction of plant-mixed bituminous
+surfacing, except as modified herein.
+(a) MnDOT 02360.6B4: The maximum payment factor for density is 100 percent.
+(b) MnDOT 02360.7C (Pavement Smoothness Specification – IRI (International Roughness Index) is
+hereby DELETED.
+PART 2 -- PRODUCTS
+2.1 MATERIALS
+A. Subgrade Preparation
+1. No exception to the referenced specification is made.
+B. Aggregate Base Course
+1. The material to be used shall conform to the requirements for Aggregate Base, Class 5.
+C. Bituminous Tack Coat
+1. The bituminous material for tack coat shall be CSS-1H.
+D. Bituminous Paving Materials
+1. Bituminous material and aggregates shall conform to the typical sections shown in the plans.
+PART 3 -- EXECUTION
+3.1 CONSTRUCTION REQUIREMENTS
+A. Unless otherwise shown in the project plans, the depth and class of aggregate base and bituminous surface
+to be constructed shall be:
+1. Bituminous Patch
+(a) 2.0-inches Type SPWEA340C
+(b) Bituminous tack coat
+(c) Type SPNWB330C of thickness necessary to match the existing pavement thickness or 2 inches,
+whichever is thicker. Thickness greater than 3-inch lifts shall be installed and compacted in
+multiple lifts, each with a layer of bituminous tack installed between.
+(d) MnDOT 2211 Aggregate Base, Class 5 of thickness to match the existing aggregate base thickness
+or 12 inches, whichever is thicker.
+B. The subgrade, aggregate and bituminous base courses of patches whose smallest dimension is less than the
+width of the compaction equipment shall be hand tamped.
+C. The subgrade shall be compacted using Quality Compaction Method. Prior to installing aggregate base, the
+prepared and compacted subgrade must be reviewed and approved by a City of Jordan representative.
+D. When the Contractor believes subgrade preparation is complete, he shall notify the City for a final
+examination. If the City requires it, the subgrade shall be test rolled with a fully loaded tandem truck to
+verify subgrade stability.
+E. Aggregate base construction shall take place only after the street subgrade condition and grade has been
+examined by a City of Jordan representative.
+F. Cut the adjacent asphalt surface prior to the Construction of the bituminous surface course to obtain a
+clean, vertical, solid edge.
+G. Compaction of the aggregate base courses shall be by the Quality Compaction Method.
+City of Jordan – Standard Specifications BITUMINOUS PATCH
+September, 2019 PAGE 02741-2
+V122617 © Bolton & Menk, Inc. 2019, All Rights ReservedH. The bituminous tack coat shall be applied at the rate of 0.08 gallons per square yard.
+I. The contact surfaces of all fixed structures, the edge of the in-place mixture in all courses at transverse
+joints, and the wearing course at longitudinal joints shall be given a uniform coating of Liquid Asphalt or
+Emulsified Asphalt before placing the adjoining mixture. The bituminous material shall be applied by
+methods that will ensure uniform coating and in no case shall the application be excessive.
+J. The bituminous surfacing shall be constructed with maximum deviation of plus or minus ¼-inch from the
+planned compacted thickness.
+K. Compaction of all bituminous mixtures shall be by the Ordinary Compaction Method. A nuclear density
+meter and operator shall be provided by the Contractor, if requested by the Engineer.
+3.2 FIELD QUALITY CONTROL
+A. The bituminous mix shall be designed using Contractor Trial Mix Designs. A current MnDOT mix design may
+be accepted provided it represents the aggregate source and bituminous plant being used for the project,
+and is approved by the Engineer. No bituminous mixture shall be placed without an approved mix design.
+B. Final line and grade of the wearing surface shall not exceed the following tolerances from the adjacent
+pavement surfaces:
+Distance Below Adjacent
+Bituminous Pavement
+(inch)
+City Streets 1/8
+County Highways 1/8
+State Highways 1/8
+Sidewalks 1/8
+Parking Areas 1/4
+****END OF SECTION****
+City of Jordan – Standard Specifications BITUMINOUS PATCH
+September, 2019 PAGE 02741-3
+V122617 © Bolton & Menk, Inc. 2019, All Rights Reserved', 1),
+('PAVEMENT MARKINGS', NULL, NULL, 'nan', 'nan', '© Bolton & Menk, Inc.', NULL, NULL, 'Standard Specifications for Construction of Public Infrastructure', '02749', 'SECTION 02749 - PAVEMENT MARKINGS
+PART 1 -- GENERAL
+1.1 SUMMARY
+A. This section covers the furnishing of all labor, materials, tools, equipment and performance of all work and
+services necessary or incidental to the application of pavement markings as indicated on the drawings or as
+specified herein.
+1.2 METHOD OF MEASUREMENT AND PAYMENT
+A. Measurement and compensation for the following items shall be paid according to the referenced
+specification or as modified below:
+1. Pavement markings of the specified width will be measured separately by LINEAL FOOT of each type
+constructed complete in place as specified. Broken line will be measured by the actual length of line
+marked and will not include the gap between the broken lines.
+2. Pavement messages will be measured separately by the number of EACH type constructed.
+3. Crosswalk blocks will be measured by the SQUARE FOOT for the actual area of paint and will not
+include the space between the blocks.
+B. The furnishing and installing of specific items and/or the performance of work under certain circumstances
+shall not be individually paid in the absence of a specific bid item for the work. The costs shall be included
+in the unit price bid for the associated pavement markings items. Such items of work include but are not
+limited to:
+1. All costs of preparing the surface, including sandblasting and removing of existing (old) pavement
+markings on existing pavement areas where a new marking layout is to occur.
+2. Controlling and protecting traffic.
+3. Maintaining the work, together with any other expenses incurred in completing the work that are not
+specifically included for payment under other Contract Items.
+1.3 SPECIFICATION REFERENCES
+A. MnDOT 2581 shall apply to temporary, removable pavement markings, except as modified herein.
+B. MnDOT 2582, 3354, 3590, 3591 and 3592 shall apply to permanent and painted pavement markings, except
+as modified herein.
+C. MnDOT Pavement and Marking Specifications shall apply. These specifications may be found at
+http://www.dot.state.mn.us/products/pavementmarkings/information.html.
+D. Unless noted otherwise, the provisions in this section are in addition to the referenced specification.
+PART 2 -- PRODUCTS
+2.1 MATERIALS
+A. Interim Pavement Markings for application on bituminous base course prior to the construction of the
+bituminous wearing course shall be:
+1. High Solids Water Based Traffic Paints, in accordance with the referenced specification.
+B. Permanent Pavement Markings for application on the final bituminous wearing course shall be:
+1. Epoxy Resin Pavement Markings, ground in, in accordance with the referenced specification.
+2. Drop-On Glass Beads, in accordance with the referenced specification.
+City of Jordan – Standard Specifications PAVEMENT MARKINGS
+September, 2019 PAGE 02749-1
+V122717 © Bolton & Menk, Inc. 2019, All Rights Reserved2.2 EQUIPMENT
+A. Application equipment for latex and epoxy resin systems shall consist of a machine of the spray type
+capable of applying the material under pressure at a controlled temperature through nozzles equipped with
+remotely controlled cutoff mechanisms and suitable line guides that will produce clean cut lines and
+prevent excessive material drift.
+B. For highway and street applications, the marking material shall be applied with truck mounted traveling
+units properly equipped to apply the stripes as required. Where two or more lines are to be applied closely
+spaced, the machine shall be equipped to apply those stripes simultaneously. For application of broken
+lines, the applying unit shall include an automatic feed to control device capable of being set to produce the
+specified stripe gap ratio.
+PART 3 -- EXECUTION
+3.1 CONSTRUCTION REQUIREMENTS
+A. At the time of applying the marking material, the application area shall be free of contamination. The
+contractor shall clean the surface prior to the line application in a manner and to the extent required by the
+Engineer.
+B. The Contractor shall sandblast or otherwise remove existing (old) pavement markings on existing pavement
+areas where a new marking layout is to occur.
+C. Pavement markings shall not be applied when the wind or other conditions cause a film of dust to be
+deposited on the pavement surface after cleaning and before the marking material can be applied.
+D. The filling of tanks, pouring of materials or cleaning of equipment shall not be performed on unprotected
+pavement surfaces unless adequate provisions are made to prevent spillage of the material.
+E. No striping operations will be permitted between sundown and sunrise without written permission from
+the Engineer.
+F. All material shall be placed in a workmanlike manner, which shall result in a clearly defined line.
+G. All pavement striping shall be 4.0-inches wide, unless noted otherwise on the plans.
+H. Application for the marking material shall be such as to provide uniform film thickness throughout the
+coverage area. Stripe ends shall be clean cut and square, with a minimum of material beyond the cutoff.
+I. All pavement markings not conforming to the requirements of the Contract shall be removed and replaced
+or otherwise repaired to the satisfaction of the Engineer. Removal of unacceptable work shall be
+accomplished with suitable blasting or grinding equipment unless other means are approved by the
+Engineer.
+3.2 ACCEPTANCE
+A. The Construction Striper Operations Report Form shall be completed and submitted to the Engineer. The
+form can be found at the link below:
+http://www.dot.state.mn.us/products/pavementmarkings/information.html
+****END OF SECTION****
+City of Jordan – Standard Specifications PAVEMENT MARKINGS
+September, 2019 PAGE 02749-2
+V122717 © Bolton & Menk, Inc. 2019, All Rights Reserved', 1),
+('CONCRETE PAVEMENT', NULL, NULL, 'nan', 'nan', '© Bolton & Menk, Inc.', NULL, NULL, 'Standard Specifications for Construction of Public Infrastructure', '02751', 'SECTION 02751 - CONCRETE PAVEMENT
+PART 1 -- GENERAL
+1.1 SUMMARY
+A. This section covers the furnishing of all labor, materials, tools, equipment and performances of all work and
+services necessary or incidental to the construction of Portland cement concrete as indicated on the
+drawings or as specified herein.
+1.2 METHOD OF MEASUREMENT AND PAYMENT
+A. All measurements for payments for Concrete Pavement items shall be based on the Unit Price bid per
+item.
+B. The furnishing and installing of specific items and/or the performance of work under certain circumstances
+shall not be individually paid in the absence of a specific bid item for the work. The costs shall be included
+in the unit price bid for the associated concrete paving items. Such items of work include but are not limited
+to:
+1. Furnishing and installing material, as specified, to seal the joints.
+2. Unless otherwise shown on the typical section, subcutting the excavation 3-inches below the bottom of
+the pavement, furnishing, placing and compacting 3.0-inches of aggregate base, Class 5, backfilling with
+topsoil and related work.
+3. Cold weather concrete protection methods and materials required.
+4. Provide adequate barricades and personnel to protect fresh concrete from pedestrian traffic and
+graffiti.
+5. Provide temporary walk ways spanning fresh concrete where required to maintain access into building
+entrances.
+1.3 SPECIFICATION REFERENCES
+A. MnDOT 2301 shall apply to the construction of concrete pavement, except as modified herein.
+B. Unless noted otherwise, the provisions in this section are in addition to the referenced specification.
+C. MnDOT Standard Plan Sheets.
+1.4 SUBMITTALS
+A. The mix proportions shall be determined by an independent certified testing laboratory secured by the
+Contractor. A current mix design may be submitted and accepted, provided the aggregate source is the
+same as that being used for this project. Two copies of the certified mix design shall be submitted to the
+Engineer for review prior to the construction of the project.
+B. Test reports and certification by an approved testing laboratory hired by the Contractor that the following
+meet all of the requirements of these Specifications.
+1. MnDOT 3126, Fine Aggregate for Portland Cement Concrete.
+2. MnDOT 3137, Coarse Aggregate for Portland Cement Concrete.
+3. ASTM C-1260, Fine aggregate and cementitious material.
+C. In the event ready-mix concrete is used, the Contractor shall furnish the Engineer with numbered delivery
+tickets showing the date, time, place of delivery, number of cubic yards, the weight of cement, fine
+aggregate and coarse aggregates, and amount of mixing water in each load. At the end of each paving day,
+the Contractor shall obtain from the supplier a summary showing the average component amounts that
+day.
+City of Jordan – Standard Specifications CONCRETE PAVEMENT
+September, 2019 PAGE 02751-1
+V122017 © Bolton & Menk, Inc. 2019, All Rights ReservedPART 2 -- PRODUCTS
+2.1 MATERIAL
+A. The coarse aggregate shall contain a minimum of 50 percent of Class A material as specified in MnDOT
+3137.
+B. The coarse aggregate designation shall be CA-35 from MnDOT Table 3137-2.
+C. The source of fine and coarse aggregates shall be one currently approved by the Minnesota Department of
+Transportation.
+D. Deformed tie bars shall be epoxy coated in accordance with MnDOT 3301.
+PART 3 -- EXECUTION
+3.1 CONSTRUCTION REQUIREMENTS
+A. The use of dimensional lumber as forms is permitted if the dimension of the lumber is within ½-inch of the
+specified dimension of the finished concrete.
+B. A bull float with 8-foot minimum width shall be used for finishing the concrete.
+Transverse control contraction joints shall be sawed at 60.0 to 75.0-foot intervals within 24 hours of placing the
+concrete. Transverse contraction joints shall be sawed at approximately 15-foot intervals in accordance with the
+Plans.
+C. Additional reinforcing bars shall be placed in the concrete pavement around manhole castings as shown in
+the plan detail.
+D. Longitudinal, contraction and expansion joints shall be constructed as specified in MnDOT 2301.
+3.2 FIELD QUALITY CONTROL
+A. The Owner may conduct various material tests throughout the construction to determine conformance
+with these specifications, including but not limited to:
+1. Air and slump cone tests.
+2. Beam and cylinder testing.
+B. The Contractor''s shall cooperate with the individuals conducting the testing operations.
+C. If allowed by the Engineer in lieu of smoothness testing per reference MnDOT 2301.M3, a 10.0-foot straight
+edge or bull float with the capability of checking the deviation in any direction over the entire width of the
+fresh concrete shall be supplied by the Contractor during all concrete pavement installation. The Contractor
+shall check the pavement longitudinally in each driving and parking lane by placing the straight edge in a
+wheel track or center of panel, and moving the straight edge at 5.0-foot overlaps. The Contractor shall
+check the pavement transversely where directed by the Engineer. The acceptable deviation tolerance shall
+be a 1/8-inch dip or hump as measured in 10-feet. A 1/8-inch deviation in less than 10.0-feet shall be
+considered out of tolerance. There shall be no more than one 1/8-inch deviation in 25.0-feet.The
+Contractor may make corrections during placement while the concrete is still fresh. Otherwise, the
+Engineer may require corrective action after the concrete has cured. Dips shall be corrected by full panel
+replacement. Humps may be corrected by grinding as directed by the Engineer.
+****END OF SECTION****
+City of Jordan – Standard Specifications CONCRETE PAVEMENT
+September, 2019 PAGE 02751-2
+V122017 © Bolton & Menk, Inc. 2019, All Rights Reserved', 1),
+('CONCRETE CURBING AND DRIVEWAY PAVEMENT', NULL, NULL, 'nan', 'nan', '© Bolton & Menk, Inc.', NULL, NULL, 'Standard Specifications for Construction of Public Infrastructure', '02770', 'SECTION 02770 - CONCRETE CURBING AND DRIVEWAY PAVEMENT
+PART 1 -- GENERAL
+1.1 SUMMARY
+A. This work consists of constructing cast-in-place concrete curbs, curb and gutter, medians, driveway
+pavement, pedestrian ramps, and other similar traffic delineation or service items as indicated on the
+drawings or as specified herein.
+1.2 METHOD OF MEASUREMENT AND PAYMENT
+A. Measurement and compensation for the following items shall be paid according to the referenced
+specification or as modified below:
+1. Special curb and gutter sections shall be measured and paid for as a part of the design style of curb and
+gutter shown on the plans.
+B. The furnishing and installing of specific items and/or the performance of work under certain circumstances
+shall not be individually paid in the absence of a specific bid item for the work. The costs shall be included
+in the unit price bid for the associated concrete curb and gutter, and concrete driveway items. Such items
+of work include, but are not limited to:
+1. Aggregate base placed under pavements.
+2. Cold weather concrete protection methods and materials required.
+3. High early strength concrete.
+4. Provide adequate barricades and personnel to protect fresh concrete from pedestrian traffic and
+graffiti.
+5. Provide temporary walk ways spanning fresh concrete where required to maintain access into building
+entrances.
+6. Casting and curing concrete compressive test cylinders and the performance of compressive strength
+tests as specified.
+C. Slump and air entrainment testing.
+1.3 SPECIFICATION REFERENCES
+A. MnDOT 2531 shall apply to the work under this section, except as modified herein.
+B. Unless noted otherwise, the provisions in this section are in addition to the referenced specification.
+C. MnDOT Standard Plates.
+1.4 SUBMITTALS
+A. The mix proportions shall be determined by an independent certified testing laboratory secured by the
+Contractor. A current mix design may be submitted and accepted, provided the aggregate source is the
+same as that being used for this project. Two copies of the certified mix design shall be submitted to the
+Engineer for review prior to the construction of the project.
+1.5 MATERIAL
+A. Fifty percent of the coarse aggregate shall be Class A material as specified in MnDOT 3137.
+B. The coarse aggregate designation shall be CA-35 from MnDOT Table 3137-2.
+C. High early strength concrete shall be used for all driveway pavement in occupied properties.
+City of Jordan – Standard Specifications CONCRETE CURBING AND DRIVEWAY PAVEMENT
+September, 2019 PAGE 02770-1
+V122717 © Bolton & Menk, Inc. 2019, All Rights Reserved1. For such properties, driveway pavement shall be installed within 2 calendars following curbing
+construction. A deduction equal to $100 per property per calendar day shall apply for the contractor’s
+failure to comply with this timeline.
+PART 2 -- EXECUTION
+2.1 CONSTRUCTION REQUIREMENTS
+A. The use of dimensional lumber as forms is permitted if the dimension of the lumber is within ½-inch of the
+specified dimension of the finished concrete.
+B. The width of all driveways shall be established in the field by the project Engineer or Owner.
+C. The joints in the driveway pavement shall match with the sidewalk and curb control joints. The Contractor
+shall be fully responsible for proper jointing patterns. Mismatched jointing will require removal and
+replacement of components in order to achieve the desired results. All removal and replacement of
+rejected construction shall be at the Contractor''s expense.
+D. The tooling tolerances as outlined in MnDOT 2531 for surface uniformity, alignment and jointing shall be
+reviewed by the Contractor prior to the construction. Defects found during examinations will require the
+Contractor to remove and replace those areas. No deduction in unit price will be acceptable to satisfy
+defective areas found.
+E. Backfill along exposed edges of slabs and/or behind the curb with selected salvage material from the
+excavation to the elevation shown on the design detail plate.
+F. The Contractor shall imprint the concrete curb at the locations of the utility service locations if indicated
+and in accordance with the plans.
+G. When the pavement is placed directly on natural subgrade, earth check dams shall be constructed
+immediately after passage of the slip forms or removal of the forms to prevent water from flowing along
+the edge of the pavement and undermining the concrete. They shall not be spaced or be of a width to
+provide an approach over which a vehicle may be driven onto the pavement.
+2.2 FIELD QUALITY CONTROL
+A. Testing
+1. The following material tests shall be conducted as determined by the Engineer throughout the
+construction to determine conformance with these specifications, including but not limited to:
+(a) Air and slump cone tests.
+(b) Beam and cylinder testing.
+2. The Contractor''s shall cooperate with the individuals conducting the testing operations.
+B. Warranty Period
+1. Contractor shall warranty installation for two years from the date of project substantial completion.
+Necessary repairs shall include but not be limited to defects in concrete and workmanship such as
+cracking, pop-outs, spalling, improper joint placement and settlement.
+****END OF SECTION****
+City of Jordan – Standard Specifications CONCRETE CURBING AND DRIVEWAY PAVEMENT
+September, 2019 PAGE 02770-2
+V122717 © Bolton & Menk, Inc. 2019, All Rights Reserved', 1),
+('WALKS - CONCRETE', NULL, NULL, 'nan', 'nan', '© Bolton & Menk, Inc.', NULL, NULL, 'Standard Specifications for Construction of Public Infrastructure', '02775', 'SECTION 02775 - WALKS - CONCRETE
+PART 1 -- GENERAL
+1.1 SUMMARY
+A. This work consists of constructing concrete or bituminous walks
+1.2 METHOD OF MEASUREMENT AND PAYMENT
+A. Measurement and compensation for the following items shall be paid according to the referenced
+specification or as modified below:
+B. Payment for constructing pedestrian ramps shall be measured and paid per area at the unit price bid in the
+Schedule of Unit Prices, complete and in place.
+C. Payment for constructing truncated domes shall be measured and paid at the unit price bid per Square Foot
+(SF) in the Schedule of Unit Prices, complete and in place.
+D. Special walk sections shall be measured and paid for as a part of the design style of walk as shown on the
+plans.
+E. The furnishing and installing of specific items and/or the performance of work under certain circumstances
+shall not be individually paid in the absence of a specific bid item for the work. The costs shall be included
+in the unit price bid for the associated walks - concrete items. Such items of work include but are not
+limited to:
+1. Cold weather concrete protection methods and materials required.
+2. Provide adequate barricades and personnel to protect fresh concrete from pedestrian traffic and
+graffiti.
+3. Provide temporary walk ways spanning fresh concrete where required to maintain access into building
+entrances.
+4. Use of high early strength concrete where required.
+1.3 SPECIFICATIONS REFERENCES
+A. MnDOT 2521 shall apply to the construction of concrete walks, except as modified herein.
+B. MnDOT Standard Plates.
+C. Unless noted otherwise, the provisions in this section are in addition to the referenced specification.
+1.4 SUBMITTALS
+A. Two copies of the certified mix design shall be submitted to the engineer for review prior to the
+construction of the project. The mix proportions shall be determined by an independent certified testing
+laboratory secured by the Contractor. A current MnDOT Design Mix may be accepted provided the
+aggregate sources are the same as that being used for this project.
+PART 2 -- PRODUCTS
+2.1 MATERIALS
+A. CONCRETE
+1. Fifty percent of the coarse aggregate shall be Class A material as specified in MnDOT 3137.
+2. The coarse aggregate designation shall be CA-35 from MnDOT Table 3137-2.
+B. TRUNCATED DOME SYSTEMS FOR PEDESTRIAN CURB RAMPS.
+City of Jordan – Standard Specifications WALKS - CONCRETE
+September, 2019 PAGE 02775-1
+V122717 © Bolton & Menk, Inc. 2019, All Rights Reserved1. The approved products are those listed on the MnDOT web site – No Stainless Steel ramps are allowed.
+http://www.dot.state.mn.us/products/detectablewarningsurfaces/index.html.
+PART 3 -- EXECUTION
+3.1 CONSTRUCTION REQUIREMENTS
+A. The use of dimensional lumber as forms is permitted if the dimension of the lumber is within ½-inch of the
+specified dimension of the finished concrete.
+B. When the pavement is placed directly on natural subgrade, earth check dams shall be constructed
+immediately after passage of the slip forms or removal of the forms to prevent water from flowing along
+the edge of the pavement and undermining the concrete. They shall not be constructed to provide an
+approach over which a vehicle may be driven onto the pavement.
+3.2 FIELD QUALITY CONTROL
+A. Testing
+1. The following material tests shall be conducted as determined by the Engineer throughout the
+construction to determine conformance with these specifications, including but not limited to:
+(a) Air and slump cone tests.
+(b) Beam and cylinder testing.
+2. The Contractor''s shall cooperate with the individuals conducting the testing operations.
+B. Warranty Period
+1. Contractor shall warranty installation for two years from the date of project substantial completion.
+Necessary repairs shall include but not be limited to defects in concrete and workmanship such as
+cracking, pop-outs, spalling, improper joint placement and settlement.
+****END OF SECTION****
+City of Jordan – Standard Specifications WALKS - CONCRETE
+September, 2019 PAGE 02775-2
+V122717 © Bolton & Menk, Inc. 2019, All Rights Reserved', 1),
+('BITUMINOUS SEAL COAT', NULL, NULL, 'nan', 'nan', '© Bolton & Menk, Inc.', NULL, NULL, 'Standard Specifications for Construction of Public Infrastructure', '02785', 'SECTION 02785 - BITUMINOUS SEAL COAT
+PART 1 -- GENERAL
+1.1 SUMMARY
+A. This section covers the furnishing of all labor, materials, tools, equipment and performances of all work and
+services necessary or incidental to the construction of bituminous seal coating as indicated on the plans or
+as specified herein.
+1.2 METHOD OF MEASUREMENT AND PAYMENT
+A. Measurement and compensation for the following items shall be paid according to the referenced
+specification or as modified below:
+1. Measurement and payment for bituminous seal coat shall comply with MnDOT 2356.
+2. No exception to the referenced specification is made.
+3. Measurement of Seal Coat Aggregate, FA-2, shall be by the square yard and shall be paid at the unit
+price bid.
+4. If weigh tickets are supplied from an outside supplier upon the delivery of the aggregate to a
+temporary stockpile, a quantity will be deducted from the totals for material that is contaminated
+and/or not used on the project streets. The Engineer will examine, measure, and calculate the amount
+of material remaining in the temporary stockpile and deduct the amount from the total quantity
+supplied with the tickets.
+5. The Contractor shall notify the Engineer prior to exceeding the plan quantities as listed in the Schedule
+of Prices. Any materials delivered to the project in excess of the original planned quantities will not be
+paid for without first notifying and obtaining the Engineer’s permission.
+6. Failing gradations will result in a price reduction. The Contract bid price for seal coat aggregate will be
+reduced 2 percent, for each 1 percent passing outside of the requirements for any sieve, except the 75
+mm (#200) sieve. The 75 mm (#200) sieve will have 2 percent price reduction for each 0.1 percent
+outside of the specification. Deductions for all failing results will be cumulative.
+B. The furnishing and installing of specific items and/or the performance of work under certain circumstances
+shall not be individually paid in the absence of a specific bid item for the work. The costs shall be included
+in the unit price bid for the associated bituminous seal coat items. Such items of work include but are not
+limited to:
+1. Provide adequate barricades and personnel to control vehicular and pedestrian traffic.
+2. Locating and notifying vehicle owners to move their vehicles so the streets can be sealed.
+3. Protecting existing improvements from damage.
+4. Protecting of manhole castings and gate valve covers from being coated with bituminous material.
+5. Sweeping and removing all objectionable foreign material, including weed growth, prior to applying the
+seal coat material.
+6. Cleaning of gutters or other areas as necessary if the seal coat oil and rock get washed by rain into
+them prior to setup of the oil and rock. Re-sealing of areas that are washed is also required.
+7. Equipment and labor necessary to provide for a neat clean, and orderly stockpile of aggregate if a
+temporary stockpile is to be used.
+8. Maintaining seal coated roadways, including the removal of “wash boards” and leveling aggregate to
+provide a uniform surface thickness, and avoid bleeding up until the time of sweeping up the excess
+rock.
+City of Jordan – Standard Specifications BITUMINOS SEAL COAT
+September, 2019 PAGE 02785-1
+V122717 © Bolton & Menk, Inc. 2019, All Rights Reserved9. The cost of all labor, equipment and materials necessary for meeting the testing requirements of
+Source Quality Control, if required, include in price bid for Bituminous Seal Coat.
+10. Cleanup of temporary aggregate stockpile location(s) following completion of the project.
+11. Placing and removing “No Parking” signs, as specified.
+12. Mobilization of equipment and personnel to and from the job site.
+1.3 SPECIFICATION REFERENCE
+A. MnDOT 2356 shall apply to the construction of bituminous seal coat, except as modified herein.
+B. MnDOT 3127 shall apply to the aggregate material, except as modified herein.
+C. MnDOT 3151 shall apply to bituminous material, except as modified herein.
+D. Unless noted otherwise, the provisions in this section are in addition to the referenced specification.
+PART 2 -- PRODUCTS
+2.1 MATERIALS
+A. Seal Coat Aggregate:
+1. Seal coat aggregate shall be FA-2 with a modified gradation of 69 to 100 percent passing the No. 4 sieve
+per MnDOT 3127. The aggregate material shall be Class A rock per MnDOT 3137.2B
+B. Bituminous Material
+1. Bituminous material shall be CRS-2P (polymer added) conforming to the requirements of MnDOT
+3151E. NOTE: Do not use anti-stripping additives with emulsions.
+2.2 SOURCE QUALITY CONTROL
+A. The Contractor shall arrange for and pay all costs associated with having the following testing performed.
+The initial tests shall be completed, submitted to, and approved by the Engineer prior to the
+commencement of the project:
+1. Two gradation and two percent crushing tests from supplier stockpiles for FA-2 modified aggregate to
+be supplied for this project.
+B. A Certificate of Compliance from the refinery shall be provided with each transport load of bituminous
+material delivered to the job site. The Contractor shall also provide two clean, dry, one-gallon containers
+with tight covers for sampling each load. The Contractor shall assist the Owner in obtaining two samples
+from each load. If, in the opinion of the Owner, the seal coating surface appears defective, the Owner may
+order that some or all of the samples be laboratory tested in accordance with ASTM D9777, at the
+Contractor''s cost and expense.
+C. All testing shall be performed by an independent testing laboratory approved by the Engineer.
+PART 3 -- EXECUTION
+3.1 CONSTRUCTION REQUIREMENTS
+A. The Contractor shall give the Owner adequate time to complete all necessary street patching prior to the
+bituminous seal coat application.
+B. If requested by the Contractor, the Owner will spray to kill weeds and grass on project streets prior to the
+Contractor coming to the site to perform the seal coat work. It is the Contractor’s responsibility to notify
+the Owner prior to coming to the site. The Owner will spray the weeds if requested by the Contractor, but
+makes no guarantee that the weeds will die. It shall be the Contractor’s responsibility to remove all weed
+or grass growth on the project streets prior to seal coating. This includes weeds and/or grass between the
+gutter lip and the bituminous pavement.
+City of Jordan – Standard Specifications BITUMINOS SEAL COAT
+September, 2019 PAGE 02785-2
+V122717 © Bolton & Menk, Inc. 2019, All Rights ReservedC. The Contractor shall be aware of the weather forecast. Seal coating shall NOT be performed if rain is
+predicted within two hours of applying the seal coat.
+3.2 NO PARKING DESIGNATION
+A. The Contractor shall post all streets in the project area for temporary no parking. Posting signs shall
+indicate the dates the no parking designation is in effect. Each street shall be posted a minimum of
+48 hours prior to the designation starting date. The Contractor is solely responsible for the installation and
+removal of no parking signage. The Contractor shall coordinate street posting with the city staff.
+3.3 CONSTRUCTION DETAILS
+A. No seal coating operations will be permitted until all necessary and required equipment is on site and
+functioning.
+B. Prior to any seal coating, the Contractor shall coordinate any necessary parking restrictions and provide
+barricades as needed to permit seal coating to proceed.
+C. The Contractor shall perform one complete sweeping of the areas to be seal coated immediately prior to
+beginning work, and will remove all objectionable foreign matter, including weed growth, on the road
+surface.
+D. The Contractor shall protect all manhole covers, valve box covers and catch basin castings by covering them
+with building paper or other suitable methods to prevent such items from being sprayed with bituminous
+material. Placing aggregate directly on these structures without a barrier is not acceptable.
+E. The Contractor shall exercise care to avoid over spraying on adjacent concrete walk, curb and gutter, and
+other structures. A minor overlap on the outside edge of the concrete gutter will be permitted. However,
+over spray on the remainder of the gutter, on the curb, on the walk or on other structures shall be removed
+at the Contractor''s expense.
+F. The Contractor shall take the necessary precautions to prevent the seal coat aggregate from entering any
+manholes, catch basins or water valve boxes.
+G. Any aggregate spill and/or tracking shall be cleaned by the Contractor from the surface prior to the
+application of the bituminous seal coat material.
+H. The aggregate spreader shall be a self-propelled type mounted on pneumatic tired wheels located to
+operate on the freshly applied aggregate. Truck mounted spreaders are not acceptable.
+I. The Contractor shall comply with the requirements of MnDOT 2356 for rolling operations, including time
+limitations, required equipment type and number of rollers on site.
+J. Upon completion of the bituminous seal coat application, the Contractor shall remove all coverings and
+excess seal coat materials from manhole covers, catch basins, and water valve boxes and restore them to
+their original condition.
+K. The Contractor shall sweep the excess seal coat aggregate from the streets approximately 14 to 21 days
+following the application.
+L. Surplus aggregate shall be the property of the Owner and the Contractor shall stockpile the surplus at a
+location directed by the Owner.
+M. Application Rates:
+Oil Rate
+Aggregate
+CRS-2P1
+Applic. Rate
+Emulsion
+Granite (FA-2, Class A): 22-27 lbs/sy 0.34 – 0.37
+gal/sy
+1Applications rates measured at 60 degrees Fahrenheit (cold
+or net gallons used)
+City of Jordan – Standard Specifications BITUMINOS SEAL COAT
+September, 2019 PAGE 02785-3
+V122717 © Bolton & Menk, Inc. 2019, All Rights ReservedN. Seal coating shall not be applied before May 15 or after August 10, for the part of Minnesota located in the
+North and North-Central Road Spring Restriction Zone; or not before May 15 or after August 31, for the part
+of Minnesota located south of the North and North-Central Spring Road Restriction Zone.
+O. The Contractor shall maintain barricades and traffic control measures until the seal coat has cured
+adequately so that vehicles are not "tracking" the cover aggregate.
+P. In the event a second seal coat application is required, the second application shall not be made until the
+first has had adequate time to cure.
+Q. The Contractor shall maintain seal coated roadways. Maintenance shall include the removal of “wash
+boards” and leveling of aggregate to provide uniform surface thickness.
+R. If rain occurs prior to the seal coat oil and rock setting up on the project streets, and the rock and oil get
+washed into the gutters or other areas, the Contractor shall clean these areas to their original condition.
+Re-seal coating of various areas may also be required.
+S. In the event the Contractor chooses to temporarily stockpile the aggregate at a City facility, the Contractor
+shall adhere to the following conditions:
+1. The haul route shall be followed. The Contractor shall submit a proposed haul route. The Contractor
+shall document the condition of the haul route prior to beginning of hauling and shall repair all damage
+that is a result of use of a haul route at no cost to the Owner.
+2. A Contractor operated loader or dozer shall be present during the stockpiling operation to maintain a
+clean and orderly stockpile.
+3. All excess and/or contaminated material shall be removed by the Contractor immediately following the
+seal coat work and the site shall be re-graded to its original condition.
+4. All cleanup of the stockpile site shall be completed prior to final payment.
+5. The amount of aggregate remaining in the stockpile, or contaminated, wasted, and/or not used on the
+project shall be deducted from the totals shown on the weigh tickets.
+****END OF SECTION****
+City of Jordan – Standard Specifications BITUMINOS SEAL COAT
+September, 2019 PAGE 02785-4
+V122717 © Bolton & Menk, Inc. 2019, All Rights Reserved', 1),
+('CHAIN LINK FENCE AND GATES', NULL, NULL, 'nan', 'nan', '© Bolton & Menk, Inc.', NULL, NULL, 'Standard Specifications for Construction of Public Infrastructure', '02820', 'SECTION 02820 - CHAIN LINK FENCE AND GATES
+PART 1 -- GENERAL
+1.1 SUMMARY
+A. This section covers the furnishing of all labor, materials, tools, equipment and performances of all work and
+services necessary or incidental to the construction of chain link fence and gate as indicated on the
+drawings or as specified herein.
+1.2 METHOD OF MEASUREMENT AND PAYMENT
+A. Measurement and compensation for the following items shall be paid according to the referenced
+specification or as modified below:
+1. The fence shall be paid at the unit price bid per linear foot, furnished and installed complete including
+wire fabric, posts, bracing, fittings, black vinyl coating, and any other materials or appurtenances
+required to complete the installation in accordance with the Plans and the requirements of this
+Specification.
+2. Gates of each width and type will be paid at the unit price bid per each gate furnished and installed
+complete including wire fabric, posts, bracing, fittings and any other materials or appurtenances
+required to complete the installation in accordance with the Plans and the requirements of this
+Specification.
+B. The furnishing and installing specific items and/or the performance of work under certain circumstances
+shall not be individually paid in the absence of a specific bid item for the work. The costs shall be included
+in the unit price bid for the associated fencing items. Such items of work include but are not limited to:
+1. No exception to the referenced specification is made.
+1.3 SPECIFICATION REFERENCES
+A. MnDOT 2557 shall apply to fencing except as modified herein.
+B. Unless noted otherwise, the provisions in this section are in addition to the referenced specification.
+PART 2 -- PRODUCTS
+2.1 MATERIALS
+A. CHAIN LINK FABRIC
+1. Wire for chain link fabric shall be helically wound and woven to a height shown on the plans. Chain link
+fabric shall meet the requirements of ASTM A392 for the following:
+(a) Residential:
+(1) 2¼-inch mesh
+(2) 12 gauge wire
+(3) Class 1 zinc coating (1.2 oz/sq. ft min.)
+(b) Commercial/Industrial:
+(1) 2.0-inch mesh
+(2) 9 gauge wire
+(3) Class 2 zinc coating (2.0 oz/sq. ft min.)
+(c) Tennis Court:
+(1) 1¾-inch mesh
+City of Jordan – Standard Specifications CHAIN LINK FENCE AND GATES
+September, 2019 PAGE 02820-1
+V111110 © Bolton & Menk, Inc. 2019, All Rights Reserved(2) 11 gauge wire
+(3) Class 2 zinc coating (2.0 oz/sq. ft min.)
+2. All selvages shall be knuckled unless otherwise specified or shown on the plans.
+3. Farbric shall be vinyl coated black in color.
+B. POSTS FOR FENCING AND GATES:
+1. Posts shall be Group IC round steel pipe (Schedule 40) as specified in ASTM F1043. Pipe shall have Type
+A coating inside and out (1.8 oz./sq. ft. minimum average zinc coating in accordance with ASTM
+Specification F1083).
+2. Post diameters and lengths shall be as shown on the plans and details for the fence heights and gate
+widths to be provided.
+C. TOP RAIL AND BRACING
+1. Top rail shall be ASTM F1083, Type 1, (Schedule 40) round steel pipe. Pipe shall be hot-dipped
+galvanized inside and out with a minimum average zinc coating of 1.8 oz/sq.ft. surface area.
+2. Top rail dimensions shall be as follows, unless otherwise shown on the plans:
+(a) Outside diameter: 1.66 inches (1½ to 5/8-inch O.D in fencing terminology)
+(b) Wall thickness: 0.140-inch
+(c) Weight: 2.27 pounds/foot
+3. Top rails shall pass through the bases of extension arms, which shall be provided on the top of each
+post, and shall form a continuous brace from end to end of each stretch of fence.
+4. Top rails shall be provided with expansion rail couplings and shall be securely fastened to gate and
+terminal posts by means of suitable hot-dip galvanized connections.
+5. End, gate and corner posts shall be suitably braced by means of 1-5/8-inch O.D. steel pipe weighing not
+less than 2.27 pounds per linear foot, set in horizontal position, with adjustable truss braces between
+terminal and first intermediate posts, complete with all fittings hot-dip galvanized.
+6. Terminal posts shall be laterally braced.
+7. Swing gates shall be provided with auxiliary side braces where necessary.
+8. Posts shall be vinyl coated black in color.
+D. GATES
+1. Gates shall be fabricated by the manufacturer of the fence in which they are installed.
+2. The gate frames shall be fabricated using the following framing materials:
+(a) Perimeter gate frame:
+(1) Outside diameter: 1.900 inches (2.0-inch O.D in fencing terminology)
+(2) Wall thickness: 0.145-inches
+(3) Weight: 2.72 pounds/foot
+(b) Intermediate braces:
+(1) Outside diameter: 1.66-inches (1-5/8-inch O.D in fencing terminology)
+(2) Wall thickness: 0.140-inches
+(3) Weight: 2.27 pounds/foot
+City of Jordan – Standard Specifications CHAIN LINK FENCE AND GATES
+September, 2019 PAGE 02820-2
+V111110 © Bolton & Menk, Inc. 2019, All Rights Reserved3. The gates shall be filled with fabric to match the line fence fabric. Fabric shall be built into each gate
+frame by means of stretcher bars and adjustable bolt hooks.
+4. Hinges shall be of heavy malleable iron, hot-dip galvanized. A hot-dip galvanized latch of the drop bar
+type, arranged for padlocking, shall be provided for each gate.
+5. A heavy duty Schlage, Yale, Masterlock or equal padlock with not less than two keys shall be provided
+for each gate.
+E. ACCESSORIES
+1. Chain link fence accessories shall conform to ASTM F 626. Provide items required to complete fence
+system. Galvanize each ferrous metal item and finish to match framing.
+2. Post caps:
+(a) Formed steel or cast malleable iron weather tight closure cap for tubular posts. Provide one cap
+for each post. Cap to have provision for barbed wire when necessary.
+(b) Where top rail is used, provide tops to permit passage of top rail.
+3. Top rail and rail ends shall be pressed steel per ASTM F626, for connection of rail and brace to terminal
+posts.
+4. Top rail sleeves shall be 7.0-inch expansion sleeve with a minimum 0.137-inch wire diameter and
+1.80-inch length spring, allowing for expansion and contraction of top rail.
+5. Wire ties shall be 9 gauge, 0.148-inch galvanized steel wire for attachment of fabric to line posts.
+Double wrap 13 gauge for rails and braces. Hog ring ties of 12-1/2 gauge for attachment.
+6. Brace and tension (stretcher bar) bands shall be pressed steel, minimum 300 degrees profile curvature
+for secure fence post attachment.
+7. Tension (stretcher) bars shall be one piece lengths equal to 2 inches less than full height of fabric with a
+minimum cross-section of 3/16-inch x ¾-inch. Provide tension (stretcher) bars where chain link fabric
+meets terminal posts.
+8. Tension wire: Galvanized coated steel wire, 6 gauge wire with tensile strength of 75,000 psi. Zinc
+coating shall match that specified for the chain link fabric. Zinc coating shall match that specified for
+the chain link fabric.
+9. Truss rods & tightener shall be steel rods with minimum diameter of 5/16-inch capable of withstanding
+a tension of minimum 2,000 lbs.
+10. Barbed wire shall meet the requirements of ASTM A 121, Class 3, zinc coated steel wire double-strand,
+12-1/2 gauge [0.099-inch twisted line wire with galvanized steel, 4 point barbs spaced approximately
+5-inch on center.
+11. Barbed wire supporting arms shall be pressed steel arms with provisions for attaching 3 rows or barbed
+wire. Arms shall withstand 250 lb. downward pull at the outermost end of arm without failure.
+(a) Provide [3 strands, single arm] [6 strands double “V’ arms].
+(b) Provide intermediate arms with hole for passage of top rail.
+12. Nuts and bolts shall be galvanized.
+13. Privacy Slats shall be fabricated from a quality high density virgin polyethylene and contain ultraviolet
+inhibitors. Color shall be selected by the Owner from the manufacturers standard color palate.
+F. CONCRETE
+1. Concrete for post foundations shall be MnDOT Mix Designation 3B32 or approved equal. Two copies of
+the certified mix design shall be submitted to the engineer for review prior to the construction of the
+project. The mix proportions shall be determined by an independent certified testing laboratory
+City of Jordan – Standard Specifications CHAIN LINK FENCE AND GATES
+September, 2019 PAGE 02820-3
+V111110 © Bolton & Menk, Inc. 2019, All Rights Reservedsecured by the Contractor. A current MnDOT Design Mix may be accepted provided the aggregate
+sources are the same as that being used for this project.
+PART 3 -- EXECUTION
+3.1 INSTALLATION
+A. All earth, brush or other obstructions that interfere with the proper alignment of construction of fences
+shall be removed and disposed of.
+B. Corner, brace and gate posts shall be set vertically plumb in circular concrete foundations as indicated on
+the plans. Corner posts shall be installed where the fence deflects 30 degrees or more. Place concrete
+around posts in a continuous pour. The top of the foundation shall extend above the ground surface and
+shall be crowned not less than one inch to provide adequate drainage away from the post. Trowel finish
+around post.
+C. All line posts shall be installed vertically plumb and spaced uniformly and intervals not exceeding 10.0-feet.
+Intermediate line posts shall be air driven to a depth of four feet unless otherwise indicated on the plans.
+D. The fence shall be so erected that the bottom of the fencing will follow the contour of the grade surface
+with 1.0-inch maximum clearance. The gate shall align with the top of the fence and shall have a 3.0-inch
+maximum clearance at the bottom.
+E. Bracing shall be provided at all end, gate and corner posts, the latter in both directions. Horizontal brace
+rails shall be set midway between top rail and ground running from the corner, end or gate post to first line
+post. Diagonal tension members shall connect tautly between posts below horizontal braces.
+F. The chain-link fabric shall be fastened on the side of the posts as shown or as designated by the Engineer.
+The fabric shall be stretched and securely fastened to the posts, and, between the posts, the top and
+bottom edges of the fabric shall be fastened to the top rail and tension wire, respectively. The tension
+wires shall be stretched tight with turnbuckles at the end and corner posts. The bottom tension wire shall
+be installed on a straight grade between posts.
+G. The fabric shall be fastened to the end, corner and gateposts with stretcher bars and stretcher bar bands
+spaced approximately 14.0-inches on line posts and at approximately 18.0-inches on tension wires.
+H. Any galvanized coating damaged during construction of the fencing shall be repaired by application of
+molten Galvo-Weld, Galvinox or equal.
+****END OF SECTION****
+City of Jordan – Standard Specifications CHAIN LINK FENCE AND GATES
+September, 2019 PAGE 02820-4
+V111110 © Bolton & Menk, Inc. 2019, All Rights Reserved', 1),
+('MODULAR BLOCK RETAINING WALL SYSTEM', NULL, NULL, 'nan', 'nan', '© Bolton & Menk, Inc.', NULL, NULL, 'Standard Specifications for Construction of Public Infrastructure', '02830', 'SECTION 02830 - MODULAR BLOCK RETAINING WALL SYSTEM
+PART 1 -- GENERAL
+1.1 SUMMARY
+A. The work under this section of these specifications includes, or is incidental to, the design, furnishing, and
+constructing a dry cast modular block retaining wall in compliance with Standard Detail 7008J. The work
+shall include the footings, drainage, the modular block, anchoring devices, railings, specified accessories and
+related items of construction.
+B. The retaining wall shall be constructed in the location and configuration as shown on the plans; however,
+the Engineer reserves the right to alter this alignment to improve constructability and/or aesthetics.
+C. Geosynthetic wall reinforcement (if required) shall be designed as part of the modular block retaining wall
+system and shall be certified by the designer of the retaining wall system that it meets the necessary
+strength and durability criteria for the application.
+1.2 METHOD OF MEASUREMENT AND PAYMENT
+A. Measurement and compensation for the following items shall be paid according to the referenced
+specification or as modified below:
+1. Measurement of the Modular Block Retaining Wall shall be by the square feet (SF) of wall installed as
+measured from the bottom of the block at the footing base to the top of the wall cap for the wall
+length. Payment at the contract price shall be compensation in full for all costs of furnishing and
+installing a complete wall system.
+B. The furnishing and installing of specific items and/or the performance of work under certain circumstances
+shall not be individually paid in the absence of a specific bid item for the work. The costs shall be included
+in the unit price bid for the associated retaining wall items. Such items of work include but are not limited
+to:
+1. Furnishing and installing appropriate sub-drainage, including piping and granular backfill, include in the
+price bid for retaining wall.
+2. Excavation below and behind wall, furnishing and installing granular footing material, drainage
+aggregate, and granular backfill, include in the price bid for retaining wall.
+3. Furnishing and installing a geosynthetic wall reinforcement system or approved other anchoring
+system, include in the price bid for retaining wall.
+4. Disposal of any excess or unsuitable excavated material, include in the price bid for retaining wall.
+5. Protecting existing improvements from damage, include in the price bid for retaining wall.
+6. Gradation and compaction testing to meet requirements of source and field quality control, include in
+the price bid for retaining wall.
+7. Preparation, furnishing, and applying surface sealer as specified herein, include in the price bid for
+retaining wall.
+8. Providing color samples and furnishing the selected block in any color in the manufacturer’s standard
+color palette, include in the price bid for retaining wall.
+1.3 SPECIFICATION REFERENCE
+A. NCMA Design Manual For Segmental Retaining Walls
+B. Unless otherwise noted, the provisions in this Section are in addition to the referenced specifications.
+C. In addition, all work and equipment shall conform to the most current applicable OSHA standards.
+City of Jordan – Standard Specifications MODULAR BLOCK RETAINING WALL SYSTEM
+September, 2019 PAGE 02830-1
+V122817 © Bolton & Menk, Inc. 2019, All Rights Reserved1.4 SUBMITTAL
+A. Product Data: Material description and installation instructions for each manufactured product specified.
+B. Shop Drawings: Retaining wall system design, including wall elevation views, geosynthetic reinforcement
+layout, pertinent details, and drainage provisions. The shop drawings shall be signed by a professional
+engineer licensed in the state in which the wall will be installed.
+C. Design:
+1. The successful bidder shall submit detailed design drawings and computations for the construction of
+the modular block retaining wall. The drawings and computations shall include, but not be limited to,
+footing / foundation drawings, wall details, anchoring requirements, compaction requirements,
+subdrainage details, railing details, re-bar schedules and other drawings and details that are
+appropriate for the successful completion of the project.
+2. Included shall be a typical section detailing excavation limits, geotextile locations, block embedments,
+leveling pad dimensions, backfill, etc. Include as many sections and other views necessary for the
+construction and inspection of the wall. The information on embedment, geotextile locations, and
+geotextile lengths as they relate to wall heights may be shown in tabular form. Also included shall be
+pertinent information on the individual blocks, the geotextile material and compaction requirements.
+3. All drawings submitted by the Contractor shall be certified and signed by a Professional Engineer
+licensed in the state in which the wall will be installed. Each plan sheet shall clearly identify the name of
+the responsible engineering firm and the name of the person certifying the plan.
+4. Engineering design calculations shall be prepared in accordance with the NCMA Design Manual for
+Segmental Retaining Walls.
+5. Analysis of global stability must be addressed and incorporated into the design for installations
+involving multiple retaining walls.
+D. Samples
+1. Furnish samples showing standard color selections for the block type being supplied.
+2. Furnish one unit in the color and face pattern specified, if requested.
+3. Furnish 12.0-inch square or larger piece of the geosynthetic reinforcement specified.
+E. Test Reports: Independent laboratory reports stating moisture absorption and compressive strength
+properties of the concrete retaining wall units meet the Project Specifications when tested in accordance
+with ASTM C140, Sections 6, 8 and 9.
+PART 2 -- PRODUCTS
+2.1 MATERIALS
+A. CONCRETE RETAINING WALL UNITS:
+1. Physical Requirements:
+(a) The units shall conform to ASTM C1372, except that:
+(1) The minimum compressive strength requirements shall be 38 Mpa (5500 psi) for any individual
+unit and 40 Mpa (5800 psi) for the average of 3 units.
+(2) The freeze/thaw durability of wall units tested in accordance with ASTM C 1262 in a 3 percent
+saline solution shall be the minimum of the following:
+1. The weight loss of each of five test specimens at the conclusion of 90 cycles shall not
+exceed 1 percent of its initial weight; or
+City of Jordan – Standard Specifications MODULAR BLOCK RETAINING WALL SYSTEM
+September, 2019 PAGE 02830-2
+V122817 © Bolton & Menk, Inc. 2019, All Rights Reserved2. The weight loss of 4 out of 5 test specimens at the conclusion of 100 cycles shall not
+exceed 1.5 percent of its initial weight, with the maximum allowable weight loss for the
+5th specimen to not exceed 10 percent.
+(3) The freeze/thaw durability of cap units test tested in accordance with ASTM C 1262 in a
+3 percent saline solution shall be the minimum of the following:
+1. The weight loss of each of five test specimens at the conclusion of 40 cycles shall not
+exceed 1 percent of its initial weight; or
+2. The weight loss of 4 out of 5 test specimens at the conclusion of 50 cycles shall not
+exceed 1.5 percent of its initial weight, with the maximum allowable weight loss for the
+5th specimen not to exceed 10 percent.
+(4) Cap units must meet the requirements of (a) and (c) and have a top surface sloped at
+minimum of 1 mm fall per 10 mm run (1.0-inch fall per 10.0-inches run) front to back or be
+crowned at the center.
+(5) ASTM C 1262 test results shall be recorded and reported in 10 cycle intervals
+(6) It is the intention of this testing that 100 percent of the wall units and cap units meet the
+weight loss requirements for (b1) and (c1) respectively, or that a minimum of 80 percent of
+the wall units and cap units tested meet the weight loss requirements for (b2) and (c2)
+respectively. If a manufacturer chooses to increase the sample size tested beyond the 5 units
+required for each block type, these percentages will still apply to the sample size chosen (i.e. if
+a sample size of 7 blocks is tested a minimum of 6 must meet the weight loss requirement of
+(b2) or (c2), if a sample size of 10 blocks is tested a minimum of 8 must meet the weight loss
+requirement).
+(7) The minimum required sampling rate for laboratory testing is one sample set per 10,000 units
+or fraction thereof, with a minimum of one sample per product type per contract. Sample
+size = 5 whole units per block type. Wall units and cap units are considered separate block
+types.
+(8) Sampling and testing shall conform to ASTM C 140, except that: Section 6.2.4 shall be deleted
+and replaced with:
+“The specimens shall be coupons cut from a finished side or back shell of each unit and sawn
+to remove any face shell projections. The coupon size shall have a height to thickness ratio of
+2 to 1 before capping and a length to thickness ratio of 4 to 1. The coupon shall be cut from
+the unit such that the coupon height dimension is in the same direction as the unit height
+dimension. Compressive testing of full size units will not be permitted. The compressive
+strength of the coupon shall be assumed to represent the net area compressive strength of
+the whole unit.”
+(9) Cap units and wall units shall be sampled and tested as separate block types.
+2. Unit Face Area: 1.0-square feet.
+3. Color: Selected by the Owner from manufacturer''s full range of standard colors.
+4. Face Pattern Geometry: Beveled.
+5. Texture: Split Rock Face.
+6. Batter: 1V:8H
+7. Acceptable Products:
+(a) Diamond Pro as manufactured by Anchor Block Company.
+(b) Classic 8 as manufactured by Rockwood Retaining Walls.
+City of Jordan – Standard Specifications MODULAR BLOCK RETAINING WALL SYSTEM
+September, 2019 PAGE 02830-3
+V122817 © Bolton & Menk, Inc. 2019, All Rights Reserved(c) Square Foot as manufactured by Versa-Lock Retaining Walls.
+(d) Standard Unit as manufactured by Keystone Retaining Walls
+B. SURFACE SEALER
+1. Surface sealers shall be a type listed on the MnDOT Approved/Qualified Products list for segemental
+masonry wall sealants. The list is available on the MnDOT website at:
+http://www.dot.state.mn.us/products/index.html.
+C. GEOSYNTHETIC WALL REINFORCEMENT
+1. Polyester fiber geogrid or geotextile, or polypropylene woven geotextile, as shown on the plan or as
+recommended by the retaining wall block manufacturer.
+D. SUB-SURFACE DRAINS
+1. Perforated PVC drain pipe, SDR35 (ASTM D3034)
+E. GRANULAR MATERIALS
+1. The drainage aggregate shall conform to the requirements of MnDOT 3149 for coarse filter aggregate.
+2. The granular backfill shall be select granular borrow conforming to MnDOT Spec 3149 modified as
+follows:
+(a) Pit-run or crusher-run material that is graded from coarse to fine such that 100 percent of the
+material must pass the 2.0-inch sieve and that the ratio of the proportion passing the #200 sieve
+divided by the portion passing the 1.0-inch sieve (#200/1.0-inch ratio) may not exceed 10 percent
+by mass.
+F. CONSTRUCTION ADHESIVE
+1. Exterior grade adhesive as recommended by the retaining wall unit manufacturer or where shown on
+the plans.
+2.2 SOURCE QUALITY CONTROL
+A. Sampling and testing shall be performed by the modular block supplier in accordance with ASTM C1372
+PART 3 -- EXECUTION
+3.1 RETAINING WALL ERECTION
+A. General: Erect units in accordance with manufacturer''s instructions and recommendations, and as
+specified herein.
+B. Place first course of concrete wall units on the prepared base material. Check units for level and alignment.
+Maintain the same elevation at the top of each unit within each section of the base course.
+C. Ensure that foundation units are in full contact with natural or compacted soil base.
+D. Place concrete wall units side-by-side for full length of wall alignment. Alignment may be done by using a
+string line measured from the back of the block. Gaps are not allowed between the foundation concrete
+wall units.
+E. Place drainage aggregate (12.0-inches, minimum unless otherwise shown on the drawings) between, and
+directly behind the concrete wall units. Fill voids in retaining wall units with drainage aggregate. Provide a
+drainage zone behind the wall units to within 9.0-inches of the final grade. Cap the backfill and drainage
+aggregate zone with 9.0-inches of impervious material.
+F. Install drainage pipe at the lowest elevation possible, to maintain gravity flow of water to outside of the
+reinforced zone. Slope the main collection drainage pipe, located just behind the concrete retaining wall
+units, 2 percent (minimum) to provide gravity flow to the daylighted areas. Daylight the main collection
+drainage pipe through the face of the wall, and/or to an appropriate location away from the wall system at
+City of Jordan – Standard Specifications MODULAR BLOCK RETAINING WALL SYSTEM
+September, 2019 PAGE 02830-4
+V122817 © Bolton & Menk, Inc. 2019, All Rights Reservedeach low point or at 50.0-foot (maximum) intervals along the wall. Alternately, the drainage pipe can be
+connected to a storm sewer system at 50.0-foot (maximum) intervals.
+G. Remove excess fill from top of units and install next course. Ensure drainage aggregate and backfill are
+compacted before installation of next course.
+H. Check each course for level and alignment. Adjust units as necessary to maintain level and alignment prior
+to proceeding with each additional course.
+I. Install each succeeding course. Backfill as each course is completed. Pull the units forward until the
+locating surface of the unit contacts the locating surface of the units in the preceding course. Interlock wall
+segments that meet at corners by overlapping successive courses. Attach concrete retaining wall units at
+exterior corners with adhesive specified.
+J. Install geosynthetic reinforcement in accordance with geosynthetic manufacturer''s recommendations and
+the shop drawings.
+1. Orient geosynthetic reinforcement with the highest strength axis perpendicular to the wall face.
+2. Prior to geosynthetic reinforcement placement, place the backfill and compact to the elevation of the
+top of the wall units at the elevation of the geosynthetic reinforcement.
+3. Place geosynthetic reinforcement at the elevations and to the lengths shown on the drawings.
+4. Lay geosynthetic reinforcement horizontally on top of the concrete retaining wall units and the
+compacted backfill soils. Place the geosynthetic reinforcement within 1.0-inch of the face of the
+concrete retaining wall units. Place the next course of concrete retaining wall units on top of the
+geosynthetic reinforcement.
+5. The geosynthetic reinforcement shall be in tension and free from wrinkles prior to placement of the
+backfill soils. Pull geosynthetic reinforcement hand-taut and secure in place with staples, stakes, or by
+hand-tensioning until the geosynthetic reinforcement is covered by 6-inches of loose fill.
+6. The geosynthetic reinforcements shall be continuous throughout their embedment lengths. Splices in
+the geosynthetic reinforcement strength direction are not allowed.
+7. Do not operate tracked construction equipment directly on the geosynthetic reinforcement.
+8. At least 6.0-inches of compacted backfill soil is required prior to operation of tracked vehicles over the
+geosynthetic reinforcement. Keep turning of tracked construction equipment to a minimum.
+9. Rubber-tired equipment may pass over the geosynthetic reinforcement at speeds of less than
+5 miles per hour. Turning of rubber-tired equipment is not allowed on the geosynthetic reinforcement.
+3.2 BACKFILL PLACEMENT
+A. Unless otherwise shown on the plans, backfill beyond the drainage aggregate within reinforcement zone
+shall be granular backfill as specified herein.
+B. Place reinforced backfill, spread and compact in a manner that will minimize slack in the reinforcement.
+C. Place fill within the reinforced zone and compact in lifts not exceeding 6.0 to 8.0-inches (loose thickness)
+where hand-operated compaction equipment is used, and not exceeding 12.0-inches (loose thickness)
+where heavy, self-propelled compaction equipment is used.
+D. Only lightweight hand-operated compaction equipment is allowed within 4.0-feet of the back of the
+retaining wall units. If the specified compaction cannot be achieved within 4.0-feet of the back of the
+retaining wall units, replace the reinforced soil in this zone with drainage aggregate material.
+E. Compaction testing shall be done in accordance with ASTM D1556 or ASTM D2922.
+F. Minimum Compaction Requirements for Fill Placed in the Reinforced Zone
+City of Jordan – Standard Specifications MODULAR BLOCK RETAINING WALL SYSTEM
+September, 2019 PAGE 02830-5
+V122817 © Bolton & Menk, Inc. 2019, All Rights Reserved1. The minimum compaction requirement shall be determined by the project geotechnical engineer
+testing the compaction. At no time shall the soil compaction requirements be less than 95 percent of
+the soil''s standard Proctor maximum dry density (ASTM D698) [modified Proctor maximum dry density
+(ASTM D1557)] for the entire wall height
+2. Moisture Content: Within 2 percentage points of the optimum moisture content for all wall heights.
+3. These specifications may be changed based on recommendations by the Project geotechnical engineer.
+G. At the end of each day''s operation, slope the last level of compacted backfill away from the interior
+(concealed) face of the wall to direct surface water runoff away from the wall face.
+H. The Contractor is responsible for ensuring that the finished site drainage is directed away from the retaining
+wall system.
+I. In addition, the Contractor is responsible for ensuring that surface water runoff from adjacent construction
+areas is not allowed to enter the retaining wall area of the construction site.
+3.3 CAP UNIT INSTALLATION
+A. Apply adhesive to the top surface of the unit below and place the cap unit into desired position.
+B. Cut cap units as necessary to obtain the proper fit.
+C. Backfill and compact to top of cap unit.
+3.4 SITE CONSTRUCTION TOLERANCES
+A. Vertical Alignment: Plus or minus 1.0-inch over any 10.0-foot distance, with a maximum differential of
+2.0-inches over the length of the wall.
+B. Horizontal Location Control From Plan
+1. Straight Lines: Plus or minus 1.0-inch over any 10.0-foot distance.
+2. Corner and Radius Locations: Plus or minus 12.0-inches from theoretical location shown on plan.
+3. Curves and Serpentine Radii: Plus or minus 12.0-inches from theoretical location shown on plan.
+C. Immediate Post Construction Wall Batter: Within 2 degrees of the design batter, negative batter
+unacceptable.
+D. Bulging: Plus or minus 1¼-inches over any 10.0-foot distance.
+E. Maximum horizontal gap between erected blocks: ½-inch
+3.5 ADJUSTING AND CLEANING
+A. Replace damaged units with new units as the work progresses.
+B. Remove debris caused by wall construction and leave adjacent paved areas broom clean.
+C. All work shall be done in accordance with the approved drawings.
+3.6 SEALER
+A. Segmental masonry retaining wall surface sealing shall consist of preparation, furnishing and applying the
+surface sealer to the top, exposed front face, and backside of the upper three courses of all walls.
+B. Due to the potentially hazardous ingredients contained in sealer formulations extreme care must be
+exercised in their handling and use, and the manufacturer’s recommendations shall be closely followed.
+C. The Contractor shall comply with the manufacturer’s written instructions for preparing, handling and
+applying the surface sealer.
+D. The surface to be treated shall receive a light water-blast to the extent that the surface is clean and free of
+oils.
+City of Jordan – Standard Specifications MODULAR BLOCK RETAINING WALL SYSTEM
+September, 2019 PAGE 02830-6
+V122817 © Bolton & Menk, Inc. 2019, All Rights ReservedE. Before the surface sealer is applied the surface to be sealed shall be dry and free of all dust, debris, and
+frost.
+F. Surface sealers shall be applied at the heaviest application rate specified by the manufacturer.
+****END OF SECTION****
+City of Jordan – Standard Specifications MODULAR BLOCK RETAINING WALL SYSTEM
+September, 2019 PAGE 02830-7
+V122817 © Bolton & Menk, Inc. 2019, All Rights Reserved', 1),
+('TRAFFIC SIGNS', NULL, NULL, 'nan', 'nan', '© Bolton & Menk, Inc.', NULL, NULL, 'Standard Specifications for Construction of Public Infrastructure', '02890', 'SECTION 02890 - TRAFFIC SIGNS
+PART 1 -- GENERAL
+1.1 SUMMARY
+A. This section covers the furnishing of all labor, materials, tools equipment and performances of all work and
+services necessary or incidental to project signing as indicated on the drawings or as specified herein.
+1.2 METHOD OF MEASUREMENT AND PAYMENT
+A. Measurement and compensation for the following items shall be paid according to the referenced
+specification or as modified below:
+1. Modify Post shall be paid at the unit price bid for related items and includes the cost of modifying each
+post as required by the contract.
+2. Traffic Signs shall be paid at the unit price bid for related items and includes the cost of providing and
+installing the sign, sign posts, stringers, brackets, attachment angles or strap mounting hardware, and
+all other materials and labor required for sign installation per the plan details.
+B. The furnishing and installing specific items and/or the performance of work under certain circumstances
+shall not be individually paid in the absence of a specific bid item for the work. The costs shall be included
+in the unit price bid for the associated project signing item. Such items of work include but are not limited
+to:
+1. No exception to the referenced specification is made.
+1.3 SPECIFICATION REFERENCES
+A. MnDOT 2564 - Traffic Signs and Devices.
+B. MnDOT 3401 -Flanged Channel Sign Posts.
+C. Current "Minnesota Manual for Uniform Traffic Control Devices" -
+http://www.dot.state.mn.us/trafficeng/publ/mutcd/index.html
+D. Unless noted otherwise, the provisions in this section are in addition to the referenced specification.
+PART 2 -- PRODUCTS
+2.1 NOT USED
+PART 3 -- EXECUTION
+3.1 NOT USED
+****END OF SECTION****
+City of Jordan – Standard Specifications TRAFFIC SIGNS
+September, 2019 PAGE 02890-1
+V102510 Error! Not a valid filename.', 1),
+('TURF RESTORATION', NULL, NULL, 'nan', 'nan', '© Bolton & Menk, Inc.', NULL, NULL, 'Standard Specifications for Construction of Public Infrastructure', '02920', 'SECTION 02920 - TURF RESTORATION
+PART 1 -- GENERAL
+1.1 SUMMARY
+A. This section covers the furnishing of all labor, materials, tools, equipment and performances of all work and
+services necessary or incidental to turf restoration as indicated on the drawings or as specified herein.
+B. A variety of different seeding mixtures may be utilized on this project. The Contractor shall refer to the plan
+for the locations of the different turf establishment areas.
+C. Temporary seeding may be necessary during construction in erosion sensitive areas. The Contractor shall
+do temporary seeding work as specified herein or as directed by the Engineer.
+1.2 METHOD OF MEASUREMENT AND PAYMENT
+A. Measurement and compensation for the following items shall be paid according to the referenced
+specification or as modified below:
+1. All measurements for payments for turf establishment items shall be based on the Unit Price bid per
+item.
+B. The furnishing and installing specific items and/or the performance of work under certain circumstances
+shall not be individually paid in the absence of a specific bid item for the work. The costs shall be included
+in the unit price bid for the associated seeding and sodding items. Such items of work include but are not
+limited to:
+1. Application of starter fertilizer on all areas to be sodded shall be included in the price bid for sodding.
+2. Subgrade preparation and topsoil placement as required on all areas shown on the plans.
+3. Maintenance of newly sodded and seeded areas, as specified, include in the unit price for the
+associated items.
+4. Stapling of sod on sloped areas, include in the unit price bid for sodding.
+1.3 SPECIFICATION REFERENCES
+A. MnDOT 2574 – Soil Preparation
+B. MnDOT 2575 - Establishing Turf and Controlling Erosion
+C. MnDOT 3876 – Seed
+D. MnDOT 3877 - Topsoil
+E. MnDOT 3878 - Sod
+F. MnDOT 3881 - Fertilizer
+G. MnDOT 3882 - Mulch Material
+H. MnDOT 3884 - Hydraulic Erosion Control Products
+I. Unless noted otherwise, the provisions in this section are in addition to the referenced specification.
+PART 2 -- PRODUCTS
+2.1 MATERIALS
+A. Seeding
+1. The seed mixtures to be used must be shown on the plans.
+City of Jordan – Standard Specifications TURF RESTORATION
+September, 2019 PAGE 02920-1
+V122917 © Bolton & Menk, Inc. 2019, All Rights Reserved2. Seed mixtures selected shall be consistent with the intended uses of the MnDOT specifications and
+sedding manual, subject to approval of the Engineer.
+3. Unless otherwise specified on the plans, all application rates for MnDOT mixes, except temporary seed,
+are 150 percent the specified rate.
+4. Type 1 mulch shall consist of clean straw with no pasture hay.
+5. All seed shall be supplied as pure-live seed (PLS).
+6. All seed and seed mixes shall conform to State seed requirements for noxious weed content.
+7. All seed and seed mixes shall conform to State labeling requirements. For all species in the mix, the
+label and or invoice shall include the county of origin, and if from Canada, the province.
+B. Sodding Items
+1. Unless otherwise indicated on the plans, sod shall be Lawn Sod as defined in the referenced
+specification except when located within MnDOT right-of-way where Salt Tolerant Sod shall be utilized.
+C. Imported Topsoil
+1. Unless otherwise indicated on the plans, imported topsoil borrow for general use as a turf growing
+medium shall comply with MnDOT 3877.2.A.
+2. Unless otherwise indicated on the plans, imported topsoil borrow for use as a plant growing medium in
+designated areas such as landscape beds shall meet the requirements of MnDOT 3877.2.B.
+D. Fertilizer
+1. Fertilizer shall be (insert fertilizer type here).
+2. Fertilizer shall be applied at a rate of (insert fertilizer application rate here).
+E. Hydraulic Matrix
+1. Hydraulic Matrix shall be MnDOT Type Bonded Fiber Matrix
+2. Hydraulic Matrix shall be applied at a rate of 3500 lbs/acre (dry weight)
+PART 3 -- EXECUTION
+3.1 CONSTRUCTION REQUIREMENTS
+A. GENERAL
+1. The subgrade shall be shaped to the approximate contour of the finished surface. All construction
+debris shall be removed from the area prior to the placement of the topsoil. The subgrade shall be
+loosened with a disc or harrow to a depth of 6.0-inches prior to application of the topsoil.
+2. The topsoil shall be shaped to the approximate contour of the finished surface, with a minimum depth
+of 6.0-inches, unless otherwise shown on the plan. All construction debris, rocks and trash shall be
+removed from the area prior to seeding or sodding. The topsoil shall be loosened with a disc or harrow
+to its full depth prior to seeding or sodding.
+3. The Contractor shall be responsible for providing water and maintenance for a period of until final
+acceptance by the Owner, to firmly establish the seed or sod. The term maintenance shall include
+mowing, weed control and watering, as necessary. Failure to perform this work within 24-hours of
+notification of non-compliance may result in the Owner or Engineer arranging for completion of the
+work by others. A contract deduction shall be made equal to the total of all costs to perform such work
+so arranged, including but not limited to, labor, materials, equipment and administrative costs.
+4. Where extended maintenance in areas seeded with Native or Wetland Seed Mixes is included in the
+project, such maintenance shall include at a minimum:
+City of Jordan – Standard Specifications TURF RESTORATION
+September, 2019 PAGE 02920-2
+V122917 © Bolton & Menk, Inc. 2019, All Rights Reserved(a) Mow 2 to 3 times (30 days apart) during 1st year with the mower deck about 6.0 to 8.0-inches off
+the ground.
+(b) Mow one time during the 2nd year before weeds set their seeds.
+(c) Mow once every 3 to 5-years following the initial 2-years of maintenance to remove dead plant
+material and stimulate new seed.
+B. SEEDING REQUIREMENTS
+1. Turf establishment by seeding shall be done utilizing the various combinations of seed mixtures
+(including aquatic plants), fertilizing and mulching at disturbed areas as shown on the plans.
+2. Areas prepared for seeding shall be free of rocks, debris and clumps of soil. The areas shall be graded
+uniformly and vegetated areas shall be raked free of chunks exceeding ½-inch diameter.
+3. Seed shall be applied with a drill seeder, unless otherwise approved by the Owner.
+4. The Contractor shall furnish weight tickets documenting pounds of hydraulic soil stabilizer placed,
+pounds of fertilizer placed and pounds of seed placed. The seed tickets shall show individual plant
+species along with the percent purity and percent germination. The fertilizer tickets shall show mix
+proportions. The Contractor shall also furnish its QA/QC data to the Engineer.
+5. Dormant seeding and snow seeding may be utilized in accordance with the referenced specification
+and technical memorandum, provided the final acceptance standards are met.
+6. Final acceptance of seeding shall be based on an established growth of 6.0-inches with a uniform
+density to cover 70 percent of the designated area, free of weeds and bare spots. Any re-seeding
+necessary shall be performed at the Contractor''s expense.
+C. SODDING REQUIREMENTS
+1. Sod shall be placed by the Contractor in the locations shown on the plans as directed by the Engineer.
+2. When placing sod in irregularly shaped locations, the Contractor shall produce sharp, straight joints
+between sod rolls.
+3. Sod shall be placed to create a firm, smooth, uniform surface without ruts, knobs or wrinkles.
+4. Sod placed on slopes greater than 1:4 (v:h), in ditch bottoms, and around storm sewer inlets or outlets
+shall be anchored with staples. Staples shall be U shaped 3 mm (0.12-inch) diameter or heavier steel
+wire having a span width of 25 mm (1.0-inch) and a length of 200 mm (8.0-inches) from top to bottom,
+after bending.
+5. All re-work necessary to repair imperfections in sod placement shall be made at the Contractor’s
+expense.
+****END OF SECTION****
+City of Jordan – Standard Specifications TURF RESTORATION
+September, 2019 PAGE 02920-3
+V122917 © Bolton & Menk, Inc. 2019, All Rights Reserved', 1),
+('BITUMINOUS SURFACE CRACK and JOINT REPAIR', NULL, NULL, 'nan', 'nan', '© Bolton & Menk, Inc.', NULL, NULL, 'Standard Specifications for Construction of Public Infrastructure', '02975', 'SECTION 02975 - BITUMINOUS SURFACE CRACK AND JOINT REPAIR
+PART 1 -- GENERAL
+1.1 SUMMARY
+A. This section covers the furnishing of all labor, materials, tools, equipment and performances of all work and
+services necessary or incidental to the repairing of the existing bituminous surface improvements; including
+routing, cleaning and sealing the existing surface.
+1.2 METHOD OF MEASUREMENT AND PAYMENT
+A. Measurement and compensation for the following items shall be paid according to the referenced
+specification or as modified below:
+1. Payment shall be at the unit price bid per linear foot of cracks which were identified by the Engineer,
+and properly routed, cleaned and sealed by the Contractor.
+B. The furnishing and installing of specific items and/or the performance of work under certain circumstance s
+shall not be individually paid in the absence of a specific bid item for the work. The costs shall be included
+in the unit price bid for the associated geotextile fabric - trench construction items. Such items of work
+include but are not limited to:
+1. Surface preparation including sweeping, brushing, etc., include in the unit price bid for crack sealing.
+2. Protecting castings and valve boxes from sealant material, include in the unit price bid for crack sealing.
+1.3 SPECIFICATION REFERENCES
+A. MnDOT 3723 shall apply to the sealing of all cracks, except as modified herein.
+B. Unless noted otherwise, the provisions in this section are in addition to the referenced specification.
+PART 2 -- PRODUCTS
+2.1 MATERIALS
+A. Crack Sealant
+1. The crack sealant compound shall be packaged in sealed containers. Each container shall be clearly
+marked with the name of the manufacturer, the trade name of the sealant, the manufacturer''s batch
+and lot number, the pouring temperature, and the safe heating temperature.
+2. Mixing of different manufacturer''s brands or different types of sealant shall be prohibited
+PART 3 -- EXECUTION
+3.1 CONSTRUCTION REQUIREMENTS
+A. A copy of the manufacturer''s recommendations pertaining to the heating and application of the joint
+sealant material shall be submitted to the Engineer prior to the commencement of work. These
+recommendations shall be adhered to and followed by the contractor. The temperature of the sealer in the
+field application equipment shall never exceed the safe heating temperature recommended by the
+manufacturer. Any given quantity of material shall not be heated at the pouring temperature for more than
+six hours and shall never be reheated. Sealing shall not proceed if the temperature of the material has not
+reached or has fallen below the manufacturer''s recommended minimum application temperature.
+B. Sealant materials may be placed during a period of rising temperature after the air temperature in the
+shade and away from artificial heat has reach 40 degrees Fahrenheit and indications are for a continued rise
+in temperature. During a period of falling temperature, the placement of sealant material shall be
+suspended when the air temperature, in the shade and away from artificial heat, reaches
+City of Jordan – Standard Specifications BITUMINOUS SURFACE CRACK and JOINT REPAIR
+September, 2019 PAGE 02975-1
+V010418 © Bolton & Menk, Inc. 2019, All Rights Reserved40 degrees Fahrenheit. Sealant shall not be placed when in the opinion of the Engineer; the weather or
+roadbed conditions are unfavorable.
+C. Routing and sealing will be permitted only during daylight hours between May 1 and October 15.
+D. The City shall determine the actual areas that will be repaired by marking the existing cracks to be routed,
+cleaned and sealed. The routing, cleaning and sealing shall extend the full width of the surface on
+transverse cracks.
+E. The Contractor shall conduct the bituminous crack sealing operations so that routing, cleaning and sealing is
+a continuous operation. Traffic shall not be allowed to kneed together or damage the reservoir once it has
+been created. Routed cracks not sealed before traffic is allowed on the surface shall be re-routed at no
+additional cost to the Owner.
+1. ROUTING. The routing equipment shall be mechanical and power driven and shall be capable of
+following the existing cracks. All cracks shall be routed 1.0-inch wide x 1.0-inch deep. The cracks shall
+be routed with sharp router blades to the specified dimensions without deviation from the existing
+crack or creating excessive spalling. Equipment designed to "plow" the cracks to dimension will not be
+permitted. Wet sawing will not be allowed.
+2. CLEANING. Immediately prior to cleaning and sealing the cracks, the entire bituminous surface shall be
+cleaned to remove all loosened bituminous particles and foreign material and the cracks shall be blown
+clean with oil-free compressed air. Compressed air shall be 100 psi and 75 cfm minimum at the nozzle.
+The crack and surface area 6.0-inches on both sides will then be cleaned and dried with a hot
+compressed air heat lance. The heat lance shall meet the following requirements: temperature of
+heated air at exit or orifice minimum of 2,800 degrees Fahrenheit. Velocity of exiting heated air
+minimum of 2,800 fps. The application time and final results of the cleaning are subject to the
+Engineers approval.
+3. SEALING. After the cracks have been properly cleaned, the Contractor shall install a foam backer rod in
+those cracks wider than ¼-inch that extends below the bottom to the routed joint. The backer rod shall
+be compressed to fill the entire width of the crack and shall not protrude up above the bottom of the
+routed reservoir. The Contractor shall install a bond breaker tape at the bottom of the routed reservoir
+for those cracks less than ¼-inch in width which extended below the bottom of the routed joint.
+F. The sealant shall be placed evenly in two separate applications. The first application shall fill the reservoir
+to approximately three-fourths the depth of the routed joint. After the first application has sufficiently
+cooled, the second application shall be placed to provide an "over bond" seal with the bituminous
+pavement. The over band shall be of the width and thickness to assure a tight seal with the pavement
+surface. The sealant shall be pressure applied with a wand type applicator; pour pots or similar devices
+shall not be used to apply the crack sealant. The applicator wand shall be returned to the machine and the
+crack sealant materials reticulated immediately upon completion of each crack.
+****END OF SECTION****
+City of Jordan – Standard Specifications BITUMINOUS SURFACE CRACK and JOINT REPAIR
+September, 2019 PAGE 02975-2
+V010418 © Bolton & Menk, Inc. 2019, All Rights Reserved', 1),
+('SUPPLEMENTARY CONDITIONS', NULL, NULL, 'nan', 'nan', '© Bolton & Menk, Inc.', NULL, NULL, 'Standard Specifications for Construction of Public Infrastructure', '00800', 'SECTION 00800 - SUPPLEMENTARY CONDITIONS
+TO THE STANDARD GENERAL CONDITIONS
+OF THE CONSTRUCTION CONTRACT
+SUPPLEMENTARY CONDITIONS - GENERAL COMMENTS
+These Supplementary Conditions amend or supplement the Standard General Conditions of the Construction Contract,
+EJCDC® C-700 (2013 Edition). All provisions which are not so amended or supplemented remain in full force and effect.
+The terms used in these Supplementary Conditions have the meanings stated in the General Conditions. Additional terms
+used in these Supplementary Conditions have the meanings stated below, which are applicable to both the singular and
+plural thereof.
+The address system used in these Supplementary Conditions is the same as the address system used in the General
+Conditions, with the prefix "SC" added thereto.
+SC-4.03 REFERENCE POINTS
+Delete Paragraph 4.03.A of the General Conditions in its entirety and insert the following Paragraph 4.03.A in its
+place:
+4.03.A. The OWNER will provide engineering surveys to establish reference points for construction as described in
+Section 01720, Field Engineering, of the Specifications.
+SC-5.03 SUBSURFACE AND PHYSICAL CONDITIONS
+Delete Paragraphs 5.03.A and 5.03.B in their entirety and insert the following:
+5.03.A. No reports of explorations or tests of subsurface conditions at or contiguous to the Site, or drawings of
+physical conditions relating to existing surface or subsurface structures at the Site, are known to Owner, unless
+provided with the bidding documents. If such explorations or test results are available to the Owner, applicable
+information and reports available to the owner will be provided with the bidding documents.
+SC-5.06 HAZARDOUS ENVIRONMENTAL CONDITIONS
+Delete subparagraphs 5.06.A.1 and 5.06.A.2 in their entirety and insert the following:
+5.06.A. No reports or drawings related to Hazardous Environmental Conditions at the Site are known to Owner,
+unless provided with the bidding documents. If such conditions are known to the owner, applicable information
+and reports available to the owner will be provided with the bidding documents.
+SC-6.02 INSURANCE – GENERAL PROVISIONS
+SC-6.02 Add the following paragraph immediately after Paragraph 6.02.B:
+6.02.B.1. Contractor may obtain worker’s compensation insurance from an insurance company that has not been
+rated by A.M. Best, provided that such company (a) is domiciled in the state in which the project is located, (b) is
+certified or authorized as a worker’s compensation insurance provider by the appropriate state agency, and (c) has
+been accepted to provide worker’s compensation insurance for similar projects by the state within the last 12
+months.
+SC-6.03 CONTRACTOR’S INSURANCE
+Delete paragraph SC-6.03.J in its entirety and insert the following:
+City of Jordan – Standard Specifications SUPPLEMENTARY CONDITIONS
+September, 2019 PAGE 00800-1
+© Bolton & Menk, Inc. 2019, All Rights Reserved6.03.J. The coverage requirements for specific policies of insurance, including the requirements of SC 6.03.K.2.a,
+must be met by such policies, with exception that an Excess or Umbrella Liability insurance policy may be
+used to supplement Contractor’s policy limits on a follow-form basis to satisfy the full policy limits
+required by this Contract.
+SC-6.03 Add the following new paragraph immediately after Paragraph 6.03.J:
+6.03.K. The limits of liability for the insurance required by Paragraph 6.03 of the General Conditions shall provide
+coverage for not less than the following amounts or greater where required by Laws and Regulations:
+1. Workers’ Compensation, and related coverages under Paragraphs 6.03.A.1 and A.2 of the
+General Conditions:
+State: Statutory
+Federal, if applicable (e.g., Longshoreman’s): Statutory
+Jones Act coverage, if applicable:
+Bodily injury by accident, each accident $ Not Applicable
+Bodily injury by disease, aggregate $ Not Applicable
+Employer’s Liability:
+Bodily injury, each accident $ 1,000,000.00
+Bodily injury by disease, each employee $ 1,000,000.00
+Bodily injury/disease aggregate $ 1,000,000.00
+For work performed in monopolistic states, stop-gap liability
+coverage shall be endorsed to either the worker’s compensation
+or commercial general liability policy with a minimum limit of: $ Not Applicable
+Foreign voluntary worker compensation Statutory
+2. Contractor’s Commercial General Liability under Paragraphs 6.03.B and 6.03.C of the General
+Conditions:
+General Aggregate 2,000,000.00
+Products - Completed Operations Aggregate $ 2,000,000.00
+Each Occurrence (Bodily Injury and Property Damage) $ 1,500,000.00
+Personal and Advertising Injury $ 1,500,000.00
+a. The aggregate limits under SC-6.03.K.2 (Commercial General Liability) be maintained
+fully available for this Contract by obtaining and maintaining a Designated Construction
+Project General Aggregate Limit endorsement, or equivalent
+3. Automobile Liability under Paragraph 6.03.D. of the General Conditions:
+Bodily Injury:
+Each person $ 1,000,000.00
+Each accident $ 1,000,000.00
+Property Damage:
+Each accident $ 1,000,000.00
+OR
+Combined Single Limit of $ 1,000,000.00
+5. Contractor’s Pollution Liability:
+City of Jordan – Standard Specifications SUPPLEMENTARY CONDITIONS
+September, 2019 PAGE 00800-2
+© Bolton & Menk, Inc. 2019, All Rights ReservedPer Occurrence $ N/A
+General Aggregate $ N/A
+If box is checked, Contractor is not required to provide Contractor’s Pollution Liability
+insurance under this Contract
+6. Additional Insureds: In addition to Owner and Bolton & Menk, Inc. as Engineer, include the other
+persons or entities identified in the bidding documents on the commercial general liability,
+automobile liability, umbrella or excess, and pollution liability policies as additional insureds.
+SC-7.08 PERMITS
+The following Paragraph 7.08.B shall be added immediately after Paragraph 7.08.A:
+7.08.B. If the OWNER has obtained, or has applied for, the necessary construction permits from any regulatory
+agencies, they will be addressed in Section 01410, Regulatory Requirements, of the Specifications. CONTRACTOR
+shall obtain and pay for all construction permits, licenses and bonds, not specifically highlighted as previously
+obtained, or applied for, in the referenced Section.
+SC-7.11 RECORD DOCUMENTS
+The following Paragraphs 7.11.B through 7.11.C shall be added immediately after Paragraph 7.11.A:
+7.11.B. The purpose of the final Project Record Documents is to provide factual information regarding all aspects
+of the work, both concealed and visible, to enable future modification of the work to proceed without lengthy and
+expensive site measurement, investigation, and examination.
+7.11.C. Prior to submitting a request for final payment, submit the final Project Record Documents to the
+Engineer and/or Owner for approval. Approval of the Record Documents shall not constitute final acceptance of
+the completed project.
+SC-7.12 SAFETY AND PROTECTION
+The following Paragraph 7.12.A.4 shall be added immediately after Paragraph 7.12.A.3:
+7.12.A.4. The OWNER, ENGINEER or their representatives may indicate potential safety hazards noticed at the
+construction site. However, the CONTRACTOR shall remain the only party liable for initiating, maintaining, and
+supervising all safety precautions and programs in connection with the Work.
+SC-7.20 PROGRESS PAYMENTS TO SUBCONTRACTORS
+Add the following Paragraph 7.20 immediately after Paragraph 7.19
+7.20 Progress Payments to Subcontractors
+A. For contracts involving payment with public funds within the State of Minnesota, including but not limited
+to cities, counties, towns, school districts, political subdivisions or agencies of local government, within
+ten days after receipt of payment has been made to the Prime Contractor, the Prime Contractor shall
+make payment to all Subcontractors for undisputed services provided by the Subcontractor. The Prime
+Contractor shall pay interest of 1.5% per month or for any part of a month to the Subcontractor on any
+undisputed amount not paid on time to the Subcontractor. The minimum monthly interest penalty
+payment for an unpaid balance of $100.00 or more is $10.00 for an unpaid balance of less than $100.00,
+the Prime Contractor shall pay the actual penalty due to the subcontractor. A Subcontractor who prevails
+City of Jordan – Standard Specifications SUPPLEMENTARY CONDITIONS
+September, 2019 PAGE 00800-3
+© Bolton & Menk, Inc. 2019, All Rights Reservedin a civil action to collect interest penalties from a Prime Contractor must be awarded its costs and
+disbursements, including attorney’s fees, incurred in bringing the action.
+SC-8.02 COORDINATION
+Delete Paragraph 8.02.A and 8.02.B in its entirety and replace with the following:
+8.02.A. Owner does not intend to contract with others for the performance of other work on the Project at the
+Site, unless otherwise stated in the bidding documents.
+SC-8.04 CLAIMS BETWEEN CONTRACTORS
+Add the following new paragraphs immediately after paragraph 8.03:
+8.04 Claims Between Contractors
+8.04.A. Should Contractor cause damage to the work or property of any other contractor at the Site, or should
+any claim arising out of Contractor’s performance of the Work at the Site be made by any other contractor against
+Contractor, Owner, Engineer, or the construction coordinator, then Contractor (without involving Owner,
+Engineer, or construction coordinator) shall either (1) remedy the damage, (2) agree to compensate the other
+contractor for remedy of the damage, or (3) remedy the damage and attempt to settle with such other contractor
+by agreement, or otherwise resolve the dispute by arbitration or at law.
+8.04.B. Contractor shall, to the fullest extent permitted by Laws and Regulations, indemnify and hold harmless
+Owner, Engineer, the construction coordinator and the officers, directors, partners, employees, agents and other
+consultants and subcontractors of each and any of them from and against all claims, costs, losses and damages
+(including, but not limited to, fees and charges of engineers, architects, attorneys, and other professionals and
+court and arbitration costs) arising directly, indirectly or consequentially out of any action, legal or equitable,
+brought by any other contractor against Owner, Engineer, consultants, or the construction coordinator to the
+extent said claim is based on or arises out of Contractor’s performance of the Work. Should another contractor
+cause damage to the Work or property of Contractor or should the performance of work by any other contractor
+at the Site give rise to any other Claim, Contractor shall not institute any action, legal or equitable, against Owner,
+Engineer, or the construction coordinator or permit any action against any of them to be maintained and
+continued in its name or for its benefit in any court or before any arbiter which seeks to impose liability on or to
+recover damages from Owner, Engineer, or the construction coordinator on account of any such damage or Claim.
+8.04.C. If Contractor is delayed at any time in performing or furnishing the Work by any act or neglect of another
+contractor, and Owner and Contractor are unable to agree as to the extent of any adjustment in Contract Times
+attributable thereto, Contractor may make a Claim for an extension of times in accordance with Article 12. An
+extension of the Contract Times shall be Contractor’s exclusive remedy with respect to Owner, Engineer, and
+construction coordinator for any delay, disruption, interference, or hindrance caused by any other contractor. This
+paragraph does not prevent recovery from Owner, Engineer, or construction coordinator for activities that are
+their respective responsibilities.
+SC-10.03 PROJECT REPRESENTATIVE
+Add the following new paragraphs immediately after Paragraph 10.03.A:
+10.03.B. When the Engineer is contracted by the Owner to do so, the Resident Project Representative (RPR) will be
+Engineer''s representative at the Site, will act as directed by and under the supervision of Engineer, and will confer
+with Engineer regarding RPR''s actions.
+1. General: RPR''s dealings in matters pertaining to the Work in general shall be with Engineer and
+Contractor. RPR''s dealings with Subcontractors shall only be through or with the full knowledge
+City of Jordan – Standard Specifications SUPPLEMENTARY CONDITIONS
+September, 2019 PAGE 00800-4
+© Bolton & Menk, Inc. 2019, All Rights Reservedand approval of Contractor. RPR shall generally communicate with Owner only with the
+knowledge of and under the direction of Engineer.
+2. Schedules: Review the progress schedule, schedule of Shop Drawing and Sample submittals, and
+Schedule of Values prepared by Contractor and consult with Engineer concerning acceptability.
+3. Conferences and Meetings: Attend meetings with Contractor, such as preconstruction
+conferences, progress meetings, job conferences, and other Project-related meetings, and
+prepare and circulate copies of minutes thereof.
+4. Liaison:
+a. Serve as Engineer’s liaison with Contractor. Working principally through Contractor’s
+authorized representative or designee, assist in providing information regarding the
+provisions and intent of the Contract Documents.
+b. Assist Engineer in serving as Owner’s liaison with Contractor when Contractor’s
+operations affect Owner’s on-Site operations.
+c. Assist in obtaining from Owner additional details or information, when required for
+proper execution of the Work.
+5. Interpretation of Contract Documents: Report to Engineer when clarifications and
+interpretations of the Contract Documents are needed and transmit to Contractor clarifications
+and interpretations as issued by Engineer.
+6. Shop Drawings and Samples:
+a. Record date of receipt of Samples and Contractor-approved Shop Drawings.
+b. Receive Samples which are furnished at the Site by Contractor, and notify Engineer of
+availability of Samples for examination.
+c. Advise Engineer and Contractor of the commencement of any portion of the Work
+requiring a Shop Drawing or Sample submittal for which RPR believes that the submittal
+has not been approved by Engineer.
+7. Modifications: Consider and evaluate Contractor’s suggestions for modifications in Drawings or
+Specifications and report such suggestions, together with RPR’s recommendations, if any, to
+Engineer. Transmit to Contractor in writing decisions as issued by Engineer.
+8. Review of Work and Rejection of Defective Work:
+a. Conduct on-Site observations of Contractor’s work in progress to assist Engineer in
+determining if the Work is in general proceeding in accordance with the Contract
+Documents.
+b. Report to Engineer whenever RPR believes that any part of Contractor’s work in
+progress is defective, will not produce a completed Project that conforms generally to
+the Contract Documents, or will imperil the integrity of the design concept of the
+completed Project as a functioning whole as indicated in the Contract Documents, or
+has been damaged, or does not meet the requirements of any inspection, test or
+approval required to be made; and advise Engineer of that part of work in progress that
+RPR believes should be corrected or rejected or should be uncovered for observation, or
+requires special testing, inspection or approval.
+9. Inspections, Tests, and System Start-ups:
+a. Verify that tests, equipment, and systems start-ups and operating and maintenance
+training are conducted in the presence of appropriate Owner’s personnel, and that
+Contractor maintains adequate records thereof.
+City of Jordan – Standard Specifications SUPPLEMENTARY CONDITIONS
+September, 2019 PAGE 00800-5
+© Bolton & Menk, Inc. 2019, All Rights Reservedb. Observe, record, and report to Engineer appropriate details relative to the test
+procedures and systems start-ups.
+10. Records:
+a. Prepare a daily report or keep a diary or log book, recording Contractor’s hours on the
+Site, Subcontractors present at the Site, weather conditions, data relative to questions
+of Change Orders, Field Orders, Work Change Directives, or changed conditions, Site
+visitors, deliveries of equipment or materials, daily activities, decisions, observations in
+general, and specific observations in more detail as in the case of observing test
+procedures; and send copies to Engineer.
+b. Record names, addresses, fax numbers, e-mail addresses, web site locations, and
+telephone numbers of all Contractors, Subcontractors, and major Suppliers of materials
+and equipment.
+c. Maintain records for use in preparing Project documentation.
+11. Reports:
+a. Furnish to Engineer periodic reports as required of progress of the Work and of
+Contractor’s compliance with the Progress Schedule and schedule of Shop Drawing and
+Sample submittals.
+b. Draft and recommend to Engineer proposed Change Orders, Work Change Directives,
+and Field Orders. Obtain backup material from Contractor.
+c. Immediately notify Engineer of the occurrence of any Site accidents, emergencies, acts
+of God endangering the Work, force majeure or delay events, damage to property by
+fire or other causes, or the discovery of any Constituent of Concern or Hazardous
+Environmental Condition.
+12. Payment Requests: Review applications for payment with Contractor for compliance with the
+established procedure for their submission and forward with recommendations to Engineer,
+noting particularly the relationship of the payment requested to the Schedule of Values, Work
+completed, and materials and equipment delivered at the Site but not incorporated in the Work.
+13. Certificates, Operation and Maintenance Manuals: During the course of the Work, verify that
+materials and equipment certificates, operation and maintenance manuals and other data
+required by the Contract Documents to be assembled and furnished by Contractor are applicable
+to the items actually installed and in accordance with the Contract Documents, and have these
+documents delivered to Engineer for review and forwarding to Owner prior to payment for that
+part of the Work.
+14. Completion:
+a. Participate in Engineer’s visits to the Site to determine Substantial Completion, assist in
+the determination of Substantial Completion and the preparation of a punch list of
+items to be completed or corrected.
+b. Participate in Engineer’s final visit to the Site to determine completion of the Work, in
+the company of Owner and Contractor, and prepare a final punch list of items to be
+completed and deficiencies to be remedied.
+c. Observe whether all items on the final list have been completed or corrected and make
+recommendations to Engineer concerning acceptance and issuance of the notice of
+acceptability of the work.
+10.03.C. The RPR shall not:
+City of Jordan – Standard Specifications SUPPLEMENTARY CONDITIONS
+September, 2019 PAGE 00800-6
+© Bolton & Menk, Inc. 2019, All Rights Reserved1. Authorize any deviation from the Contract Documents or substitution of materials or equipment
+(including “or-equal” items).
+2. Exceed limitations of Engineer’s authority as set forth in the Contract Documents.
+3. Undertake any of the responsibilities of Contractor, Subcontractors, or Suppliers.
+4. Advise on, issue directions relative to, or assume control over any aspect of the means, methods,
+techniques, sequences or procedures of Contractor’s work.
+5. Advise on, issue directions regarding, or assume control over security or safety practices,
+precautions, and programs in connection with the activities or operations of Owner or
+Contractor.
+6. Participate in specialized field or laboratory tests or inspections conducted off-site by others
+except as specifically authorized by Engineer.
+7. Accept Shop Drawing or Sample submittals from anyone other than Contractor.
+8. Authorize Owner to occupy the Project in whole or in part.
+SC-13.03. UNIT PRICE WORK
+Delete Paragraph 13.03.E. in its entirety and insert the following in its place:
+13.03.E. The unit price of an item of Unit Price Work shall be subject to reevaluation and adjustment under the
+following conditions:
+1. if the original bid amount of a particular item of Unit Price Work amounts to five (5) percent or
+more of the total Contract Price and the variation in the quantity of that particular item of Unit
+Price Work performed by Contractor differs by more than twenty (20) percent from the
+estimated quantity of such item indicated in the Agreement; and
+2. if there is no corresponding adjustment with respect to any other item of Work; and
+3. if Contractor believes that Contractor has incurred additional expense as a result thereof or if
+Owner believes that the quantity variation entitles Owner to an adjustment in the unit price,
+either Owner or Contractor may make a Claim for an adjustment in the Contract Price in
+accordance with Article 10 if the parties are unable to agree as to the effect of any such
+variations in the quantity of Unit Price Work performed.
+SC-15.01.B.4 APPLICATIONS FOR PAYMENT
+Add the following Paragraph 15.01.B.4 immediately after Paragraph 15.01.B.3.
+15.01.B.4. All out-of-state contractors shall comply with all State of Minnesota surety deposit requirements. The
+OWNER may withhold an additional sum of 8 percent of the amount due the CONTRACTOR from each payment
+and forward it to the Department of Revenue until the CONTRACTOR''s state tax obligations are considered fulfilled
+unless the CONTRACTOR can show reason for exemption. Exemption will be granted provided the out-of-state
+CONTRACTOR meets the exemption guidelines established for the Minnesota Department of Revenue. All
+necessary forms may be obtained from the Minnesota Department of Revenue, Mail Station 4450, St. Paul,
+Minnesota 55146-4450, or phone 1-800-657-3777 or online at:
+http://www.revenue.state.mn.us/businesses/withholding/Pages/Forms.aspx .
+SC-15.01.D.1 PAYMENT BECOMES DUE
+Delete Paragraph 15.01.D.1 in its entirety and replace with the following:
+15.01.D.1 The time period for payment shall be in accordance with the Agreement.
+City of Jordan – Standard Specifications SUPPLEMENTARY CONDITIONS
+September, 2019 PAGE 00800-7
+© Bolton & Menk, Inc. 2019, All Rights ReservedSC-15.04 PARTIAL UTILIZATION
+Add the following Paragraph 15.04.B immediately after Paragraph 15.04.A.4 of the General Conditions. Paragraph
+15.04.B modifies Paragraph 15.04.A of the General Conditions and reference is made thereto.
+15.04.B. Nothing in Paragraph 15.04.A shall obligate the CONTRACTOR to apply for a Certificate of Substantial
+Completion for any part of this Project. The provisions for partial utilization of the Project, if any, are established
+by the Specifications and no Certificate of Substantial Completion will be issued for partial utilization occurring
+within the terms of the Specifications. Partial utilization of the Project not covered by the Specifications shall be in
+accordance with Paragraph 15.04.A and its sub-paragraphs. If a Certificate of Substantial Completion is not issued,
+Substantial Completion shall be when final payment is due in accordance with Paragraph 15.06.D.
+SC-15.06.A.4. WITHHOLDING OF INCOME TAX AT SOURCE
+Add the following Paragraph 15.06.A.4. Immediately following Paragraph 15.06.A.3 of the General Conditions and
+immediately before 15.06.B:
+15.06.A.4. "Final payment will not be made to the CONTRACTOR until a certificate showing that the
+CONTRACTOR has complied with the provisions of M.S.A. 290.92 requiring withholding of income tax on wages at
+the source. Said certificate shall be executed by the Commissioner of Revenue. Forms for certification may be
+obtained from the Commissioner of Revenue, Centennial Building, St. Paul, Minnesota 55145."
+SC-15.08 CORRECTION PERIOD
+Modify Paragraphs 15.08.A of the General Conditions to change all references for the correction period length
+from one year to two years, except for luminaires, which is five years.
+Add the following Paragraph 15.08.F immediately after Paragraph 15.08.E:
+15.08.F. For purposes of this Paragraph 15.08, the date of Substantial Completion shall be interpreted as the
+date when final payment is due in accordance with Paragraph 15.06.B and 15.06.C, and the two year correction
+period shall commence on the date when final payment is due in accordance with Paragraph 15.06.B and 15.06.C,
+unless otherwise modified by the Specifications or by Written Agreement.
+****END OF SECTION****
+City of Jordan – Standard Specifications SUPPLEMENTARY CONDITIONS
+September, 2019 PAGE 00800-8
+© Bolton & Menk, Inc. 2019, All Rights Reservedc. Observe whether all items on the final list have been completed or corrected and make
+recommendations to Engineer concerning acceptance and issuance of the notice of
+acceptability of the work.
+10.03.C. The RPR shall not:
+1. Authorize any deviation from the Contract Documents or substitution of materials or equipment
+(including “or-equal” items).
+2. Exceed limitations of Engineer’s authority as set forth in the Contract Documents.
+3. Undertake any of the responsibilities of Contractor, Subcontractors, or Suppliers.
+4. Advise on, issue directions relative to, or assume control over any aspect of the means, methods,
+techniques, sequences or procedures of Contractor’s work.
+5. Advise on, issue directions regarding, or assume control over security or safety practices,
+precautions, and programs in connection with the activities or operations of Owner or
+Contractor.
+6. Participate in specialized field or laboratory tests or inspections conducted off-site by others
+except as specifically authorized by Engineer.
+7. Accept Shop Drawing or Sample submittals from anyone other than Contractor.
+8. Authorize Owner to occupy the Project in whole or in part.
+SC-13.03. UNIT PRICE WORK
+Delete Paragraph 13.03.E. in its entirety and insert the following in its place:
+13.03.E. The unit price of an item of Unit Price Work shall be subject to reevaluation and adjustment under the
+following conditions:
+1. if the original bid amount of a particular item of Unit Price Work amounts to five (5) percent or
+more of the total Contract Price and the variation in the quantity of that particular item of Unit
+Price Work performed by Contractor differs by more than twenty (20) percent from the
+estimated quantity of such item indicated in the Agreement; and
+2. if there is no corresponding adjustment with respect to any other item of Work; and
+3. if Contractor believes that Contractor has incurred additional expense as a result thereof or if
+Owner believes that the quantity variation entitles Owner to an adjustment in the unit price,
+either Owner or Contractor may make a Claim for an adjustment in the Contract Price in
+accordance with Article 10 if the parties are unable to agree as to the effect of any such
+variations in the quantity of Unit Price Work performed.
+SC-15.01.B.4 APPLICATIONS FOR PAYMENT
+Add the following Paragraph 15.01.B.4 immediately after Paragraph 15.01.B.3.
+15.01.B.4. All out-of-state contractors shall comply with all State of Minnesota surety deposit requirements. The
+OWNER may withhold an additional sum of 8 percent of the amount due the CONTRACTOR from each payment
+and forward it to the Department of Revenue until the CONTRACTOR''s state tax obligations are considered fulfilled
+unless the CONTRACTOR can show reason for exemption. Exemption will be granted provided the out-of-state
+CONTRACTOR meets the exemption guidelines established for the Minnesota Department of Revenue. All
+necessary forms may be obtained from the Minnesota Department of Revenue, Mail Station 4450, St. Paul,
+Minnesota 55146-4450, or phone 1-800-657-3777 or online at:
+http://www.revenue.state.mn.us/businesses/withholding/Pages/Forms.aspx .
+City of Jordan – Standard Specifications SUPPLEMENTARY CONDITIONS
+September, 2019 PAGE 00800-7
+© Bolton & Menk, Inc. 2019, All Rights ReservedSC-15.01.D.1 PAYMENT BECOMES DUE
+Delete Paragraph 15.01.D.1 in its entirety and replace with the following:
+15.01.D.1 The time period for payment shall be in accordance with the Agreement.
+SC-15.04 PARTIAL UTILIZATION
+Add the following Paragraph 15.04.B immediately after Paragraph 15.04.A.4 of the General Conditions. Paragraph
+15.04.B modifies Paragraph 15.04.A of the General Conditions and reference is made thereto.
+15.04.B. Nothing in Paragraph 15.04.A shall obligate the CONTRACTOR to apply for a Certificate of Substantial
+Completion for any part of this Project. The provisions for partial utilization of the Project, if any, are established
+by the Specifications and no Certificate of Substantial Completion will be issued for partial utilization occurring
+within the terms of the Specifications. Partial utilization of the Project not covered by the Specifications shall be in
+accordance with Paragraph 15.04.A and its sub-paragraphs. If a Certificate of Substantial Completion is not issued,
+Substantial Completion shall be when final payment is due in accordance with Paragraph 15.06.D.
+SC-15.06.A.4. WITHHOLDING OF INCOME TAX AT SOURCE
+Add the following Paragraph 15.06.A.4. Immediately following Paragraph 15.06.A.3 of the General Conditions and
+immediately before 15.06.B:
+15.06.A.4. "Final payment will not be made to the CONTRACTOR until a certificate showing that the
+CONTRACTOR has complied with the provisions of M.S.A. 290.92 requiring withholding of income tax on wages at
+the source. Said certificate shall be executed by the Commissioner of Revenue. Forms for certification may be
+obtained from the Commissioner of Revenue, Centennial Building, St. Paul, Minnesota 55145."
+SC-15.08 CORRECTION PERIOD
+Modify Paragraphs 15.08.A of the General Conditions to change all references for the correction period length
+from one year to two years, except for luminaires, which is five years.
+Add the following Paragraph 15.08.F immediately after Paragraph 15.08.E:
+15.08.F. For purposes of this Paragraph 15.08, the date of Substantial Completion shall be interpreted as the
+date when final payment is due in accordance with Paragraph 15.06.B and 15.06.C, and the two year correction
+period shall commence on the date when final payment is due in accordance with Paragraph 15.06.B and 15.06.C,
+unless otherwise modified by the Specifications or by Written Agreement.
+****END OF SECTION****
+City of Jordan – Standard Specifications SUPPLEMENTARY CONDITIONS
+September, 2019 PAGE 00800-8
+© Bolton & Menk, Inc. 2019, All Rights Reserved', 1),
+('EXCAVATION & EMBANKMENT - SITE GRADING', NULL, NULL, 'nan', 'nan', '© Bolton & Menk, Inc.', NULL, NULL, 'Standard Specifications for Construction of Public Infrastructure', '02310', 'SECTION 02310 - EXCAVATION & EMBANKMENT - SITE GRADING
+PART 1 -- GENERAL
+1.1 SUMMARY
+A. This section covers the furnishing of all labor, materials, tools, equipment and performances of all work and
+services necessary or incidental to the excavation and embankment of the site improvements as indicated
+on the drawings or as specified herein.
+1.2 DEFINITIONS
+A. Building Pad - The area under any proposed building, or an area delineated on the plans as the site for a
+future building.
+B. Building Pad Hold-Down - The elevation that the proposed building pad is to be constructed to. This
+elevation does not represent the finished grade elevation of the proposed building.
+C. Compacted Volume (CV) – The volume of material actually placed as determined by computing the
+difference between original and final cross-sections by the average end area method.
+D. Excavated Volume (EV) – The volume of material actually excavated as determined by computing the
+difference between original and final cross-sections by the average end area method.
+E. Excess Material - Material that is not needed to complete the earthwork balance.
+F. Structural Improvements - For the purposes of this specification, structural improvements shall refer to any
+roadway, sidewalk, trail, building, sign, or other improvements requiring suitable soil to support the
+anticipated loadings.
+G. Subcut - Excavation performed below the proposed subgrade or building pad hold-down elevation shown
+on the plans for the purposes of removing unsuitable material.
+H. Subgrade - The top surface of a roadbed upon which the pavement structure (including aggregate base
+and/or granular subbase) is to be constructed. This is also a general term denoting the soil foundation upon
+which a proposed improvement is to be placed.
+I. Suitable Material - Sand, silty sand or low plasticity clay soils with no organic content. The Engineer shall
+make the final determination as to what material will be considered suitable.
+J. Topsoil - Any soil, generally black in color, containing organic material.
+K. Unsuitable Material - Soil with organic content including topsoil, swamp deposits, peat, muck, or other
+material deemed by the Engineer to be unsuitable for fill or embankment construction.
+1.3 METHOD OF MEASUREMENT AND PAYMENT
+A. Measurement and compensation for the following items shall be paid according to the referenced
+specification or as modified below:
+1. Measurement and payment for Common Excavation shall be based upon the CUBIC YARD - PLANNED
+QUANTITY - CY (P), included in the Proposal. Common excavation is computed to the face of any
+retaining walls. Excavation required for construction of the wall shall be incidental to the unit price bid
+for retaining wall.
+2. Measurement and payment for Topsoil Borrow shall be based upon the CUBIC YARD - LOOSE VOLUME
+QUANTITY - CY (LV), included in the Proposal.
+3. Measurement and payment for Granular Borrow or Select Granular Borrow shall be based upon the
+TON or the CUBIC YARD – COMPACTED VOLUME INPLACE QUANTITY - CY (CV), as indicated in the
+Schedule of Unit Prices.
+4. Measurement and payment for Subgrade Excavation shall be based upon the CUBIC YARD - EXCAVATED
+VOLUME QUANTITY - CY (EV), included in the Proposal.
+City of Jordan – Standard Specifications EXCAVATION & EMBANKMENT - SITE GRADING
+September, 2019 PAGE 02310-1
+V122217 © Bolton & Menk, Inc. 2019, All Rights Reserved5. Measurement and payment for Stabilizing Aggregate shall be based upon the TON or the CUBIC YARD –
+COMPACTED VOLUME INPLACE QUANTITY - CY (CV), as indicated in the Schedule of Unit Prices.
+6. The quantities for Subgrade Excavation and Stabilizing Aggregate may be increased or decreased by any
+amount according to the conditions revealed. No direct compensation will be made for backfilling
+subcut areas with suitable material from the excavation.
+B. The furnishing and installing of specific items and/or the performance of work under certain circumstances
+shall not be individually paid in the absence of a specific bid item for the work. The costs shall be included
+in the unit price bid for the associated excavation items. Such items of work include but are not limited to:
+1. Unless itemized in the Schedule of Prices, separating, salvaging, stockpiling, and spreading of topsoil,
+include in the price bid for common excavation.
+2. Unless itemized in the Schedule of Prices, subcutting the existing topsoil prior to placing embankment
+in all areas with proposed structural improvements, include in the price bid for common excavation.
+3. Salvaging and separately stockpiling suitable aggregate base material, as determined by the Engineer,
+include in the price bid for common excavation.
+4. Separating, salvaging, stockpiling and placing suitable material for use in embankment areas, include in
+the price bid for common excavation.
+5. Obtaining suitable material from areas with no proposed structural improvements to provide enough
+suitable material for embankments being constructed under proposed structural improvements,
+include in the price bid for common excavation.
+6. Restoring the borrow site by grading the area to drain properly to slopes not-to-exceed 6:1 and by
+restoring the topsoil to a minimum thickness of 6 inches, include in the contract unit price for common
+borrow.
+7. Subgrade excavation, furnishing stabilizing aggregate, geotextile fabric installation, compaction,
+regrading and/or other efforts necessary to repair the subgrade after satisfying the roll test and failing
+to protect the integrity of the subgrade, include in the price bid for common excavation.
+8. Over-excavation in cut areas to provide room for placement of topsoil, include in the price bid for
+common excavation.
+9. Earthwork balancing including adjustments for shrinkage loss, and excess materials resulting from the
+additional volume created from pipe bedding, utility pipe, and/or underground structures shall be
+included in the unit price bid for common excavation.
+10. The avoidance and protection of wetlands include in the price bid for common excavation.
+11. Protecting existing improvements and previously accepted in-process improvements from damage
+include in the price bid for common excavation.
+12. Test rolling, include in the price bid for common excavation.
+13. Gradation and compaction testing, and geotechnical inspection services to meet requirements of
+Source and Field Quality Control, if required, include in the price bid for common excavation.
+14. Farming, disking and/or drying suitable wet materials, include in the price bid for common excavation.
+15. Excavation required for construction of any retaining wall shall be included in the unit price bid for
+retaining wall.
+1.4 SPECIFICATION REFERENCES
+A. MnDOT 2105 shall apply to the excavation and embankment for the site improvements, except as modified
+herein.
+B. MnDOT 2574 shall apply to the excavation and embankment for the site improvements, except as modified
+herein.
+City of Jordan – Standard Specifications EXCAVATION & EMBANKMENT - SITE GRADING
+September, 2019 PAGE 02310-2
+V122217 © Bolton & Menk, Inc. 2019, All Rights ReservedC. Unless noted otherwise, the provisions in this section are in addition to the referenced specification.
+PART 2 -- PRODUCTS
+2.1 MATERIALS
+A. All excess excavated material shall become the property of the Contractor and shall be removed from the
+site and disposed of at a location secured by the Contractor.
+B. Stabilizing aggregates for use in backfilling subgrade excavations shall be one of the following, as approved
+by the City Engineer:
+1. 2-inch dust free aggregate, 100% Crushed
+2. Class 5 Aggregate Base, 100% Crushed
+3. Coarse Filter Aggregate, 100% Crushed
+PART 3 -- EXECUTION
+3.1 GENERAL
+A. Excavated topsoil and suitable material for reuse in the project shall be segregated and stockpiled at a site
+selected by the Contractor.
+B. Frozen material will not be allowed for roadway or building pad construction. The Engineer shall approve
+locations for placement of frozen material.
+C. All excavations shall be kept free of water during the placement of fill.
+D. The Contractor shall utilize methods and equipment for excavating that will minimize the disturbance to the
+subgrade. The use of backhoes rather than scrapers or front-end loaders may be required to minimize
+repeated passes of equipment over wet subgrade soils.
+E. At the end of each day the Contractor shall eliminate surface indentations, including those caused by
+sheepsfoot rollers, tractor tires and tracked equipment, and roll the surface with a steel wheel or rubber
+tired roller.
+F. Sufficient common excavation shall be utilized by the Contractor to replace the soil shrinkage from
+excavation which occurs through the course of construction handling and compaction. The Contractor shall
+make his own estimate of the amount of shrinkage that will occur.
+G. Topsoil
+1. Topsoil shall be salvaged and stockpiled in locations shown on the plans or in areas requiring final turf
+establishment, as approved by the Engineer.
+2. Once the salvaged topsoil is stockpiled, the Contractor shall make an estimate of any potential shortage
+or surplus of topsoil possible in meeting the other provision of this Contract and notify the Engineer of
+the estimate.
+3. The first priority in re-distributing the topsoil on site shall be to meet the minimum depths required
+over the entire project area.
+4. In areas requiring final turf establishment with no proposed or anticipated structural improvements
+(building pads, etc.), topsoil shall be spread uniformly to a minimum depth of 6.0-inches, unless
+otherwise indicated in the plans.
+5. In areas requiring final turf establishment with proposed or anticipated structural improvements
+(building pads, etc.), topsoil shall be spread to a depth of 2.0 to 4.0-inches.
+6. In areas not requiring final turf establishment with proposed or anticipated structural improvements,
+no topsoil shall be placed.
+City of Jordan – Standard Specifications EXCAVATION & EMBANKMENT - SITE GRADING
+September, 2019 PAGE 02310-3
+V122217 © Bolton & Menk, Inc. 2019, All Rights ReservedH. Material suitable for curb backfill shall be segregated and stockpiled at a site selected by the Contractor.
+Following curb construction, the material shall be placed behind the curb, allowing for a minimum of 6-
+inches of topsoil, unless otherwise indicated in the plans.
+I. In areas where filling above the existing grade is necessary to establish the final designed elevation, the
+Contractor shall fully remove the topsoil and organic material to the level of stable underlying sand or clay
+prior to backfilling with suitable embankment material.
+J. The Contractor shall make his own determination as to whether the proposed grading has been completed
+according to the plans. When the Contractor determines that the grading has been completed, he will
+notify the Engineer. Neither the Owner nor the Engineer will provide any intermediate acceptance of the
+grading improvements until all of the grading has been completed and all topsoil has been spread.
+3.2 EXCAVATION AND EMBANKMENT IN AREAS WITH PROPOSED STRUCTURAL IMPROVEMENTS.
+A. All vegetation, topsoil, organic, or other unsuitable materials shall be excavated from the area below the
+structural improvement. Due to the variability of soils, the depth of the excavation in these areas is
+expected to vary significantly throughout the site. The excavated area shall be inspected by the
+geotechnical engineer as specified in Field Quality Control.
+B. Subcut excavations shall be laterally oversized a distance of 1.0-foot beyond the edges of the proposed
+structural improvement for each foot of excavation depth (1:1 oversizing). The extents of the structural
+improvement areas shown on the plans do not necessarily show this 1:1 oversizing.
+C. Fill placed from the bottom of the subcut to the subgrade or building pad hold down elevation shall be
+selected material from the excavation or borrow material. Such material shall consist of suitable material
+as defined above. Clay fill shall be moisture-conditioned to within 2 percent above or below the optimum
+moisture content determined from the Standard Proctor compaction test.
+D. The embankment material shall be spread in 6.0 to 8.0-inch loose lifts.
+E. In all roadway and pavement areas, the Contractor shall perform a roll test on the subgrade prior to placing
+any portion of the pavement structure. The roll test shall be performed with a fully-loaded tandem axle
+truck. Soils which rut or deflect 1.0-inch or more shall be corrected by scarifying, drying, and recompacting
+the soils. Subgrade excavation shall only be performed as directed by the Engineer.
+F. Subgrade excavation shall be performed only when the Engineer and the Contractor both agree that the
+inplace soil cannot be made suitable by scarifying, drying, and recompacting. Such excavation shall be
+backfilled with suitable excess common excavation material, stabilizing aggregate, granular borrow or select
+granular borrow, as directed by the Engineer. If the Contractor proceeds without approval from the
+Engineer, all work and material to restore the roadbed to the proper grade shall be at the Contractor’s
+expense.
+3.3 EXCAVATION AND EMBANKMENT IN AREAS WITH NO PROPOSED STRUCTURAL IMPROVEMENTS
+A. Topsoil or unsuitable material may be used to construct embankments in areas with no structural
+improvements.
+3.4 COMPACTION
+A. All embankment grading shall be compacted using:
+1. Under areas with proposed paved or structural improvements, Specified Density Method:
+(a) 100 percent Standard Proctor dry density within 3.0-feet of the proposed sub-grade or building
+pad hold-down elevation.
+(b) 95 percent of the maximum Standard Proctor dry density below 3.0-feet from the proposed sub-
+grade or building pad hold-down elevation.
+2. Under areas with no proposed paved or structural improvements, Quality Compaction Method.
+3.5 SOURCE QUALITY CONTROL
+City of Jordan – Standard Specifications EXCAVATION & EMBANKMENT - SITE GRADING
+September, 2019 PAGE 02310-4
+V122217 © Bolton & Menk, Inc. 2019, All Rights ReservedA. The following testing must be performed:
+1. One (1) gradation test per each 500 tons or 275 cubic yards (CV) of select granular borrow.
+2. One (1) gradation test per each 500 tons or 275 cubic yards (CV) of stabilizing aggregate.
+B. All testing shall be performed by an independent testing laboratory approved by the Engineer.
+3.6 FIELD QUALITY CONTROL
+A. The following testing and inspections, with written certification, must be performed:
+1. Areas with Proposed Structural Improvements:
+(a) One compaction test (including Standard Proctor) per each 500 SY per each 3.0-foot of depth of
+embankment.
+(b) Building Pads shall have a minimum of one compaction test (including Standard Proctor) per each
+3.0-foot of depth of embankment for each pad.
+(c) Inspection following the removal of unsuitable material and prior to placement of embankment
+material to insure that all topsoil and unsuitable material has been removed, and that the exposed
+subgrade has sufficient bearing capacity for the anticipated structural improvement.
+B. The Contractor shall notify the Engineer 24 hours prior to completing the removal of topsoil and unsuitable
+material in areas with proposed structural improvements to ensure that appropriate inspection may be
+performed.
+C. All testing shall be performed by an independent testing laboratory. All inspection shall be performed
+under the direct supervision of a licensed Geotechnical Engineer who shall provide written certification of
+the results.
+D. Samples for testing shall be taken from material in place, in building sites and/or paved areas. All sampling
+methods shall be approved by the Engineer.
+E. The Contractor shall coordinate the site grading and inform the Engineer when the roadway subgrade is
+ready for test rolling, prior to installing any aggregate base. The Engineer may order some subgrade
+correction prior to allowing the installation of aggregate base.
+F. Should any of the specified tests or inspections fail, the Contractor may arrange and pay for additional tests
+or inspections as may be necessary to satisfy the Engineer that the specified requirements have been met.
+***END OF SECTION***
+City of Jordan – Standard Specifications EXCAVATION & EMBANKMENT - SITE GRADING
+September, 2019 PAGE 02310-5
+V122217 © Bolton & Menk, Inc. 2019, All Rights Reserved', 1),
+('Submittals, prior to backfilling.', NULL, NULL, 'nan', 'nan', '© Bolton & Menk, Inc.', NULL, NULL, 'Standard Specifications for Construction of Public Infrastructure', '01330', 'SECTION 01330 - SUBMITTALS
+PART 1 -- GENERAL
+1.1 SUMMARY
+A. The Contractor shall submit three copies of all required submittals and sample items as noted below. The
+Engineer will review them with reasonable promptness. The Contractor shall make all required corrections
+and file with the Engineer three corrected sets for final review. If the Contractor requires more than two
+reviewed copies, the Contractor shall submit additional sets.
+B. The responsibility for completeness of submittals lies with the Contractor. If the Engineer and/or Owner
+sign the submittal with no exception taken, such action shall not absolve the responsibilities of the
+Contractor in any way.
+C. Emailed submittals to the Engineer in pdf format will be accepted.
+1.2 ITEMS TO BE SUBMITTED
+A. Written Progress Management Schedule Tool (as defined in Section 01310) - to be reviewed at the
+Preconstruction Conference. See Article 4 of Section 00520 “Agreement” of this Project Manual for
+contractual time requirements.
+B. The following items must be submitted when applicable to the project scope:
+1. Minnesota Pollution Control Agency (MPCA) - General Storm Water Permit for Construction Activity
+(MN R100001) – Reference Section 02370 “Erosion & Sediment Control” of this Project Manual.
+2. Concrete Mix Design
+3. Bituminous Mix Design (wear and non-wear)
+4. Gradation Test Results from 2 separate tests, as required in Source Quality Control provisions of
+individual sections contained herein, from material stockpiles of aggregates to be used on this project.
+These tests may be run by the Contractor or its supplier during aggregate production.
+5. Geotextile Fabrics - Certificates of Compliance.
+6. Sanitary Sewer and Sanitary Sewer Service
+(a) Manhole structure - shop drawings.
+(b) Manhole casting - shop drawings.
+(c) Piping and fittings - Certificates of Compliance.
+(d) Final televising DVD and log.
+7. Storm Sewer, Subdrain and Sump Drain Lines
+(a) Manhole and catch basin structure - shop drawings.
+(b) Manhole and catch basin casting - shop drawings.
+(c) Piping and fittings - Certificates of Compliance.
+8. Watermain and Water Service Lines
+(a) Hydrants - Certificates of Compliance.
+(b) Valves & boxes - Certificates of Compliance.
+(c) Pipe & fittings - Certificates of Compliance.
+(d) Corporation stops, saddles, curb stops, curb boxes, copper pipe - Certificates of Compliance.
+9. Seeding - Certificates of Compliance for seed mixture.
+City of Jordan – Standard Specifications SUBMITTALS
+September, 2019 PAGE 01330-1
+V062612 © Bolton & Menk, Inc. 2019, All Rights Reserved10. Trees & Shrubs - Certificates of Compliance.
+11. Lift Stations
+(a) Pumps & panels - shop drawings
+(b) Valve manhole - shop drawings.
+(c) Valves - shop drawings and Certificates of Compliance.
+(d) Maintenance and operations manuals.
+1.3 MATERIAL SAFETY DATA SHEETS
+A. The Contractor shall submit two copies of Safety Data Sheets (SDSs) (formerly known as Material Safety
+Data Sheets or MSDSs) for each material on site to the OWNER.
+B. The Contractor shall maintain an orderly file of Safety Data Sheets at the job site.
+1.4 RECORD DRAWINGS
+A. The CONTRACTOR shall maintain at the construction site one complete set of drawings suitably marked to
+show all deviations from the original set of drawings and other information as specified. Supplementary
+sketches shall be included, if necessary, to clearly indicate all work as constructed. Sanitary and water
+service tie-in or stub-out locations shall show station and distances left or right of the survey control
+centerline. Existing sanitary and water service piping material type and size at the tie-in locations shall be
+noted also.
+B. All manholes, watermain bends and valves shall be located with tie-off dimensions to known items on the
+plans or in the field to enable the Contractor or City personnel to locate these structures for adjustment.
+C. The CONTRACTOR shall fill out a service record form for each water service and sanitary sewer service
+connection or stub out. A blank service record form will be supplied by the ENGINEER to be used by the
+CONTRACTOR. The completed service record forms and photos taken of the services shall be submitted to
+the ENGINEER in a digital format and in booklet form.
+D. All work shall be clearly shown and the record drawings and service record forms shall be satisfactory to the
+OWNER in order to insure that adequate information is indicated to show the actual construction. The
+complete set of the record drawings shall be submitted to the ENGINEER prior to submittal of the final
+Application for Payment. Failure of the CONTRACTOR to maintain an up-to-date set of record drawings on
+the project site shall be reason to withhold payments. All underground lines shall be determined from the
+record drawings.
+E. The CONTRACTOR must provide a complete an as-built record form, as provided in the appendix, for
+acceptance of each storm sewer and sanitary sewer structure, as well as each sanitary sewer and water
+service line. The completed report shall be submitted each week to the Engineer or the Engineer''s
+designated representative at some mutually agreeable time. Failure to submit the required form shall
+render the structure or services subject to non-acceptance.
+1.5 CONSTRUCTION PHOTOS
+A. The CONTRACTOR shall take digital photos during the course of construction using only cameras or smart
+phones with Global Positioning System (GPS) capabilities. GPS location settings shall be turned on at the
+time of taking each photo. The quality of the photos submitted shall be sufficient to clearly depict the focal
+points in the photo.
+B. The CONTRACTOR shall take photos of underground construction work prior to backfilling. Such items to be
+photographed include but are not limited to: connections to existing utilities, watermain fittings,
+small/private underground utilities, utility stub-outs, manholes, etc.
+C. The CONTRACTOR shall take photos of all water service and sanitary sewer service connections at the main
+and at the tie in or stub out locations prior to backfilling the service. The photo shall indicate the house
+address number or lot description of the service location.
+City of Jordan – Standard Specifications SUBMITTALS
+September, 2019 PAGE 01330-2
+V062612 © Bolton & Menk, Inc. 2019, All Rights ReservedD. After the first couple days of underground construction, the CONTRACTOR shall submit to the ENGINEER a
+sample set of digital photos. The test set of photos will be reviewed to verify that the date, GPS
+coordinates, and other photo features are being recorded.
+E. All photos shall be submitted to the ENGINEER in a digital format immediately upon completion of the
+utility installation. The digital properties of the photos, such as date and time taken and GPS coordinates,
+shall be full intact at the time of submittal. Failure of the CONTRACTOR to maintain a set of construction
+photos shall be reason to withhold payments.
+PART 2 -- PRODUCTS (NOT USED)
+PART 3 -- EXECUTION
+3.1 SUBMITTAL ROUTING
+A. All submittals shall be approved by the Contractor prior to submission to the Engineer.
+B. A Letter of Transmittal that identifies the submitted item and the review action required shall accompany
+all submittals.
+1. The Contractor shall be responsible for filling in the following information on the Letter of Transmittal:
+(a) Date.
+(b) Submittal No.
+(c) Identify what is being sent checking the appropriate box.
+(d) No. Copies Submitted.
+(e) Identify the Specification Section the attached information relates to.
+(f) Subject of Shop Drawing or Other Submittal.
+(g) Check whether the Shop Drawings are or are not in compliance.
+(1) If not in compliance, list the features which are not.
+(h) Sign and Date.
+3.2 RESPONSIBILITY
+A. The Engineer''s review of a submittal shall not relieve the Contractor from the responsibility for deviation
+from the drawings and specifications unless the Contractor has, in writing, called the Engineer''s attention to
+the deviations at the time of submission; nor shall it relieve the Contractor from the responsibility of errors
+in the submittals.
+B. All submittals shall be reviewed by the Engineer prior to their incorporation into the project. If materials
+are installed without prior review, they will be subject to removal, at the Contractor''s expense, if the
+material is found to be non-conforming to the Specifications.
+**** END OF SECTION ****
+City of Jordan – Standard Specifications SUBMITTALS
+September, 2019 PAGE 01330-3
+V062612 © Bolton & Menk, Inc. 2019, All Rights Reserved', 1),
+('BITUMINOUS SURFACE CRACK AND JOINT REPAIR', NULL, NULL, 'nan', 'nan', '© Bolton & Menk, Inc.', NULL, NULL, 'Standard Specifications for Construction of Public Infrastructure', '02975', 'SECTION 02975 - BITUMINOUS SURFACE CRACK AND JOINT REPAIR
+PART 1 -- GENERAL
+1.1 SUMMARY
+A. This section covers the furnishing of all labor, materials, tools, equipment and performances of all work and
+services necessary or incidental to the repairing of the existing bituminous surface improvements; including
+routing, cleaning and sealing the existing surface.
+1.2 METHOD OF MEASUREMENT AND PAYMENT
+A. Measurement and compensation for the following items shall be paid according to the referenced
+specification or as modified below:
+1. Payment shall be at the unit price bid per linear foot of cracks which were identified by the Engineer,
+and properly routed, cleaned and sealed by the Contractor.
+B. The furnishing and installing of specific items and/or the performance of work under certain circumstance s
+shall not be individually paid in the absence of a specific bid item for the work. The costs shall be included
+in the unit price bid for the associated geotextile fabric - trench construction items. Such items of work
+include but are not limited to:
+1. Surface preparation including sweeping, brushing, etc., include in the unit price bid for crack sealing.
+2. Protecting castings and valve boxes from sealant material, include in the unit price bid for crack sealing.
+1.3 SPECIFICATION REFERENCES
+A. MnDOT 3723 shall apply to the sealing of all cracks, except as modified herein.
+B. Unless noted otherwise, the provisions in this section are in addition to the referenced specification.
+PART 2 -- PRODUCTS
+2.1 MATERIALS
+A. Crack Sealant
+1. The crack sealant compound shall be packaged in sealed containers. Each container shall be clearly
+marked with the name of the manufacturer, the trade name of the sealant, the manufacturer''s batch
+and lot number, the pouring temperature, and the safe heating temperature.
+2. Mixing of different manufacturer''s brands or different types of sealant shall be prohibited
+PART 3 -- EXECUTION
+3.1 CONSTRUCTION REQUIREMENTS
+A. A copy of the manufacturer''s recommendations pertaining to the heating and application of the joint
+sealant material shall be submitted to the Engineer prior to the commencement of work. These
+recommendations shall be adhered to and followed by the contractor. The temperature of the sealer in the
+field application equipment shall never exceed the safe heating temperature recommended by the
+manufacturer. Any given quantity of material shall not be heated at the pouring temperature for more than
+six hours and shall never be reheated. Sealing shall not proceed if the temperature of the material has not
+reached or has fallen below the manufacturer''s recommended minimum application temperature.
+B. Sealant materials may be placed during a period of rising temperature after the air temperature in the
+shade and away from artificial heat has reach 40 degrees Fahrenheit and indications are for a continued rise
+in temperature. During a period of falling temperature, the placement of sealant material shall be
+suspended when the air temperature, in the shade and away from artificial heat, reaches
+City of Jordan – Standard Specifications BITUMINOUS SURFACE CRACK and JOINT REPAIR
+September, 2019 PAGE 02975-1
+V010418 © Bolton & Menk, Inc. 2019, All Rights Reserved40 degrees Fahrenheit. Sealant shall not be placed when in the opinion of the Engineer; the weather or
+roadbed conditions are unfavorable.
+C. Routing and sealing will be permitted only during daylight hours between May 1 and October 15.
+D. The City shall determine the actual areas that will be repaired by marking the existing cracks to be routed,
+cleaned and sealed. The routing, cleaning and sealing shall extend the full width of the surface on
+transverse cracks.
+E. The Contractor shall conduct the bituminous crack sealing operations so that routing, cleaning and sealing is
+a continuous operation. Traffic shall not be allowed to kneed together or damage the reservoir once it has
+been created. Routed cracks not sealed before traffic is allowed on the surface shall be re-routed at no
+additional cost to the Owner.
+1. ROUTING. The routing equipment shall be mechanical and power driven and shall be capable of
+following the existing cracks. All cracks shall be routed 1.0-inch wide x 1.0-inch deep. The cracks shall
+be routed with sharp router blades to the specified dimensions without deviation from the existing
+crack or creating excessive spalling. Equipment designed to "plow" the cracks to dimension will not be
+permitted. Wet sawing will not be allowed.
+2. CLEANING. Immediately prior to cleaning and sealing the cracks, the entire bituminous surface shall be
+cleaned to remove all loosened bituminous particles and foreign material and the cracks shall be blown
+clean with oil-free compressed air. Compressed air shall be 100 psi and 75 cfm minimum at the nozzle.
+The crack and surface area 6.0-inches on both sides will then be cleaned and dried with a hot
+compressed air heat lance. The heat lance shall meet the following requirements: temperature of
+heated air at exit or orifice minimum of 2,800 degrees Fahrenheit. Velocity of exiting heated air
+minimum of 2,800 fps. The application time and final results of the cleaning are subject to the
+Engineers approval.
+3. SEALING. After the cracks have been properly cleaned, the Contractor shall install a foam backer rod in
+those cracks wider than ¼-inch that extends below the bottom to the routed joint. The backer rod shall
+be compressed to fill the entire width of the crack and shall not protrude up above the bottom of the
+routed reservoir. The Contractor shall install a bond breaker tape at the bottom of the routed reservoir
+for those cracks less than ¼-inch in width which extended below the bottom of the routed joint.
+F. The sealant shall be placed evenly in two separate applications. The first application shall fill the reservoir
+to approximately three-fourths the depth of the routed joint. After the first application has sufficiently
+cooled, the second application shall be placed to provide an "over bond" seal with the bituminous
+pavement. The over band shall be of the width and thickness to assure a tight seal with the pavement
+surface. The sealant shall be pressure applied with a wand type applicator; pour pots or similar devices
+shall not be used to apply the crack sealant. The applicator wand shall be returned to the machine and the
+crack sealant materials reticulated immediately upon completion of each crack.
+****END OF SECTION****
+City of Jordan – Standard Specifications BITUMINOUS SURFACE CRACK and JOINT REPAIR
+September, 2019 PAGE 02975-2
+V010418 © Bolton & Menk, Inc. 2019, All Rights Reserved', 1);
+

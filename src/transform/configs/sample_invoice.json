@@ -1,0 +1,16 @@
+{
+  "document_id": 2,
+  "mapping": {
+    "item_description": "Service Description",
+    "price": "Amount\n-without VAT-",
+    "quantity": "quantity",
+    "invoice_number": "Invoice No",
+    "customer_number": "Customer No",
+    "contractor": "Service Contractor",
+    "client_name": "Client Name",
+    "tax_rate": "VAT Percentage",
+    "document_description": "Service Name",
+    "item_code": null,
+    "details": null
+  }
+}
