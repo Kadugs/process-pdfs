@@ -32,6 +32,7 @@ Value: 434.12
 
 ## Percentage of lines with details
 Description: Percentage of item lines that have non-empty `details` field.
+
 Value: 72.86%
 
 

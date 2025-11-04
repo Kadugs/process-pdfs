@@ -22,10 +22,6 @@ source venv/bin/activate
 echo "Upgrading pip..."
 pip install --upgrade pip
 
-# Install the project in editable mode so imports work (no per-file sys.path hacks required)
-echo "Installing project in editable mode..."
-pip install -e .
-
 # Also install extra requirements if present
 if [ -f "requirements.txt" ]; then
     echo "Installing requirements from requirements.txt..."

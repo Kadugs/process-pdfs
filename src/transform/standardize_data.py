@@ -50,6 +50,7 @@ def standardize_data(df: pd.DataFrame, mapping_path: str) -> pd.DataFrame:
 
     treated_df.dropna(subset=["item_description"], inplace=True)
     treated_df.drop_duplicates(inplace=True)
+    treated_df.to_parquet("data/transformed/standardized_data.parquet", index=False)
     return treated_df
 
 
